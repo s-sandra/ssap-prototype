@@ -6,7 +6,7 @@
         <meta name="description" content="">
         <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
         <meta name="generator" content="Hugo 0.79.0">
-        <title>Dashboard Template · Bootstrap v5.0</title>
+        <title>Round Data</title>
 
         <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/dashboard/">
 
@@ -33,8 +33,11 @@
         </style>
 
 
-        <!-- Custom styles for navigation -->
+        <!-- component styles -->
         <link href="./styles/navbar.css" rel="stylesheet">
+        <link href="./styles/global.css" rel="stylesheet">
+        <link href="./styles/chart.css" rel="stylesheet">
+
     </head>
     <body>
         
@@ -112,9 +115,9 @@
                     </div>
                 </nav>
 
-                <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
+                <main class="col-md-9 ms-sm-auto col-lg-10">
                     <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-                        <h1 class="h2">Round Data Trends</h1>
+                        <h1 class="h2">Historical Round Data</h1>
                         <div class="btn-toolbar mb-2 mb-md-0">
                             <button type="button" class="btn btn-sm btn-outline-secondary">
                                 <span data-feather="plus"></span>
@@ -123,7 +126,7 @@
                         </div>
                     </div>
 
-                    <canvas class="my-4 w-100" id="myChart" width="900" height="380"></canvas>
+                    <canvas class="my-4 w-100" id="histogram" width="900" height="380"></canvas>
 
                     <h2>Section title</h2>
                     <div class="table-responsive">
@@ -261,6 +264,6 @@
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/feather-icons@4.28.0/dist/feather.min.js" integrity="sha384-uO3SXW5IuS1ZpFPKugNNWqTZRRglnUJK6UAZ/gxOX80nxEkN9NcGZTftn6RzhGWE" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js" integrity="sha384-zNy6FEbO50N+Cg5wap8IKA4M/ZnLJgzc6w2NqACZaK0u0FXfOWRRJOnQtpZun8ha" crossorigin="anonymous"></script>
-        <script src="./scripts/dashboard.js"></script>
+        <script src="./scripts/chart.js"></script>
     </body>
 </html>
