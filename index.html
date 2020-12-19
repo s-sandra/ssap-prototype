@@ -9,7 +9,7 @@
         <title>Round Data</title>
 
         <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/dashboard/">
-
+        <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
 
 
         <!-- Bootstrap core CSS -->
@@ -117,9 +117,9 @@
 
                 <main class="col-md-9 ms-sm-auto col-lg-10">
                     <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-                        <h1 class="h2">Historical Round Data</h1>
+                        <h1>Historical Round Data</h1>
                         <div class="btn-toolbar mb-2 mb-md-0">
-                            <button type="button" class="btn btn-sm btn-outline-secondary">
+                            <button type="button" class="btn btn-sm btn-primary">
                                 <span data-feather="plus"></span>
                                 Add Data
                             </button>
@@ -128,133 +128,78 @@
 
                     <canvas class="my-4 w-100" id="histogram" width="900" height="380"></canvas>
 
-                    <h2>Section title</h2>
-                    <div class="table-responsive">
-                        <table class="table table-striped table-sm">
-                        <thead>
-                            <tr>
-                            <th>#</th>
-                            <th>Header</th>
-                            <th>Header</th>
-                            <th>Header</th>
-                            <th>Header</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                            <td>1,001</td>
-                            <td>Lorem</td>
-                            <td>ipsum</td>
-                            <td>dolor</td>
-                            <td>sit</td>
-                            </tr>
-                            <tr>
-                            <td>1,002</td>
-                            <td>amet</td>
-                            <td>consectetur</td>
-                            <td>adipiscing</td>
-                            <td>elit</td>
-                            </tr>
-                            <tr>
-                            <td>1,003</td>
-                            <td>Integer</td>
-                            <td>nec</td>
-                            <td>odio</td>
-                            <td>Praesent</td>
-                            </tr>
-                            <tr>
-                            <td>1,003</td>
-                            <td>libero</td>
-                            <td>Sed</td>
-                            <td>cursus</td>
-                            <td>ante</td>
-                            </tr>
-                            <tr>
-                            <td>1,004</td>
-                            <td>dapibus</td>
-                            <td>diam</td>
-                            <td>Sed</td>
-                            <td>nisi</td>
-                            </tr>
-                            <tr>
-                            <td>1,005</td>
-                            <td>Nulla</td>
-                            <td>quis</td>
-                            <td>sem</td>
-                            <td>at</td>
-                            </tr>
-                            <tr>
-                            <td>1,006</td>
-                            <td>nibh</td>
-                            <td>elementum</td>
-                            <td>imperdiet</td>
-                            <td>Duis</td>
-                            </tr>
-                            <tr>
-                            <td>1,007</td>
-                            <td>sagittis</td>
-                            <td>ipsum</td>
-                            <td>Praesent</td>
-                            <td>mauris</td>
-                            </tr>
-                            <tr>
-                            <td>1,008</td>
-                            <td>Fusce</td>
-                            <td>nec</td>
-                            <td>tellus</td>
-                            <td>sed</td>
-                            </tr>
-                            <tr>
-                            <td>1,009</td>
-                            <td>augue</td>
-                            <td>semper</td>
-                            <td>porta</td>
-                            <td>Mauris</td>
-                            </tr>
-                            <tr>
-                            <td>1,010</td>
-                            <td>massa</td>
-                            <td>Vestibulum</td>
-                            <td>lacinia</td>
-                            <td>arcu</td>
-                            </tr>
-                            <tr>
-                            <td>1,011</td>
-                            <td>eget</td>
-                            <td>nulla</td>
-                            <td>Class</td>
-                            <td>aptent</td>
-                            </tr>
-                            <tr>
-                            <td>1,012</td>
-                            <td>taciti</td>
-                            <td>sociosqu</td>
-                            <td>ad</td>
-                            <td>litora</td>
-                            </tr>
-                            <tr>
-                            <td>1,013</td>
-                            <td>torquent</td>
-                            <td>per</td>
-                            <td>conubia</td>
-                            <td>nostra</td>
-                            </tr>
-                            <tr>
-                            <td>1,014</td>
-                            <td>per</td>
-                            <td>inceptos</td>
-                            <td>himenaeos</td>
-                            <td>Curabitur</td>
-                            </tr>
-                            <tr>
-                            <td>1,015</td>
-                            <td>sodales</td>
-                            <td>ligula</td>
-                            <td>in</td>
-                            <td>libero</td>
-                            </tr>
-                        </tbody>
-                        </table>
+                    <div class="card">
+                        <div class="card-header">
+                            <div class="row justify-content-between align-items-center flex-grow-1">
+                                <div class="col-12 col-md">
+                                    <h3>Round Data</h3>
+                                </div>
+                                <div class="col-auto">
+                                    <button type="button" class="btn btn-sm btn-outline-primary">
+                                        <span data-feather="plus"></span>
+                                        Add Data
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="table-responsive">
+                            <table class="table">
+                            <thead>
+                                <tr>
+                                <th><input type="checkbox" class="form-check-input" id="selectAll"></th>
+                                <th>File Name</th>
+                                <th>Year</th>
+                                <th>Region</th>
+                                <th>Total</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                <td><input type="checkbox" class="form-check-input"></td>
+                                <td class="col-8"><a href="#">2019 Round Data</a></td>
+                                <td>2019</td>
+                                <td>local</td>
+                                <td>25</td>
+                                </tr>
+                                <tr>
+                                <td><input type="checkbox" class="form-check-input"></td>
+                                <td class="col-8"><a href="#">2019 Regional Data</a></td>
+                                <td>2019</td>
+                                <td>state</td>
+                                <td>130</td>
+                                </tr>
+                                <tr>
+                                <td><input type="checkbox" class="form-check-input"></td>
+                                <td class="col-8"><a href="#">2017 Regional SSS Scores</a></td>
+                                <td>2017</td>
+                                <td>local</td>
+                                <td>22</td>
+                                </tr>
+                                <tr>
+                                <td><input type="checkbox" class="form-check-input"></td>
+                                <td class="col-8"><a href="#">2017 State Scores</a></td>
+                                <td>2017</td>
+                                <td>state</td>
+                                <td>126</td>
+                                </tr>
+                                <tr>
+                                <td><input type="checkbox" class="form-check-input"></td>
+                                <td class="col-8"><a href="#">2015 Regional Projects</a></td>
+                                <td>2015</td>
+                                <td>local</td>
+                                <td>33</td>
+                                </tr>
+                                <tr>
+                                <td><input type="checkbox" class="form-check-input"></td>
+                                <td class="col-8"><a href="#">2015 State Projects</a></td>
+                                <td>2015</td>
+                                <td>state</td>
+                                <td>113</td>
+                                </tr>
+                                <tr>
+                            </tbody>
+                            </table>
+                        </div>
                     </div>
                 </main>
             </div>

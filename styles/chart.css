@@ -1,6 +1,48 @@
-canvas {
-    background-color: white;
+canvas, .card {
     -webkit-box-shadow: 0 0 5px 2px rgba(0,0,0,.15);
     -moz-box-shadow: 0 0 5px 2px rgba(0,0,0,.15);
     box-shadow: 0 0 5px 2px rgba(0,0,0,.15);
+}
+
+canvas, .card-header {
+    background-color: white;
+}
+
+.card-header {
+    padding: 1rem 1rem;
+}
+
+tr {
+    padding: 1rem;
+}
+
+.card {
+    border: none;
+}
+
+.table {
+    border-color: white;
+    color: #677788;
+}
+
+.table a {
+    text-decoration: none;
+    color: #5c6369;
+}
+
+.table a:hover {
+    color: #007bff;
+}
+
+.table > :not(:last-child) > :last-child > * {
+    border-bottom-color: inherit;
+}
+
+.table thead th {
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+thead tr:first-child {
+    border-bottom: 1px solid rgba(0,0,0,.125);
 }

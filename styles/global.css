@@ -1,8 +1,31 @@
+body {
+    font-family: "Roboto",sans-serif;
+    font-size: .875rem;
+    font-weight: 400;
+    line-height: 1.6;
+}
+
 main {
     background-color: #eef0f0;
     padding: 1rem 3rem 3rem 3rem !important;
 }
 
-.bg-light {
+.bg-light, thead {
    background-color: #f8f9fa !important;
+}
+
+.bg-dark {
+    background-color: #5b5c5e !important
+}
+
+h1 {
+    font-size: 2rem;
+}
+
+h3 {
+    font-size: 1.5rem;
+}
+
+h1, h2, h3 {
+    color: #5c6369
 }
