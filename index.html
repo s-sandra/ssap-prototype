@@ -9,7 +9,7 @@
         <title>Round Data</title>
 
         <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/dashboard/">
-        <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
+        <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet'>
 
 
         <!-- Bootstrap core CSS -->
@@ -133,25 +133,7 @@
                                     <h3>Smart Scale Score Distribution</h3>
                                 </div>
                                 <div class="col-auto">
-                                    <div class="dropdown show">
-                                        <button class="btn btn-sm btn-outline-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                          100th Percentile
-                                        </button>
-                                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                          <a class="dropdown-item active" href="#">100</a>
-                                          <a class="dropdown-item" href="#">95</a>
-                                          <a class="dropdown-item" href="#">90</a>
-                                          <a class="dropdown-item" href="#">75</a>
-                                          <a class="dropdown-item" href="#">50</a>
-                                          <a class="dropdown-item" href="#">25</a>
-                                          <a class="dropdown-item" href="#">10</a>
-                                          <a class="dropdown-item" href="#">5</a>
-                                          <a class="dropdown-item" href="#">Custom</a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-auto">
-                                    <button type="button" class="btn btn-sm btn-outline-primary">
+                                    <button type="button" class="btn btn-outline-primary">
                                         <span data-feather="download"></span>
                                         Export Chart
                                     </button>
@@ -162,19 +144,48 @@
                     </div>
 
                     <div class="card">
+                        <div class="card-header bg-light">
+                            <div class="row justify-content-between align-items-center flex-grow-1">
+                                <div class="col-12 col-md">
+                                    <h3>Smart Scale Score Percentiles</h3>
+                                </div>
+                                <div class="col-auto">
+                                    <form>
+                                        <div class="input-group input-group-merge input-group-flush">
+                                            <div class="input-group-prepend">
+                                                <div class="input-group-text">
+                                                    <span data-feather="search"></span>
+                                                </div>
+                                            </div>
+                                            <input class="form-control" type="search" placeholder="enter custom percentile" aria-label="enter custom percentile">
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="col-auto">
+                                    <button type="button" class="btn btn-outline-primary">
+                                        <span data-feather="download"></span>
+                                        Export Chart
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <canvas class="my-4 w-100" id="percentile" width="900" height="380"></canvas>
+                    </div>
+
+                    <div class="card">
                         <div class="card-header">
                             <div class="row justify-content-between align-items-center flex-grow-1">
                                 <div class="col-12 col-md">
                                     <h3>Round Data</h3>
                                 </div>
                                 <div class="col-auto">
-                                    <button type="button" class="btn btn-sm btn-outline-danger">
+                                    <button type="button" class="btn btn-outline-danger">
                                         <span data-feather="minus"></span>
                                         Delete Data
                                     </button>
                                 </div>
                                 <div class="col-auto">
-                                    <button type="button" class="btn btn-sm btn-outline-primary">
+                                    <button type="button" class="btn btn-outline-primary">
                                         <span data-feather="plus"></span>
                                         Add Data
                                     </button>
