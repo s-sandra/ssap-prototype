@@ -119,20 +119,59 @@
                     <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
                         <h1>Historical Round Data</h1>
                         <div class="btn-toolbar mb-2 mb-md-0">
-                            <button type="button" class="btn btn-sm btn-primary">
+                            <button type="button" class="btn btn-primary">
                                 <span data-feather="plus"></span>
                                 Add Data
                             </button>
                         </div>
                     </div>
 
-                    <canvas class="my-4 w-100" id="histogram" width="900" height="380"></canvas>
+                    <div class="card">
+                        <div class="card-header bg-light">
+                            <div class="row justify-content-between align-items-center flex-grow-1">
+                                <div class="col-12 col-md">
+                                    <h3>Smart Scale Score Distribution</h3>
+                                </div>
+                                <div class="col-auto">
+                                    <div class="dropdown show">
+                                        <button class="btn btn-sm btn-outline-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                          100th Percentile
+                                        </button>
+                                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                          <a class="dropdown-item active" href="#">100</a>
+                                          <a class="dropdown-item" href="#">95</a>
+                                          <a class="dropdown-item" href="#">90</a>
+                                          <a class="dropdown-item" href="#">75</a>
+                                          <a class="dropdown-item" href="#">50</a>
+                                          <a class="dropdown-item" href="#">25</a>
+                                          <a class="dropdown-item" href="#">10</a>
+                                          <a class="dropdown-item" href="#">5</a>
+                                          <a class="dropdown-item" href="#">Custom</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-auto">
+                                    <button type="button" class="btn btn-sm btn-outline-primary">
+                                        <span data-feather="download"></span>
+                                        Export Chart
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <canvas class="my-4 w-100" id="histogram" width="900" height="380"></canvas>
+                    </div>
 
                     <div class="card">
                         <div class="card-header">
                             <div class="row justify-content-between align-items-center flex-grow-1">
                                 <div class="col-12 col-md">
                                     <h3>Round Data</h3>
+                                </div>
+                                <div class="col-auto">
+                                    <button type="button" class="btn btn-sm btn-outline-danger">
+                                        <span data-feather="minus"></span>
+                                        Delete Data
+                                    </button>
                                 </div>
                                 <div class="col-auto">
                                     <button type="button" class="btn btn-sm btn-outline-primary">
@@ -144,10 +183,10 @@
                         </div>
                         <div class="table-responsive">
                             <table class="table">
-                            <thead>
+                            <thead class="bg-light">
                                 <tr>
                                 <th><input type="checkbox" class="form-check-input" id="selectAll"></th>
-                                <th>File Name</th>
+                                <th>Record Name</th>
                                 <th>Year</th>
                                 <th>Region</th>
                                 <th>Total</th>
@@ -205,10 +244,12 @@
             </div>
         </div>
 
-
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/feather-icons@4.28.0/dist/feather.min.js" integrity="sha384-uO3SXW5IuS1ZpFPKugNNWqTZRRglnUJK6UAZ/gxOX80nxEkN9NcGZTftn6RzhGWE" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js" integrity="sha384-zNy6FEbO50N+Cg5wap8IKA4M/ZnLJgzc6w2NqACZaK0u0FXfOWRRJOnQtpZun8ha" crossorigin="anonymous"></script>
         <script src="./scripts/chart.js"></script>
+
     </body>
 </html>

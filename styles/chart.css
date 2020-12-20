@@ -1,19 +1,18 @@
-canvas, .card {
+.card {
     -webkit-box-shadow: 0 0 5px 2px rgba(0,0,0,.15);
     -moz-box-shadow: 0 0 5px 2px rgba(0,0,0,.15);
     box-shadow: 0 0 5px 2px rgba(0,0,0,.15);
-}
-
-canvas, .card-header {
-    background-color: white;
+    margin-top: 3rem;
 }
 
 .card-header {
+    background-color: white;
     padding: 1rem 1rem;
 }
 
 tr {
     padding: 1rem;
+    border-color:  #ddd;
 }
 
 .card {
@@ -21,13 +20,15 @@ tr {
 }
 
 .table {
-    border-color: white;
     color: #677788;
 }
 
 .table a {
     text-decoration: none;
     color: #5c6369;
+    margin-bottom: .5rem;
+    font-weight: 600;
+    line-height: 1.4;
 }
 
 .table a:hover {
