@@ -37,9 +37,67 @@
         <link href="./styles/navbar.css" rel="stylesheet">
         <link href="./styles/global.css" rel="stylesheet">
         <link href="./styles/chart.css" rel="stylesheet">
+        <link href="./styles/modal.css" rel="stylesheet">
 
     </head>
     <body>
+        <div class="modal fade" id="uploadModal" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title">Upload Round Data</h5>
+                  <button type="button" class="btn btn-toolbar" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                    <div class="mb-3">
+                        <label for="uploadFile" class="form-label">Round Data File</label>
+                        <input class="form-control" type="file" id="fileUpload">
+                    </div>
+                    <div class="progress mb-3">
+                        <div class="progress-bar" role="progressbar" style="width: 25%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">25%</div>
+                    </div>
+                    <div class="mb-3">
+                        <div class="form-group">
+                            <label for="recordName">Record Name</label>
+                            <input type="text" class="form-control" id="recordName" aria-describedby="recordHelp">
+                            <small id="emailHelp" class="form-text text-muted">Enter a unique name for the round data.</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                  <a class="btn btn-primary" data-dismiss="modal" href="#">Upload</a>
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+              </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="warningModal" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title">Confirm Deletion</h5>
+                  <button type="button" class="btn btn-toolbar" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                    <div class="mb-3">
+                        <p>Are you sure you want to delete <b>2017 Round Data State</b>?</p>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                  <button class="btn btn-danger" data-dismiss="modal">
+                    <span data-feather="trash"></span>
+                      Delete
+                  </button>
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                </div>
+              </div>
+            </div>
+        </div>
         
         <header class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0 shadow">
             <a class="navbar-brand col-md-3 col-lg-2 me-0 px-3" href="#">SSAP</a>
@@ -119,7 +177,7 @@
                     <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
                         <h1>Historical Round Data</h1>
                         <div class="btn-toolbar mb-2 mb-md-0">
-                            <button type="button" class="btn btn-primary">
+                            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#uploadModal">
                                 <span data-feather="plus"></span>
                                 Add Data
                             </button>
@@ -179,13 +237,13 @@
                                     <h3>Round Data</h3>
                                 </div>
                                 <div class="col-auto">
-                                    <button type="button" class="btn btn-outline-danger">
+                                    <button type="button" class="btn btn-outline-danger" data-toggle="modal" data-target="#warningModal">
                                         <span data-feather="minus"></span>
                                         Delete Data
                                     </button>
                                 </div>
                                 <div class="col-auto">
-                                    <button type="button" class="btn btn-outline-primary">
+                                    <button type="button" class="btn btn-outline-primary" data-toggle="modal" data-target="#uploadModal">
                                         <span data-feather="plus"></span>
                                         Add Data
                                     </button>
@@ -260,7 +318,10 @@
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/feather-icons@4.28.0/dist/feather.min.js" integrity="sha384-uO3SXW5IuS1ZpFPKugNNWqTZRRglnUJK6UAZ/gxOX80nxEkN9NcGZTftn6RzhGWE" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js" integrity="sha384-zNy6FEbO50N+Cg5wap8IKA4M/ZnLJgzc6w2NqACZaK0u0FXfOWRRJOnQtpZun8ha" crossorigin="anonymous"></script>
+        
+        <!-- Custom component scripts -->
         <script src="./scripts/chart.js"></script>
+        <script src="./scripts/modal.js"></script>
 
     </body>
 </html>
