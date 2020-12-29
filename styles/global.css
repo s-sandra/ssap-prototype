@@ -39,3 +39,7 @@ h1, h2, h3 {
     height: auto;
     vertical-align: middle;
 }
+
+.breadcrumb-item a {
+    text-decoration: none;
+}

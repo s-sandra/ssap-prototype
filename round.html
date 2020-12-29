@@ -155,12 +155,19 @@
                 </nav>
 
                 <main class="col-md-9 ms-sm-auto col-lg-10">
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb">
+                          <li class="breadcrumb-item"><a href="index.html">Historical Round Data</a></li>
+                          <li class="breadcrumb-item active" aria-current="page">2017 State Scores</li>
+                        </ol>
+                    </nav>
+
                     <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
                         <h1>2017 State Scores</h1>
                         <div class="btn-toolbar mb-2 mb-md-0">
                             <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#uploadModal">
                                 <span data-feather="plus"></span>
-                                Add Data
+                                Add Project
                             </button>
                         </div>
                     </div>
@@ -196,7 +203,7 @@
                                                     <span data-feather="search"></span>
                                                 </div>
                                             </div>
-                                            <input class="form-control" type="search" placeholder="enter custom percentile" aria-label="enter custom percentile">
+                                            <input class="form-control" type="search" placeholder="custom percentile" aria-label="enter custom percentile">
                                         </div>
                                     </form>
                                 </div>
@@ -214,78 +221,147 @@
                     <div class="card">
                         <div class="card-header">
                             <div class="row justify-content-between align-items-center flex-grow-1">
-                                <div class="col-12 col-md">
-                                    <h3>Round Data</h3>
+                                <div class="col-3 col-md">
+                                    <h3>Round Projects</h3>
+                                </div>
+                                <div class="col-8 col-md">
+                                    <form>
+                                        <div class="input-group input-group-merge input-group-flush">
+                                            <div class="input-group-prepend">
+                                                <div class="input-group-text">
+                                                    <span data-feather="search"></span>
+                                                </div>
+                                            </div>
+                                            <input class="form-control" type="search" placeholder="search projects" aria-label="enter custom percentile">
+                                        </div>
+                                    </form>
                                 </div>
                                 <div class="col-auto">
                                     <button type="button" class="btn btn-outline-danger" data-toggle="modal" data-target="#warningModal">
                                         <span data-feather="minus"></span>
-                                        Delete Data
+                                        Delete
                                     </button>
                                 </div>
                                 <div class="col-auto">
                                     <button type="button" class="btn btn-outline-primary" data-toggle="modal" data-target="#uploadModal">
                                         <span data-feather="plus"></span>
-                                        Add Data
+                                        Add
                                     </button>
                                 </div>
                             </div>
                         </div>
-                        <div class="table-responsive">
+                        <div class="table-responsive table-hover">
                             <table class="table">
                             <thead class="bg-light">
                                 <tr>
                                 <th><input type="checkbox" class="form-check-input" id="selectAll"></th>
-                                <th>Record Name</th>
-                                <th>Year</th>
-                                <th>Region</th>
-                                <th>Total</th>
+                                <th>ID</th>
+                                <th>Title</th>
+                                <th>District</th>
+                                <th>Organization Name</th>
+                                <th>Smart Scale Score</th>
+                                <th>Statewide Priority</th>
+                                <th>District Grant</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr>
-                                <td><input type="checkbox" class="form-check-input"></td>
-                                <td class="col-8"><a href="#">2019 Round Data</a></td>
-                                <td>2019</td>
-                                <td>local</td>
-                                <td>25</td>
+                                <th><input type="checkbox" class="form-check-input"></th>
+                                <td><a href="#">1414</a></td>
+                                <td>VRE Fredericksburg Line Capacity Expansion</td>
+                                <td>NOVA</td>
+                                <td>Northern Virginia Transportation Commission</td>
+                                <td>6.934</td>
+                                <td><span class="text-success" data-feather="arrow-up-circle"></span></td>
+                                <td><span data-feather="circle"></span></td>
                                 </tr>
                                 <tr>
                                 <td><input type="checkbox" class="form-check-input"></td>
-                                <td class="col-8"><a href="#">2019 Regional Data</a></td>
-                                <td>2019</td>
-                                <td>state</td>
-                                <td>130</td>
+                                <td><a href="#">1229</a></td>
+                                <td>Westwind Drive (Loudoun County Parkway to Route 606)</td>
+                                <td>NOVA</td>
+                                <td>Loudoun County</td>
+                                <td>4.677</td>
+                                <td><span class="text-success" data-feather="arrow-up-circle"></span></td>
+                                <td><span class="text-success" data-feather="check-circle"></span></td>
                                 </tr>
                                 <tr>
                                 <td><input type="checkbox" class="form-check-input"></td>
-                                <td class="col-8"><a href="#">2017 Regional SSS Scores</a></td>
-                                <td>2017</td>
-                                <td>local</td>
-                                <td>22</td>
+                                <td><a href="#">1111</a></td>
+                                <td>Multi-Use Paths - Routes 17/698/1036</td>
+                                <td>Fredericksburg</td>
+                                <td>Essex County</td>
+                                <td>0.859</td>
+                                <td><span class="text-success" data-feather="arrow-up-circle"></span></td>
+                                <td><span class="text-success" data-feather="check-circle"></span></td>
                                 </tr>
                                 <tr>
                                 <td><input type="checkbox" class="form-check-input"></td>
-                                <td class="col-8"><a href="#">2017 State Scores</a></td>
-                                <td>2017</td>
-                                <td>state</td>
-                                <td>126</td>
+                                <td><a href="#">1194</a></td>
+                                <td>Butler Road Widening</td>
+                                <td>Fredericksburg</td>
+                                <td>Stafford County</td>
+                                <td>1.195</td>
+                                <td><span class="text-success" data-feather="arrow-up-circle"></span></td>
+                                <td><span class="text-success" data-feather="check-circle"></span></td>
                                 </tr>
                                 <tr>
                                 <td><input type="checkbox" class="form-check-input"></td>
-                                <td class="col-8"><a href="#">2015 Regional Projects</a></td>
-                                <td>2015</td>
-                                <td>local</td>
-                                <td>33</td>
+                                <td><a href="#">1336</a></td>
+                                <td>Route 460 Project</td>
+                                <td>Hampton Roads</td>
+                                <td>CTB</td>
+                                <td>0.348</td>
+                                <td><span class="text-success" data-feather="arrow-up-circle"></span></td>
+                                <td><span data-feather="circle"></span></td>
                                 </tr>
                                 <tr>
                                 <td><input type="checkbox" class="form-check-input"></td>
-                                <td class="col-8"><a href="#">2015 State Projects</a></td>
-                                <td>2015</td>
-                                <td>state</td>
-                                <td>113</td>
+                                <td><a href="#">1045</a></td>
+                                <td>Bus Service Expansion</td>
+                                <td>Richmond</td>
+                                <td>Prince George County</td>
+                                <td>1.326</td>
+                                <td><span data-feather="circle"></span></td>
+                                <td><span class="text-success" data-feather="check-circle"></span></td>
                                 </tr>
                                 <tr>
+                                <td><input type="checkbox" class="form-check-input"></td>
+                                <td><a href="#">1306</a></td>
+                                <td>Maple Street Widening</td>
+                                <td>Stauton</td>
+                                <td>Frederick County</td>
+                                <td>0.212</td>
+                                <td><span class="text-success" data-feather="arrow-up-circle"></span></td>
+                                <td><span data-feather="circle"></span></td>
+                                </tr>
+                                <td><input type="checkbox" class="form-check-input"></td>
+                                <td><a href="#">1820</a></td>
+                                <td>Exit 35 Ramp</td>
+                                <td>Salem</td>
+                                <td>Roanoke Valley Transportation Planning</td>
+                                <td>0.235</td>
+                                <td><span data-feather="circle"></span></td>
+                                <td><span class="text-success" data-feather="check-circle"></span></td>
+                                </tr>
+                                <td><input type="checkbox" class="form-check-input"></td>
+                                <td><a href="#">1336</a></td>
+                                <td>Downtown Congestion Relief</td>
+                                <td>NOVA</td>
+                                <td>Falls Church City</td>
+                                <td>0.348</td>
+                                <td><span class="text-success" data-feather="arrow-up-circle"></span></td>
+                                <td><span data-feather="circle"></span></td>
+                                </tr>
+                                <td><input type="checkbox" class="form-check-input"></td>
+                                <td><a href="#">1329</a></td>
+                                <td>Road Bridge Phase-2A</td>
+                                <td>Hampton Roads</td>
+                                <td>York County</td>
+                                <td>0.348</td>
+                                <td><span class="text-success" data-feather="arrow-up-circle"></span></td>
+                                <td><span class="text-success" data-feather="check-circle"></span></td>
+                                </tr>
                             </tbody>
                             </table>
                         </div>
