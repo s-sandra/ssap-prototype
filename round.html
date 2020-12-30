@@ -19,6 +19,7 @@
         <link href="./styles/global.css" rel="stylesheet">
         <link href="./styles/chart.css" rel="stylesheet">
         <link href="./styles/modal.css" rel="stylesheet">
+        <link href="./styles/table.css" rel="stylesheet">
 
     </head>
     <body>
@@ -250,120 +251,113 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="table-responsive table-hover">
-                            <table class="table">
+                        <div class="table-responsive">
+                            <table class="table table-hover">
                             <thead class="bg-light">
                                 <tr>
-                                <th><input type="checkbox" class="form-check-input" id="selectAll"></th>
-                                <th>ID</th>
-                                <th>Title</th>
-                                <th>District</th>
-                                <th>Organization Name</th>
-                                <th>Smart Scale Score</th>
-                                <th>Statewide Priority</th>
-                                <th>District Grant</th>
+                                    <th><input type="checkbox" class="form-check-input" id="selectAll"></th>
+                                    <th>ID</th>
+                                    <th>Title</th>
+                                    <th>District</th>
+                                    <th>Organization Name</th>
+                                    <th>Smart Scale Score</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr>
-                                <th><input type="checkbox" class="form-check-input"></th>
-                                <td><a href="#">1414</a></td>
-                                <td>VRE Fredericksburg Line Capacity Expansion</td>
-                                <td>NOVA</td>
-                                <td>Northern Virginia Transportation Commission</td>
-                                <td>6.934</td>
-                                <td><span class="text-success" data-feather="arrow-up-circle"></span></td>
-                                <td><span data-feather="circle"></span></td>
+                                    <th scope="row"><input type="checkbox" class="form-check-input"></th>
+                                    <td><a href="#">1414</a></td>
+                                    <td>VRE Fredericksburg Line Capacity Expansion</td>
+                                    <td>NOVA</td>
+                                    <td>Northern Virginia Transportation Commission</td>
+                                    <td>6.934</td>
                                 </tr>
                                 <tr>
-                                <td><input type="checkbox" class="form-check-input"></td>
-                                <td><a href="#">1229</a></td>
-                                <td>Westwind Drive (Loudoun County Parkway to Route 606)</td>
-                                <td>NOVA</td>
-                                <td>Loudoun County</td>
-                                <td>4.677</td>
-                                <td><span class="text-success" data-feather="arrow-up-circle"></span></td>
-                                <td><span class="text-success" data-feather="check-circle"></span></td>
+                                    <th scope="row"><input type="checkbox" class="form-check-input"></th>
+                                    <td><a href="#">1229</a></td>
+                                    <td>Westwind Drive (Loudoun County Parkway to Route 606)</td>
+                                    <td>NOVA</td>
+                                    <td>Loudoun County</td>
+                                    <td>4.677</td>
                                 </tr>
                                 <tr>
-                                <td><input type="checkbox" class="form-check-input"></td>
-                                <td><a href="#">1111</a></td>
-                                <td>Multi-Use Paths - Routes 17/698/1036</td>
-                                <td>Fredericksburg</td>
-                                <td>Essex County</td>
-                                <td>0.859</td>
-                                <td><span class="text-success" data-feather="arrow-up-circle"></span></td>
-                                <td><span class="text-success" data-feather="check-circle"></span></td>
+                                    <th scope="row"><input type="checkbox" class="form-check-input"></th>
+                                    <td><a href="#">1111</a></td>
+                                    <td>Multi-Use Paths - Routes 17/698/1036</td>
+                                    <td>Fredericksburg</td>
+                                    <td>Essex County</td>
+                                    <td>0.859</td>
                                 </tr>
                                 <tr>
-                                <td><input type="checkbox" class="form-check-input"></td>
-                                <td><a href="#">1194</a></td>
-                                <td>Butler Road Widening</td>
-                                <td>Fredericksburg</td>
-                                <td>Stafford County</td>
-                                <td>1.195</td>
-                                <td><span class="text-success" data-feather="arrow-up-circle"></span></td>
-                                <td><span class="text-success" data-feather="check-circle"></span></td>
+                                    <th scope="row"><input type="checkbox" class="form-check-input"></th>
+                                    <td><a href="#">1194</a></td>
+                                    <td>Butler Road Widening</td>
+                                    <td>Fredericksburg</td>
+                                    <td>Stafford County</td>
+                                    <td>1.195</td>
                                 </tr>
                                 <tr>
-                                <td><input type="checkbox" class="form-check-input"></td>
-                                <td><a href="#">1336</a></td>
-                                <td>Route 460 Project</td>
-                                <td>Hampton Roads</td>
-                                <td>CTB</td>
-                                <td>0.348</td>
-                                <td><span class="text-success" data-feather="arrow-up-circle"></span></td>
-                                <td><span data-feather="circle"></span></td>
+                                    <th scope="row"><input type="checkbox" class="form-check-input"></th>
+                                    <td><a href="#">1336</a></td>
+                                    <td>Route 460 Project</td>
+                                    <td>Hampton Roads</td>
+                                    <td>CTB</td>
+                                    <td>0.348</td>
                                 </tr>
                                 <tr>
-                                <td><input type="checkbox" class="form-check-input"></td>
-                                <td><a href="#">1045</a></td>
-                                <td>Bus Service Expansion</td>
-                                <td>Richmond</td>
-                                <td>Prince George County</td>
-                                <td>1.326</td>
-                                <td><span data-feather="circle"></span></td>
-                                <td><span class="text-success" data-feather="check-circle"></span></td>
+                                    <th scope="row"><input type="checkbox" class="form-check-input"></th>
+                                    <td><a href="#">1045</a></td>
+                                    <td>Bus Service Expansion</td>
+                                    <td>Richmond</td>
+                                    <td>Prince George County</td>
+                                    <td>1.326</td>
                                 </tr>
                                 <tr>
-                                <td><input type="checkbox" class="form-check-input"></td>
-                                <td><a href="#">1306</a></td>
-                                <td>Maple Street Widening</td>
-                                <td>Stauton</td>
-                                <td>Frederick County</td>
-                                <td>0.212</td>
-                                <td><span class="text-success" data-feather="arrow-up-circle"></span></td>
-                                <td><span data-feather="circle"></span></td>
+                                    <th scope="row"><input type="checkbox" class="form-check-input"></th>
+                                    <td><a href="#">1306</a></td>
+                                    <td>Maple Street Widening</td>
+                                    <td>Stauton</td>
+                                    <td>Frederick County</td>
+                                    <td>0.212</td>
                                 </tr>
-                                <td><input type="checkbox" class="form-check-input"></td>
-                                <td><a href="#">1820</a></td>
-                                <td>Exit 35 Ramp</td>
-                                <td>Salem</td>
-                                <td>Roanoke Valley Transportation Planning</td>
-                                <td>0.235</td>
-                                <td><span data-feather="circle"></span></td>
-                                <td><span class="text-success" data-feather="check-circle"></span></td>
+                                    <th scope="row"><input type="checkbox" class="form-check-input"></th>
+                                    <td><a href="#">1820</a></td>
+                                    <td>Exit 35 Ramp</td>
+                                    <td>Salem</td>
+                                    <td>Roanoke Valley Transportation Planning</td>
+                                    <td>0.235</td>
                                 </tr>
-                                <td><input type="checkbox" class="form-check-input"></td>
-                                <td><a href="#">1336</a></td>
-                                <td>Downtown Congestion Relief</td>
-                                <td>NOVA</td>
-                                <td>Falls Church City</td>
-                                <td>0.348</td>
-                                <td><span class="text-success" data-feather="arrow-up-circle"></span></td>
-                                <td><span data-feather="circle"></span></td>
+                                    <th scope="row"><input type="checkbox" class="form-check-input"></th>
+                                    <td><a href="#">1336</a></td>
+                                    <td>Downtown Congestion Relief</td>
+                                    <td>NOVA</td>
+                                    <td>Falls Church City</td>
+                                    <td>0.348</td>
                                 </tr>
-                                <td><input type="checkbox" class="form-check-input"></td>
-                                <td><a href="#">1329</a></td>
-                                <td>Road Bridge Phase-2A</td>
-                                <td>Hampton Roads</td>
-                                <td>York County</td>
-                                <td>0.348</td>
-                                <td><span class="text-success" data-feather="arrow-up-circle"></span></td>
-                                <td><span class="text-success" data-feather="check-circle"></span></td>
+                                    <th scope="row"><input type="checkbox" class="form-check-input"></th>
+                                    <td><a href="#">1329</a></td>
+                                    <td>Road Bridge Phase-2A</td>
+                                    <td>Hampton Roads</td>
+                                    <td>York County</td>
+                                    <td>0.348</td>
                                 </tr>
                             </tbody>
                             </table>
+                        </div>
+                        <div class="card-footer">
+                            <nav aria-label="Page navigation example">
+                                <ul class="pagination justify-content-end">
+                                  <li class="page-item disabled">
+                                    <a class="page-link" href="#" tabindex="-1">Previous</a>
+                                  </li>
+                                  <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                                  <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                  <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                  <li class="page-item">
+                                    <a class="page-link" href="#">Next</a>
+                                  </li>
+                                </ul>
+                              </nav>
                         </div>
                     </div>
                 </main>
