@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="description" content="">
         <meta name="author" content="Sandra Shtabnaya">
-        <title>Page Title</title>
+        <title>Butler Road Extension</title>
 
         <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet'>
 
@@ -16,6 +16,7 @@
         <!-- component styles -->
         <link href="./styles/navbar.css" rel="stylesheet">
         <link href="./styles/global.css" rel="stylesheet">
+        <link href="./styles/chart.css" rel="stylesheet">
 
     </head>
     <body>
@@ -94,15 +95,246 @@
                 </nav>
 
                 <main class="col-md-9 ms-sm-auto col-lg-10">
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb">
+                          <li class="breadcrumb-item"><a href="index.html">Historical Round Data</a></li>
+                          <li class="breadcrumb-item"><a href="round.html">2017 State Scores</a></li>
+                          <li class="breadcrumb-item active" aria-current="page">Project Details</li>
+                        </ol>
+                    </nav>
                     <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-                        <h1>Page Title</h1>
+                        <h1>Butler Road Extension</h1>
                         <div class="btn-toolbar mb-2 mb-md-0">
                             <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#uploadModal">
                                 <span data-feather="plus"></span>
-                                Action
+                                Project Group
                             </button>
                         </div>
                     </div>
+                    <div class="grid">
+                        <div class="row">
+                            <div class="col-auto mb-3">
+                                <div class="card-group">
+                                    <div class="card">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Area Type</h5>
+                                            <h1 class="card-text">A</h1>
+                                        </div>
+                                        <div class="card-footer">
+                                            <div class="btn-group">
+                                                <button type="button" class="btn btn-small">
+                                                    <span data-feather="edit"></span> Edit
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card">
+                                        <div class="card-body">
+                                            <h5 class="card-title">District</h5>
+                                            <h1 class="card-text">Fredericksburg</h1>
+                                        </div>
+                                        <div class="card-footer">
+                                            <div class="btn-group">
+                                                <button type="button" class="btn btn-small">
+                                                    <span data-feather="edit"></span> Edit
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Organization</h5>
+                                            <h1 class="card-text">Stafford County</h1>
+                                        </div>
+                                        <div class="card-footer">
+                                            <div class="btn-group">
+                                                <button type="button" class="btn btn-small">
+                                                    <span data-feather="edit"></span> Edit
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-auto mb-3">
+                                <div class="card-group">
+                                    <div class="card">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Statewide Priority</h5>
+                                            <h1 class="card-text text-success">
+                                                <span data-feather="arrow-up-circle"></span> High
+                                            </h1>
+                                        </div>
+                                        <div class="card-footer">
+                                            <div class="btn-group">
+                                                <button type="button" class="btn btn-small">
+                                                    <span data-feather="edit"></span> Edit
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card">
+                                        <div class="card-body">
+                                            <h5 class="card-title">State Rank</h5>
+                                            <h1 class="card-text">271</h1>
+                                            <h6 class="card-subtitle">20th Percentile</h6>
+                                        </div>
+                                        <div class="card-footer">
+                                            <div class="btn-group">
+                                                <button type="button" class="btn btn-small">
+                                                    <span data-feather="bar-chart-2"></span> See Chart
+                                                </button>
+                                                <button type="button" class="btn btn-small">
+                                                    <span data-feather="edit"></span> Edit
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card">
+                                        <div class="card-body">
+                                            <h5 class="card-title">District Grant</h5>
+                                            <h1 class="card-text text-success">
+                                                <span data-feather="check-circle"></span> Yes
+                                            </h1>
+                                        </div>
+                                        <div class="card-footer">
+                                            <div class="btn-group">
+                                                <button type="button" class="btn btn-small">
+                                                    <span data-feather="edit"></span> Edit
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card">
+                                        <div class="card-body">
+                                            <h5 class="card-title">District Rank</h5>
+                                            <h1 class="card-text">16</h1>
+                                            <h6 class="card-subtitle">20th Percentile</h6>
+                                        </div>
+                                        <div class="card-footer">
+                                            <div class="btn-group">
+                                                <button type="button" class="btn btn-small">
+                                                    <span data-feather="bar-chart-2"></span> See Chart
+                                                </button>
+                                                <button type="button" class="btn btn-small">
+                                                    <span data-feather="edit"></span> Edit
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-auto mb-3">
+                                <div class="card-group">
+                                    <div class="card">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Total Project</h5>
+                                            <h1 class="card-text">$ 28,500,000</h1>
+                                        </div>
+                                        <div class="card-footer">
+                                            <div class="btn-group">
+                                                <button type="button" class="btn btn-small">
+                                                    <span data-feather="bar-chart-2"></span> See Chart
+                                                </button>
+                                                <button type="button" class="btn btn-small">
+                                                    <span data-feather="edit"></span> Edit
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card">
+                                        <div class="card-body">
+                                            <h5 class="card-title">SMART SCALE Request</h5>
+                                            <h1 class="card-text">$ 25,646,000</h1>
+                                        </div>
+                                        <div class="card-footer">
+                                            <div class="btn-group">
+                                                <button type="button" class="btn btn-small">
+                                                    <span data-feather="bar-chart-2"></span> See Chart
+                                                </button>
+                                                <button type="button" class="btn btn-small">
+                                                    <span data-feather="edit"></span> Edit
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <h3>Project Rankings</h3>
+                    <div class="grid">
+                        <div class="row">
+                            <div class="col-auto mb-3">
+                                <div class="card-group">
+                                    <div class="card">
+                                        <div class="card-body">
+                                            <h5 class="card-title">SMART SCALE Score</h5>
+                                            <h1 class="card-text">1.195</h1>
+                                            <h6 class="card-subtitle">12th Percentile</h6>
+                                        </div>
+                                        <div class="card-footer">
+                                            <div class="btn-group">
+                                                <button type="button" class="btn btn-small">
+                                                    <span data-feather="bar-chart-2"></span> See Chart
+                                                </button>
+                                                <button type="button" class="btn btn-small">
+                                                    <span data-feather="edit"></span> Edit
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Project Benefit Score</h5>
+                                            <h1 class="card-text">3.065</h1>
+                                            <h6 class="card-subtitle">20th Percentile</h6>
+                                        </div>
+                                        <div class="card-footer">
+                                            <div class="btn-group">
+                                                <button type="button" class="btn btn-small">
+                                                    <span data-feather="bar-chart-2"></span> See Chart
+                                                </button>
+                                                <button type="button" class="btn btn-small">
+                                                    <span data-feather="edit"></span> Edit
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Benefit Rank</h5>
+                                            <h1 class="card-text">158</h1>
+                                            <h6 class="card-subtitle">20th Percentile</h6>
+                                        </div>
+                                        <div class="card-footer">
+                                            <div class="btn-group">
+                                                <button type="button" class="btn btn-small">
+                                                    <span data-feather="bar-chart-2"></span> See Chart
+                                                </button>
+                                                <button type="button" class="btn btn-small">
+                                                    <span data-feather="edit"></span> Edit
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                           </div>
+                        </div>
+                    </div>
+                    
+                    <h3>Economic Development Statistics</h3>
+                    
+                    <h3>Travel Time Reliability Statistics</h3>
+                   
+                    <h3>Environmental Impact Statistics</h3>
+                    
                 </main>
             </div>
         </div>
@@ -110,6 +342,9 @@
         <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/feather-icons@4.28.0/dist/feather.min.js" integrity="sha384-uO3SXW5IuS1ZpFPKugNNWqTZRRglnUJK6UAZ/gxOX80nxEkN9NcGZTftn6RzhGWE" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js" integrity="sha384-zNy6FEbO50N+Cg5wap8IKA4M/ZnLJgzc6w2NqACZaK0u0FXfOWRRJOnQtpZun8ha" crossorigin="anonymous"></script>
+
+        <script src="./scripts/percentile.js"></script>
         <script src="./scripts/global.js"></script>
 
     </body>

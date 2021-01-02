@@ -1,5 +1,6 @@
 .table {
     margin-bottom: 0;
+    color: #677788;
 }
 
 .card-footer {
@@ -14,4 +15,37 @@ ul {
     background-color: white;
     border-color: #dee2e6;
     color: #727272;
+}
+
+.table a {
+    text-decoration: none;
+    color: #5c6369;
+    margin-bottom: .5rem;
+    line-height: 1.4;
+}
+
+.table a:hover {
+    color: #007bff;
+}
+
+th[scope="row"]+td a {
+    font-weight: 600;
+}
+
+.table > :not(:last-child) > :last-child > * {
+    border-bottom-color: inherit;
+}
+
+.table thead th {
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+thead tr:first-child {
+    border-bottom: 1px solid rgba(0,0,0,.125);
+}
+
+tr {
+    padding: 1rem;
+    border-color:  #ddd;
 }
