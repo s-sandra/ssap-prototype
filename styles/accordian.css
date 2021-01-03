@@ -1,0 +1,17 @@
+.btn[data-toggle="collapse"] {
+    display: block;
+    padding: 0 0 1rem 0;
+}
+
+.btn[data-toggle="collapse"] h3 {
+    display: inline;
+    padding-right: 10px;
+}
+
+.btn[aria-expanded=true] .feather-chevron-down {
+    display: none;
+}
+
+.btn[aria-expanded=false] .feather-chevron-up {
+    display: none;
+}
