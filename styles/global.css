@@ -6,7 +6,7 @@ body {
 }
 
 main {
-    background-color: #eef0f0;
+    background-color: #efefef;
     padding: 1rem 3rem 3rem 3rem !important;
 }
 
@@ -28,6 +28,10 @@ h3 {
 
 h1, h2, h3, h4 {
     color: #5c6369
+}
+
+.dropdown-menu {
+    font-size: 0.8rem;
 }
 
 .input-group-text {

@@ -27,6 +27,18 @@
                     <div class="col-12 col-md">
                         <h3>Round Data</h3>
                     </div>
+                    <div class="col-8 col-md">
+                        <form>
+                            <div class="input-group input-group-merge input-group-flush">
+                                <div class="input-group-prepend">
+                                    <div class="input-group-text">
+                                        <span data-feather="search"></span>
+                                    </div>
+                                </div>
+                                <input class="form-control" type="search" placeholder="search projects" aria-label="enter project to search">
+                            </div>
+                        </form>
+                    </div>
                     <div class="col-auto">
                         <button type="button" class="btn btn-outline-danger" data-toggle="modal" data-target="#warningModal">
                             <span data-feather="minus"></span>
@@ -55,42 +67,42 @@
                     <tbody>
                         <tr>
                             <th scope="row"><input type="checkbox" class="form-check-input"></th>
-                            <td class="col-8"><a href="round.html">2019 Round Data</a></td>
+                            <td class="col-8"><a href="#">2019 Round Data</a></td>
                             <td>2019</td>
                             <td>local</td>
                             <td>25</td>
                         </tr>
                         <tr>
                             <th scope="row"><input type="checkbox" class="form-check-input"></th>
-                            <td class="col-8"><a href="round.html">2019 Regional Data</a></td>
+                            <td class="col-8"><a href="#">2019 Regional Data</a></td>
                             <td>2019</td>
                             <td>state</td>
                             <td>130</td>
                         </tr>
                         <tr>
                             <th scope="row"><input type="checkbox" class="form-check-input"></th>
-                            <td class="col-8"><a href="round.html">2017 Regional SSS Scores</a></td>
+                            <td class="col-8"><a href="#">2017 Regional SSS Scores</a></td>
                             <td>2017</td>
                             <td>local</td>
                             <td>22</td>
                         </tr>
                         <tr>
                             <th scope="row"><input type="checkbox" class="form-check-input"></th>
-                            <td class="col-8"><a href="round.html">2017 State Scores</a></td>
+                            <td class="col-8"><a href="#">2017 State Scores</a></td>
                             <td>2017</td>
                             <td>state</td>
                             <td>126</td>
                         </tr>
                         <tr>
                             <th scope="row"><input type="checkbox" class="form-check-input"></th>
-                            <td class="col-8"><a href="round.html">2015 Regional Projects</a></td>
+                            <td class="col-8"><a href="#">2015 Regional Projects</a></td>
                             <td>2015</td>
                             <td>local</td>
                             <td>33</td>
                         </tr>
                         <tr>
                             <th scope="row"><input type="checkbox" class="form-check-input"></th>
-                            <td class="col-8"><a href="round.html">2015 State Projects</a></td>
+                            <td class="col-8"><a href="#">2015 State Projects</a></td>
                             <td>2015</td>
                             <td>state</td>
                             <td>113</td>
@@ -98,6 +110,26 @@
                         <tr>
                     </tbody>
                 </table>
+            </div>
+            <div class="card-footer">
+                <div class="pagination justify-content-end" aria-label="table pagination">
+                    <div class="col-2">
+                        <form>
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <div class="input-group-text">Page</div>
+                                </div>
+                                <input class="form-control" type="number" value="1" min="1" max="32" aria-label="enter table page">
+                            </div>
+                        </form>
+                    </div>
+                    <button type="button" class="btn btn-small disabled" href="#" tabindex="-1" aria-label="previous page">
+                        <span data-feather="arrow-left"></span>
+                    </button>
+                    <button type="button" class="btn btn-small text-primary" href="#" aria-label="next page">
+                        <span data-feather="arrow-right"></span>
+                    </button>
+                </div>   
             </div>
         </div>
 

@@ -16,7 +16,7 @@
         <!-- component styles -->
         <link href="./styles/navbar.css" rel="stylesheet">
         <link href="./styles/global.css" rel="stylesheet">
-        <link href="./styles/chart.css" rel="stylesheet">
+        <link href="./styles/table.css" rel="stylesheet">
         <link href="./styles/accordian.css" rel="stylesheet">
 
     </head>
@@ -106,10 +106,20 @@
                     <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
                         <h1>Butler Road Extension</h1>
                         <div class="btn-toolbar mb-2 mb-md-0">
-                            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#uploadModal">
-                                <span data-feather="plus"></span>
-                                Project Group
+                            <button type="button" class="btn btn-primary dropdown-toggle" 
+                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Actions
                             </button>
+                            <div class="dropdown-menu">
+                              <a class="dropdown-item" href="#">
+                                  <span data-feather="plus"></span>
+                                  Add project to project group
+                                </a>
+                              <a class="dropdown-item" href="#">
+                                  <span data-feather="minus"></span>
+                                  Remove project from project group
+                                </a>
+                            </div>
                         </div>
                     </div>
 
@@ -639,11 +649,121 @@
                            </div>
                         </div>
                     </div>
+
+                    <div class="card">
+                        <div class="card-header">
+                            <div class="row justify-content-between align-items-center flex-grow-1">
+                                <div class="col-12 col-md">
+                                    <h3>Project Groups</h3>
+                                </div>
+                                <div class="col-8 col-md">
+                                    <form>
+                                        <div class="input-group input-group-merge input-group-flush">
+                                            <div class="input-group-prepend">
+                                                <div class="input-group-text">
+                                                    <span data-feather="search"></span>
+                                                </div>
+                                            </div>
+                                            <input class="form-control" type="search" placeholder="search groups" aria-label="enter group to search">
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="col-auto">
+                                    <button type="button" class="btn btn-primary dropdown-toggle" 
+                                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        Actions
+                                    </button>
+                                    <div class="dropdown-menu">
+                                        <a class="dropdown-item" href="#">
+                                            <span data-feather="plus"></span>
+                                            Add project to project group
+                                        </a>
+                                        <a class="dropdown-item" href="#">
+                                            <span data-feather="minus"></span>
+                                            Remove project from project group
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="table-responsive">
+                            <table class="table table-hover">
+                                <thead class="bg-light">
+                                    <tr>
+                                        <th><input type="checkbox" class="form-check-input" id="selectAll"></th>
+                                        <th>Group Name</th>
+                                        <th>Region</th>
+                                        <th>Total</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <th scope="row"><input type="checkbox" class="form-check-input"></th>
+                                        <td class="col-8"><a href="#">Eco-Friendly Competitor Pool</a></td>
+                                        <td>local</td>
+                                        <td>25</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row"><input type="checkbox" class="form-check-input"></th>
+                                        <td class="col-8"><a href="#">Highly Accessible Competitors</a></td>
+                                        <td>state</td>
+                                        <td>130</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row"><input type="checkbox" class="form-check-input"></th>
+                                        <td class="col-8"><a href="#">Hypothetical Loudoun Bids</a></td>
+                                        <td>local</td>
+                                        <td>22</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row"><input type="checkbox" class="form-check-input"></th>
+                                        <td class="col-8"><a href="#">Moderate Competitor Pool</a></td>
+                                        <td>state</td>
+                                        <td>126</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row"><input type="checkbox" class="form-check-input"></th>
+                                        <td class="col-8"><a href="#">Average Competition</a></td>
+                                        <td>local</td>
+                                        <td>33</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row"><input type="checkbox" class="form-check-input"></th>
+                                        <td class="col-8"><a href="#">High Econ-Dev</a></td>
+                                        <td>state</td>
+                                        <td>113</td>
+                                    </tr>
+                                    <tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="card-footer">
+                            <div class="pagination justify-content-end" aria-label="table pagination">
+                                <div class="col-2">
+                                    <form>
+                                        <div class="input-group">
+                                            <div class="input-group-prepend">
+                                                <div class="input-group-text">Page</div>
+                                            </div>
+                                            <input class="form-control" type="number" value="1" min="1" max="32" aria-label="enter table page">
+                                        </div>
+                                    </form>
+                                </div>
+                                <button type="button" class="btn btn-small disabled" href="#" tabindex="-1" aria-label="previous page">
+                                    <span data-feather="arrow-left"></span>
+                                </button>
+                                <button type="button" class="btn btn-small text-primary" href="#" aria-label="next page">
+                                    <span data-feather="arrow-right"></span>
+                                </button>
+                            </div>   
+                        </div>
+                    </div>
                 </main>
             </div>
         </div>
 
         <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/feather-icons@4.28.0/dist/feather.min.js" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js" crossorigin="anonymous"></script>
