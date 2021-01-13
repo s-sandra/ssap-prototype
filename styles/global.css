@@ -22,12 +22,17 @@ h1 {
     font-size: 2rem;
 }
 
-h3 {
+h3, input.card-text {
     font-size: 1.5rem;
 }
 
+input.card-text:disabled {
+    background-color: initial;
+    border: 0;
+}
+
 h1, h2, h3, h4 {
-    color: #5c6369
+    color: #5c6369;
 }
 
 .dropdown-menu {
@@ -74,4 +79,16 @@ h1, h2, h3, h4 {
 .card-header {
     background-color: white;
     padding: 1rem 1rem;
+}
+
+.nav-pills {
+    margin-bottom: 3em;
+}
+
+.nav-pills .nav-item {
+    background-color: rgba(0,0,0,.03) !important;
+}
+
+.nav-pills a {
+    color: #5c6369 !important
 }

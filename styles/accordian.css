@@ -3,15 +3,21 @@
     padding: 0 0 1rem 0;
 }
 
+.card-footer .btn[data-toggle="collapse"] {
+    padding: .375rem .75rem;
+}
+
 .btn[data-toggle="collapse"] h3 {
     display: inline;
     padding-right: 10px;
 }
 
-.btn[aria-expanded=true] .feather-chevron-down {
+.btn[aria-expanded=true] .feather-chevron-down,
+.toggled[aria-expanded="false"] {
     display: none;
 }
 
-.btn[aria-expanded=false] .feather-chevron-up {
+.btn[aria-expanded=false] .feather-chevron-up,
+.toggle.btn[aria-expanded="true"] {
     display: none;
 }
