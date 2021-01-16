@@ -7,6 +7,9 @@
         <meta name="author" content="Sandra Shtabnaya">
         <title>Butler Road Extension</title>
 
+        <!-- Font Awesome Icons -->
+        <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+
         <!-- Font CSS -->
         <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet'>
 
@@ -137,28 +140,38 @@
 
                     <ul class="nav nav-pills">
                         <li class="nav-item">
-                            <a class="nav-link" href="#rankings_scores">        
+                            <a class="nav-link" href="#rankings_scores"
+                               data-toggle="tooltip" data-placement="bottom" title="Project Rankings">        
                                 <span data-feather="award"></span>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#access_scores">Accessibility</a>
+                            <a class="nav-link" href="#access_scores"
+                               data-toggle="tooltip" data-placement="bottom" title="Accessibility">
+                            <i class="fa fa-wheelchair" style="font-weight: bold;"></i></a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#econ_scores">
-                                <span data-feather="dollar-sign"></span>
-                            </a>
+                            <a class="nav-link" href="#econ_scores" 
+                               data-toggle="tooltip" data-placement="bottom" 
+                               title="Economic Development">
+                            <i class="fa fa-usd"></i></a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#safety_scores">
-                                <span data-feather="life-buoy"></span>
-                            </a>
+                            <a class="nav-link" href="#safety_scores"
+                               data-toggle="tooltip" data-placement="bottom" title="Safety">
+                            <span data-feather="life-buoy"></span></a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#congestion_scores">Congestion Mitigation</a>
+                            <a class="nav-link" href="#congestion_scores"
+                               data-toggle="tooltip" data-placement="bottom" 
+                               title="Congestion Mitigation">
+                            <i class="fa fa-car"></i></a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#environ_scores">Environmental Quality</a>
+                            <a class="nav-link" href="#environ_scores"
+                               data-toggle="tooltip" data-placement="bottom" 
+                               title="Environmental Quality">
+                            <i class="fa fa-leaf"></i></a>
                         </li>
                     </ul>
 
@@ -181,19 +194,9 @@
                                         </div>
                                         <div class="card-footer">
                                             <div class="btn-group">
-                                                <button type="button" class="btn btn-small toggle"
-                                                 data-toggle="collapse" data-target="#edit" id="edit-toggle">
+                                                <button type="button" class="btn btn-small">
                                                     <span data-feather="edit"></span> Edit
                                                 </button>
-                                                <div id="edit" class="collapse toggled">
-                                                    <button type="button" class="btn btn-small text-primary"
-                                                    data-target="#edit-toggle">
-                                                       <span data-feather="check"></span> Save
-                                                   </button>
-                                                   <button type="button" class="btn btn-small text-danger">
-                                                       <span data-feather="x"></span> Cancel
-                                                   </button>
-                                                </div>
                                             </div>
                                         </div>
                                     </div>

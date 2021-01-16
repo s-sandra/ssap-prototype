@@ -12,12 +12,10 @@
     padding-right: 10px;
 }
 
-.btn[aria-expanded=true] .feather-chevron-down,
-.toggled[aria-expanded="false"] {
+.btn[aria-expanded=true] .feather-chevron-down {
     display: none;
 }
 
-.btn[aria-expanded=false] .feather-chevron-up,
-.toggle.btn[aria-expanded="true"] {
+.btn[aria-expanded=false] .feather-chevron-up {
     display: none;
 }
