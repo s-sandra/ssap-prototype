@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="description" content="">
         <meta name="author" content="Sandra Shtabnaya">
-        <title>Upload Modal Template</title>
+        <title>Edit Modal Template</title>
 
         <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet'>
 
@@ -20,39 +20,31 @@
 
     </head>
     <body>
-        <div class="modal fade" id="uploadModal" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal fade" id="editText" tabindex="-1" role="dialog" aria-hidden="true">
             <div class="modal-dialog" role="document">
-            <div class="modal-content">
+              <div class="modal-content">
                 <div class="modal-header">
-                <h5 class="modal-title">Upload Round Data</h5>
-                <button type="button" class="btn btn-toolbar" data-dismiss="modal" aria-label="Close">
+                  <h5 class="modal-title">Edit Project Details</h5>
+                  <button type="button" class="btn btn-toolbar" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
-                </button>
+                  </button>
                 </div>
                 <form class="modal-body">
                     <div class="mb-3">
-                        <label for="uploadFile" class="form-label">Round Data File</label>
-                        <input class="form-control" type="file" id="fileUpload">
-                    </div>
-                    <div class="progress mb-3">
-                        <div class="progress-bar" role="progressbar" style="width: 25%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">25%</div>
-                    </div>
-                    <div class="mb-3">
-                        <div class="form-group">
-                            <label for="recordName">Record Name</label>
-                            <input type="text" class="form-control" id="recordName" aria-describedby="recordHelp">
-                            <small id="emailHelp" class="form-text text-muted">Enter a unique name for the round data.</small>
-                        </div>
+                        <label for="newText" class="form-label">Organization Name</label>
+                        <input type="text" class="form-control form-control-lg" id="newText" 
+                               value="Stafford County">
+                        <small class="form-text text-muted">Update value</small>
                     </div>
                 </form>
                 <div class="modal-footer">
-                <a class="btn btn-primary" data-dismiss="modal" href="#">Add</a>
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                  <a class="btn btn-primary" data-dismiss="modal" href="#">Save</a>
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
                 </div>
-            </div>
+              </div>
             </div>
         </div>
-        <button class="btn btn-primary" data-toggle="modal" data-target="#uploadModal">Show Modal</button>
+        <button class="btn btn-primary" data-toggle="modal" data-target="#editText">Show Modal</button>
 
         <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>

@@ -47,6 +47,141 @@
             </ul>
         </header>
 
+        <div class="modal fade" id="editChoice" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title">Edit Project Details</h5>
+                  <button type="button" class="btn btn-toolbar" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                    <form class="mb-3">
+                        <label for="newAreaType" class="form-label">Area Type</label>
+                        <select class="form-control form-control-lg" id="newAreaType">
+                            <option>A</option>
+                            <option>B</option>
+                            <option>C</option>
+                            <option>D</option>
+                        </select>
+                        <small class="form-text text-muted">Update value</small>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                  <a class="btn btn-primary" data-dismiss="modal" href="#">Save</a>
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                </div>
+              </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="editBinary" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title">Edit Project Details</h5>
+                  <button type="button" class="btn btn-toolbar" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                    <form class="mb-3">
+                        <label for="newBinary" class="form-label">State Priority</label>
+                        <div class="custom-control custom-switch form-control-lg">
+                            <input type="checkbox" class="custom-control-input" id="newBinary" checked>
+                            <label class="custom-control-label" for="newBinary">High</label>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                  <a class="btn btn-primary" data-dismiss="modal" href="#">Save</a>
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                </div>
+              </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="editText" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title">Edit Project Details</h5>
+                  <button type="button" class="btn btn-toolbar" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <form class="modal-body">
+                    <div class="mb-3">
+                        <label for="newText" class="form-label">Organization Name</label>
+                        <input type="text" class="form-control form-control-lg" id="newText" 
+                               value="Stafford County">
+                        <small class="form-text text-muted">Update value</small>
+                    </div>
+                </form>
+                <div class="modal-footer">
+                  <a class="btn btn-primary" data-dismiss="modal" href="#">Save</a>
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                </div>
+              </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="editDollars" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title">Edit Project Details</h5>
+                  <button type="button" class="btn btn-toolbar" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <form class="modal-body">
+                    <div class="mb-3">
+                        <label for="newFund" class="form-label">Total Project</label>
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                                <div class="input-group-text">$</div>
+                            </div>
+                            <input type="number" class="form-control form-control-lg" id="newFund" 
+                                min="0" step="100" value="285000">
+                        </div>
+                        <small class="form-text text-muted">Update value</small>
+                    </div>
+                </form>
+                <div class="modal-footer">
+                  <a class="btn btn-primary" data-dismiss="modal" href="#">Save</a>
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                </div>
+              </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="editNumber" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title">Edit Project Details</h5>
+                  <button type="button" class="btn btn-toolbar" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <form class="modal-body">
+                    <div class="mb-3">
+                        <label for="newScore" class="form-label">Smart Scale Score</label>
+                        <input type="number" class="form-control form-control-lg" id="newScore" 
+                               min="0" max="300" value="1.195" step="0.001">
+                        <small class="form-text text-muted">Update value</small>
+                    </div>
+                </form>
+                <div class="modal-footer">
+                  <a class="btn btn-primary" data-dismiss="modal" href="#">Save</a>
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                </div>
+              </div>
+            </div>
+        </div>
+
         <div class="container-fluid">
             <div class="row">
                 <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse">
@@ -114,14 +249,18 @@
                                 Actions
                             </button>
                             <div class="dropdown-menu">
+                              <button class="dropdown-item" href="#">
+                                 <span data-feather="copy"></span>
+                                  Clone
+                              </button>
                               <a class="dropdown-item" href="#">
                                   <span data-feather="plus"></span>
-                                  Add project to project group
-                                </a>
+                                  Add to group
+                              </a>
                               <a class="dropdown-item" href="#">
                                   <span data-feather="minus"></span>
-                                  Remove project from project group
-                                </a>
+                                  Remove from group
+                              </a>
                             </div>
                         </div>
                     </div>
@@ -141,37 +280,42 @@
                     <ul class="nav nav-pills">
                         <li class="nav-item">
                             <a class="nav-link" href="#rankings_scores"
-                               data-toggle="tooltip" data-placement="bottom" title="Project Rankings">        
-                                <span data-feather="award"></span>
+                               data-toggle="tooltip" data-placement="bottom" title="Project Rankings">
+                               <span data-feather="award"></span>
                             </a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#access_scores"
                                data-toggle="tooltip" data-placement="bottom" title="Accessibility">
-                            <i class="fa fa-wheelchair" style="font-weight: bold;"></i></a>
+                               <i class="fa fa-wheelchair" style="font-weight: bold;"></i>
+                            </a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#econ_scores" 
                                data-toggle="tooltip" data-placement="bottom" 
                                title="Economic Development">
-                            <i class="fa fa-usd"></i></a>
+                               <i class="fa fa-usd"></i>
+                            </a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#safety_scores"
                                data-toggle="tooltip" data-placement="bottom" title="Safety">
-                            <span data-feather="life-buoy"></span></a>
+                               <span data-feather="life-buoy"></span>
+                            </a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#congestion_scores"
                                data-toggle="tooltip" data-placement="bottom" 
                                title="Congestion Mitigation">
-                            <i class="fa fa-car"></i></a>
+                               <i class="fa fa-car"></i>
+                            </a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#environ_scores"
                                data-toggle="tooltip" data-placement="bottom" 
                                title="Environmental Quality">
-                            <i class="fa fa-leaf"></i></a>
+                               <i class="fa fa-leaf"></i>
+                            </a>
                         </li>
                     </ul>
 
@@ -189,12 +333,12 @@
                                     <div class="card">
                                         <div class="card-body">
                                             <h5 class="card-title">Area Type</h5>
-                                            <input type="text" value="A" class="card-text" 
-                                                disabled aria-disabled="true"></input>
+                                            <h3 class="card-text">A</h3>
                                         </div>
                                         <div class="card-footer">
                                             <div class="btn-group">
-                                                <button type="button" class="btn btn-small">
+                                                <button type="button" class="btn btn-small" 
+                                                        data-toggle="modal" data-target="#editChoice">
                                                     <span data-feather="edit"></span> Edit
                                                 </button>
                                             </div>
@@ -207,7 +351,8 @@
                                         </div>
                                         <div class="card-footer">
                                             <div class="btn-group">
-                                                <button type="button" class="btn btn-small">
+                                                <button type="button" class="btn btn-small"
+                                                        data-toggle="modal" data-target="#editText">
                                                     <span data-feather="edit"></span> Edit
                                                 </button>
                                             </div>
@@ -220,7 +365,8 @@
                                         </div>
                                         <div class="card-footer">
                                             <div class="btn-group">
-                                                <button type="button" class="btn btn-small">
+                                                <button type="button" class="btn btn-small"
+                                                        data-toggle="modal" data-target="#editText">
                                                     <span data-feather="edit"></span> Edit
                                                 </button>
                                             </div>
@@ -241,7 +387,8 @@
                                         </div>
                                         <div class="card-footer">
                                             <div class="btn-group">
-                                                <button type="button" class="btn btn-small">
+                                                <button type="button" class="btn btn-small"
+                                                        data-toggle="modal" data-target="#editBinary">
                                                     <span data-feather="edit"></span> Edit
                                                 </button>
                                             </div>
@@ -258,7 +405,8 @@
                                                 <a role="button" class="btn btn-small" href="./historical_percentile.html">
                                                     <span data-feather="bar-chart-2"></span> See Chart
                                                 </a>
-                                                <button type="button" class="btn btn-small">
+                                                <button type="button" class="btn btn-small" 
+                                                        data-toggle="modal" data-target="#editNumber">
                                                     <span data-feather="edit"></span> Edit
                                                 </button>
                                             </div>
@@ -273,7 +421,8 @@
                                         </div>
                                         <div class="card-footer">
                                             <div class="btn-group">
-                                                <button type="button" class="btn btn-small">
+                                                <button type="button" class="btn btn-small" 
+                                                        data-toggle="modal" data-target="#editBinary">
                                                     <span data-feather="edit"></span> Edit
                                                 </button>
                                             </div>
@@ -290,7 +439,8 @@
                                                 <a type="button" class="btn btn-small" href="./historical_percentile.html">
                                                     <span data-feather="bar-chart-2"></span> See Chart
                                                 </a>
-                                                <button type="button" class="btn btn-small">
+                                                <button type="button" class="btn btn-small" 
+                                                        data-toggle="modal" data-target="#editNumber">
                                                     <span data-feather="edit"></span> Edit
                                                 </button>
                                             </div>
@@ -312,7 +462,8 @@
                                                 <a type="button" class="btn btn-small" href="./historical_percentile.html">
                                                     <span data-feather="bar-chart-2"></span> See Chart
                                                 </a>
-                                                <button type="button" class="btn btn-small">
+                                                <button type="button" class="btn btn-small" 
+                                                        data-toggle="modal" data-target="#editDollars">
                                                     <span data-feather="edit"></span> Edit
                                                 </button>
                                             </div>
@@ -328,7 +479,8 @@
                                                 <a type="button" class="btn btn-small" href="./historical_percentile.html">
                                                     <span data-feather="bar-chart-2"></span> See Chart
                                                 </a>
-                                                <button type="button" class="btn btn-small">
+                                                <button type="button" class="btn btn-small" 
+                                                        data-toggle="modal" data-target="#editDollars">
                                                     <span data-feather="edit"></span> Edit
                                                 </button>
                                             </div>
@@ -361,7 +513,8 @@
                                                 <a type="button" class="btn btn-small" href="./historical_percentile.html">
                                                     <span data-feather="bar-chart-2"></span> See Chart
                                                 </a>
-                                                <button type="button" class="btn btn-small">
+                                                <button type="button" class="btn btn-small" 
+                                                        data-toggle="modal" data-target="#editNumber">
                                                     <span data-feather="edit"></span> Edit
                                                 </button>
                                             </div>
@@ -378,7 +531,8 @@
                                                 <a type="button" class="btn btn-small" href="./historical_percentile.html">
                                                     <span data-feather="bar-chart-2"></span> See Chart
                                                 </a>
-                                                <button type="button" class="btn btn-small">
+                                                <button type="button" class="btn btn-small" 
+                                                        data-toggle="modal" data-target="#editNumber">
                                                     <span data-feather="edit"></span> Edit
                                                 </button>
                                             </div>
@@ -395,7 +549,8 @@
                                                 <a type="button" class="btn btn-small" href="./historical_percentile.html">
                                                     <span data-feather="bar-chart-2"></span> See Chart
                                                 </a>
-                                                <button type="button" class="btn btn-small">
+                                                <button type="button" class="btn btn-small" 
+                                                        data-toggle="modal" data-target="#editNumber">
                                                     <span data-feather="edit"></span> Edit
                                                 </button>
                                             </div>
@@ -428,7 +583,8 @@
                                                 <a type="button" class="btn btn-small" href="./historical_percentile.html">
                                                     <span data-feather="bar-chart-2"></span> See Chart
                                                 </a>
-                                                <button type="button" class="btn btn-small">
+                                               <button type="button" class="btn btn-small" 
+                                                        data-toggle="modal" data-target="#editNumber">
                                                     <span data-feather="edit"></span> Edit
                                                 </button>
                                             </div>
@@ -445,7 +601,8 @@
                                                 <a type="button" class="btn btn-small" href="./historical_percentile.html">
                                                     <span data-feather="bar-chart-2"></span> See Chart
                                                 </a>
-                                                <button type="button" class="btn btn-small">
+                                                <button type="button" class="btn btn-small" 
+                                                        data-toggle="modal" data-target="#editNumber">
                                                     <span data-feather="edit"></span> Edit
                                                 </button>
                                             </div>
@@ -462,7 +619,8 @@
                                                 <a type="button" class="btn btn-small" href="./historical_percentile.html">
                                                     <span data-feather="bar-chart-2"></span> See Chart
                                                 </a>
-                                                <button type="button" class="btn btn-small">
+                                                <button type="button" class="btn btn-small" 
+                                                        data-toggle="modal" data-target="#editNumber">
                                                     <span data-feather="edit"></span> Edit
                                                 </button>
                                             </div>
@@ -491,7 +649,8 @@
                                         </div>
                                         <div class="card-footer">
                                             <div class="btn-group">
-                                                <button type="button" class="btn btn-small">
+                                                <button type="button" class="btn btn-small" 
+                                                        data-toggle="modal" data-target="#editNumber">
                                                     <span data-feather="edit"></span> Edit
                                                 </button>
                                             </div>
@@ -508,7 +667,8 @@
                                                 <a type="button" class="btn btn-small" href="./historical_percentile.html">
                                                     <span data-feather="bar-chart-2"></span> See Chart
                                                 </a>
-                                                <button type="button" class="btn btn-small">
+                                                <button type="button" class="btn btn-small" 
+                                                        data-toggle="modal" data-target="#editNumber">
                                                     <span data-feather="edit"></span> Edit
                                                 </button>
                                             </div>
@@ -525,7 +685,8 @@
                                                 <a type="button" class="btn btn-small" href="./historical_percentile.html">
                                                     <span data-feather="bar-chart-2"></span> See Chart
                                                 </a>
-                                                <button type="button" class="btn btn-small">
+                                                <button type="button" class="btn btn-small" 
+                                                        data-toggle="modal" data-target="#editNumber">
                                                     <span data-feather="edit"></span> Edit
                                                 </button>
                                             </div>
@@ -558,7 +719,8 @@
                                                 <a type="button" class="btn btn-small" href="./historical_percentile.html">
                                                     <span data-feather="bar-chart-2"></span> See Chart
                                                 </a>
-                                                <button type="button" class="btn btn-small">
+                                                <button type="button" class="btn btn-small" 
+                                                        data-toggle="modal" data-target="#editNumber">
                                                     <span data-feather="edit"></span> Edit
                                                 </button>
                                             </div>
@@ -575,7 +737,8 @@
                                                 <a type="button" class="btn btn-small" href="./historical_percentile.html">
                                                     <span data-feather="bar-chart-2"></span> See Chart
                                                 </a>
-                                                <button type="button" class="btn btn-small">
+                                                <button type="button" class="btn btn-small" 
+                                                        data-toggle="modal" data-target="#editNumber">
                                                     <span data-feather="edit"></span> Edit
                                                 </button>
                                             </div>
@@ -608,7 +771,8 @@
                                                 <a type="button" class="btn btn-small" href="./historical_percentile.html">
                                                     <span data-feather="bar-chart-2"></span> See Chart
                                                 </a>
-                                                <button type="button" class="btn btn-small">
+                                                <button type="button" class="btn btn-small" 
+                                                        data-toggle="modal" data-target="#editNumber">
                                                     <span data-feather="edit"></span> Edit
                                                 </button>
                                             </div>
@@ -625,7 +789,8 @@
                                                 <a type="button" class="btn btn-small" href="./historical_percentile.html">
                                                     <span data-feather="bar-chart-2"></span> See Chart
                                                 </a>
-                                                <button type="button" class="btn btn-small">
+                                                <button type="button" class="btn btn-small" 
+                                                        data-toggle="modal" data-target="#editNumber">
                                                     <span data-feather="edit"></span> Edit
                                                 </button>
                                             </div>
@@ -658,7 +823,8 @@
                                                 <a type="button" class="btn btn-small" href="./historical_percentile.html">
                                                     <span data-feather="bar-chart-2"></span> See Chart
                                                 </a>
-                                                <button type="button" class="btn btn-small">
+                                                <button type="button" class="btn btn-small" 
+                                                        data-toggle="modal" data-target="#editNumber">
                                                     <span data-feather="edit"></span> Edit
                                                 </button>
                                             </div>
@@ -675,7 +841,8 @@
                                                 <a type="button" class="btn btn-small" href="./historical_percentile.html">
                                                     <span data-feather="bar-chart-2"></span> See Chart
                                                 </a>
-                                                <button type="button" class="btn btn-small">
+                                                <button type="button" class="btn btn-small" 
+                                                        data-toggle="modal" data-target="#editNumber">
                                                     <span data-feather="edit"></span> Edit
                                                 </button>
                                             </div>
@@ -692,7 +859,8 @@
                                                 <a type="button" class="btn btn-small" href="./historical_percentile.html">
                                                     <span data-feather="bar-chart-2"></span> See Chart
                                                 </a>
-                                                <button type="button" class="btn btn-small">
+                                                <button type="button" class="btn btn-small" 
+                                                        data-toggle="modal" data-target="#editNumber">
                                                     <span data-feather="edit"></span> Edit
                                                 </button>
                                             </div>
