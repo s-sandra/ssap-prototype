@@ -16,13 +16,13 @@
           label: 'Total Projects',
           data: histValues,
           backgroundColor: 'rgb(13, 110, 253)',
+          barPercentage: 1.29,
         }]
       },
       options: {
         scales: {
           xAxes: [{
             display: false,
-            barPercentage: 1.29,
             ticks: {
                 beginAtZero: true,
                 max: 29, // the max number of bars

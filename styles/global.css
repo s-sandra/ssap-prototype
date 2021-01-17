@@ -18,6 +18,12 @@ main {
     background-color: #5b5c5e !important
 }
 
+.feather {
+    width: 16px;
+    height: 16px;
+    vertical-align: text-bottom;
+}
+
 h1 {
     font-size: 2rem;
 }

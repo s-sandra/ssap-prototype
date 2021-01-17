@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="description" content="">
         <meta name="author" content="Sandra Shtabnaya">
-        <title>Round Data</title>
+        <title>Round Charts</title>
 
         <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet'>
 
@@ -17,8 +17,8 @@
         <!-- component styles -->
         <link href="./styles/navbar.css" rel="stylesheet">
         <link href="./styles/global.css" rel="stylesheet">
+        <link href="./styles/chart.css" rel="stylesheet">
         <link href="./styles/modal.css" rel="stylesheet">
-        <link href="./styles/table.css" rel="stylesheet">
 
     </head>
     <body>
@@ -158,7 +158,7 @@
                     <nav aria-label="breadcrumb">
                         <ol class="breadcrumb">
                           <li class="breadcrumb-item"><a href="index.html">Historical Round Data</a></li>
-                          <li class="breadcrumb-item active" aria-current="page">Round Projects</li>
+                          <li class="breadcrumb-item active" aria-current="page">Round Charts</li>
                         </ol>
                     </nav>
 
@@ -174,25 +174,42 @@
 
                     <ul class="nav nav-tabs">
                         <li class="nav-item">
-                            <a class="nav-link active" href="./round.html" role="button">
+                            <a class="nav-link" href="./round.html" role="button">
                             Projects
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="./roundCharts.html" role="button">
+                            <a class="nav-link active"  href="./roundCharts.html" role="button">
                             Charts
                             </a>
                         </li>
                     </ul>
 
-                    <div id="projects">
+                    <div id="charts">
                         <div class="card">
-                            <div class="card-header">
+                            <div class="card-header bg-light">
                                 <div class="row justify-content-between align-items-center flex-grow-1">
-                                    <div class="col-3 col-md">
-                                        <h3>Round Projects</h3>
+                                    <div class="col-12 col-md">
+                                        <h3>SMART SCALE Score Distribution</h3>
                                     </div>
-                                    <div class="col-8 col-md">
+                                    <div class="col-auto">
+                                        <button type="button" class="btn btn-outline-primary">
+                                            <span data-feather="download"></span>
+                                            Export Chart
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <canvas class="my-4 w-100" id="histogram" width="900" height="380"></canvas>
+                        </div>
+
+                        <div class="card">
+                            <div class="card-header bg-light">
+                                <div class="row justify-content-between align-items-center flex-grow-1">
+                                    <div class="col-12 col-md">
+                                        <h3>SMART SCALE Score Percentiles</h3>
+                                    </div>
+                                    <div class="col-auto">
                                         <form>
                                             <div class="input-group input-group-merge input-group-flush">
                                                 <div class="input-group-prepend">
@@ -200,140 +217,21 @@
                                                         <span data-feather="search"></span>
                                                     </div>
                                                 </div>
-                                                <input class="form-control" type="search" placeholder="search projects" aria-label="enter project to search">
+                                                <input class="form-control" type="search" placeholder="custom percentile" aria-label="enter custom percentile">
                                             </div>
                                         </form>
                                     </div>
                                     <div class="col-auto">
-                                        <button type="button" class="btn btn-outline-danger" data-toggle="modal" data-target="#warningModal">
-                                            <span data-feather="minus"></span>
-                                            Delete
-                                        </button>
-                                    </div>
-                                    <div class="col-auto">
-                                        <button type="button" class="btn btn-outline-primary" data-toggle="modal" data-target="#uploadModal">
-                                            <span data-feather="plus"></span>
-                                            Add
+                                        <button type="button" class="btn btn-outline-primary">
+                                            <span data-feather="download"></span>
+                                            Export Chart
                                         </button>
                                     </div>
                                 </div>
                             </div>
-                            <div class="table-responsive">
-                                <table class="table table-hover">
-                                <thead class="bg-light">
-                                    <tr>
-                                        <th><input type="checkbox" class="form-check-input" id="selectAll"></th>
-                                        <th>ID</th>
-                                        <th>Title</th>
-                                        <th>District</th>
-                                        <th>Organization</th>
-                                        <th>SMART SCALE Score</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <th scope="row"><input type="checkbox" class="form-check-input"></th>
-                                        <td><a href="historical_project.html">1414</a></td>
-                                        <td><a href="historical_project.html">VRE Fredericksburg Line Capacity Expansion</a></td>
-                                        <td>NOVA</td>
-                                        <td>Northern Virginia Transportation Commission</td>
-                                        <td>6.934</td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row"><input type="checkbox" class="form-check-input"></th>
-                                        <td><a href="historical_project.html">1229</a></td>
-                                        <td><a href="historical_project.html">Westwind Drive (Loudoun County Parkway to Route 606</a></td>
-                                        <td>NOVA</td>
-                                        <td>Loudoun County</td>
-                                        <td>4.677</td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row"><input type="checkbox" class="form-check-input"></th>
-                                        <td><a href="historical_project.html">1111</a></td>
-                                        <td><a href="historical_project.html">Multi-Use Paths - Routes 17/698/1036</a></td>
-                                        <td>Fredericksburg</td>
-                                        <td>Essex County</td>
-                                        <td>0.859</td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row"><input type="checkbox" class="form-check-input"></th>
-                                        <td><a href="historical_project.html">1194</a></td>
-                                        <td><a href="historical_project.html">Butler Road Widening</a></td>
-                                        <td>Fredericksburg</td>
-                                        <td>Stafford County</td>
-                                        <td>1.195</td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row"><input type="checkbox" class="form-check-input"></th>
-                                        <td><a href="historical_project.html">1336</a></td>
-                                        <td><a href="historical_project.html">Route 460 Project</a></td>
-                                        <td>Hampton Roads</td>
-                                        <td>CTB</td>
-                                        <td>0.348</td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row"><input type="checkbox" class="form-check-input"></th>
-                                        <td><a href="historical_project.html">1045</a></td>
-                                        <td><a href="historical_project.html">Bus Service Expansion</a></td>
-                                        <td>Richmond</td>
-                                        <td>Prince George County</td>
-                                        <td>1.326</td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row"><input type="checkbox" class="form-check-input"></th>
-                                        <td><a href="historical_project.html">1306</a></td>
-                                        <td><a href="historical_project.html">Maple Street Widening</a></td>
-                                        <td>Stauton</td>
-                                        <td>Frederick County</td>
-                                        <td>0.212</td>
-                                    </tr>
-                                        <th scope="row"><input type="checkbox" class="form-check-input"></th>
-                                        <td><a href="historical_project.html">1820</a></td>
-                                        <td><a href="historical_project.html">Exit 35 Ramp</a></td>
-                                        <td>Salem</td>
-                                        <td>Roanoke Valley Transportation Planning</td>
-                                        <td>0.235</td>
-                                    </tr>
-                                        <th scope="row"><input type="checkbox" class="form-check-input"></th>
-                                        <td><a href="historical_project.html">1336</a></td>
-                                        <td><a href="historical_project.html">Downtown Congestion Relief</a></td>
-                                        <td>NOVA</td>
-                                        <td>Falls Church City</td>
-                                        <td>0.348</td>
-                                    </tr>
-                                        <th scope="row"><input type="checkbox" class="form-check-input"></th>
-                                        <td><a href="historical_project.html">1329</a></td>
-                                        <td><a href="historical_project.html">Road Bridge Phase-2A</a></td>
-                                        <td>Hampton Roads</td>
-                                        <td>York County</td>
-                                        <td>0.348</td>
-                                    </tr>
-                                    <tr>
-                                </tbody>
-                                </table>
-                            </div>
-                            <div class="card-footer">
-                                <div class="pagination justify-content-end" aria-label="table pagination">
-                                    <div class="col-2">
-                                        <form>
-                                            <div class="input-group">
-                                                <div class="input-group-prepend">
-                                                    <div class="input-group-text">Page</div>
-                                                </div>
-                                                <input class="form-control" type="number" value="1" min="1" max="32" aria-label="enter table page">
-                                            </div>
-                                        </form>
-                                    </div>
-                                    <button type="button" class="btn btn-small disabled" href="#" tabindex="-1" aria-label="previous page">
-                                        <span data-feather="arrow-left"></span>
-                                    </button>
-                                    <button type="button" class="btn btn-small text-primary" href="#" aria-label="next page">
-                                        <span data-feather="arrow-right"></span>
-                                    </button>
-                                </div>   
-                            </div>
+                            <canvas class="my-4 w-100" id="percentile" width="900" height="380"></canvas>
                         </div>
-                    </div>
+                </div>
                 </main>
             </div>
         </div>
@@ -342,10 +240,12 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/feather-icons@4.28.0/dist/feather.min.js" integrity="sha384-uO3SXW5IuS1ZpFPKugNNWqTZRRglnUJK6UAZ/gxOX80nxEkN9NcGZTftn6RzhGWE" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js" integrity="sha384-zNy6FEbO50N+Cg5wap8IKA4M/ZnLJgzc6w2NqACZaK0u0FXfOWRRJOnQtpZun8ha" crossorigin="anonymous"></script>
         
         <!-- Custom component scripts -->
+        <script src="./scripts/histogram.js"></script>
+        <script src="./scripts/percentile.js"></script>
         <script src="./scripts/global.js"></script>
-        <script src="./scripts/modal.js"></script>
 
     </body>
 </html>
