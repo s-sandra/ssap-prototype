@@ -77,6 +77,10 @@ h1, h2, h3, h4 {
     width: 1.5rem;
 }
 
+p.card-text .feather {
+    width: 0.9rem;
+}
+
 .grid {
     margin-bottom: 1rem;
 }
@@ -84,6 +88,10 @@ h1, h2, h3, h4 {
 .grid .card {
     margin: 1rem 0 1rem;
     width: 18rem;
+}
+
+.row-cols-3 .card {
+    margin: 0;
 }
 
 .card-header {
@@ -101,4 +109,8 @@ h1, h2, h3, h4 {
 
 .nav-pills a {
     color: #5c6369 !important
+}
+
+.btn-toolbar .btn {
+    margin-left: 10px;
 }

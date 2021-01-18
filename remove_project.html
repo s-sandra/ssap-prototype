@@ -5,10 +5,13 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="description" content="">
         <meta name="author" content="Sandra Shtabnaya">
-        <title>Butler Road Extension</title>
+        <title>Remove Project from Project Group</title>
 
+        <!-- Font Awesome Icons -->
+        <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+
+        <!-- Font CSS -->
         <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet'>
-
 
         <!-- Bootstrap core CSS -->
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
@@ -17,7 +20,6 @@
         <link href="./styles/navbar.css" rel="stylesheet">
         <link href="./styles/global.css" rel="stylesheet">
         <link href="./styles/table.css" rel="stylesheet">
-        <link href="./styles/accordian.css" rel="stylesheet">
 
     </head>
     <body>
@@ -100,50 +102,81 @@
                         <ol class="breadcrumb">
                           <li class="breadcrumb-item"><a href="index.html">Historical Round Data</a></li>
                           <li class="breadcrumb-item"><a href="round.html">2017 State Scores</a></li>
-                          <li class="breadcrumb-item active" aria-current="page">Project Groups</li>
+                          <li class="breadcrumb-item active" aria-current="page">Remove from Project Group</li>
                         </ol>
                     </nav>
                     <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-                        <h1>Butler Road Extension</h1>
+                        <h1>Remove Butler Road Extension from Project Group</h1>
                         <div class="btn-toolbar mb-2 mb-md-0">
-                            <button type="button" class="btn btn-primary dropdown-toggle" 
-                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                Actions
-                            </button>
-                            <div class="dropdown-menu">
-                              <button class="dropdown-item" href="#">
-                                 <span data-feather="copy"></span>
-                                  Clone
-                              </button>
-                              <a class="dropdown-item" href="#">
-                                  <span data-feather="plus"></span>
-                                  Add to group
-                              </a>
-                              <a class="dropdown-item" href="./remove_project.html">
-                                  <span data-feather="minus"></span>
-                                  Remove from group
-                              </a>
-                            </div>
+                            <a class="btn btn-primary" href="historical_project_groups.html">Remove</a>
+                            <a class="btn btn-secondary" href="historical_project_groups.html">Cancel</a>
                         </div>
                     </div>
 
-                    <ul class="nav nav-tabs">
-                        <li class="nav-item">
-                            <a class="nav-link" href="./historical_project.html">Details</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link active" href="./historical_project_groups.html">Project Groups</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="./historical_project_charts.html">Charts</a>
-                        </li>
-                    </ul>
+                    <h3>Selected to Remove Project From</h3>
 
+                    <div class="row row-cols-3 row-cols-md-3">
+                        <div class="col">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h3 class="card-title">Eco-Friendly Competitor Pool</h3>
+                                    <p class="card-text">
+                                        <span data-feather="user"></span>
+                                        Thomas Jefferson
+                                    </p>
+                                </div>
+                                <div class="card-footer">
+                                    <div class="btn-group">
+                                        <button type="button" class="btn btn-small">
+                                            <span data-feather="x"></span> Cancel
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h3 class="card-title">Hypothetical Loudoun Bids</h3>
+                                    <p class="card-text">
+                                        <span data-feather="user"></span>
+                                        Eleanor Roosevelt
+                                    </p>
+                                </div>
+                                <div class="card-footer">
+                                    <div class="btn-group">
+                                        <button type="button" class="btn btn-small">
+                                            <span data-feather="x"></span> Cancel
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h3 class="card-title">Average Competition</h3>
+                                    <p class="card-text">
+                                        <span data-feather="user"></span>
+                                        Albert Einstein
+                                    </p>
+                                </div>
+                                <div class="card-footer">
+                                    <div class="btn-group">
+                                        <button type="button" class="btn btn-small">
+                                            <span data-feather="x"></span> Cancel
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
                     <div class="card">
                         <div class="card-header">
                             <div class="row justify-content-between align-items-center flex-grow-1">
                                 <div class="col-12 col-md">
-                                    <h3>Project Groups</h3>
+                                    <h3>Select Project Group(s)</h3>
                                 </div>
                                 <div class="col-8 col-md">
                                     <form>
@@ -153,25 +186,9 @@
                                                     <span data-feather="search"></span>
                                                 </div>
                                             </div>
-                                            <input class="form-control" type="search" placeholder="search groups" aria-label="enter group to search">
+                                            <input class="form-control" type="search" placeholder="filter groups" aria-label="enter group to filter">
                                         </div>
                                     </form>
-                                </div>
-                                <div class="col-auto">
-                                    <button type="button" class="btn btn-outline-primary dropdown-toggle" 
-                                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                        Actions
-                                    </button>
-                                    <div class="dropdown-menu">
-                                        <a class="dropdown-item" href="#">
-                                            <span data-feather="plus"></span>
-                                            Add to group
-                                        </a>
-                                        <a class="dropdown-item" href="#">
-                                            <span data-feather="minus"></span>
-                                            Remove from group
-                                        </a>
-                                    </div>
                                 </div>
                             </div>
                         </div>
