@@ -20,6 +20,7 @@
         <link href="./styles/navbar.css" rel="stylesheet">
         <link href="./styles/global.css" rel="stylesheet">
         <link href="./styles/table.css" rel="stylesheet">
+        <link href="./styles/modal.css" rel="stylesheet">
 
     </head>
     <body>
@@ -97,75 +98,142 @@
                     </div>
                 </nav>
 
+                <div class="modal fade" id="warningModal" tabindex="-1" role="dialog" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h5 class="modal-title">Confirm Deletion</h5>
+                          <button type="button" class="btn btn-toolbar" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                          </button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="mb-3">
+                                <p>Are you sure you want to delete <b>Butler Road Extension</b> from the 
+                                    following project groups?</p>
+                                <div class="grid">
+                                    <div class="card">
+                                        <div class="card-body">
+                                            <h3 class="card-title">Eco-Friendly Competitor Pool</h3>
+                                            <p class="card-text">
+                                                <span data-feather="user"></span>
+                                                Thomas Jefferson
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="card">
+                                        <div class="card-body">
+                                            <h3 class="card-title">Hypothetical Loudoun Bids</h3>
+                                            <p class="card-text">
+                                                <span data-feather="user"></span>
+                                                Eleanor Roosevelt
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="card">
+                                        <div class="card-body">
+                                            <h3 class="card-title">Average Competition</h3>
+                                            <p class="card-text">
+                                                <span data-feather="user"></span>
+                                                Albert Einstein
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                          <a class="btn btn-danger" href="./historical_project_groups.html">
+                            <span data-feather="minus"></span>
+                              Remove
+                          </a>
+                          <button type="button" class="btn btn-secondary" data-dismiss="modal">
+                              Cancel
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                </div>
+
                 <main class="col-md-9 ms-sm-auto col-lg-10">
                     <nav aria-label="breadcrumb">
                         <ol class="breadcrumb">
                           <li class="breadcrumb-item"><a href="index.html">Historical Round Data</a></li>
                           <li class="breadcrumb-item"><a href="round.html">2017 State Scores</a></li>
-                          <li class="breadcrumb-item active" aria-current="page">Remove from Project Group</li>
+                          <li class="breadcrumb-item active" aria-current="page">Butler Road Extension</li>
                         </ol>
                     </nav>
                     <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-                        <h1>Remove Butler Road Extension from Project Group</h1>
+                        <h1>Remove from Project Group</h1>
                         <div class="btn-toolbar mb-2 mb-md-0">
-                            <a class="btn btn-primary" href="historical_project_groups.html">Remove</a>
-                            <a class="btn btn-secondary" href="historical_project_groups.html">Cancel</a>
+                            <button class="btn btn-primary" data-toggle="modal" data-target="#warningModal">
+                                <span data-feather="minus"></span>
+                                Remove
+                            </button>
+                            <a class="btn btn-secondary" href="historical_project_groups.html">
+                                <span data-feather="x"></span>
+                                Cancel
+                            </a>
                         </div>
                     </div>
 
-                    <h3>Selected to Remove Project From</h3>
+                    <!-- Collapse only for demo purposes to visually display groups upon selection -->
+                    <div id="selectedGroups" class="collapse"> 
+                        <h3>Selected to Remove Butler Road Extension From</h3>
 
-                    <div class="row row-cols-3 row-cols-md-3">
-                        <div class="col">
-                            <div class="card">
-                                <div class="card-body">
-                                    <h3 class="card-title">Eco-Friendly Competitor Pool</h3>
-                                    <p class="card-text">
-                                        <span data-feather="user"></span>
-                                        Thomas Jefferson
-                                    </p>
-                                </div>
-                                <div class="card-footer">
-                                    <div class="btn-group">
-                                        <button type="button" class="btn btn-small">
-                                            <span data-feather="x"></span> Cancel
-                                        </button>
+                        <div class="row row-cols-3 row-cols-md-3">
+                            <div class="col">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <h3 class="card-title">Eco-Friendly Competitor Pool</h3>
+                                        <p class="card-text">
+                                            <span data-feather="user"></span>
+                                            Thomas Jefferson
+                                        </p>
+                                    </div>
+                                    <div class="card-footer">
+                                        <!-- Remove card after pressing cancel. -->
+                                        <div class="btn-group">
+                                            <button type="button" class="btn btn-small">
+                                                <span data-feather="x"></span> Cancel
+                                            </button>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="col">
-                            <div class="card">
-                                <div class="card-body">
-                                    <h3 class="card-title">Hypothetical Loudoun Bids</h3>
-                                    <p class="card-text">
-                                        <span data-feather="user"></span>
-                                        Eleanor Roosevelt
-                                    </p>
-                                </div>
-                                <div class="card-footer">
-                                    <div class="btn-group">
-                                        <button type="button" class="btn btn-small">
-                                            <span data-feather="x"></span> Cancel
-                                        </button>
+                            <div class="col">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <h3 class="card-title">Hypothetical Loudoun Bids</h3>
+                                        <p class="card-text">
+                                            <span data-feather="user"></span>
+                                            Eleanor Roosevelt
+                                        </p>
+                                    </div>
+                                    <div class="card-footer">
+                                        <div class="btn-group">
+                                            <button type="button" class="btn btn-small">
+                                                <span data-feather="x"></span> Cancel
+                                            </button>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="col">
-                            <div class="card">
-                                <div class="card-body">
-                                    <h3 class="card-title">Average Competition</h3>
-                                    <p class="card-text">
-                                        <span data-feather="user"></span>
-                                        Albert Einstein
-                                    </p>
-                                </div>
-                                <div class="card-footer">
-                                    <div class="btn-group">
-                                        <button type="button" class="btn btn-small">
-                                            <span data-feather="x"></span> Cancel
-                                        </button>
+                            <div class="col">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <h3 class="card-title">Average Competition</h3>
+                                        <p class="card-text">
+                                            <span data-feather="user"></span>
+                                            Albert Einstein
+                                        </p>
+                                    </div>
+                                    <div class="card-footer">
+                                        <div class="btn-group">
+                                            <button type="button" class="btn btn-small">
+                                                <span data-feather="x"></span> Cancel
+                                            </button>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -196,7 +264,10 @@
                             <table class="table table-hover">
                                 <thead class="bg-light">
                                     <tr>
-                                        <th><input type="checkbox" class="form-check-input" id="selectAll"></th>
+                                        <th>
+                                            <input type="checkbox" class="form-check-input" id="selectAll"
+                                                   data-toggle="collapse" data-target="#selectedGroups">
+                                        </th>
                                         <th>Group Name</th>
                                         <th>Owner</th>
                                         <th>Total</th>
@@ -204,37 +275,55 @@
                                 </thead>
                                 <tbody>
                                     <tr>
-                                        <th scope="row"><input type="checkbox" class="form-check-input"></th>
+                                        <th scope="row">
+                                            <input type="checkbox" class="form-check-input"
+                                                    data-toggle="collapse" data-target="#selectedGroups">
+                                        </th>
                                         <td class="col-8"><a href="#">Eco-Friendly Competitor Pool</a></td>
                                         <td>Thomas Jefferson</td>
                                         <td>25</td>
                                     </tr>
                                     <tr>
-                                        <th scope="row"><input type="checkbox" class="form-check-input"></th>
+                                        <th scope="row">
+                                            <input type="checkbox" class="form-check-input"
+                                                    data-toggle="collapse" data-target="#selectedGroups">
+                                        </th>
                                         <td class="col-8"><a href="#">Highly Accessible Competitors</a></td>
                                         <td>Benjamin Franklin</td>
                                         <td>130</td>
                                     </tr>
                                     <tr>
-                                        <th scope="row"><input type="checkbox" class="form-check-input"></th>
+                                        <th scope="row">
+                                            <input type="checkbox" class="form-check-input"
+                                                    data-toggle="collapse" data-target="#selectedGroups">
+                                        </th>
                                         <td class="col-8"><a href="#">Hypothetical Loudoun Bids</a></td>
                                         <td>Eleanor Roosevelt</td>
                                         <td>22</td>
                                     </tr>
                                     <tr>
-                                        <th scope="row"><input type="checkbox" class="form-check-input"></th>
+                                        <th scope="row">
+                                            <input type="checkbox" class="form-check-input"
+                                                    data-toggle="collapse" data-target="#selectedGroups">
+                                        </th>
                                         <td class="col-8"><a href="#">Moderate Competitor Pool</a></td>
                                         <td>George Washington</td>
                                         <td>126</td>
                                     </tr>
                                     <tr>
-                                        <th scope="row"><input type="checkbox" class="form-check-input"></th>
+                                        <th scope="row">
+                                            <input type="checkbox" class="form-check-input"
+                                                    data-toggle="collapse" data-target="#selectedGroups">
+                                        </th>
                                         <td class="col-8"><a href="#">Average Competition</a></td>
                                         <td>Albert Einstein</td>
                                         <td>33</td>
                                     </tr>
                                     <tr>
-                                        <th scope="row"><input type="checkbox" class="form-check-input"></th>
+                                        <th scope="row">
+                                            <input type="checkbox" class="form-check-input"
+                                                    data-toggle="collapse" data-target="#selectedGroups">
+                                        </th>
                                         <td class="col-8"><a href="#">High Econ-Dev</a></td>
                                         <td>James Madison</td>
                                         <td>113</td>
@@ -274,6 +363,7 @@
         <script src="https://cdn.jsdelivr.net/npm/feather-icons@4.28.0/dist/feather.min.js" crossorigin="anonymous"></script>
 
         <script src="./scripts/global.js"></script>
+        <script src="./scripts/modal.js"></script>
 
     </body>
 </html>

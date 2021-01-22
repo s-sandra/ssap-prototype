@@ -2,3 +2,16 @@
 .modal-content {
     border: 0px white;
 }
+
+.modal .card-title {
+    font-size: 1rem;
+}
+
+.modal p.card-text, 
+.modal-footer .feather {
+    font-size: 0.8rem
+}
+
+.grid .card {
+    width: inherit;
+}

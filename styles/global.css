@@ -94,6 +94,10 @@ p.card-text .feather {
     margin: 0;
 }
 
+.row-cols-3 {
+    margin-top: 2rem;
+}
+
 .card-header {
     background-color: white;
     padding: 1rem 1rem;
