@@ -113,3 +113,18 @@ body {
   order: 2;
   margin-left: auto;
 }
+
+.nav-tabs .nav-link.active {
+  border: initial;
+  border-bottom: solid #007bff;
+  background-color: initial;
+  font-weight: bold;
+}
+
+.nav-tabs .nav-link.hover {
+  border-bottom: solid #007bff;
+}
+
+.nav-tabs a {
+  color: black;
+}

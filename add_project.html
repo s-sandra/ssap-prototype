@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="description" content="">
         <meta name="author" content="Sandra Shtabnaya">
-        <title>Remove Project from Project Group</title>
+        <title>Add Project from Project Group</title>
 
         <!-- Font Awesome Icons -->
         <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
@@ -98,63 +98,6 @@
                     </div>
                 </nav>
 
-                <div class="modal fade" id="warningModal" tabindex="-1" role="dialog" aria-hidden="true">
-                    <div class="modal-dialog" role="document">
-                      <div class="modal-content">
-                        <div class="modal-header">
-                          <h5 class="modal-title">Confirm Deletion</h5>
-                          <button type="button" class="btn btn-toolbar" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                          </button>
-                        </div>
-                        <div class="modal-body">
-                            <div class="mb-3">
-                                <p>Are you sure you want to delete <b>Butler Road Extension</b> from the 
-                                    following project groups?</p>
-                                <div class="grid">
-                                    <div class="card">
-                                        <div class="card-body">
-                                            <h3 class="card-title">Eco-Friendly Competitor Pool</h3>
-                                            <p class="card-text">
-                                                <span data-feather="user"></span>
-                                                Thomas Jefferson
-                                            </p>
-                                        </div>
-                                    </div>
-                                    <div class="card">
-                                        <div class="card-body">
-                                            <h3 class="card-title">Hypothetical Loudoun Bids</h3>
-                                            <p class="card-text">
-                                                <span data-feather="user"></span>
-                                                Eleanor Roosevelt
-                                            </p>
-                                        </div>
-                                    </div>
-                                    <div class="card">
-                                        <div class="card-body">
-                                            <h3 class="card-title">Average Competition</h3>
-                                            <p class="card-text">
-                                                <span data-feather="user"></span>
-                                                Albert Einstein
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="modal-footer">
-                          <a class="btn btn-danger" href="./historical_project_groups.html">
-                            <span data-feather="minus"></span>
-                              Remove Selected
-                          </a>
-                          <button type="button" class="btn btn-secondary" data-dismiss="modal">
-                              Cancel
-                          </button>
-                        </div>
-                      </div>
-                    </div>
-                </div>
-
                 <main class="col-md-9 ms-sm-auto col-lg-10">
                     <nav aria-label="breadcrumb">
                         <ol class="breadcrumb">
@@ -164,12 +107,12 @@
                         </ol>
                     </nav>
                     <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-                        <h1>Remove from Project Group</h1>
+                        <h1>Add to Project Group</h1>
                         <div class="btn-toolbar mb-2 mb-md-0">
-                            <button class="btn btn-primary" data-toggle="modal" data-target="#warningModal">
-                                <span data-feather="minus"></span>
-                                Remove
-                            </button>
+                            <a class="btn btn-primary" href="historical_project_groups.html">
+                                <span data-feather="plus"></span>
+                                Add Selected
+                            </a>
                             <a class="btn btn-secondary" href="historical_project_groups.html">
                                 <span data-feather="x"></span>
                                 Cancel
@@ -179,7 +122,7 @@
 
                     <!-- Collapse only for demo purposes to visually display groups upon selection -->
                     <div id="selectedGroups" class="collapse"> 
-                        <h3>Selected to Remove Butler Road Extension From</h3>
+                        <h3>Selected to Add Butler Road Extension to</h3>
 
                         <div class="row row-cols-3 row-cols-md-3">
                             <div class="col">
