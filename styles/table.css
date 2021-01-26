@@ -45,3 +45,25 @@ tr {
     padding: 1rem;
     border-color:  #ddd;
 }
+
+.filters {
+    display: flex;
+    margin-top: 0.8rem;
+    align-items: center;
+
+}
+
+.filter {
+    color: #007bff;
+    border: 1px solid #007bff;
+    padding: 0.5rem;
+    border-radius: 0.25rem !important;
+}
+
+.filters .input-group {
+    width: auto;
+}
+
+.card-header .nav-tabs {
+    margin-left: 0.5rem;
+}
