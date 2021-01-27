@@ -32,6 +32,20 @@
                   </button>
                 </div>
                 <div class="modal-body">
+                    <ul class="nav nav-tabs">
+                        <li class="nav-item">
+                            <a class="nav-link active">
+                                <span data-feather="upload"></span>
+                                Upload
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link">
+                                <span data-feather="copy"></span>
+                                Clone
+                            </a>
+                        </li>
+                    </ul>
                     <div class="mb-3">
                         <label for="uploadFile" class="form-label">Project File</label>
                         <input class="form-control" type="file" id="fileUpload">
@@ -174,13 +188,15 @@
 
                     <ul class="nav nav-tabs">
                         <li class="nav-item">
-                            <a class="nav-link active" href="./round.html" role="button">
-                            Projects
+                            <a class="nav-link active" href="./round.html">
+                                <span data-feather="clipboard"></span>
+                                Projects
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="./round_charts.html" role="button">
-                            Charts
+                            <a class="nav-link" href="./round_charts.html">
+                                <span data-feather="bar-chart-2"></span>
+                                Charts
                             </a>
                         </li>
                     </ul>
@@ -205,16 +221,28 @@
                                         </form>
                                     </div>
                                     <div class="col-auto">
-                                        <button type="button" class="btn btn-outline-danger" data-toggle="modal" data-target="#warningModal">
-                                            <span data-feather="minus"></span>
-                                            Delete
+                                        <button type="button" class="btn btn-outline-primary dropdown-toggle" 
+                                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            Actions
                                         </button>
-                                    </div>
-                                    <div class="col-auto">
-                                        <button type="button" class="btn btn-outline-primary" data-toggle="modal" data-target="#uploadModal">
-                                            <span data-feather="plus"></span>
-                                            Add
-                                        </button>
+                                        <div class="dropdown-menu">
+                                            <a class="dropdown-item" href="./clone_project.html">
+                                                <span data-feather="copy"></span>
+                                                Clone
+                                            </a>
+                                            <button class="dropdown-item" data-toggle="modal" data-target="#uploadModal">
+                                                <span data-feather="plus"></span>
+                                                Add
+                                            </button>
+                                            <button class="dropdown-item"  data-toggle="modal" data-target="#warningModal">
+                                                <span data-feather="minus"></span>
+                                                Remove
+                                            </button>
+                                            <a class="dropdown-item" href="#">
+                                                <span data-feather="arrow-right"></span>
+                                                Move
+                                            </a>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
