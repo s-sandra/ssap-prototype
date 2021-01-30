@@ -63,6 +63,10 @@ body {
   color: #727272;
 }
 
+.navbar-nav .feather {
+  color: white;
+}
+
 .sidebar .nav-link.active {
   color: #007bff;
 }

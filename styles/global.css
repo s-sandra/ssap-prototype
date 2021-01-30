@@ -7,7 +7,7 @@ body {
 
 main {
     background-color: #efefef;
-    padding: 1rem 3rem 3rem 3rem !important;
+    padding: 2rem 3rem 3rem 3rem !important;
 }
 
 .bg-light {
@@ -50,7 +50,7 @@ h1, h2, h3, h4 {
     height: 100%;
 }
 
-.form {
+.form .form-group {
     margin-bottom: 2rem;
 }
 
@@ -61,10 +61,6 @@ h1, h2, h3, h4 {
 
 .breadcrumb-item a {
     text-decoration: none;
-}
-
-.breadcrumb {
-    margin-top: 1rem;
 }
 
 .card {

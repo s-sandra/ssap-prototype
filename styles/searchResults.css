@@ -1,0 +1,12 @@
+.list-group-item .feather {
+    margin-right: 0.8rem;
+}
+
+.list-group-item {
+    border: 0px;
+}
+
+.list-group {
+    margin-top: 0.5rem;
+    border: 1px solid rgba(0,0,0,.125);
+}
