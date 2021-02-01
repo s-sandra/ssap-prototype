@@ -98,6 +98,23 @@ p.card-text .feather {
     margin-top: 1rem;
 }
 
+.row-cols-5 .card-title {
+    font-size: 1.25rem;
+}
+
+.row-cols-5 .card-footer {
+    padding: 0;
+}
+
+.row-cols-5 .card {
+    margin: 1rem 0 1rem;
+}
+
+.row-cols-5 .btn-small,
+.row-cols-5 .feather {
+    font-size: 0.9rem;
+}
+
 .card-header {
     background-color: white;
     padding: 1rem 1rem;

@@ -22,6 +22,47 @@
 
     </head>
     <body>
+        <div class="modal fade" id="cloneModal" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title">Clone Project Group</h5>
+                  <button type="button" class="btn btn-toolbar" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                    <form class="form">
+                        <div class="form-group col">
+                            <label class="form-label" for="projectTitle">Project Group Title</label>
+                            <input type="search" class="form-control" id="projectTitle" aria-describedby="projectHelp"
+                                   value="2019 Round Data Copy">
+                            <small id="projectHelp" class="form-text text-muted">Enter a name for the project group.</small>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label" for="destination">Copy To</label>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="projects">
+                                <label class="form-check-label" for="projects">
+                                    Projects
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="rounds">
+                                <label class="form-check-label" for="rounds">
+                                    Round Data
+                                </label>
+                            </div>    
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-primary" data-dismiss="modal">Clone</button>
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                </div>
+              </div>
+            </div>
+        </div>
         <div class="modal fade" id="uploadModal" tabindex="-1" role="dialog" aria-hidden="true">
             <div class="modal-dialog" role="document">
               <div class="modal-content">
@@ -80,14 +121,103 @@
                 </div>
                 <div class="modal-body">
                     <div class="mb-3">
-                        <p>Are you sure you want to delete <b>2017 Round Data State</b>?</p>
+                        <p>Are you sure you want to delete the following rounds?</p>
+                        <div class="grid">
+                            <div class="card">
+                                <div class="card-body">
+                                    <div class="row justify-content-between">
+                                        <div class="col">
+                                            <h3 class="card-title">State Projects</h3>
+                                            <small class="text-muted">
+                                                <span data-feather="calendar"></span>
+                                                2019
+                                            </small>
+                                        </div>
+                                        <div class="col-auto">
+                                            <button class="btn">
+                                                <span data-feather="x"></span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="card-body">
+                                    <div class="row justify-content-between">
+                                        <div class="col">
+                                            <h3 class="card-title">2017 Round Data</h3>
+                                            <small class="text-muted">
+                                                <span data-feather="calendar"></span>
+                                                2017
+                                            </small>
+                                        </div>
+                                        <div class="col-auto">
+                                            <button class="btn">
+                                                <span data-feather="x"></span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="card-body">
+                                    <div class="row justify-content-between">
+                                        <div class="col">
+                                            <h3 class="card-title">2015 Regional Projects</h3>
+                                            <small class="text-muted">
+                                                <span data-feather="calendar"></span>
+                                                2015
+                                            </small>
+                                        </div>
+                                        <div class="col-auto">
+                                            <button class="btn">
+                                                <span data-feather="x"></span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="modal-footer">
-                  <button class="btn btn-danger" data-dismiss="modal">
-                    <span data-feather="trash"></span>
+                  <button type="button" class="btn btn-danger" data-dismiss="modal">
                       Delete
                   </button>
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">
+                      Cancel
+                  </button>
+                </div>
+              </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="moveModal" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title">Move Round</h5>
+                  <button type="button" class="btn btn-toolbar" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                    <div class="mb-3">
+                        <p>Are you sure you want move <b>2019 Round Data</b> to the following location?</p>
+                        <div class="grid">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h3 class="card-title">
+                                        <span data-feather="clipboard"></span>
+                                        Project Groups
+                                    </h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-primary" data-dismiss="modal">Move</button>
                   <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
                 </div>
               </div>
@@ -218,22 +348,22 @@
                                         Actions
                                     </button>
                                     <div class="dropdown-menu">
-                                        <a class="dropdown-item" data-toggle="modal" data-target="#cloneModal">
+                                        <button class="dropdown-item" data-toggle="modal" data-target="#cloneModal">
                                             <span data-feather="copy"></span>
                                             Clone
-                                        </a>
+                                        </button>
                                         <button class="dropdown-item" data-toggle="modal" data-target="#uploadModal">
                                             <span data-feather="plus"></span>
                                             Add
                                         </button>
-                                        <button class="dropdown-item"  data-toggle="modal" data-target="#warningModal">
-                                            <span data-feather="minus"></span>
-                                            Remove
+                                        <button class="dropdown-item" data-toggle="modal" data-target="#warningModal">
+                                            <span data-feather="trash"></span>
+                                            Delete
                                         </button>
-                                        <a class="dropdown-item" href="#">
+                                        <button class="dropdown-item" data-toggle="modal" data-target="#moveModal">
                                             <span data-feather="arrow-right"></span>
                                             Move
-                                        </a>
+                                        </button>
                                     </div>
                                 </div>
                             </div>

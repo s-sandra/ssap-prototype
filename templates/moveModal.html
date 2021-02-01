@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="">
+        <meta name="author" content="Sandra Shtabnaya">
+        <title>Round Data</title>
+
+        <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet'>
+
+
+        <!-- Bootstrap core CSS -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+
+
+        <!-- component styles -->
+        <link href="./styles/global.css" rel="stylesheet">
+        <link href="./styles/modal.css" rel="stylesheet">
+
+    </head>
+    <body>
+        <div class="modal fade" id="moveModal" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title">Move Project</h5>
+                  <button type="button" class="btn btn-toolbar" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                    <div class="row align-items-end">
+                        <div class="col">
+                            <label class="form-label" for="destination">Move To</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <div class="input-group-text">
+                                        <span data-feather="search"></span>
+                                    </div>
+                                </div>
+                                <input class="form-control" type="search" id="destination"
+                                       placeholder="search project groups" aria-label="enter group to search"
+                                       data-toggle="collapse" data-target="#results">
+                            </div>
+                        </div>
+                        <div class="col-auto">
+                            <!-- On click, add My Projects Card to destination grid -->
+                            <button class="btn btn-outline-primary">
+                                <span data-feather="arrow-right"></span>
+                                My Projects
+                            </button>
+                        </div>
+                    </div>
+                    <ul class="list-group collapse" id="results">
+                        <button class="list-group-item list-group-item-action">
+                            <span data-feather="clipboard"></span>
+                            Eco-Friendly Competitor Pool
+                            <small class="text-muted">- Project Groups</small>
+                        </button>
+                        <button class="list-group-item list-group-item-action">
+                            <span data-feather="clipboard"></span>
+                            Eco-Friendly Group
+                            <small class="text-muted">- Project Groups</small>
+                        </button>
+                        <button class="list-group-item list-group-item-action">
+                            <span data-feather="bar-chart-2"></span>
+                            Economic 2017 Projects
+                            <small class="text-muted">- Round Data</small>
+                        </button>
+                    </ul>
+                </form>
+                    <div class="grid">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="row justify-content-between">
+                                    <div class="col">
+                                        <h3 class="card-title">My Projects</h3>
+                                        <small class="text-muted">
+                                            <span data-feather="clipboard"></span>
+                                            Project Groups
+                                        </small>
+                                    </div>
+                                    <div class="col-auto">
+                                        <button class="btn">
+                                            <span data-feather="x"></span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-primary" data-dismiss="modal">Move</button>
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                </div>
+              </div>
+            </div>
+        </div>
+        <button class="btn btn-danger" data-toggle="modal" data-target="#moveModal">Show Modal</button>
+
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/feather-icons@4.28.0/dist/feather.min.js" integrity="sha384-uO3SXW5IuS1ZpFPKugNNWqTZRRglnUJK6UAZ/gxOX80nxEkN9NcGZTftn6RzhGWE" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js" integrity="sha384-zNy6FEbO50N+Cg5wap8IKA4M/ZnLJgzc6w2NqACZaK0u0FXfOWRRJOnQtpZun8ha" crossorigin="anonymous"></script>
+        
+        <!-- Custom component scripts -->
+        <script src="./scripts/modal.js"></script>
+        <script src="./../scripts/global.js"></script>
+
+    </body>
+</html>
