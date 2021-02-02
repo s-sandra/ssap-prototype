@@ -22,6 +22,42 @@
 
     </head>
     <body>
+
+        <div class="modal fade" id="moveModal" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title">Move Round</h5>
+                  <button type="button" class="btn btn-toolbar" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                    <div class="mb-3">
+                        <p>
+                            Are you sure you want move <b>2019 Round Data</b> to the following location? This
+                            will make the group public to other users.
+                        </p>
+                        <div class="grid">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h3 class="card-title">
+                                        <span data-feather="bar-chart-2"></span>
+                                        Historical Rounds
+                                    </h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-primary" data-dismiss="modal">Move</button>
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                </div>
+              </div>
+            </div>
+        </div>
+
         <div class="modal fade" id="cloneModal" tabindex="-1" role="dialog" aria-hidden="true">
             <div class="modal-dialog" role="document">
               <div class="modal-content">
@@ -292,26 +328,26 @@
 
                 <main class="col-md-9 ms-sm-auto col-lg-10">
                     <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-                        <h1>Historical Round Data</h1>
+                        <h1>My Projects</h1>
                         <div class="btn-toolbar mb-2 mb-md-0">
                             <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#uploadModal">
                                 <span data-feather="plus"></span>
-                                Add Round
+                                Add Group
                             </button>
                         </div>
                     </div>
 
                     <ul class="nav nav-tabs">
                         <li class="nav-item">
-                            <a class="nav-link active" href="./rounds.html">
+                            <a class="nav-link active" href="./projects.html">
                                 <span data-feather="archive"></span>
-                                Rounds
+                                Project Groups
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="./historical_charts.html">
-                                <span data-feather="bar-chart-2"></span>
-                                Charts
+                            <a class="nav-link" href="./standalone_projects.html">
+                                <span data-feather="clipboard"></span>
+                                Projects
                             </a>
                         </li>
                     </ul>
@@ -320,7 +356,7 @@
                         <div class="card-header">
                             <div class="row justify-content-between align-items-center flex-grow-1">
                                 <div class="col-12 col-md">
-                                    <h3>Round Data</h3>
+                                    <h3>My Project Groups</h3>
                                 </div>
                                 <div class="col-8 col-md">
                                     <form>
@@ -330,7 +366,7 @@
                                                     <span data-feather="search"></span>
                                                 </div>
                                             </div>
-                                            <input class="form-control" type="search" placeholder="search rounds" aria-label="enter round to search">
+                                            <input class="form-control" type="search" placeholder="search groups" aria-label="enter group to search">
                                         </div>
                                     </form>
                                 </div>
@@ -340,10 +376,10 @@
                                         Actions
                                     </button>
                                     <div class="dropdown-menu">
-                                        <a class="dropdown-item" data-toggle="modal" data-target="#cloneModal">
+                                        <button class="dropdown-item" data-toggle="modal" data-target="#cloneModal">
                                             <span data-feather="copy"></span>
                                             Clone
-                                        </a>
+                                        </button>
                                         <button class="dropdown-item" data-toggle="modal" data-target="#uploadModal">
                                             <span data-feather="plus"></span>
                                             Add
@@ -352,10 +388,10 @@
                                             <span data-feather="minus"></span>
                                             Remove
                                         </button>
-                                        <a class="dropdown-item" href="#">
+                                        <button class="dropdown-item" data-toggle="modal" data-target="#moveModal">
                                             <span data-feather="arrow-right"></span>
                                             Move
-                                        </a>
+                                        </button>
                                     </div>
                                 </div>
                             </div>
@@ -366,52 +402,45 @@
                                     <tr>
                                         <th><input type="checkbox" class="form-check-input" id="selectAll"></th>
                                         <th>Record Name</th>
-                                        <th>Year</th>
-                                        <th>Region</th>
+                                        <th>Created</th>
                                         <th>Total</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     <tr>
                                         <th scope="row"><input type="checkbox" class="form-check-input"></th>
-                                        <td class="col-8"><a href="round.html">2019 Round Data</a></td>
+                                        <td class="col-9"><a href="round.html">2019 Round Data</a></td>
                                         <td>2019</td>
-                                        <td>local</td>
                                         <td>25</td>
                                     </tr>
                                     <tr>
                                         <th scope="row"><input type="checkbox" class="form-check-input"></th>
-                                        <td class="col-8"><a href="round.html">2019 Regional Data</a></td>
+                                        <td class="col-9"><a href="round.html">2019 Regional Data</a></td>
                                         <td>2019</td>
-                                        <td>state</td>
                                         <td>130</td>
                                     </tr>
                                     <tr>
                                         <th scope="row"><input type="checkbox" class="form-check-input"></th>
-                                        <td class="col-8"><a href="round.html">2017 Regional SSS Scores</a></td>
+                                        <td class="col-9"><a href="round.html">2017 Regional SSS Scores</a></td>
                                         <td>2017</td>
-                                        <td>local</td>
                                         <td>22</td>
                                     </tr>
                                     <tr>
                                         <th scope="row"><input type="checkbox" class="form-check-input"></th>
-                                        <td class="col-8"><a href="round.html">2017 State Scores</a></td>
+                                        <td class="col-9"><a href="round.html">2017 State Scores</a></td>
                                         <td>2017</td>
-                                        <td>state</td>
                                         <td>126</td>
                                     </tr>
                                     <tr>
                                         <th scope="row"><input type="checkbox" class="form-check-input"></th>
-                                        <td class="col-8"><a href="round.html">2015 Regional Projects</a></td>
+                                        <td class="col-9"><a href="round.html">2015 Regional Projects</a></td>
                                         <td>2015</td>
-                                        <td>local</td>
                                         <td>33</td>
                                     </tr>
                                     <tr>
                                         <th scope="row"><input type="checkbox" class="form-check-input"></th>
-                                        <td class="col-8"><a href="round.html">2015 State Projects</a></td>
+                                        <td class="col-9"><a href="round.html">2015 State Projects</a></td>
                                         <td>2015</td>
-                                        <td>state</td>
                                         <td>113</td>
                                     </tr>
                                     <tr>

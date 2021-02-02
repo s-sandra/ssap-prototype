@@ -101,6 +101,20 @@
                             <small id="emailHelp" class="form-text text-muted">Enter a unique name for the round data.</small>
                         </div>
                     </div>
+                    <div class="mb-3 row">
+                        <div class="form-group col-5">
+                            <label for="roundYear">Round Year</label>
+                            <input type="number" min="1960" max="2099" step="1" value="2021"
+                                   class="form-control" id="roundYear" aria-describedby="yearHelp">
+                        </div>
+                        <div class="form-group col-5">
+                            <label for="roundRegion">Round Region</label>
+                            <select class="form-control" id="roundRegion">
+                                <option>State</option>
+                                <option>Local</option>
+                            </select>
+                        </div>
+                    </div>
                 </div>
                 <div class="modal-footer">
                   <a class="btn btn-primary" data-dismiss="modal" href="#">Add</a>
@@ -203,7 +217,10 @@
                 </div>
                 <div class="modal-body">
                     <div class="mb-3">
-                        <p>Are you sure you want move <b>2019 Round Data</b> to the following location?</p>
+                        <p>
+                            Are you sure you want move <b>2019 Round Data</b> to the following location? This
+                            will make the round private and other users will not be able to access it.
+                        </p>
                         <div class="grid">
                             <div class="card">
                                 <div class="card-body">
