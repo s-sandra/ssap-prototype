@@ -23,6 +23,7 @@
         <link href="./styles/accordian.css" rel="stylesheet">
         <link href="./styles/modal.css" rel="stylesheet">
         <link href="./styles/searchResults.css" rel="stylesheet">
+        <link href="./styles/backToTop.css" rel="stylesheet">
 
     </head>
     <body>
@@ -462,6 +463,10 @@
                     </div>
                 </nav>
 
+                <button class="btn btn-secondary" onclick="goToTop()" id="topBtn" title="Go to top">
+                    <span data-feather="arrow-up"></span>
+                </button>
+
                 <main class="col-md-9 ms-sm-auto col-lg-10">
                     <nav aria-label="breadcrumb">
                         <ol class="breadcrumb">
@@ -498,68 +503,71 @@
                         </div>
                     </div>
 
-                    <ul class="nav nav-tabs">
-                        <li class="nav-item">
-                            <a class="nav-link active" href="./historical_project.html">
-                                <span data-feather="menu"></span>
-                                Details
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="./historical_project_groups.html">
-                                <span data-feather="clipboard"></span>
-                                Project Groups
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="./historical_project_charts.html">
-                                <span data-feather="bar-chart-2"></span>
-                                Charts
-                            </a>
-                        </li>
-                    </ul>
-
-                    <ul class="nav nav-pills">
-                        <li class="nav-item">
-                            <a class="nav-link" href="#rankings_scores"
-                               data-toggle="tooltip" data-placement="bottom" title="Project Rankings">
-                               <span data-feather="award"></span>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#access_scores"
-                               data-toggle="tooltip" data-placement="bottom" title="Accessibility">
-                               <i class="fa fa-wheelchair" style="font-weight: bold;"></i>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#econ_scores" 
-                               data-toggle="tooltip" data-placement="bottom" 
-                               title="Economic Development">
-                               <i class="fa fa-usd"></i>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#safety_scores"
-                               data-toggle="tooltip" data-placement="bottom" title="Safety">
-                               <span data-feather="life-buoy"></span>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#congestion_scores"
-                               data-toggle="tooltip" data-placement="bottom" 
-                               title="Congestion Mitigation">
-                               <i class="fa fa-car"></i>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#environ_scores"
-                               data-toggle="tooltip" data-placement="bottom" 
-                               title="Environmental Quality">
-                               <i class="fa fa-leaf"></i>
-                            </a>
-                        </li>
-                    </ul>
+                    <div style="width: max-content;">
+                        <ul class="nav nav-tabs">
+                            <li class="nav-item">
+                                <a class="nav-link active" href="./historical_project.html">
+                                    <span data-feather="menu"></span>
+                                    Details
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="./historical_project_groups.html">
+                                    <span data-feather="clipboard"></span>
+                                    Project Groups
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="./historical_project_charts.html">
+                                    <span data-feather="bar-chart-2"></span>
+                                    Charts
+                                </a>
+                            </li>
+                        </ul>
+    
+                        <ul class="nav nav-pills">
+                            <li class="nav-item">
+                                <a class="nav-link" href="#rankings_scores"
+                                   data-toggle="tooltip" data-placement="bottom" title="Project Rankings">
+                                   <span data-feather="award"></span>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#access_scores"
+                                   data-toggle="tooltip" data-placement="bottom" title="Accessibility">
+                                   <i class="fa fa-wheelchair" style="font-weight: bold;"></i>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#econ_scores" 
+                                   data-toggle="tooltip" data-placement="bottom" 
+                                   title="Economic Development">
+                                   <i class="fa fa-usd"></i>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#safety_scores"
+                                   data-toggle="tooltip" data-placement="bottom" title="Safety">
+                                   <span data-feather="life-buoy"></span>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#congestion_scores"
+                                   data-toggle="tooltip" data-placement="bottom" 
+                                   title="Congestion Mitigation">
+                                   <i class="fa fa-car"></i>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#environ_scores"
+                                   data-toggle="tooltip" data-placement="bottom" 
+                                   title="Environmental Quality">
+                                   <i class="fa fa-leaf"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    
 
                     <button class="btn" type="button" data-toggle="collapse" data-target="#overview" 
                             aria-expanded="true" aria-controls="collapseOverview">
@@ -1122,6 +1130,7 @@
         <script src="https://cdn.jsdelivr.net/npm/feather-icons@4.28.0/dist/feather.min.js" crossorigin="anonymous"></script>
 
         <script src="./scripts/global.js"></script>
+        <script src="./scripts/backToTop.js"></script>
 
     </body>
 </html>
