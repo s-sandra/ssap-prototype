@@ -27,12 +27,26 @@
             <div class="modal-dialog" role="document">
               <div class="modal-content">
                 <div class="modal-header">
-                  <h5 class="modal-title">Upload Round Data</h5>
+                  <h5 class="modal-title">Add Round Data</h5>
                   <button type="button" class="btn btn-toolbar" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                   </button>
                 </div>
                 <div class="modal-body">
+                    <ul class="nav nav-tabs">
+                        <li class="nav-item">
+                            <a class="nav-link active">
+                                <span data-feather="upload"></span>
+                                Upload
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link">
+                                <span data-feather="copy"></span>
+                                Clone
+                            </a>
+                        </li>
+                    </ul>
                     <div class="mb-3">
                         <label for="uploadFile" class="form-label">Round Data File</label>
                         <input class="form-control" type="file" id="fileUpload">
@@ -45,6 +59,20 @@
                             <label for="recordName">Record Name</label>
                             <input type="text" class="form-control" id="recordName" aria-describedby="recordHelp">
                             <small id="emailHelp" class="form-text text-muted">Enter a unique name for the round data.</small>
+                        </div>
+                    </div>
+                    <div class="mb-3 row">
+                        <div class="form-group col-5">
+                            <label for="roundYear">Round Year</label>
+                            <input type="number" min="1960" max="2099" step="1" value="2021"
+                                   class="form-control" id="roundYear" aria-describedby="yearHelp">
+                        </div>
+                        <div class="form-group col-5">
+                            <label for="roundRegion">Round Region</label>
+                            <select class="form-control" id="roundRegion">
+                                <option>State</option>
+                                <option>Local</option>
+                            </select>
                         </div>
                     </div>
                 </div>
