@@ -12,10 +12,11 @@ form {
     background-color: white;
 }
 
-.form-label[disabled], 
+.form-label[disabled],
+h3[disabled],
 .form-label[disabled]~.input-group, 
 .form-control:disabled {
-    opacity: 0.5;
+    opacity: 0.6;
 }
 
 .form-check-input {
