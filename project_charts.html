@@ -22,6 +22,7 @@
         <link href="./styles/chart.css" rel="stylesheet">
         <link href="./styles/accordian.css" rel="stylesheet">
         <link href="./styles/modal.css" rel="stylesheet">
+        <link href="./styles/backToTop.css" rel="stylesheet">
 
     </head>
     <body>
@@ -310,6 +311,10 @@
               </div>
             </div>
         </div>
+
+        <button class="btn btn-secondary" onclick="goToTop()" id="topBtn" title="Go to top">
+            <span data-feather="arrow-up"></span>
+        </button>
         
         <header class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0 shadow">
             <a class="navbar-brand col-md-3 col-lg-2 me-0 px-3" href="#">SSAP</a>
@@ -340,7 +345,7 @@
                     <div class="position-sticky pt-3">
                         <ul class="nav flex-column">
                             <li class="nav-item">
-                                <a class="nav-link" href="./projects.html">
+                                <a class="nav-link active" href="./projects.html">
                                 <span data-feather="clipboard"></span>
                                 Projects
                                 </a>
@@ -352,7 +357,7 @@
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link active" aria-current="page" href="./rounds.html">
+                                <a class="nav-link" aria-current="page" href="./rounds.html">
                                 <span data-feather="bar-chart-2"></span>
                                 Round Data
                                 </a>
@@ -498,7 +503,7 @@
                         <span data-feather="chevron-up"></span>
                     </button>
 
-                    <div class="collapse show" id="rankings">
+                    <div class="collapse show" id="access">
                         <div class="card">
                             <div class="card-header bg-light">
                                 <div class="row justify-content-between align-items-center flex-grow-1">
@@ -557,6 +562,7 @@
         <!-- Custom component scripts -->
         <script src="./scripts/percentileHighlight.js"></script>
         <script src="./scripts/global.js"></script>
+        <script src="./scripts/backToTop.js"></script>
 
     </body>
 </html>

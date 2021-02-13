@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="description" content="">
         <meta name="author" content="Sandra Shtabnaya">
-        <title>Round Charts</title>
+        <title>My Project Charts</title>
 
         <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet'>
 
@@ -311,6 +311,10 @@
               </div>
             </div>
         </div>
+
+        <button class="btn btn-secondary" onclick="goToTop()" id="topBtn" title="Go to top">
+            <span data-feather="arrow-up"></span>
+        </button>
         
         <header class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0 shadow">
             <a class="navbar-brand col-md-3 col-lg-2 me-0 px-3" href="#">SSAP</a>
@@ -341,7 +345,7 @@
                     <div class="position-sticky pt-3">
                         <ul class="nav flex-column">
                             <li class="nav-item">
-                                <a class="nav-link" href="./projects.html">
+                                <a class="nav-link active" href="./projects.html">
                                 <span data-feather="clipboard"></span>
                                 Projects
                                 </a>
@@ -353,7 +357,7 @@
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link active" aria-current="page" href="./rounds.html">
+                                <a class="nav-link" aria-current="page" href="./rounds.html">
                                 <span data-feather="bar-chart-2"></span>
                                 Round Data
                                 </a>
@@ -386,145 +390,83 @@
                     </div>
                 </nav>
 
-                <button class="btn btn-secondary" onclick="goToTop()" id="topBtn" title="Go to top">
-                    <span data-feather="arrow-up"></span>
-                </button>
-
                 <main class="col-md-9 ms-sm-auto col-lg-10">
-                    <nav aria-label="breadcrumb">
-                        <ol class="breadcrumb">
-                          <li class="breadcrumb-item"><a href="rounds.html">Historical Round Data</a></li>
-                          <li class="breadcrumb-item"><a href="round.html">2017 State Scores</a></li>
-                          <li class="breadcrumb-item active" aria-current="page">Project Charts</li>
-                        </ol>
-                    </nav>
                     <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3">
-                        <h1>Butler Road Extension</h1>
-                        <div class="btn-toolbar mb-2 mb-md-0">
-                            <button type="button" class="btn btn-primary dropdown-toggle" 
-                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                Actions
-                            </button>
-                            <div class="dropdown-menu">
-                              <button type="button" class="dropdown-item" data-toggle="modal" data-target="#cloneModal">
-                                 <span data-feather="copy"></span>
-                                  Clone
-                              </button>
-                              <button class="dropdown-item" data-toggle="modal" data-target="#warningModal">
-                                 <span data-feather="trash"></span>
-                                 Delete
-                              </button>
-                              <button class="dropdown-item" data-toggle="modal" data-target="#addModal">
-                                  <span data-feather="plus"></span>
-                                  Add to group
-                              </button>
-                              <a class="dropdown-item" href="./remove_project.html">
-                                  <span data-feather="minus"></span>
-                                  Remove from group
-                              </a>
-                            </div>
-                        </div>
+                        <h1>My Project Charts</h1>
                     </div>
 
                     <div style="width: max-content;">
                         <ul class="nav nav-tabs">
                             <li class="nav-item">
-                                <a class="nav-link" href="./historical_project.html">
-                                    <span data-feather="menu"></span>
-                                    Details
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="./historical_project_groups.html">
-                                    <span data-feather="clipboard"></span>
+                                <a class="nav-link" href="./projects.html">
+                                    <span data-feather="archive"></span>
                                     Project Groups
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link active" href="./historical_project_charts.html">
+                                <a class="nav-link" href="./standalone_projects.html">
+                                    <span data-feather="clipboard"></span>
+                                    Projects
+                                </a>
+                            </li> 
+                            <li class="nav-item">
+                                <a class="nav-link active" href="./projects_charts.html">
                                     <span data-feather="bar-chart-2"></span>
                                     Charts
                                 </a>
                             </li>
                         </ul>
-    
-                        <ul class="nav nav-pills justify-content-between">
-                            <li class="nav-item">
-                                <a class="nav-link" href="#rankings_scores"
-                                   data-toggle="tooltip" data-placement="bottom" title="Project Rankings">
-                                   <span data-feather="award"></span>
-                                </a>
-                            </li>
+
+                        <ul class="nav nav-pills">
                             <li class="nav-item">
                                 <a class="nav-link" href="#access_scores"
-                                   data-toggle="tooltip" data-placement="bottom" title="Accessibility">
-                                   <i class="fa fa-wheelchair" style="font-weight: bold;"></i>
+                                data-toggle="tooltip" data-placement="bottom" title="Accessibility">
+                                <i class="fa fa-wheelchair" style="font-weight: bold;"></i>
                                 </a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="#econ_scores" 
-                                   data-toggle="tooltip" data-placement="bottom" 
-                                   title="Economic Development">
-                                   <i class="fa fa-usd"></i>
+                                data-toggle="tooltip" data-placement="bottom" 
+                                title="Economic Development">
+                                <i class="fa fa-usd"></i>
                                 </a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="#safety_scores"
-                                   data-toggle="tooltip" data-placement="bottom" title="Safety">
-                                   <span data-feather="life-buoy"></span>
+                                data-toggle="tooltip" data-placement="bottom" title="Safety">
+                                <span data-feather="life-buoy"></span>
                                 </a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="#congestion_scores"
-                                   data-toggle="tooltip" data-placement="bottom" 
-                                   title="Congestion Mitigation">
-                                   <i class="fa fa-car"></i>
+                                data-toggle="tooltip" data-placement="bottom" 
+                                title="Congestion Mitigation">
+                                <i class="fa fa-car"></i>
                                 </a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="#environ_scores"
-                                   data-toggle="tooltip" data-placement="bottom" 
-                                   title="Environmental Quality">
-                                   <i class="fa fa-leaf"></i>
+                                data-toggle="tooltip" data-placement="bottom" 
+                                title="Environmental Quality">
+                                <i class="fa fa-leaf"></i>
                                 </a>
                             </li>
                         </ul>
                     </div>
 
-                    <button class="btn" type="button" data-toggle="collapse" data-target="#overview" 
-                            aria-expanded="true" aria-controls="collapseOverview">
-                        <h3>Project Overview</h3>
+                    <button id="access_scores" class="btn" type="button" data-toggle="collapse" data-target="#access" 
+                            aria-expanded="true" aria-controls="collapseStats">
+                        <h3>Accessibility Statistics</h3>
                         <span data-feather="chevron-down"></span>
                         <span data-feather="chevron-up"></span>
                     </button>
 
-                    <button id="rankings_scores" class="btn" type="button" data-toggle="collapse" data-target="#rankings" 
-                            aria-expanded="true" aria-controls="collapseRankings">
-                        <h3>Project Rankings</h3>
-                        <span data-feather="chevron-down"></span>
-                        <span data-feather="chevron-up"></span>
-                    </button>
-
-                    <div class="collapse show" id="rankings">
+                    <div class="collapse show" id="access">
                         <div class="card">
                             <div class="card-header bg-light">
                                 <div class="row justify-content-between align-items-center flex-grow-1">
                                     <div class="col-12 col-md">
-                                        <h3>SMART SCALE Score Percentiles</h3>
-                                    </div>
-                                    <div class="col-auto">
-                                        <div class="input-group">
-                                            <div class="input-group-prepend">
-                                            <div class="input-group-text">Year</div>
-                                            </div>
-                                            <select class="form-control custom-select">
-                                                <option selected>2017</option>
-                                                <option>2015</option>
-                                                <option>2013</option>
-                                                <option>2011</option>
-                                                <option>All</option>
-                                            </select>
-                                        </div>
+                                        <h3>Multimodal Access Score Percentiles</h3>
                                     </div>
                                     <div class="col-auto">
                                         <button type="button" class="btn btn-outline-primary">
@@ -537,13 +479,6 @@
                             <canvas class="my-4 w-100" id="percentileHighlight" width="900" height="380"></canvas>
                         </div>
                     </div>
-
-                    <button id="access_scores" class="btn" type="button" data-toggle="collapse" data-target="#access" 
-                            aria-expanded="true" aria-controls="collapseStats">
-                        <h3>Accessibility Statistics</h3>
-                        <span data-feather="chevron-down"></span>
-                        <span data-feather="chevron-up"></span>
-                    </button>
 
                     <button id="econ_scores" class="btn" type="button" data-toggle="collapse" data-target="#econ-dev" 
                             aria-expanded="true" aria-controls="collapseEconDev">

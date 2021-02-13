@@ -19,6 +19,7 @@
         <link href="./styles/global.css" rel="stylesheet">
         <link href="./styles/chart.css" rel="stylesheet">
         <link href="./styles/modal.css" rel="stylesheet">
+        <link href="./styles/backToTop.css" rel="stylesheet">
 
     </head>
     <body>
@@ -44,6 +45,10 @@
                 </li>
             </ul>
         </header>
+
+        <button class="btn btn-secondary" onclick="goToTop()" id="topBtn" title="Go to top">
+            <span data-feather="arrow-up"></span>
+        </button>
 
         <div class="container-fluid">
             <div class="row">
@@ -95,6 +100,10 @@
                         </ul>
                     </div>
                 </nav>
+
+                <button class="btn btn-secondary" onclick="goToTop()" id="topBtn" title="Go to top">
+                    <span data-feather="arrow-up"></span>
+                </button>
 
                 <main class="col-md-9 ms-sm-auto col-lg-10">
                     <nav aria-label="breadcrumb">
@@ -190,6 +199,8 @@
         <script src="./scripts/histogram.js"></script>
         <script src="./scripts/percentile.js"></script>
         <script src="./scripts/global.js"></script>
+        <script src="./scripts/backToTop.js"></script>
+
 
     </body>
 </html>
