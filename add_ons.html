@@ -33,33 +33,33 @@
                 </div>
                 <div class="modal-body">
                     <div class="mb-3">
-                        <p>Are you sure you want to delete <b>Butler Road Extension</b> from the 
-                            following project groups?</p>
+                        <p>Are you sure you want to delete the following project options from
+                            <b>Butler Road Extension</b>?</p>
                         <div class="grid">
                             <div class="card">
                                 <div class="card-body">
-                                    <h3 class="card-title">Eco-Friendly Competitor Pool</h3>
+                                    <h3 class="card-title">Sidewalks</h3>
                                     <p class="card-text">
                                         <span data-feather="key"></span>
-                                        1760
+                                        703
                                     </p>
                                 </div>
                             </div>
                             <div class="card">
                                 <div class="card-body">
-                                    <h3 class="card-title">Hypothetical Loudoun Bids</h3>
+                                    <h3 class="card-title">Solar Powered Street Lamps</h3>
                                     <p class="card-text">
                                         <span data-feather="key"></span>
-                                        7601
+                                        411
                                     </p>
                                 </div>
                             </div>
                             <div class="card">
                                 <div class="card-body">
-                                    <h3 class="card-title">Average Competition</h3>
+                                    <h3 class="card-title">Rain Garden</h3>
                                     <p class="card-text">
                                         <span data-feather="key"></span>
-                                        1054
+                                        183
                                     </p>
                                 </div>
                             </div>
@@ -384,7 +384,7 @@
                         <ol class="breadcrumb">
                           <li class="breadcrumb-item"><a href="projects.html">My Project Groups</a></li>
                           <li class="breadcrumb-item"><a href="project_group.html">Moderate Competitor Pool</a></li>
-                          <li class="breadcrumb-item active" aria-current="page">Project Groups</li>
+                          <li class="breadcrumb-item active" aria-current="page">Project Options</li>
                         </ol>
                     </nav>
                     <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3">
@@ -394,27 +394,28 @@
                                     data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 Actions
                             </button>
+                            
                             <div class="dropdown-menu">
-                              <button class="dropdown-item" data-toggle="modal" data-target="#cloneModal">
-                                 <span data-feather="copy"></span>
-                                  Clone
-                              </button>
-                              <button class="dropdown-item" data-toggle="modal" data-target="#warningModal">
-                                  <span data-feather="trash"></span>
-                                  Delete
-                              </button>
-                              <a class="dropdown-item" href="./create_add_on.html">
-                                <span data-feather="file-plus"></span>
-                                Add option
-                              </a>
-                              <button class="dropdown-item" data-toggle="modal" data-target="#addModal">
-                                  <span data-feather="plus"></span>
-                                  Add to group
-                              </button>
-                              <a class="dropdown-item" href="./remove_project.html">
-                                  <span data-feather="minus"></span>
-                                  Remove from group
-                              </a>
+                                <button class="dropdown-item" data-toggle="modal" data-target="#cloneModal">
+                                    <span data-feather="copy"></span>
+                                    Clone
+                                </button>
+                                <button class="dropdown-item" data-toggle="modal" data-target="#warningModal">
+                                    <span data-feather="trash"></span>
+                                    Delete
+                                </button>
+                                <a class="dropdown-item" href="./create_add_on.html">
+                                    <span data-feather="file-plus"></span>
+                                    Add option
+                                </a>
+                                <button class="dropdown-item" data-toggle="modal" data-target="#addModal">
+                                    <span data-feather="plus"></span>
+                                    Add to group
+                                </button>
+                                <a class="dropdown-item" href="./remove_project.html">
+                                    <span data-feather="minus"></span>
+                                    Remove from group
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -427,13 +428,13 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="./add_ons.html">
+                            <a class="nav-link active" href="./add_ons.html">
                                 <span data-feather="file-plus"></span>
                                 Options
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link active" href="./project_project_groups.html">
+                            <a class="nav-link" href="./project_project_groups.html">
                                 <span data-feather="clipboard"></span>
                                 Project Groups
                             </a>
@@ -450,7 +451,7 @@
                         <div class="card-header">
                             <div class="row justify-content-between align-items-center flex-grow-1">
                                 <div class="col-12 col-md">
-                                    <h3>Project Groups</h3>
+                                    <h3>Project Options</h3>
                                 </div>
                                 <div class="col-8 col-md">
                                     <form>
@@ -460,7 +461,7 @@
                                                     <span data-feather="search"></span>
                                                 </div>
                                             </div>
-                                            <input class="form-control" type="search" placeholder="search groups" aria-label="enter group to search">
+                                            <input class="form-control" type="search" placeholder="search project options" aria-label="enter add-on to search">
                                         </div>
                                     </form>
                                 </div>
@@ -490,46 +491,34 @@
                                     <tr>
                                         <th><input type="checkbox" class="form-check-input" id="selectAll"></th>
                                         <th>ID</th>
-                                        <th>Group Name</th>
-                                        <th>Projects</th>
+                                        <th>Name</th>
+                                        <th>Cost</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     <tr>
                                         <th scope="row"><input type="checkbox" class="form-check-input"></th>
-                                        <td><a href="project_group.html">1760</a></td>
-                                        <td class="col-9"><a href="project_group.html">Eco-Friendly Competitor Pool</a></td>
-                                        <td>25</td>
+                                        <td><a href="add_on.html">703</a></td>
+                                        <td class="col-10"><a href="add_on.html">Sidewalks</a></td>
+                                        <td>25000</td>
                                     </tr>
                                     <tr>
                                         <th scope="row"><input type="checkbox" class="form-check-input"></th>
-                                        <td><a href="project_group.html">1607</a></td>
-                                        <td class="col-9"><a href="project_group.html">Highly Accessible Competitors</a></td>
-                                        <td>130</td>
+                                        <td><a href="add_on.html">183</a></td>
+                                        <td class="col-10"><a href="add_on.html">Rain Garden</a></td>
+                                        <td>10500</td>
                                     </tr>
                                     <tr>
                                         <th scope="row"><input type="checkbox" class="form-check-input"></th>
-                                        <td><a href="project_group.html">7601</a></td>
-                                        <td class="col-9"><a href="project_group.html">Hypothetical Loudoun Bids</a></td>
-                                        <td>22</td>
+                                        <td><a href="add_on.html">501</a></td>
+                                        <td class="col-10"><a href="add_on.html">Solar Panels</a></td>
+                                        <td>75000</td>
                                     </tr>
                                     <tr>
                                         <th scope="row"><input type="checkbox" class="form-check-input"></th>
-                                        <td><a href="project_group.html">7823</a></td>
-                                        <td class="col-9"><a href="project_group.html">Moderate Competitor Pool</a></td>
-                                        <td>126</td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row"><input type="checkbox" class="form-check-input"></th>
-                                        <td><a href="project_group.html">1054</a></td>
-                                        <td class="col-9"><a href="project_group.html">Average Competition</a></td>
-                                        <td>33</td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row"><input type="checkbox" class="form-check-input"></th>
-                                        <td><a href="project_group.html">6432</a></td>
-                                        <td class="col-9"><a href="project_group.html">High Econ-Dev</a></td>
-                                        <td>113</td>
+                                        <td><a href="add_on.html">411</a></td>
+                                        <td class="col-10"><a href="add_on.html">Solar Powered Street Lamps</a></td>
+                                        <td>10600</td>
                                     </tr>
                                     <tr>
                                 </tbody>

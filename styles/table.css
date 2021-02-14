@@ -26,6 +26,12 @@ ul {
 
 th[scope="row"]+td a {
     font-weight: 600;
+    padding-right: 10px;
+}
+
+th[scope="row"],
+th[scope="row"]+td {
+    width: 10px;
 }
 
 .table > :not(:last-child) > :last-child > * {
