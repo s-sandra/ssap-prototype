@@ -23,3 +23,7 @@
 .btn[aria-expanded=false] .feather-chevron-up {
     display: none;
 }
+
+.collapse h3 {
+    font-size: 1.3rem;
+}
