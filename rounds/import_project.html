@@ -5,10 +5,9 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="description" content="">
         <meta name="author" content="Sandra Shtabnaya">
-        <title>Page Title</title>
+        <title>Import Project</title>
 
         <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet'>
-
 
         <!-- Bootstrap core CSS -->
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
@@ -16,6 +15,7 @@
         <!-- component styles -->
         <link href="./../styles/navbar.css" rel="stylesheet">
         <link href="./../styles/global.css" rel="stylesheet">
+        <link href="./../styles/form.css" rel="stylesheet">
 
     </head>
     <body>
@@ -48,19 +48,19 @@
                     <div class="position-sticky pt-3">
                         <ul class="nav flex-column">
                             <li class="nav-item">
-                                <a class="nav-link" href="./projects/project_groups.html">
+                                <a class="nav-link active" href="./../projects/project_groups.html">
                                 <span data-feather="clipboard"></span>
                                 Projects
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="./scenarios/index.html">
+                                <a class="nav-link" href="./../scenarios/index.html">
                                 <span data-feather="tool"></span>
                                 Scenarios
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link active" aria-current="page" href="./rounds/index.html">
+                                <a class="nav-link" aria-current="page" href="./../rounds/index.html">
                                 <span data-feather="bar-chart-2"></span>
                                 Round Data
                                 </a>
@@ -94,15 +94,57 @@
                 </nav>
 
                 <main class="col-md-9 ms-sm-auto col-lg-10">
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb">
+                          <li class="breadcrumb-item"><a href="projects.html">My Project Groups</a></li>
+                          <li class="breadcrumb-item"><a href="project_group.html">Moderate Competitor Pool</a></li>
+                          <li class="breadcrumb-item active" aria-current="page">Add Project</li>
+                        </ol>
+                    </nav>
+                    
                     <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-                        <h1>Page Title</h1>
+                        <h1>Add Project</h1>
                         <div class="btn-toolbar mb-2 mb-md-0">
-                            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#uploadModal">
+                            <a class="btn btn-primary" href="./project_group.html">
                                 <span data-feather="plus"></span>
-                                Action
-                            </button>
+                                Add
+                            </a>
+                            <a class="btn btn-secondary" href="./project_group.html">
+                                <span data-feather="x"></span>
+                                Cancel
+                            </a>
                         </div>
                     </div>
+                    <ul class="nav nav-tabs">
+                        <li class="nav-item">
+                            <a class="nav-link" href="./add_project.html">
+                                <span data-feather="file"></span>
+                                New
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="./import_project.html">
+                                <span data-feather="upload"></span>
+                                Import
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./clone_project.html">
+                                <span data-feather="copy"></span>
+                                Clone
+                            </a>
+                        </li>
+                    </ul>
+                    <form class="form">
+                        <div class="col-7 mb-5">
+                            <label for="uploadFile" class="form-label">Project File</label>
+                            <input class="form-control" type="file" id="fileUpload" aria-describedby="fileHelp">
+                        </div>
+                        <div class="col-7 mb-5">
+                            <label for="projectName">Project Title</label>
+                            <input type="text" class="form-control" id="projectName" aria-describedby="titleHelp">
+                        </div>
+                    </form>
                 </main>
             </div>
         </div>
@@ -110,6 +152,7 @@
         <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/feather-icons@4.28.0/dist/feather.min.js" integrity="sha384-uO3SXW5IuS1ZpFPKugNNWqTZRRglnUJK6UAZ/gxOX80nxEkN9NcGZTftn6RzhGWE" crossorigin="anonymous"></script>
+     
         <script src="./../scripts/global.js"></script>
 
     </body>

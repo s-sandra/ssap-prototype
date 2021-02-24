@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="description" content="">
         <meta name="author" content="Sandra Shtabnaya">
-        <title>Butler Road Extension</title>
+        <title>My Project Groups</title>
 
         <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet'>
 
@@ -13,144 +13,45 @@
         <!-- Bootstrap core CSS -->
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
 
+
         <!-- component styles -->
-        <link href="./styles/navbar.css" rel="stylesheet">
-        <link href="./styles/global.css" rel="stylesheet">
-        <link href="./styles/table.css" rel="stylesheet">
-        <link href="./styles/modal.css" rel="stylesheet">
+        <link href="./../styles/navbar.css" rel="stylesheet">
+        <link href="./../styles/global.css" rel="stylesheet">
+        <link href="./../styles/modal.css" rel="stylesheet">
+        <link href="./../styles/table.css" rel="stylesheet">
 
     </head>
     <body>
 
-        <div class="modal fade" id="warningModal" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal fade" id="moveModal" tabindex="-1" role="dialog" aria-hidden="true">
             <div class="modal-dialog" role="document">
               <div class="modal-content">
                 <div class="modal-header">
-                  <h5 class="modal-title">Confirm Deletion</h5>
+                  <h5 class="modal-title">Move Project Group</h5>
                   <button type="button" class="btn btn-toolbar" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                   </button>
                 </div>
                 <div class="modal-body">
                     <div class="mb-3">
-                        <p>Are you sure you want to delete the following project options from
-                            <b>Butler Road Extension</b>?</p>
+                        <p>
+                            Are you sure you want move <b>State Projects Option 1</b> to the following location? This
+                            will make the group public to other users.
+                        </p>
                         <div class="grid">
                             <div class="card">
                                 <div class="card-body">
-                                    <h3 class="card-title">Sidewalks</h3>
-                                    <p class="card-text">
-                                        <span data-feather="key"></span>
-                                        703
-                                    </p>
-                                </div>
-                            </div>
-                            <div class="card">
-                                <div class="card-body">
-                                    <h3 class="card-title">Solar Powered Street Lamps</h3>
-                                    <p class="card-text">
-                                        <span data-feather="key"></span>
-                                        411
-                                    </p>
-                                </div>
-                            </div>
-                            <div class="card">
-                                <div class="card-body">
-                                    <h3 class="card-title">Rain Garden</h3>
-                                    <p class="card-text">
-                                        <span data-feather="key"></span>
-                                        183
-                                    </p>
+                                    <h3 class="card-title">
+                                        <span data-feather="bar-chart-2"></span>
+                                        Round Data
+                                    </h3>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="modal-footer">
-                  <button type="button" class="btn btn-danger" data-dismiss="modal">
-                      Remove
-                  </button>
-                  <button type="button" class="btn btn-secondary" data-dismiss="modal">
-                      Cancel
-                  </button>
-                </div>
-              </div>
-            </div>
-        </div>
-
-        <div class="modal fade" id="addModal" tabindex="-1" role="dialog" aria-hidden="true">
-            <div class="modal-dialog" role="document">
-              <div class="modal-content">
-                <div class="modal-header">
-                  <h5 class="modal-title">Add to Project Group</h5>
-                  <button type="button" class="btn btn-toolbar" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                  </button>
-                </div>
-                <div class="modal-body">
-                    <div class="row align-items-end">
-                        <div class="col">
-                            <label class="form-label" for="destination">Add To</label>
-                            <div class="input-group">
-                                <div class="input-group-prepend">
-                                    <div class="input-group-text">
-                                        <span data-feather="search"></span>
-                                    </div>
-                                </div>
-                                <input class="form-control" type="search" id="destination"
-                                       placeholder="search project groups" aria-label="enter group to search"
-                                       data-toggle="collapse" data-target="#addResults">
-                            </div>
-                        </div>
-                        <div class="col-auto">
-                            <!-- On click, add My Projects Card to destination grid -->
-                            <button class="btn btn-outline-primary">
-                                <span data-feather="plus"></span>
-                                My Projects
-                            </button>
-                        </div>
-                    </div>
-                    <ul class="list-group collapse" id="addResults">
-                        <button class="list-group-item list-group-item-action">
-                            <span data-feather="clipboard"></span>
-                            Eco-Friendly Competitor Pool
-                            <small class="text-muted">- Project Groups</small>
-                        </button>
-                        <button class="list-group-item list-group-item-action">
-                            <span data-feather="clipboard"></span>
-                            Eco-Friendly Group
-                            <small class="text-muted">- Project Groups</small>
-                        </button>
-                        <button class="list-group-item list-group-item-action">
-                            <span data-feather="bar-chart-2"></span>
-                            Economic 2017 Projects
-                            <small class="text-muted">- Round Data</small>
-                        </button>
-                    </ul>
-                </form>
-                    <div class="grid">
-                        <div class="card">
-                            <div class="card-body">
-                                <div class="row justify-content-between">
-                                    <div class="col">
-                                        <h3 class="card-title">My Projects</h3>
-                                        <small class="text-muted">
-                                            <span data-feather="clipboard"></span>
-                                            Project Groups
-                                        </small>
-                                    </div>
-                                    <div class="col-auto">
-                                        <button class="btn">
-                                            <span data-feather="x"></span>
-                                        </button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="modal-footer">
-                  <button type="button" class="btn btn-primary" data-dismiss="modal">Add</button>
+                  <button type="button" class="btn btn-primary" data-dismiss="modal">Move</button>
                   <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
                 </div>
               </div>
@@ -161,7 +62,7 @@
             <div class="modal-dialog" role="document">
               <div class="modal-content">
                 <div class="modal-header">
-                  <h5 class="modal-title">Clone Project</h5>
+                  <h5 class="modal-title">Clone Project Group</h5>
                   <button type="button" class="btn btn-toolbar" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                   </button>
@@ -169,14 +70,77 @@
                 <div class="modal-body">
                     <form class="form">
                         <div class="form-group col">
-                            <label class="form-label" for="projectTitle">Project Title</label>
+                            <label class="form-label" for="projectTitle">Project Group Title</label>
+                            <input type="search" class="form-control" id="projectTitle" aria-describedby="projectHelp"
+                                   value="2019 Round Data Copy">
+                            <small id="projectHelp" class="form-text text-muted">Enter a name for the project group.</small>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label" for="destination">Copy To</label>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="projects" checked>
+                                <label class="form-check-label" for="projects">
+                                    My Project Groups
+                                    <span data-feather="lock"></span>
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="rounds">
+                                <label class="form-check-label" for="rounds">
+                                    Round Data
+                                </label>
+                            </div>    
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-primary" data-dismiss="modal">Clone</button>
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                </div>
+              </div>
+            </div>
+        </div>
+        
+        <div class="modal fade" id="uploadModal" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title">Add Project Group</h5>
+                  <button type="button" class="btn btn-toolbar" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                    <ul class="nav nav-tabs">
+                        <li class="nav-item">
+                            <a class="nav-link">
+                                <span data-feather="file"></span>
+                                New
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link">
+                                <span data-feather="upload"></span>
+                                Import
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active">
+                                <span data-feather="copy"></span>
+                                Clone
+                            </a>
+                        </li>
+                    </ul>
+                    <form class="form">
+                        <div class="form-group col">
+                            <label class="form-label" for="projectTitle">Project Group Title</label>
                             <input type="search" class="form-control" id="projectTitle" aria-describedby="projectHelp"
                                    value="Butler Road Extension Copy">
-                            <small id="projectHelp" class="form-text text-muted">Enter a name for the project.</small>
+                            <small id="projectHelp" class="form-text text-muted">Enter a name for the project group.</small>
                         </div>
                         <div class="row align-items-end">
                             <div class="col">
-                                <label class="form-label" for="destination">Copy To</label>
+                                <label class="form-label" for="destination">Copy From</label>
                                 <div class="input-group">
                                     <div class="input-group-prepend">
                                         <div class="input-group-text">
@@ -187,13 +151,6 @@
                                            placeholder="search project groups" aria-label="enter group to search"
                                            data-toggle="collapse" data-target="#results">
                                 </div>
-                            </div>
-                            <div class="col-auto">
-                                <!-- On click, add My Projects Card to destination grid -->
-                                <button class="btn btn-outline-primary">
-                                    <span data-feather="plus"></span>
-                                    My Projects
-                                </button>
                             </div>
                         </div>
                         <ul class="list-group collapse" id="results">
@@ -219,46 +176,10 @@
                             <div class="card-body">
                                 <div class="row justify-content-between">
                                     <div class="col">
-                                        <h3 class="card-title">My Projects</h3>
+                                        <h3 class="card-title">2019 Round Data</h3>
                                         <small class="text-muted">
-                                            <span data-feather="clipboard"></span>
-                                            Project Groups
-                                        </small>
-                                    </div>
-                                    <div class="col-auto">
-                                        <button class="btn">
-                                            <span data-feather="x"></span>
-                                        </button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card">
-                            <div class="card-body">
-                                <div class="row justify-content-between">
-                                    <div class="col">
-                                        <h3 class="card-title">Hypothetical Loudoun Bids</h3>
-                                        <small class="text-muted">
-                                            <span data-feather="clipboard"></span>
-                                            Project Groups
-                                        </small>
-                                    </div>
-                                    <div class="col-auto">
-                                        <button class="btn">
-                                            <span data-feather="x"></span>
-                                        </button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card">
-                            <div class="card-body">
-                                <div class="row justify-content-between">
-                                    <div class="col">
-                                        <h3 class="card-title">Average Competition</h3>
-                                        <small class="text-muted">
-                                            <span data-feather="clipboard"></span>
-                                            Project Groups
+                                            <span data-feather="bar-chart-2"></span>
+                                            Round Data
                                         </small>
                                     </div>
                                     <div class="col-auto">
@@ -272,14 +193,14 @@
                     </div>
                 </div>
                 <div class="modal-footer">
-                  <a class="btn btn-primary" data-dismiss="modal" href="#">Clone</a>
+                  <a class="btn btn-primary" data-dismiss="modal" href="#">Add</a>
                   <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
                 </div>
               </div>
             </div>
         </div>
 
-        <div class="modal fade" id="deleteModal" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal fade" id="warningModal" tabindex="-1" role="dialog" aria-hidden="true">
             <div class="modal-dialog" role="document">
               <div class="modal-content">
                 <div class="modal-header">
@@ -290,13 +211,69 @@
                 </div>
                 <div class="modal-body">
                     <div class="mb-3">
-                        <p>Are you sure you want to delete <b>Butler Road Extension</b>?</p>
+                        <p>Are you sure you want to delete the following project groups?</p>
+                        <div class="grid">
+                            <div class="card">
+                                <div class="card-body">
+                                    <div class="row justify-content-between">
+                                        <div class="col">
+                                            <h3 class="card-title">State Projects</h3>
+                                            <small class="text-muted">
+                                                <span data-feather="calendar"></span>
+                                                2019
+                                            </small>
+                                        </div>
+                                        <div class="col-auto">
+                                            <button class="btn">
+                                                <span data-feather="x"></span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="card-body">
+                                    <div class="row justify-content-between">
+                                        <div class="col">
+                                            <h3 class="card-title">2017 Round Data</h3>
+                                            <small class="text-muted">
+                                                <span data-feather="calendar"></span>
+                                                2017
+                                            </small>
+                                        </div>
+                                        <div class="col-auto">
+                                            <button class="btn">
+                                                <span data-feather="x"></span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="card-body">
+                                    <div class="row justify-content-between">
+                                        <div class="col">
+                                            <h3 class="card-title">2015 Regional Projects</h3>
+                                            <small class="text-muted">
+                                                <span data-feather="calendar"></span>
+                                                2015
+                                            </small>
+                                        </div>
+                                        <div class="col-auto">
+                                            <button class="btn">
+                                                <span data-feather="x"></span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="modal-footer">
-                  <a class="btn btn-danger" href="./round.html">
+                  <button type="button" class="btn btn-danger" data-dismiss="modal">
                       Delete
-                  </a>
+                  </button>
                   <button type="button" class="btn btn-secondary" data-dismiss="modal">
                       Cancel
                   </button>
@@ -304,7 +281,7 @@
               </div>
             </div>
         </div>
-
+        
         <header class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0 shadow">
             <a class="navbar-brand col-md-3 col-lg-2 me-0 px-3" href="#">SSAP</a>
             <button class="navbar-toggler position-absolute d-md-none collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="false" aria-label="Toggle navigation">
@@ -320,7 +297,7 @@
               </div>
             <ul class="navbar-nav px-3 user">
                 <li class="nav-item text-nowrap">
-                    <a class="nav-link" href="./index.html">
+                    <a class="nav-link" href="./../index.html">
                         <span data-feather="log-out"></span>
                         Log out
                     </a>
@@ -334,43 +311,43 @@
                     <div class="position-sticky pt-3">
                         <ul class="nav flex-column">
                             <li class="nav-item">
-                                <a class="nav-link active" href="./projects.html">
+                                <a class="nav-link active" href="./../projects/project_groups.html">
                                 <span data-feather="clipboard"></span>
                                 Projects
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="./scenarios.html">
+                                <a class="nav-link" href="./../scenarios/index.html">
                                 <span data-feather="tool"></span>
                                 Scenarios
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" aria-current="page" href="./rounds.html">
+                                <a class="nav-link" aria-current="page" href="./../rounds/index.html">
                                 <span data-feather="bar-chart-2"></span>
                                 Round Data
                                 </a>
                             </li>
                         </ul>
 
-                        <p class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted">
+                        <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted">
                         <span>Account</span>
-                        </p>
+                        </h6>
                         <ul class="nav flex-column">
                             <li class="nav-item">
-                                <a class="nav-link" href="./users.html">
+                                <a class="nav-link" href="./../users/index.html">
                                 <span data-feather="users"></span>
                                 Users
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="./settings.html">
+                                <a class="nav-link" href="./../settings/index.html">
                                 <span data-feather="settings"></span>
                                 Settings
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="./index.html">
+                                <a class="nav-link" href="./../index.html">
                                 <span data-feather="log-out"></span>
                                 Log Out
                                 </a>
@@ -380,71 +357,31 @@
                 </nav>
 
                 <main class="col-md-9 ms-sm-auto col-lg-10">
-                    <nav aria-label="breadcrumb">
-                        <ol class="breadcrumb">
-                          <li class="breadcrumb-item"><a href="projects.html">My Project Groups</a></li>
-                          <li class="breadcrumb-item"><a href="project_group.html">Moderate Competitor Pool</a></li>
-                          <li class="breadcrumb-item active" aria-current="page">Project Options</li>
-                        </ol>
-                    </nav>
-                    <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3">
-                        <h1>Butler Road Extension</h1>
+                    <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+                        <h1>My Projects</h1>
                         <div class="btn-toolbar mb-2 mb-md-0">
-                            <button type="button" class="btn btn-primary dropdown-toggle" 
-                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                Actions
+                            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#uploadModal">
+                                <span data-feather="plus"></span>
+                                Add Group
                             </button>
-                            
-                            <div class="dropdown-menu">
-                                <button class="dropdown-item" data-toggle="modal" data-target="#cloneModal">
-                                    <span data-feather="copy"></span>
-                                    Clone
-                                </button>
-                                <button class="dropdown-item" data-toggle="modal" data-target="#warningModal">
-                                    <span data-feather="trash"></span>
-                                    Delete
-                                </button>
-                                <a class="dropdown-item" href="./create_add_on.html">
-                                    <span data-feather="file-plus"></span>
-                                    Add option
-                                </a>
-                                <a class="dropdown-item" href="./delete_add_on.html">
-                                    <span data-feather="file-minus"></span>
-                                    Delete option
-                                </a>
-                                <button class="dropdown-item" data-toggle="modal" data-target="#addModal">
-                                    <span data-feather="plus"></span>
-                                    Add to group
-                                </button>
-                                <a class="dropdown-item" href="./remove_project.html">
-                                    <span data-feather="minus"></span>
-                                    Remove from group
-                                </a>
-                            </div>
                         </div>
                     </div>
 
                     <ul class="nav nav-tabs">
                         <li class="nav-item">
-                            <a class="nav-link" href="./project.html">
-                                <span data-feather="menu"></span>
-                                Details
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link active" href="./add_ons.html">
-                                <span data-feather="file-plus"></span>
-                                Options
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="./project_project_groups.html">
-                                <span data-feather="clipboard"></span>
+                            <a class="nav-link active" href="./../projects/project_groups.html">
+                                <span data-feather="archive"></span>
                                 Project Groups
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="./project_charts.html">
+                            <a class="nav-link" href="./projects.html">
+                                <span data-feather="clipboard"></span>
+                                Projects
+                            </a>
+                        </li> 
+                        <li class="nav-item">
+                            <a class="nav-link" href="./charts.html">
                                 <span data-feather="bar-chart-2"></span>
                                 Charts
                             </a>
@@ -455,7 +392,7 @@
                         <div class="card-header">
                             <div class="row justify-content-between align-items-center flex-grow-1">
                                 <div class="col-12 col-md">
-                                    <h3>Project Options</h3>
+                                    <h3>Project Groups</h3>
                                 </div>
                                 <div class="col-8 col-md">
                                     <form>
@@ -465,7 +402,7 @@
                                                     <span data-feather="search"></span>
                                                 </div>
                                             </div>
-                                            <input class="form-control" type="search" placeholder="search project options" aria-label="enter add-on to search">
+                                            <input class="form-control" type="search" placeholder="search groups" aria-label="enter group to search">
                                         </div>
                                     </form>
                                 </div>
@@ -475,16 +412,22 @@
                                         Actions
                                     </button>
                                     <div class="dropdown-menu">
-                                        <!-- Enable when no projects selected -->
-                                        <a class="dropdown-item" href="./create_add_on.html">
+                                        <button class="dropdown-item" data-toggle="modal" data-target="#cloneModal">
+                                            <span data-feather="copy"></span>
+                                            Clone
+                                        </button>
+                                        <button class="dropdown-item" data-toggle="modal" data-target="#uploadModal">
                                             <span data-feather="plus"></span>
                                             Add
-                                        </a>
-                                        <!-- Enable when projects selected -->
-                                         <button type="button" class="dropdown-item" data-target="#warningModal" data-toggle="modal">
-                                             <span data-feather="minus"></span>
-                                             Remove
-                                         </button>
+                                        </button>
+                                        <button class="dropdown-item"  data-toggle="modal" data-target="#warningModal">
+                                            <span data-feather="minus"></span>
+                                            Remove
+                                        </button>
+                                        <button class="dropdown-item" data-toggle="modal" data-target="#moveModal">
+                                            <span data-feather="arrow-right"></span>
+                                            Move
+                                        </button>
                                     </div>
                                 </div>
                             </div>
@@ -496,33 +439,45 @@
                                         <th><input type="checkbox" class="form-check-input" id="selectAll"></th>
                                         <th>ID</th>
                                         <th>Name</th>
-                                        <th>Cost</th>
+                                        <th>Projects</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     <tr>
                                         <th scope="row"><input type="checkbox" class="form-check-input"></th>
-                                        <td><a href="add_on.html">703</a></td>
-                                        <td class="col-10"><a href="add_on.html">Sidewalks</a></td>
-                                        <td>25000</td>
+                                        <td><a href="project_group.html">1760</a></td>
+                                        <td class="col-9"><a href="project_group.html">Moderate Competitor Pool</a></td>
+                                        <td>25</td>
                                     </tr>
                                     <tr>
                                         <th scope="row"><input type="checkbox" class="form-check-input"></th>
-                                        <td><a href="add_on.html">183</a></td>
-                                        <td class="col-10"><a href="add_on.html">Rain Garden</a></td>
-                                        <td>10500</td>
+                                        <td><a href="project_group.html">7604</a></td>
+                                        <td class="col-9"><a href="empty_project_group.html">Highly Accessible Competitors</a></td>
+                                        <td>0</td>
                                     </tr>
                                     <tr>
                                         <th scope="row"><input type="checkbox" class="form-check-input"></th>
-                                        <td><a href="add_on.html">501</a></td>
-                                        <td class="col-10"><a href="add_on.html">Solar Panels</a></td>
-                                        <td>75000</td>
+                                        <td><a href="project_group.html">6017</a></td>
+                                        <td class="col-9"><a href="project_group.html">Average Competition</a></td>
+                                        <td>22</td>
                                     </tr>
                                     <tr>
                                         <th scope="row"><input type="checkbox" class="form-check-input"></th>
-                                        <td><a href="add_on.html">411</a></td>
-                                        <td class="col-10"><a href="add_on.html">Solar Powered Street Lamps</a></td>
-                                        <td>10600</td>
+                                        <td><a href="project_group.html">1054</a></td>
+                                        <td class="col-9"><a href="project_group.html">Hypothetical Loudoun Bids</a></td>
+                                        <td>126</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row"><input type="checkbox" class="form-check-input"></th>
+                                        <td><a href="project_group.html">5405</a></td>
+                                        <td class="col-9"><a href="project_group.html">High Econ-Dev</a></td>
+                                        <td>33</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row"><input type="checkbox" class="form-check-input"></th>
+                                        <td><a href="project_group.html">1987</a></td>
+                                        <td class="col-9"><a href="project_group.html">State Projects Option 1</a></td>
+                                        <td>113</td>
                                     </tr>
                                     <tr>
                                 </tbody>
@@ -553,12 +508,14 @@
             </div>
         </div>
 
-        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" crossorigin="anonymous"></script>
-        <script src="https://cdn.jsdelivr.net/npm/feather-icons@4.28.0/dist/feather.min.js" crossorigin="anonymous"></script>
-
-        <script src="./scripts/global.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/feather-icons@4.28.0/dist/feather.min.js" integrity="sha384-uO3SXW5IuS1ZpFPKugNNWqTZRRglnUJK6UAZ/gxOX80nxEkN9NcGZTftn6RzhGWE" crossorigin="anonymous"></script>
+        
+        <!-- Custom component scripts -->
+        <script src="./../scripts/modal.js"></script>
+        <script src="./../scripts/global.js"></script>
 
     </body>
 </html>
