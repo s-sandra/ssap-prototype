@@ -9,6 +9,8 @@
 
         <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet'>
 
+        <!-- Font Awesome Icons -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
         <!-- Bootstrap core CSS -->
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
@@ -19,6 +21,7 @@
         <link href="./../styles/global.css" rel="stylesheet">
         <link href="./../styles/chart.css" rel="stylesheet">
         <link href="./../styles/modal.css" rel="stylesheet">
+        <link href="./../styles/accordian.css" rel="stylesheet">
         <link href="./../styles/backToTop.css" rel="stylesheet">
 
     </head>
@@ -123,27 +126,72 @@
                         </div>
                     </div>
 
-                    <ul class="nav nav-tabs">
-                        <li class="nav-item">
-                            <a class="nav-link" href="./project_group.html">
-                                <span data-feather="clipboard"></span>
-                                Projects
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link active" href="./project_group_charts.html">
-                                <span data-feather="bar-chart-2"></span>
-                                Charts
-                            </a>
-                        </li>
-                    </ul>
+                    <div style="width: max-content;">
+                        <ul class="nav nav-tabs">
+                            <li class="nav-item">
+                                <a class="nav-link" href="./project_group.html">
+                                    <span data-feather="clipboard"></span>
+                                    Projects
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active" href="./project_group_charts.html">
+                                    <span data-feather="bar-chart-2"></span>
+                                    Charts
+                                </a>
+                            </li>
+                        </ul>
 
-                    <div id="charts">
+                        <ul class="nav nav-pills">
+                            <li class="nav-item">
+                                <a class="nav-link" href="#access_scores"
+                                   data-toggle="tooltip" data-placement="bottom" title="Accessibility">
+                                   <i class="fa fa-wheelchair" style="font-weight: bold;"></i>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#econ_scores" 
+                                   data-toggle="tooltip" data-placement="bottom" 
+                                   title="Economic Development">
+                                   <i class="fa fa-usd"></i>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#safety_scores"
+                                   data-toggle="tooltip" data-placement="bottom" title="Safety">
+                                   <span data-feather="life-buoy"></span>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#congestion_scores"
+                                   data-toggle="tooltip" data-placement="bottom" 
+                                   title="Congestion Mitigation">
+                                   <i class="fa fa-car"></i>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#environ_scores"
+                                   data-toggle="tooltip" data-placement="bottom" 
+                                   title="Environmental Quality">
+                                   <i class="fa fa-leaf"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <button id="access_scores" class="btn" type="button" data-toggle="collapse" data-target="#access" 
+                            aria-expanded="true" aria-controls="collapseStats">
+                        <h3>Accessibility Statistics</h3>
+                        <span data-feather="chevron-down"></span>
+                        <span data-feather="chevron-up"></span>
+                    </button>
+
+                    <div class="collapse show" id="access">
                         <div class="card">
                             <div class="card-header bg-light">
                                 <div class="row justify-content-between align-items-center flex-grow-1">
                                     <div class="col-12 col-md">
-                                        <h3>SMART SCALE Score Distribution</h3>
+                                        <h3>Multimodal Access Score Percentiles</h3>
                                     </div>
                                     <div class="col-auto">
                                         <button type="button" class="btn btn-outline-primary">
@@ -153,38 +201,38 @@
                                     </div>
                                 </div>
                             </div>
-                            <canvas class="my-4 w-100" id="histogram" width="900" height="380"></canvas>
+                            <canvas class="my-4 w-100" id="percentileHighlight" width="900" height="380"></canvas>
                         </div>
+                    </div>
 
-                        <div class="card">
-                            <div class="card-header bg-light">
-                                <div class="row justify-content-between align-items-center flex-grow-1">
-                                    <div class="col-12 col-md">
-                                        <h3>SMART SCALE Score Percentiles</h3>
-                                    </div>
-                                    <div class="col-auto">
-                                        <form>
-                                            <div class="input-group input-group-merge input-group-flush">
-                                                <div class="input-group-prepend">
-                                                    <div class="input-group-text">
-                                                        <span data-feather="search"></span>
-                                                    </div>
-                                                </div>
-                                                <input class="form-control" type="search" placeholder="custom percentile" aria-label="enter custom percentile">
-                                            </div>
-                                        </form>
-                                    </div>
-                                    <div class="col-auto">
-                                        <button type="button" class="btn btn-outline-primary">
-                                            <span data-feather="download"></span>
-                                            Export Chart
-                                        </button>
-                                    </div>
-                                </div>
-                            </div>
-                            <canvas class="my-4 w-100" id="percentile" width="900" height="380"></canvas>
-                        </div>
-                </div>
+                    <button id="econ_scores" class="btn" type="button" data-toggle="collapse" data-target="#econ-dev" 
+                            aria-expanded="true" aria-controls="collapseEconDev">
+                        <h3>Economic Development Statistics</h3>
+                        <span data-feather="chevron-down"></span>
+                        <span data-feather="chevron-up"></span>
+                    </button>
+
+                    <button id="safety_scores" class="btn" type="button" data-toggle="collapse" data-target="#safety" 
+                            aria-expanded="true" aria-controls="collapseSafety">
+                        <h3>Safety Statistics</h3>
+                        <span data-feather="chevron-down"></span>
+                        <span data-feather="chevron-up"></span>
+                    </button>
+
+                    <button id="congestion_scores" class="btn" type="button" data-toggle="collapse" data-target="#congestion" 
+                            aria-expanded="true" aria-controls="collapseCongestion">
+                        <h3>Congestion Mitigation Statistics</h3>
+                        <span data-feather="chevron-down"></span>
+                        <span data-feather="chevron-up"></span>
+                    </button>
+
+                    <button id="environ_scores" class="btn" type="button" data-toggle="collapse" data-target="#environ" 
+                            aria-expanded="true" aria-controls="collapseEnviron">
+                        <h3>Environmental Quality Statistics</h3>
+                        <span data-feather="chevron-down"></span>
+                        <span data-feather="chevron-up"></span>
+                    </button>
+                        
                 </main>
             </div>
         </div>
@@ -196,8 +244,7 @@
         <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js" integrity="sha384-zNy6FEbO50N+Cg5wap8IKA4M/ZnLJgzc6w2NqACZaK0u0FXfOWRRJOnQtpZun8ha" crossorigin="anonymous"></script>
         
         <!-- Custom component scripts -->
-        <script src="./../scripts/histogram.js"></script>
-        <script src="./../scripts/percentile.js"></script>
+        <script src="./../scripts/percentileHighlight.js"></script>
         <script src="./../scripts/global.js"></script>
         <script src="./../scripts/backToTop.js"></script>
 
