@@ -1,0 +1,398 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="">
+        <meta name="author" content="Sandra Shtabnaya">
+        <title>My Scenarios</title>
+
+        <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet'>
+
+
+        <!-- Bootstrap core CSS -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+
+
+        <!-- component styles -->
+        <link href="./../styles/navbar.css" rel="stylesheet">
+        <link href="./../styles/global.css" rel="stylesheet">
+        <link href="./../styles/modal.css" rel="stylesheet">
+        <link href="./../styles/table.css" rel="stylesheet">
+
+    </head>
+    <body>
+
+        <div class="modal fade" id="cloneModal" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title">Clone Scenarios</h5>
+                  <button type="button" class="btn btn-toolbar" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                    <form class="form">
+                        <div class="form-group col">
+                            <label class="form-label" for="scenarioTitle">Scenario Title</label>
+                            <input type="search" class="form-control" id="scenarioTitle" aria-describedby="scenarioHelp"
+                                   value="2018 Option 1 Copy">
+                            <small id="scenarioHelp" class="form-text text-muted">Enter a name for the scenario.</small>
+                        </div>
+                        <div class="form-group col">
+                            <label for="budget" class="form-label">Budget</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <div class="input-group-text">$</div>
+                                </div>
+                                <input type="number" class="form-control" id="budget" 
+                                    min="0" step="100" value="85000">
+                            </div>
+                        </div>
+                        <div class="form-group col">
+                            <label for="total" class="form-label">Total Funds</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <div class="input-group-text">$</div>
+                                </div>
+                                <input type="number" class="form-control" id="total" 
+                                    min="0" step="100" value="285000">
+                            </div>
+                        </div>
+                        <div class="form-group col">
+                            <label for="budget" class="form-label">District Allocated Funds</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <div class="input-group-text">$</div>
+                                </div>
+                                <input type="number" class="form-control" id="budget" 
+                                    min="0" step="100" value="50000">
+                            </div>
+                        </div>
+                        <div class="form-group col">
+                            <label for="copyProjects" class="form-label">Deep Copy</label>
+                            <div class="custom-control custom-switch">
+                                <input type="checkbox" class="custom-control" id="copyProjects" checked>
+                                <label class="custom-control-label" for="newBinary">Copy competitor pools</label>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-primary" data-dismiss="modal">Clone</button>
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                </div>
+              </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="warningModal" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title">Confirm Deletion</h5>
+                  <button type="button" class="btn btn-toolbar" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                    <div class="mb-3">
+                        <p>Are you sure you want to delete the following scenarios?</p>
+                        <div class="grid">
+                            <div class="card">
+                                <div class="card-body">
+                                    <div class="row justify-content-between">
+                                        <div class="col">
+                                            <h3 class="card-title">State Projects</h3>
+                                            <small class="text-muted">
+                                                <span data-feather="calendar"></span>
+                                                2019
+                                            </small>
+                                        </div>
+                                        <div class="col-auto">
+                                            <button class="btn">
+                                                <span data-feather="x"></span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="card-body">
+                                    <div class="row justify-content-between">
+                                        <div class="col">
+                                            <h3 class="card-title">2017 Round Data</h3>
+                                            <small class="text-muted">
+                                                <span data-feather="calendar"></span>
+                                                2017
+                                            </small>
+                                        </div>
+                                        <div class="col-auto">
+                                            <button class="btn">
+                                                <span data-feather="x"></span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="card-body">
+                                    <div class="row justify-content-between">
+                                        <div class="col">
+                                            <h3 class="card-title">2015 Regional Projects</h3>
+                                            <small class="text-muted">
+                                                <span data-feather="calendar"></span>
+                                                2015
+                                            </small>
+                                        </div>
+                                        <div class="col-auto">
+                                            <button class="btn">
+                                                <span data-feather="x"></span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-danger" data-dismiss="modal">
+                      Delete
+                  </button>
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">
+                      Cancel
+                  </button>
+                </div>
+              </div>
+            </div>
+        </div>
+        
+        <header class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0 shadow">
+            <a class="navbar-brand col-md-3 col-lg-2 me-0 px-3" href="#">SSAP</a>
+            <button class="navbar-toggler position-absolute d-md-none collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="input-group w-50">
+                <div class="input-group-prepend">
+                  <span class="input-group-text" id="search-phrase">
+                    <span data-feather="search"></span>
+                  </span>
+                </div>
+                <input class="form-control" type="text" placeholder="Search" aria-label="Search">
+              </div>
+            <ul class="navbar-nav px-3 user">
+                <li class="nav-item text-nowrap">
+                    <a class="nav-link" href="./../index.html">
+                        <span data-feather="log-out"></span>
+                        Log out
+                    </a>
+                </li>
+            </ul>
+        </header>
+
+        <div class="container-fluid">
+            <div class="row">
+                <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse">
+                    <div class="position-sticky pt-3">
+                        <ul class="nav flex-column">
+                            <li class="nav-item">
+                                <a class="nav-link" href="./../projects/project_groups.html">
+                                <span data-feather="clipboard"></span>
+                                Projects
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active" href="./../scenarios/index.html">
+                                <span data-feather="tool"></span>
+                                Scenarios
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" aria-current="page" href="./../rounds/index.html">
+                                <span data-feather="bar-chart-2"></span>
+                                Round Data
+                                </a>
+                            </li>
+                        </ul>
+
+                        <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted">
+                        <span>Account</span>
+                        </h6>
+                        <ul class="nav flex-column">
+                            <li class="nav-item">
+                                <a class="nav-link" href="./../users/index.html">
+                                <span data-feather="users"></span>
+                                Users
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="./../settings/index.html">
+                                <span data-feather="settings"></span>
+                                Settings
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="./../index.html">
+                                <span data-feather="log-out"></span>
+                                Log Out
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+
+                <main class="col-md-9 ms-sm-auto col-lg-10">
+                    <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+                        <h1>My Scenarios</h1>
+                        <div class="btn-toolbar mb-2 mb-md-0">
+                            <a class="btn btn-primary" href="./add_scenario.html">
+                                <span data-feather="plus"></span>
+                                Add Scenario
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-header">
+                            <div class="row justify-content-between align-items-center flex-grow-1">
+                                <div class="col-12 col-md">
+                                    <h3>Scenarios</h3>
+                                </div>
+                                <div class="col-8 col-md">
+                                    <form>
+                                        <div class="input-group input-group-merge input-group-flush">
+                                            <div class="input-group-prepend">
+                                                <div class="input-group-text">
+                                                    <span data-feather="search"></span>
+                                                </div>
+                                            </div>
+                                            <input class="form-control" type="search" placeholder="search scenarios" 
+                                                   aria-label="enter scenario to search">
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="col-auto">
+                                    <button type="button" class="btn btn-outline-primary dropdown-toggle" 
+                                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        Actions
+                                    </button>
+                                    <div class="dropdown-menu">
+                                        <button class="dropdown-item" data-toggle="modal" data-target="#cloneModal">
+                                            <span data-feather="copy"></span>
+                                            Clone
+                                        </button>
+                                        <a class="dropdown-item" href="./add_scenario.html">
+                                            <span data-feather="plus"></span>
+                                            Add
+                                        </a>
+                                        <button class="dropdown-item"  data-toggle="modal" data-target="#warningModal">
+                                            <span data-feather="minus"></span>
+                                            Remove
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="table-responsive">
+                            <table class="table table-hover">
+                                <thead class="bg-light">
+                                    <tr>
+                                        <th><input type="checkbox" class="form-check-input" id="selectAll"></th>
+                                        <th>ID</th>
+                                        <th>Name</th>
+                                        <th>Budget</th>
+                                        <th>Total Funds</th>
+                                        <th>District Funds</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <th scope="row"><input type="checkbox" class="form-check-input"></th>
+                                        <td><a href="scenario.html">1760</a></td>
+                                        <td class="col-md-6"><a href="scenario.html">Potential 2022 Round</a></td>
+                                        <td>3400</td>
+                                        <td>250000</td>
+                                        <td>10000</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row"><input type="checkbox" class="form-check-input"></th>
+                                        <td><a href="scenario.html">7604</a></td>
+                                        <td class="col-md-6"><a href="scenario.html">2022 Round (low budget)</a></td>
+                                        <td>980</td>
+                                        <td>2000</td>
+                                        <td>1000</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row"><input type="checkbox" class="form-check-input"></th>
+                                        <td><a href="scenario.html">6017</a></td>
+                                        <td class="col-md-6"><a href="scenario.html">2018 Option 1</a></td>
+                                        <td>10000</td>
+                                        <td>22000</td>
+                                        <td>12050</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row"><input type="checkbox" class="form-check-input"></th>
+                                        <td><a href="scenario.html">1054</a></td>
+                                        <td class="col-md-6"><a href="scenario.html">2022 Eco-Friendly Round</a></td>
+                                        <td>4500</td>
+                                        <td>126000</td>
+                                        <td>13020</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row"><input type="checkbox" class="form-check-input"></th>
+                                        <td><a href="scenario.html">5405</a></td>
+                                        <td class="col-md-6"><a href="scenario.html">High performing competitors</a></td>
+                                        <td>2000</td>
+                                        <td>3300</td>
+                                        <td>1200</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row"><input type="checkbox" class="form-check-input"></th>
+                                        <td><a href="scenario.html">1987</a></td>
+                                        <td class="col-md-6"><a href="scenario.html">2018 Eco Option 2</a></td>
+                                        <td>9000</td>
+                                        <td>11300</td>
+                                        <td>6500</td>
+                                    </tr>
+                                    <tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="card-footer">
+                            <div class="pagination justify-content-end" aria-label="table pagination">
+                                <div class="col-2">
+                                    <form>
+                                        <div class="input-group">
+                                            <div class="input-group-prepend">
+                                                <div class="input-group-text">Page</div>
+                                            </div>
+                                            <input class="form-control" type="number" value="1" min="1" max="32" aria-label="enter table page">
+                                        </div>
+                                    </form>
+                                </div>
+                                <button type="button" class="btn btn-small disabled" href="#" tabindex="-1" aria-label="previous page">
+                                    <span data-feather="arrow-left"></span>
+                                </button>
+                                <button type="button" class="btn btn-small text-primary" href="#" aria-label="next page">
+                                    <span data-feather="arrow-right"></span>
+                                </button>
+                            </div>   
+                        </div>
+                    </div>
+                </main>
+            </div>
+        </div>
+
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/feather-icons@4.28.0/dist/feather.min.js" integrity="sha384-uO3SXW5IuS1ZpFPKugNNWqTZRRglnUJK6UAZ/gxOX80nxEkN9NcGZTftn6RzhGWE" crossorigin="anonymous"></script>
+        
+        <!-- Custom component scripts -->
+        <script src="./../scripts/modal.js"></script>
+        <script src="./../scripts/global.js"></script>
+
+    </body>
+</html>
