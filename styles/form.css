@@ -36,3 +36,11 @@ form h3 {
     margin-top: 1rem;
     margin-bottom: 1rem;
 }
+
+form h3.card-title {
+    margin-top: 0;
+}
+
+.row-cols-5 {
+    margin-top: 2rem;
+}

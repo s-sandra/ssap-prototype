@@ -137,152 +137,166 @@
                         </li>
                     </ul>
                     <form class="form" novalidate>
-                        <div class="row form-row">
-                            <div class="col-8 mb-3">
-                                <label class="form-label" for="title">Project Title</label>
-                                <input type="text" class="form-control" id="title" aria-describedby="titleHelp" required>
-                            </div>
-                        </div>
-                        <div class="row form-row">
-                            <div class="col-md-5 mb-3">
-                                <label class="form-label" for="org">Organization</label>
-                                <input type="text" class="form-control" id="org" aria-describedby="orgHelp">
-                            </div>
-                            <div class="col-md-4 mb-3">
-                                <label class="form-label" for="district">District</label>
-                                <input type="text" class="form-control" id="district" aria-describedby="districtHelp">
-                            </div>
-                            <div class="col-md-2 mb-3">
-                                <label for="areaType" class="form-label">Area Type</label>
-                                <select class="form-control" id="areaType">
-                                    <option>A</option>
-                                    <option>B</option>
-                                    <option>C</option>
-                                    <option>D</option>
-                                </select>
-                            </div>
-                        </div>
-                        <h3 disabled>Rankings</h3>
-                        <div class="row form-row">
-                            <div class="col-md-4 mb-3">
-                                <div class="mb-3">
-                                    <label class="form-label" for="stateRank" disabled>State Rank</label>
-                                    <input type="number" class="form-control" id="stateRank" min="1" max="300" step="1" disabled>
+                        <div class="panel">
+                            <div class="row form-row">
+                                <div class="col-8 mb-3">
+                                    <label class="form-label" for="title">Project Title</label>
+                                    <input type="text" class="form-control" id="title" aria-describedby="titleHelp" required>
                                 </div>
-                                <div class="mb-3">
-                                    <input class="form-check-input" type="checkbox" id="priority" disabled>
-                                    <label class="form-check-label" for="priority">Statewide Priority</label>
+                            </div>
+                            <div class="row form-row">
+                                <div class="col-md-5 mb-3">
+                                    <label class="form-label" for="org">Organization</label>
+                                    <input type="text" class="form-control" id="org" aria-describedby="orgHelp">
                                 </div>
-                                
-                            </div>  
-                            <div class="col-md-4 mb-3">
-                                <div class="mb-3">
-                                    <label class="form-label" for="distRank" disabled>District Rank</label>
-                                    <input type="number" class="form-control" id="distRank" min="1" max="100" step="1" disabled>
+                                <div class="col-md-4 mb-3">
+                                    <label class="form-label" for="district">District</label>
+                                    <input type="text" class="form-control" id="district" aria-describedby="districtHelp">
                                 </div>
-                                <div class="mb-3">
-                                    <input class="form-check-input" type="checkbox" id="grant" disabled>
-                                    <label class="form-check-label" for="grant">District Grant</label>
+                                <div class="col-md-2 mb-3">
+                                    <label for="areaType" class="form-label">Area Type</label>
+                                    <select class="form-control" id="areaType">
+                                        <option>A</option>
+                                        <option>B</option>
+                                        <option>C</option>
+                                        <option>D</option>
+                                    </select>
                                 </div>
                             </div>
                         </div>
-                        <div class="row form-row">
-                            <div class="col-md-3 mb-3">
-                                <label class="form-label" for="sss" disabled>SMART SCALE Score</label>
-                                <input type="number" class="form-control" id="sss" min="0" max="300" step="0.001" disabled>
-                            </div>
-                            <div class="col-md-3 mb-3">
-                                <label class="form-label" for="benefitScore" disabled>Project Benefit Score</label>
-                                <input type="number" class="form-control" id="benefitScore" min="0" max="300" step="0.001" disabled>
-                            </div>
-                            <div class="col-md-3 mb-3">
-                                <label class="form-label" for="benefitRank" disabled>Benefit Rank</label>
-                                <input type="number" class="form-control" id="benefitRank" min="1" max="300" step="1" disabled>
-                            </div>
-                        </div>
-                        <h3 disabled>Funding</h3>
-                        <div class="row form-row">
-                            <div class="col-md-4 mb-3">
-                                <label for="fund" class="form-label" disabled>Total Project</label>
-                                <div class="input-group">
-                                    <div class="input-group-prepend">
-                                        <div class="input-group-text">$</div>
+                        <div class="panel">
+                            <h3 disabled>Rankings</h3>
+                            <div class="row form-row">
+                                <div class="col-md-4 mb-3">
+                                    <div class="mb-3">
+                                        <label class="form-label" for="stateRank" disabled>State Rank</label>
+                                        <input type="number" class="form-control" id="stateRank" min="1" max="300" step="1" disabled>
                                     </div>
-                                    <input type="number" class="form-control" id="fund" min="0" step="100" disabled>
-                                </div>
-                            </div>
-                            <div class="col-md-4 mb-3">
-                                <label for="ssFund" class="form-label" disabled>SMART SCALE Request</label>
-                                <div class="input-group">
-                                    <div class="input-group-prepend">
-                                        <div class="input-group-text">$</div>
+                                    <div class="mb-3">
+                                        <input class="form-check-input" type="checkbox" id="priority" disabled>
+                                        <label class="form-check-label" for="priority">Statewide Priority</label>
                                     </div>
-                                    <input type="number" class="form-control" id="ssFund" min="0" step="100" disabled>
+                                    
+                                </div>  
+                                <div class="col-md-4 mb-3">
+                                    <div class="mb-3">
+                                        <label class="form-label" for="distRank" disabled>District Rank</label>
+                                        <input type="number" class="form-control" id="distRank" min="1" max="100" step="1" disabled>
+                                    </div>
+                                    <div class="mb-3">
+                                        <input class="form-check-input" type="checkbox" id="grant" disabled>
+                                        <label class="form-check-label" for="grant">District Grant</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row form-row">
+                                <div class="col-md-3 mb-3">
+                                    <label class="form-label" for="sss" disabled>SMART SCALE Score</label>
+                                    <input type="number" class="form-control" id="sss" min="0" max="300" step="0.001" disabled>
+                                </div>
+                                <div class="col-md-3 mb-3">
+                                    <label class="form-label" for="benefitScore" disabled>Project Benefit Score</label>
+                                    <input type="number" class="form-control" id="benefitScore" min="0" max="300" step="0.001" disabled>
+                                </div>
+                                <div class="col-md-3 mb-3">
+                                    <label class="form-label" for="benefitRank" disabled>Benefit Rank</label>
+                                    <input type="number" class="form-control" id="benefitRank" min="1" max="300" step="1" disabled>
                                 </div>
                             </div>
                         </div>
-                        <h3>Accessibility</h3>
-                        <div class="row form-row">
-                            <div class="col-md-3 mb-3">
-                                <label class="form-label" for="accessJobs">Access to Jobs</label>
-                                <input type="number" class="form-control" id="accessJobs" min="0" max="300" step="0.001">
-                            </div>
-                            <div class="col-md-3 mb-3">
-                                <label class="form-label" for="disAccJobs">Disadvantaged Access to Jobs</label>
-                                <input type="number" class="form-control" id="disAccJobs" min="0" max="300" step="0.001">
-                            </div>
-                            <div class="col-md-3 mb-3">
-                                <label class="form-label" for="multiScore">Multimodal Access Score</label>
-                                <input type="number" class="form-control" id="multiScore" min="0" max="300" step="0.001">
-                            </div>
-                        </div>
-                        <h3>Economic Development</h3>
-                        <div class="row form-row">
-                            <div class="col-md-3 mb-3">
-                                <label class="form-label" for="econDev">Economic Development Support</label>
-                                <input type="number" class="form-control" id="econDev" min="0" max="300" step="0.001">
-                            </div>
-                            <div class="col-md-3 mb-3">
-                                <label class="form-label" for="travelTime">Travel Time Reliability</label>
-                                <input type="number" class="form-control" id="travelTime" min="0" max="300" step="0.001">
-                            </div>
-                            <div class="col-md-3 mb-3">
-                                <label class="form-label" for="interScore">Intermodal Access Score</label>
-                                <input type="number" class="form-control" id="interScore" min="0" max="300" step="0.001">
+                        <div class="panel">
+                            <h3 disabled>Funding</h3>
+                            <div class="row form-row">
+                                <div class="col-md-4 mb-3">
+                                    <label for="fund" class="form-label" disabled>Total Project</label>
+                                    <div class="input-group">
+                                        <div class="input-group-prepend">
+                                            <div class="input-group-text">$</div>
+                                        </div>
+                                        <input type="number" class="form-control" id="fund" min="0" step="100" disabled>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 mb-3">
+                                    <label for="ssFund" class="form-label" disabled>SMART SCALE Request</label>
+                                    <div class="input-group">
+                                        <div class="input-group-prepend">
+                                            <div class="input-group-text">$</div>
+                                        </div>
+                                        <input type="number" class="form-control" id="ssFund" min="0" step="100" disabled>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                        <h3>Safety and Congestion Mitigation</h3>
-                        <div class="row form-row">
-                            <div class="col-md-2 mb-3">
-                                <label class="form-label" for="crashScore">Crash Frequency Score</label>
-                                <input type="number" class="form-control" id="crashScore" min="0" max="300" step="0.001">
-                            </div>
-                            <div class="col-md-2 mb-3">
-                                <label class="form-label" for="crashRate">Crash Rate</label>
-                                <input type="number" class="form-control" id="crashRate" min="0" max="300" step="0.001">
-                            </div>
-                            <div class="col-md-2 mb-3">
-                                <label class="form-label" for="throughput">Throughput Score</label>
-                                <input type="number" class="form-control" id="throughput" min="0" max="300" step="0.1">
-                            </div>
-                            <div class="col-md-2 mb-3">
-                                <label class="form-label" for="interScore">Delay Score</label>
-                                <input type="number" class="form-control" id="delay" min="0" max="300" step="0.01">
+                        <div class="panel">
+                            <h3>Accessibility</h3>
+                            <div class="row form-row">
+                                <div class="col-md-3 mb-3">
+                                    <label class="form-label" for="accessJobs">Access to Jobs</label>
+                                    <input type="number" class="form-control" id="accessJobs" min="0" max="300" step="0.001">
+                                </div>
+                                <div class="col-md-3 mb-3">
+                                    <label class="form-label" for="disAccJobs">Disadvantaged Access to Jobs</label>
+                                    <input type="number" class="form-control" id="disAccJobs" min="0" max="300" step="0.001">
+                                </div>
+                                <div class="col-md-3 mb-3">
+                                    <label class="form-label" for="multiScore">Multimodal Access Score</label>
+                                    <input type="number" class="form-control" id="multiScore" min="0" max="300" step="0.001">
+                                </div>
                             </div>
                         </div>
-                        <h3>Environmental Quality</h3>
-                        <div class="row form-row">
-                            <div class="col-md-3 mb-3">
-                                <label class="form-label" for="airQuality">Air Quality Score</label>
-                                <input type="number" class="form-control" id="airQuality" min="0" max="300" step="0.001">
+                        <div class="panel">
+                            <h3>Economic Development</h3>
+                            <div class="row form-row">
+                                <div class="col-md-3 mb-3">
+                                    <label class="form-label" for="econDev">Economic Development Support</label>
+                                    <input type="number" class="form-control" id="econDev" min="0" max="300" step="0.001">
+                                </div>
+                                <div class="col-md-3 mb-3">
+                                    <label class="form-label" for="travelTime">Travel Time Reliability</label>
+                                    <input type="number" class="form-control" id="travelTime" min="0" max="300" step="0.001">
+                                </div>
+                                <div class="col-md-3 mb-3">
+                                    <label class="form-label" for="interScore">Intermodal Access Score</label>
+                                    <input type="number" class="form-control" id="interScore" min="0" max="300" step="0.001">
+                                </div>
                             </div>
-                            <div class="col-md-3 mb-3">
-                                <label class="form-label" for="enviroImpact">Environmental Impact Score</label>
-                                <input type="number" class="form-control" id="enviroImpact" min="0" max="300" step="0.001">
+                        </div>
+                        <div class="panel">
+                            <h3>Safety and Congestion Mitigation</h3>
+                            <div class="row form-row">
+                                <div class="col-md-2 mb-3">
+                                    <label class="form-label" for="crashScore">Crash Frequency Score</label>
+                                    <input type="number" class="form-control" id="crashScore" min="0" max="300" step="0.001">
+                                </div>
+                                <div class="col-md-2 mb-3">
+                                    <label class="form-label" for="crashRate">Crash Rate</label>
+                                    <input type="number" class="form-control" id="crashRate" min="0" max="300" step="0.001">
+                                </div>
+                                <div class="col-md-2 mb-3">
+                                    <label class="form-label" for="throughput">Throughput Score</label>
+                                    <input type="number" class="form-control" id="throughput" min="0" max="300" step="0.1">
+                                </div>
+                                <div class="col-md-2 mb-3">
+                                    <label class="form-label" for="interScore">Delay Score</label>
+                                    <input type="number" class="form-control" id="delay" min="0" max="300" step="0.01">
+                                </div>
                             </div>
-                            <div class="col-md-3 mb-3">
-                                <label class="form-label" for="landUse">Land Use Score</label>
-                                <input type="number" class="form-control" id="landUse" min="0" max="300" step="0.001">
+                        </div>
+                        <div class="panel">
+                            <h3>Environmental Quality</h3>
+                            <div class="row form-row">
+                                <div class="col-md-3 mb-3">
+                                    <label class="form-label" for="airQuality">Air Quality Score</label>
+                                    <input type="number" class="form-control" id="airQuality" min="0" max="300" step="0.001">
+                                </div>
+                                <div class="col-md-3 mb-3">
+                                    <label class="form-label" for="enviroImpact">Environmental Impact Score</label>
+                                    <input type="number" class="form-control" id="enviroImpact" min="0" max="300" step="0.001">
+                                </div>
+                                <div class="col-md-3 mb-3">
+                                    <label class="form-label" for="landUse">Land Use Score</label>
+                                    <input type="number" class="form-control" id="landUse" min="0" max="300" step="0.001">
+                                </div>
                             </div>
                         </div>
                     </form>
