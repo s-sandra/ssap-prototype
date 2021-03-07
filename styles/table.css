@@ -73,3 +73,12 @@ tr {
 .card-header .nav-tabs {
     margin-left: 0.5rem;
 }
+
+.card-footer {
+    min-height: 2.5rem;
+}
+
+.type-col {
+    width: 3rem;
+    text-align: right;
+}

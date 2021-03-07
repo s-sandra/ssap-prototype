@@ -100,105 +100,6 @@
               </div>
             </div>
         </div>
-        
-        <div class="modal fade" id="uploadModal" tabindex="-1" role="dialog" aria-hidden="true">
-            <div class="modal-dialog" role="document">
-              <div class="modal-content">
-                <div class="modal-header">
-                  <h5 class="modal-title">Add Project Group</h5>
-                  <button type="button" class="btn btn-toolbar" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                  </button>
-                </div>
-                <div class="modal-body">
-                    <ul class="nav nav-tabs">
-                        <li class="nav-item">
-                            <a class="nav-link">
-                                <span data-feather="file"></span>
-                                New
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link">
-                                <span data-feather="upload"></span>
-                                Import
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link active">
-                                <span data-feather="copy"></span>
-                                Clone
-                            </a>
-                        </li>
-                    </ul>
-                    <form class="form">
-                        <div class="form-group col">
-                            <label class="form-label" for="projectTitle">Project Group Title</label>
-                            <input type="search" class="form-control" id="projectTitle" aria-describedby="projectHelp"
-                                   value="Butler Road Extension Copy">
-                            <small id="projectHelp" class="form-text text-muted">Enter a name for the project group.</small>
-                        </div>
-                        <div class="row align-items-end">
-                            <div class="col">
-                                <label class="form-label" for="destination">Copy From</label>
-                                <div class="input-group">
-                                    <div class="input-group-prepend">
-                                        <div class="input-group-text">
-                                            <span data-feather="search"></span>
-                                        </div>
-                                    </div>
-                                    <input class="form-control" type="search" id="destination"
-                                           placeholder="search project groups" aria-label="enter group to search"
-                                           data-toggle="collapse" data-target="#results">
-                                </div>
-                            </div>
-                        </div>
-                        <ul class="list-group collapse" id="results">
-                            <button class="list-group-item list-group-item-action">
-                                <span data-feather="clipboard"></span>
-                                Eco-Friendly Competitor Pool
-                                <small class="text-muted">- Project Groups</small>
-                            </button>
-                            <button class="list-group-item list-group-item-action">
-                                <span data-feather="clipboard"></span>
-                                Eco-Friendly Group
-                                <small class="text-muted">- Project Groups</small>
-                            </button>
-                            <button class="list-group-item list-group-item-action">
-                                <span data-feather="bar-chart-2"></span>
-                                Economic 2017 Projects
-                                <small class="text-muted">- Round Data</small>
-                            </button>
-                        </ul>
-                    </form>
-                    <div class="grid">
-                        <div class="card">
-                            <div class="card-body">
-                                <div class="row justify-content-between">
-                                    <div class="col">
-                                        <h3 class="card-title">2019 Round Data</h3>
-                                        <small class="text-muted">
-                                            <span data-feather="bar-chart-2"></span>
-                                            Round Data
-                                        </small>
-                                    </div>
-                                    <div class="col-auto">
-                                        <button class="btn">
-                                            <span data-feather="x"></span>
-                                        </button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="modal-footer">
-                  <a class="btn btn-primary" data-dismiss="modal" href="#">Add</a>
-                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
-                </div>
-              </div>
-            </div>
-        </div>
 
         <div class="modal fade" id="warningModal" tabindex="-1" role="dialog" aria-hidden="true">
             <div class="modal-dialog" role="document">
@@ -360,10 +261,10 @@
                     <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
                         <h1>My Projects</h1>
                         <div class="btn-toolbar mb-2 mb-md-0">
-                            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#uploadModal">
+                            <a type="button" class="btn btn-primary" href="./add_project_group.html">
                                 <span data-feather="plus"></span>
                                 Add Group
-                            </button>
+                            </a>
                         </div>
                     </div>
 
@@ -416,10 +317,10 @@
                                             <span data-feather="copy"></span>
                                             Clone
                                         </button>
-                                        <button class="dropdown-item" data-toggle="modal" data-target="#uploadModal">
+                                        <a class="dropdown-item" href="./add_project_group.html">
                                             <span data-feather="plus"></span>
                                             Add
-                                        </button>
+                                        </a>
                                         <button class="dropdown-item"  data-toggle="modal" data-target="#warningModal">
                                             <span data-feather="minus"></span>
                                             Remove

@@ -16,6 +16,7 @@
         <link href="./../styles/navbar.css" rel="stylesheet">
         <link href="./../styles/global.css" rel="stylesheet">
         <link href="./../styles/form.css" rel="stylesheet">
+        <link href="./../styles/searchResults.css" rel="stylesheet">
 
     </head>
     <body>
@@ -170,10 +171,9 @@
                                         </div>
                                     </div>
                                     <div class="col-auto">
-                                        <!-- On click, add My Projects Card to destination grid -->
-                                        <a class="btn btn-outline-primary" href="../projects/create_project_group.html" target="_blank">
+                                        <a class="btn btn-outline-primary" href="../projects/add_project_group.html" target="_blank">
                                             <span data-feather="plus"></span>
-                                            New Project Group
+                                            Create New
                                         </a>
                                     </div>
                                 </div>
@@ -203,8 +203,8 @@
                                                 <div class="card-body">
                                                     <h3 class="card-title">Eco-Friendly Competitor Pool</h3>
                                                     <p class="card-text">
-                                                        <span data-feather="key"></span>
-                                                        1760
+                                                        <span data-feather="clipboard"></span>
+                                                        Project Groups
                                                     </p>
                                                 </div>
                                                 <div class="card-footer">
@@ -222,8 +222,8 @@
                                                 <div class="card-body">
                                                     <h3 class="card-title">Hypothetical Loudoun Bids</h3>
                                                     <p class="card-text">
-                                                        <span data-feather="key"></span>
-                                                        7601
+                                                        <span data-feather="bar-chart-2"></span>
+                                                        Round Data
                                                     </p>
                                                 </div>
                                                 <div class="card-footer">
@@ -240,8 +240,8 @@
                                                 <div class="card-body">
                                                     <h3 class="card-title">Average Competition</h3>
                                                     <p class="card-text">
-                                                        <span data-feather="key"></span>
-                                                        1054
+                                                        <span data-feather="clipboard"></span>
+                                                        Project Groups
                                                     </p>
                                                 </div>
                                                 <div class="card-footer">
@@ -274,10 +274,9 @@
                                         </div>
                                     </div>
                                     <div class="col-auto">
-                                        <!-- On click, add My Projects Card to destination grid -->
-                                        <a class="btn btn-outline-primary" href="../projects/create_project_group.html" target="_blank">
+                                        <a class="btn btn-outline-primary" href="../projects/add_project_group.html" target="_blank">
                                             <span data-feather="plus"></span>
-                                            New Project Group
+                                            Create New
                                         </a>
                                     </div>
                                 </div>
@@ -307,8 +306,8 @@
                                                 <div class="card-body">
                                                     <h3 class="card-title">Eco-Friendly Competitor Pool</h3>
                                                     <p class="card-text">
-                                                        <span data-feather="key"></span>
-                                                        1760
+                                                        <span data-feather="clipboard"></span>
+                                                        Project Groups
                                                     </p>
                                                 </div>
                                                 <div class="card-footer">
@@ -326,8 +325,8 @@
                                                 <div class="card-body">
                                                     <h3 class="card-title">Hypothetical Loudoun Bids</h3>
                                                     <p class="card-text">
-                                                        <span data-feather="key"></span>
-                                                        7601
+                                                        <span data-feather="bar-chart-2"></span>
+                                                        Round Data
                                                     </p>
                                                 </div>
                                                 <div class="card-footer">
@@ -344,11 +343,152 @@
                                                 <div class="card-body">
                                                     <h3 class="card-title">Average Competition</h3>
                                                     <p class="card-text">
-                                                        <span data-feather="key"></span>
-                                                        1054
+                                                        <span data-feather="clipboard"></span>
+                                                        Project Groups
                                                     </p>
                                                 </div>
                                                 <div class="card-footer">
+                                                    <div class="btn-group">
+                                                        <button type="button" class="btn btn-small">
+                                                            <span data-feather="x"></span> Cancel
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="panel">
+                            <h3>Candidate Pool</h3>
+                            <div class="row form-row">
+                                <div class="row align-items-end">
+                                    <div class="col-md-5">
+                                        <div class="input-group col-md-5">
+                                            <div class="input-group-prepend">
+                                                <div class="input-group-text">
+                                                    <span data-feather="plus"></span>
+                                                </div>
+                                            </div>
+                                            <input class="form-control" type="search" id="candidateSearch"
+                                                    placeholder="add project group" aria-label="enter group to search"
+                                                    data-toggle="collapse" data-target="#districtResults">
+                                        </div>
+                                    </div>
+                                    <div class="col-auto">
+                                        <a class="btn btn-outline-primary" href="../projects/add_project_group.html" target="_blank">
+                                            <span data-feather="plus"></span>
+                                            Create New
+                                        </a>
+                                    </div>
+                                </div>
+                                <div>
+                                    <ul class="list-group col-md-5 collapse" id="candidateResults">
+                                        <button class="list-group-item list-group-item-action">
+                                            <span data-feather="clipboard"></span>
+                                            Eco-Friendly Competitor Pool
+                                            <small class="text-muted">- Project Groups</small>
+                                        </button>
+                                        <button class="list-group-item list-group-item-action">
+                                            <span data-feather="clipboard"></span>
+                                            Eco-Friendly Group
+                                            <small class="text-muted">- Project Groups</small>
+                                        </button>
+                                        <button class="list-group-item list-group-item-action">
+                                            <span data-feather="bar-chart-2"></span>
+                                            Economic 2017 Projects
+                                            <small class="text-muted">- Round Data</small>
+                                        </button>
+                                    </ul>
+                                </div>
+                                <div id="candidatePool" class="collapse show"> 
+                                    <div class="row row-cols-5 row-cols-md-5">
+                                        <div class="col">
+                                            <div class="card">
+                                                <div class="card-body">
+                                                    <h3 class="card-title">Eco-Friendly Competitor Pool</h3>
+                                                    <p class="card-text">
+                                                        <span data-feather="bar-chart-2"></span>
+                                                        Round Data
+                                                    </p>
+                                                </div>
+                                                <div class="card-footer">
+                                                    <!-- Remove card after pressing cancel. -->
+                                                    <div class="btn-group">
+                                                        <button type="button" class="btn btn-small">
+                                                            <span data-feather="x"></span> Cancel
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <div class="card">
+                                                <div class="card-body">
+                                                    <h3 class="card-title">Hypothetical Loudoun Bids</h3>
+                                                    <p class="card-text">
+                                                        <span data-feather="clipboard"></span>
+                                                        Project Groups
+                                                    </p>
+                                                </div>
+                                                <div class="card-footer">
+                                                    <div class="btn-group">
+                                                        <button type="button" class="btn btn-small">
+                                                            <span data-feather="x"></span> Cancel
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <div class="card">
+                                                <div class="card-body">
+                                                    <h3 class="card-title">Average Competition</h3>
+                                                    <p class="card-text">
+                                                        <span data-feather="clipboard"></span>
+                                                        Project Groups
+                                                    </p>
+                                                </div>
+                                                <div class="card-footer">
+                                                    <div class="btn-group">
+                                                        <button type="button" class="btn btn-small">
+                                                            <span data-feather="x"></span> Cancel
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <div class="card">
+                                                <div class="card-body">
+                                                    <h3 class="card-title">State Bridge Projects</h3>
+                                                    <p class="card-text">
+                                                        <span data-feather="clipboard"></span>
+                                                        Project Groups
+                                                    </p>
+                                                </div>
+                                                <div class="card-footer">
+                                                    <!-- Remove card after pressing cancel. -->
+                                                    <div class="btn-group">
+                                                        <button type="button" class="btn btn-small">
+                                                            <span data-feather="x"></span> Cancel
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <div class="card">
+                                                <div class="card-body">
+                                                    <h3 class="card-title">Round 2017</h3>
+                                                    <p class="card-text">
+                                                        <span data-feather="clipboard"></span>
+                                                        Project Groups
+                                                    </p>
+                                                </div>
+                                                <div class="card-footer">
+                                                    <!-- Remove card after pressing cancel. -->
                                                     <div class="btn-group">
                                                         <button type="button" class="btn btn-small">
                                                             <span data-feather="x"></span> Cancel

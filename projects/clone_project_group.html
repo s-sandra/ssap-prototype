@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="description" content="">
         <meta name="author" content="Sandra Shtabnaya">
-        <title>Import Project</title>
+        <title>Clone Project</title>
 
         <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet'>
 
@@ -16,6 +16,7 @@
         <link href="./../styles/navbar.css" rel="stylesheet">
         <link href="./../styles/global.css" rel="stylesheet">
         <link href="./../styles/form.css" rel="stylesheet">
+        <link href="./../styles/searchResults.css" rel="stylesheet">
 
     </head>
     <body>
@@ -97,19 +98,18 @@
                     <nav aria-label="breadcrumb">
                         <ol class="breadcrumb">
                           <li class="breadcrumb-item"><a href="project_groups.html">My Project Groups</a></li>
-                          <li class="breadcrumb-item"><a href="project_group.html">Moderate Competitor Pool</a></li>
-                          <li class="breadcrumb-item active" aria-current="page">Add Project</li>
+                          <li class="breadcrumb-item active" aria-current="page">Add Project Group</li>
                         </ol>
                     </nav>
                     
                     <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-                        <h1>Add Project</h1>
+                        <h1>Add Project Group</h1>
                         <div class="btn-toolbar mb-2 mb-md-0">
-                            <a class="btn btn-primary" href="./project_group.html">
+                            <a class="btn btn-primary" href="./project_groups.html">
                                 <span data-feather="plus"></span>
                                 Add
                             </a>
-                            <a class="btn btn-secondary" href="./project_group.html">
+                            <a class="btn btn-secondary" href="./project_groups.html">
                                 <span data-feather="x"></span>
                                 Cancel
                             </a>
@@ -117,19 +117,13 @@
                     </div>
                     <ul class="nav nav-tabs">
                         <li class="nav-item">
-                            <a class="nav-link" href="./add_project.html">
+                            <a class="nav-link" href="./add_project_group.html">
                                 <span data-feather="file"></span>
                                 New
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link active" href="./import_project.html">
-                                <span data-feather="upload"></span>
-                                Import
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="./clone_project.html">
+                            <a class="nav-link active" href="./clone_project_group.html">
                                 <span data-feather="copy"></span>
                                 Clone
                             </a>
@@ -137,15 +131,45 @@
                     </ul>
                     <form class="form">
                         <div class="panel">
-                            <div class="col-7 mb-4">
-                                <label for="uploadFile" class="form-label">Project File</label>
-                                <input class="form-control" type="file" id="fileUpload" aria-describedby="fileHelp">
+                            <div class="form-group col-7 mb-4">
+                                <label class="form-label" for="projectTitle">Project Group Title</label>
+                                <input type="search" class="form-control" id="projectTitle" aria-describedby="projectHelp">
                             </div>
-                            <div class="col-7 mb-4">
-                                <label for="projectName">Project Title</label>
-                                <input type="text" class="form-control" id="projectName" aria-describedby="titleHelp">
+                            <div class="mb-4">
+                                <div class="row align-items-end">
+                                    <div class="col-7">
+                                        <label class="form-label" for="destination">Copy From</label>
+                                        <div class="input-group">
+                                            <div class="input-group-prepend">
+                                                <div class="input-group-text">
+                                                    <span data-feather="search"></span>
+                                                </div>
+                                            </div>
+                                            <input class="form-control" type="search" id="source"
+                                                placeholder="search project groups" aria-label="enter group to search"
+                                                data-toggle="collapse" data-target="#results">
+                                        </div>
+                                    </div>
+                                </div>
+                                <ul class="list-group collapse col-7" id="results">
+                                    <button class="list-group-item list-group-item-action">
+                                        <span data-feather="clipboard"></span>
+                                        Eco-Friendly Competitor Pool
+                                        <small class="text-muted">- Project Groups</small>
+                                    </button>
+                                    <button class="list-group-item list-group-item-action">
+                                        <span data-feather="clipboard"></span>
+                                        Eco-Friendly Group
+                                        <small class="text-muted">- Project Groups</small>
+                                    </button>
+                                    <button class="list-group-item list-group-item-action">
+                                        <span data-feather="bar-chart-2"></span>
+                                        Economic 2017 Projects
+                                        <small class="text-muted">- Round Data</small>
+                                    </button>
+                                </ul>
                             </div>
-                     </div>
+                        </div>
                     </form>
                 </main>
             </div>
@@ -156,6 +180,5 @@
         <script src="https://cdn.jsdelivr.net/npm/feather-icons@4.28.0/dist/feather.min.js" integrity="sha384-uO3SXW5IuS1ZpFPKugNNWqTZRRglnUJK6UAZ/gxOX80nxEkN9NcGZTftn6RzhGWE" crossorigin="anonymous"></script>
      
         <script src="./../scripts/global.js"></script>
-
     </body>
 </html>
