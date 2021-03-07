@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="description" content="">
         <meta name="author" content="Sandra Shtabnaya">
-        <title>Import Project</title>
+        <title>Import Project Option</title>
 
         <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet'>
 
@@ -16,6 +16,7 @@
         <link href="./../styles/navbar.css" rel="stylesheet">
         <link href="./../styles/global.css" rel="stylesheet">
         <link href="./../styles/form.css" rel="stylesheet">
+        <link href="./../styles/searchResults.css" rel="stylesheet">
 
     </head>
     <body>
@@ -98,18 +99,18 @@
                         <ol class="breadcrumb">
                           <li class="breadcrumb-item"><a href="project_groups.html">My Project Groups</a></li>
                           <li class="breadcrumb-item"><a href="project_group.html">Moderate Competitor Pool</a></li>
-                          <li class="breadcrumb-item active" aria-current="page">Add Project</li>
+                          <li class="breadcrumb-item active" aria-current="page">Add Project Option</li>
                         </ol>
                     </nav>
                     
                     <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-                        <h1>Add Project</h1>
+                        <h1>Add Project Option</h1>
                         <div class="btn-toolbar mb-2 mb-md-0">
-                            <a class="btn btn-primary" href="./project_group.html">
+                            <a class="btn btn-primary" href="./add_ons.html">
                                 <span data-feather="plus"></span>
                                 Add
                             </a>
-                            <a class="btn btn-secondary" href="./project_group.html">
+                            <a class="btn btn-secondary" href="./add_ons.html">
                                 <span data-feather="x"></span>
                                 Cancel
                             </a>
@@ -117,19 +118,19 @@
                     </div>
                     <ul class="nav nav-tabs">
                         <li class="nav-item">
-                            <a class="nav-link" href="./add_project.html">
+                            <a class="nav-link" href="./create_add_on.html">
                                 <span data-feather="file"></span>
                                 New
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link active" href="./import_project.html">
+                            <a class="nav-link active" href="./import_add_on.html">
                                 <span data-feather="upload"></span>
                                 Import
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="./clone_project.html">
+                            <a class="nav-link" href="./clone_add_on.html">
                                 <span data-feather="copy"></span>
                                 Clone
                             </a>
@@ -138,12 +139,12 @@
                     <form class="form">
                         <div class="panel">
                             <div class="col-7 mb-4">
-                                <label for="uploadFile" class="form-label">Project File</label>
+                                <label for="uploadFile" class="form-label">Project Option File</label>
                                 <input class="form-control" type="file" id="fileUpload" aria-describedby="fileHelp">
                             </div>
                             <div class="col-7 mb-4">
-                                <label for="projectName">Project Title</label>
-                                <input type="text" class="form-control" id="projectName" aria-describedby="titleHelp">
+                                <label for="optionName">Project Option Title</label>
+                                <input type="text" class="form-control" id="optionName" aria-describedby="titleHelp">
                             </div>
                         </div>
                     </form>
@@ -156,6 +157,5 @@
         <script src="https://cdn.jsdelivr.net/npm/feather-icons@4.28.0/dist/feather.min.js" integrity="sha384-uO3SXW5IuS1ZpFPKugNNWqTZRRglnUJK6UAZ/gxOX80nxEkN9NcGZTftn6RzhGWE" crossorigin="anonymous"></script>
      
         <script src="./../scripts/global.js"></script>
-
     </body>
 </html>

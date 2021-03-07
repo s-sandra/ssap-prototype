@@ -27,7 +27,7 @@
             <div class="modal-dialog" role="document">
               <div class="modal-content">
                 <div class="modal-header">
-                  <h5 class="modal-title">Clone Scenarios</h5>
+                  <h5 class="modal-title">Clone Scenario</h5>
                   <button type="button" class="btn btn-toolbar" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                   </button>
@@ -36,9 +36,14 @@
                     <form class="form">
                         <div class="form-group col">
                             <label class="form-label" for="scenarioTitle">Scenario Title</label>
-                            <input type="search" class="form-control" id="scenarioTitle" aria-describedby="scenarioHelp"
+                            <input type="search" class="form-control" id="scenarioTitle" aria-describedby="scenarioTitle"
                                    value="2018 Option 1 Copy">
                             <small id="scenarioHelp" class="form-text text-muted">Enter a name for the scenario.</small>
+                        </div>
+                        <div class="form-group col">
+                            <label class="form-label" for="district">District</label>
+                            <input type="search" class="form-control" id="district" aria-describedby="scenarioDistrict"
+                                   value="Fredericksburg">
                         </div>
                         <div class="form-group col">
                             <label for="budget" class="form-label">Budget</label>
@@ -68,13 +73,6 @@
                                 </div>
                                 <input type="number" class="form-control" id="budget" 
                                     min="0" step="100" value="50000">
-                            </div>
-                        </div>
-                        <div class="form-group col">
-                            <label for="copyProjects" class="form-label">Deep Copy</label>
-                            <div class="custom-control custom-switch">
-                                <input type="checkbox" class="custom-control" id="copyProjects" checked>
-                                <label class="custom-control-label" for="newBinary">Copy competitor pools</label>
                             </div>
                         </div>
                     </form>
