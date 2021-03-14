@@ -58,7 +58,7 @@ body {
   color: #333;
 }
 
-.nav-link .feather {
+.nav-link .feather, .nav-link .fa {
   margin-right: 4px;
   color: #727272;
 }

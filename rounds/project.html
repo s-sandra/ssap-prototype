@@ -333,92 +333,13 @@
             </div>
         </div>
 
-        <div class="modal fade" id="addModal" tabindex="-1" role="dialog" aria-hidden="true">
-            <div class="modal-dialog" role="document">
-              <div class="modal-content">
-                <div class="modal-header">
-                  <h5 class="modal-title">Add to Project Group</h5>
-                  <button type="button" class="btn btn-toolbar" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                  </button>
-                </div>
-                <div class="modal-body">
-                    <div class="row align-items-end">
-                        <div class="col">
-                            <label class="form-label" for="destination">Add To</label>
-                            <div class="input-group">
-                                <div class="input-group-prepend">
-                                    <div class="input-group-text">
-                                        <span data-feather="search"></span>
-                                    </div>
-                                </div>
-                                <input class="form-control" type="search" id="destination"
-                                       placeholder="search project groups" aria-label="enter group to search"
-                                       data-toggle="collapse" data-target="#addResults">
-                            </div>
-                        </div>
-                        <div class="col-auto">
-                            <!-- On click, add My Projects Card to destination grid -->
-                            <button class="btn btn-outline-primary">
-                                <span data-feather="plus"></span>
-                                My Projects
-                            </button>
-                        </div>
-                    </div>
-                    <ul class="list-group collapse" id="addResults">
-                        <button class="list-group-item list-group-item-action">
-                            <span data-feather="clipboard"></span>
-                            Eco-Friendly Competitor Pool
-                            <small class="text-muted">- Project Groups</small>
-                        </button>
-                        <button class="list-group-item list-group-item-action">
-                            <span data-feather="clipboard"></span>
-                            Eco-Friendly Group
-                            <small class="text-muted">- Project Groups</small>
-                        </button>
-                        <button class="list-group-item list-group-item-action">
-                            <span data-feather="bar-chart-2"></span>
-                            Economic 2017 Projects
-                            <small class="text-muted">- Round Data</small>
-                        </button>
-                    </ul>
-                </form>
-                    <div class="grid">
-                        <div class="card">
-                            <div class="card-body">
-                                <div class="row justify-content-between">
-                                    <div class="col">
-                                        <h3 class="card-title">My Projects</h3>
-                                        <small class="text-muted">
-                                            <span data-feather="clipboard"></span>
-                                            Project Groups
-                                        </small>
-                                    </div>
-                                    <div class="col-auto">
-                                        <button class="btn">
-                                            <span data-feather="x"></span>
-                                        </button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="modal-footer">
-                  <a class="btn btn-primary" href="project_groups.html">Add</a>
-                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
-                </div>
-              </div>
-            </div>
-        </div>
-
         <div class="container-fluid">
             <div class="row">
                 <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse">
                     <div class="position-sticky pt-3">
                         <ul class="nav flex-column">
                             <li class="nav-item">
-                                <a class="nav-link" href="./../projects/project_groups.html">
+                                <a class="nav-link" href="./../projects/index.html">
                                 <span data-feather="clipboard"></span>
                                 Projects
                                 </a>
@@ -491,14 +412,6 @@
                                   <span data-feather="trash"></span>
                                   Delete
                               </button>
-                              <button class="dropdown-item" data-toggle="modal" data-target="#addModal">
-                                  <span data-feather="plus"></span>
-                                  Add to group
-                              </button>
-                              <a class="dropdown-item" href="./remove_project.html">
-                                  <span data-feather="minus"></span>
-                                  Remove from group
-                              </a>
                             </div>
                         </div>
                     </div>
@@ -509,12 +422,6 @@
                                 <a class="nav-link active" href="./project.html">
                                     <span data-feather="menu"></span>
                                     Details
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="./project_groups.html">
-                                    <span data-feather="clipboard"></span>
-                                    Project Groups
                                 </a>
                             </li>
                             <li class="nav-item">

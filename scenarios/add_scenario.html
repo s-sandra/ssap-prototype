@@ -49,7 +49,7 @@
                     <div class="position-sticky pt-3">
                         <ul class="nav flex-column">
                             <li class="nav-item">
-                                <a class="nav-link" href="./../projects/project_groups.html">
+                                <a class="nav-link" href="./../projects/index.html">
                                 <span data-feather="clipboard"></span>
                                 Projects
                                 </a>
@@ -121,6 +121,17 @@
                                 <div class="col-8 mb-3">
                                     <label class="form-label" for="title">Scenario Title</label>
                                     <input type="text" class="form-control" id="title" aria-describedby="titleHelp" required>
+                                </div>
+                            </div>
+                            <div class="row form-row">
+                                <div class="col-8 mb-3">
+                                    <label class="form-label" for="title">SSS Calculation Template</label>
+                                    <select class="form-control" id="sssTemplate" required>
+                                        <option selected>SSS 2020 Template</option>
+                                        <option value="2018">SSS 2018 Template</option>
+                                        <option value="2016">SSS 2016 Template</option>
+                                    </select>
+                                    <small class="form-text text-muted">Select template for calculating smart scale score.</small>
                                 </div>
                             </div>
                             <div class="row form-row">
