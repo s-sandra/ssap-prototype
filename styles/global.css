@@ -143,3 +143,11 @@ p.card-text .feather {
     margin: 2rem 0 2rem;
     min-height: 10rem;
 }
+
+.form-control:disabled, .form-control[readonly] {
+    background-color: #e9ecef75;
+}
+
+.btn:disabled {
+    background-color: #e9ecef75;
+}

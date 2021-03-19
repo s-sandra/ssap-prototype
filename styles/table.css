@@ -78,6 +78,10 @@ tr {
     min-height: 2.5rem;
 }
 
+.table-responsive + .card-body {
+    height: 10em;
+}
+
 .type-col {
     width: 3rem;
     text-align: right;
