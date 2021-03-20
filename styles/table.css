@@ -24,13 +24,13 @@ ul {
     color: #007bff;
 }
 
-th[scope="row"]+td a {
+th[scope="col"]+td a {
     font-weight: 600;
     padding-right: 10px;
 }
 
-th[scope="row"],
-th[scope="row"]+td {
+th[scope="col"],
+th[scope="col"]+td {
     width: 10px;
 }
 
@@ -85,4 +85,8 @@ tr {
 .type-col {
     width: 3rem;
     text-align: right;
+}
+
+.col-sm {
+    width: 5%;
 }
