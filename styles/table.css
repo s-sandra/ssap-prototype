@@ -90,3 +90,7 @@ tr {
 .col-sm {
     width: 5%;
 }
+
+.card-body {
+    color: #677788;
+}
