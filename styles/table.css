@@ -38,6 +38,11 @@ th[scope="col"]+td {
     border-bottom-color: inherit;
 }
 
+td:first-child, th:first-child {
+    text-align: center;
+    border-right: solid 1px #dee2e6;
+}
+
 .table thead th {
     text-transform: uppercase;
     font-weight: 600;
@@ -78,6 +83,10 @@ tr {
     min-height: 2.5rem;
 }
 
+.table-responsive + .card-footer {
+    border-top: 0px;
+}
+
 .table-responsive + .card-body {
     height: 10em;
 }
@@ -91,6 +100,6 @@ tr {
     width: 5%;
 }
 
-.card-body {
+.card-body, .card-header {
     color: #677788;
 }
