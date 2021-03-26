@@ -83,10 +83,6 @@ tr {
     min-height: 2.5rem;
 }
 
-.table-responsive + .card-footer {
-    border-top: 0px;
-}
-
 .table-responsive + .card-body {
     height: 10em;
 }

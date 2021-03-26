@@ -140,14 +140,6 @@ p.card-text .feather {
     margin-left: 10px;
 }
 
-.panel {
-    background-color: #f8f9fa;
-    border: 1px solid rgba(0,0,0,.125);
-    padding: 1rem 2rem 1rem;
-    margin: 2rem 0 2rem;
-    min-height: 10rem;
-}
-
 .form-control:disabled, .form-control[readonly] {
     background-color: #e9ecef75;
 }
