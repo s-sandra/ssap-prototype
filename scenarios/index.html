@@ -41,6 +41,15 @@
                             <small id="scenarioHelp" class="form-text text-muted">Enter a name for the scenario.</small>
                         </div>
                         <div class="form-group col">
+                            <label class="form-label" for="title">SSS Calculation Template</label>
+                            <select class="form-control" id="sssTemplate" required>
+                                <option selected>SSS 2020 Template</option>
+                                <option value="2018">SSS 2018 Template</option>
+                                <option value="2016">SSS 2016 Template</option>
+                            </select>
+                            <small class="form-text text-muted">Select template for calculating smart scale score.</small>
+                        </div>
+                        <div class="form-group col">
                             <label class="form-label" for="district">District</label>
                             <input type="search" class="form-control" id="district" aria-describedby="scenarioDistrict"
                                    value="Fredericksburg">
@@ -78,7 +87,7 @@
                     </form>
                 </div>
                 <div class="modal-footer">
-                  <button type="button" class="btn btn-primary" data-dismiss="modal">Clone</button>
+                  <a class="btn btn-primary" href="index.html">Clone</a>
                   <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
                 </div>
               </div>
@@ -268,8 +277,8 @@
                                             Add
                                         </a>
                                         <button class="dropdown-item"  data-toggle="modal" data-target="#warningModal">
-                                            <span data-feather="minus"></span>
-                                            Remove
+                                            <span data-feather="trash"></span>
+                                            Delete
                                         </button>
                                     </div>
                                 </div>
