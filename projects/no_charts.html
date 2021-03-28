@@ -49,6 +49,31 @@
             </ul>
         </header>
 
+        <div class="modal fade" id="editText" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title">Edit Project Group Details</h5>
+                  <button type="button" class="btn btn-toolbar" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <form class="modal-body">
+                    <div class="mb-3">
+                        <label for="newText" class="form-label">Project Group Title</label>
+                        <input type="text" class="form-control form-control-lg" id="newText" 
+                               value="Moderate Competitor Pool">
+                        <small class="form-text text-muted">Update value</small>
+                    </div>
+                </form>
+                <div class="modal-footer">
+                  <a class="btn btn-primary" data-dismiss="modal" href="#">Save</a>
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                </div>
+              </div>
+            </div>
+        </div>
+
         <button class="btn btn-secondary" onclick="goToTop()" id="topBtn" title="Go to top">
             <span data-feather="arrow-up"></span>
         </button>
@@ -113,7 +138,12 @@
                     </nav>
 
                     <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-                        <h1>Moderate Competitor Pool</h1>
+                        <div class="d-flex">
+                            <h1>Moderate Competitor Pool</h1>
+                            <button type="button" class="btn btn-sm" data-toggle="modal" data-target="#editText">
+                                <span data-feather="edit"></span>
+                            </button>
+                        </div>
                         <div class="btn-toolbar mb-2 mb-md-0">
                             <a class="btn btn-primary" href="./add_project.html">
                                 <span data-feather="plus"></span>

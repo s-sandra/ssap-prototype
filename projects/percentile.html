@@ -45,6 +45,31 @@
             </div>
         </div>
 
+        <div class="modal fade" id="editText" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title">Edit Project Details</h5>
+                  <button type="button" class="btn btn-toolbar" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <form class="modal-body">
+                    <div class="mb-3">
+                        <label for="newText" class="form-label">Project Title</label>
+                        <input type="text" class="form-control form-control-lg" id="newText" 
+                               value="Butler Road Extension">
+                        <small class="form-text text-muted">Update value</small>
+                    </div>
+                </form>
+                <div class="modal-footer">
+                  <a class="btn btn-primary" data-dismiss="modal" href="#">Save</a>
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                </div>
+              </div>
+            </div>
+        </div>
+
         <header class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0 shadow">
             <a class="navbar-brand col-md-3 col-lg-2 me-0 px-3" href="#">SSAP</a>
             <button class="navbar-toggler position-absolute d-md-none collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="false" aria-label="Toggle navigation">
@@ -129,7 +154,12 @@
                         </ol>
                     </nav>
                     <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-                        <h1>Butler Road Extension</h1>
+                        <div class="d-flex">
+                            <h1>Butler Road Extension</h1>
+                            <button type="button" class="btn btn-sm" data-toggle="modal" data-target="#editText">
+                                <span data-feather="edit"></span>
+                            </button>
+                        </div>
                     </div>
                     <div class="card">
                         <div class="card-body">
