@@ -147,3 +147,7 @@ p.card-text .feather {
 .btn:disabled {
     background-color: #e9ecef75;
 }
+
+.mb-4 {
+    margin-bottom: 2rem !important;
+}

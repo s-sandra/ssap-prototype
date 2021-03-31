@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="description" content="">
         <meta name="author" content="Sandra Shtabnaya">
-        <title>Potential 2022 Round</title>
+        <title>Scenario Funding</title>
 
         <!-- Font Awesome Icons -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -19,7 +19,8 @@
         <!-- component styles -->
         <link href="./../styles/navbar.css" rel="stylesheet">
         <link href="./../styles/global.css" rel="stylesheet">
-        <link href="./../styles/panel.css" rel="stylesheet">
+        <link href="./../styles/table.css" rel="stylesheet">
+        <link href="./../styles/accordian.css" rel="stylesheet">
         <link href="./../styles/modal.css" rel="stylesheet">
         <link href="./../styles/searchResults.css" rel="stylesheet">
         <link href="./../styles/backToTop.css" rel="stylesheet">
@@ -49,33 +50,6 @@
             </ul>
         </header>
 
-        <div class="modal fade" id="removeModal" tabindex="-1" role="dialog" aria-hidden="true">
-            <div class="modal-dialog" role="document">
-              <div class="modal-content">
-                <div class="modal-header">
-                  <h5 class="modal-title">Confirm Removal</h5>
-                  <button type="button" class="btn btn-toolbar" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                  </button>
-                </div>
-                <div class="modal-body">
-                    <div class="mb-3">
-                        <p>Are you sure you want to remove <b>Eco-Friendly Competitor Pool</b>
-                           as a statewide competitor?</p>
-                    </div>
-                </div>
-                <div class="modal-footer">
-                  <button type="button" class="btn btn-danger" data-dismiss="modal">
-                      Remove
-                  </button>
-                  <button type="button" class="btn btn-secondary" data-dismiss="modal">
-                      Cancel
-                  </button>
-                </div>
-              </div>
-            </div>
-        </div>
-
         <div class="modal fade" id="warningModal" tabindex="-1" role="dialog" aria-hidden="true">
             <div class="modal-dialog" role="document">
               <div class="modal-content">
@@ -97,6 +71,61 @@
                   <button type="button" class="btn btn-secondary" data-dismiss="modal">
                       Cancel
                   </button>
+                </div>
+              </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="editText" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title">Edit Scenario Details</h5>
+                  <button type="button" class="btn btn-toolbar" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <form class="modal-body">
+                    <div class="mb-3">
+                        <label for="newText" class="form-label">District</label>
+                        <input type="text" class="form-control form-control-lg" id="newText" 
+                               value="Stafford County">
+                        <small class="form-text text-muted">Update value</small>
+                    </div>
+                </form>
+                <div class="modal-footer">
+                  <a class="btn btn-primary" data-dismiss="modal" href="#">Save</a>
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                </div>
+              </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="editDollars" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title">Edit Scenario Details</h5>
+                  <button type="button" class="btn btn-toolbar" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <form class="modal-body">
+                    <div class="mb-3">
+                        <label for="newFund" class="form-label">Budget</label>
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                                <div class="input-group-text">$</div>
+                            </div>
+                            <input type="number" class="form-control form-control-lg" id="newFund" 
+                                min="0" step="100" value="285000">
+                        </div>
+                        <small class="form-text text-muted">Update value</small>
+                    </div>
+                </form>
+                <div class="modal-footer">
+                  <a class="btn btn-primary" data-dismiss="modal" href="#">Save</a>
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
                 </div>
               </div>
             </div>
@@ -158,72 +187,28 @@
             </div>
         </div>
 
-        <div class="modal fade" id="stateModal" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal fade" id="editChoice" tabindex="-1" role="dialog" aria-hidden="true">
             <div class="modal-dialog" role="document">
               <div class="modal-content">
                 <div class="modal-header">
-                  <h5 class="modal-title">Add to Statewide Competitors</h5>
+                  <h5 class="modal-title">Edit Scenario Details</h5>
                   <button type="button" class="btn btn-toolbar" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                   </button>
                 </div>
                 <div class="modal-body">
-                    <div class="row align-items-end">
-                        <div class="col">
-                            <label class="form-label" for="destination">Project Group</label>
-                            <div class="input-group">
-                                <div class="input-group-prepend">
-                                    <div class="input-group-text">
-                                        <span data-feather="search"></span>
-                                    </div>
-                                </div>
-                                <input class="form-control" type="search" id="destination"
-                                       placeholder="search project groups" aria-label="enter group to search"
-                                       data-toggle="collapse" data-target="#addResults">
-                            </div>
-                        </div>
-                    </div>
-                    <ul class="list-group collapse" id="addResults">
-                        <button class="list-group-item list-group-item-action">
-                            <span data-feather="clipboard"></span>
-                            Eco-Friendly Competitor Pool
-                            <small class="text-muted">- Project Groups</small>
-                        </button>
-                        <button class="list-group-item list-group-item-action">
-                            <span data-feather="clipboard"></span>
-                            Eco-Friendly Group
-                            <small class="text-muted">- Project Groups</small>
-                        </button>
-                        <button class="list-group-item list-group-item-action">
-                            <span data-feather="bar-chart-2"></span>
-                            Economic 2017 Projects
-                            <small class="text-muted">- Round Data</small>
-                        </button>
-                    </ul>
-                </form>
-                    <div class="grid">
-                        <div class="card">
-                            <div class="card-body">
-                                <div class="row justify-content-between">
-                                    <div class="col">
-                                        <h3 class="card-title">Eco-Friendly Competitors</h3>
-                                        <small class="text-muted">
-                                            <span data-feather="clipboard"></span>
-                                            Project Groups
-                                        </small>
-                                    </div>
-                                    <div class="col-auto">
-                                        <button class="btn">
-                                            <span data-feather="x"></span>
-                                        </button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    <form class="mb-3">
+                        <label for="newAreaType" class="form-label">SSS Calculation Template</label>
+                        <select class="form-control form-control-lg" id="newTemplate" required>
+                            <option selected>SSS 2020 Template</option>
+                            <option value="2018">SSS 2018 Template</option>
+                            <option value="2016">SSS 2016 Template</option>
+                        </select>
+                        <small class="form-text text-muted">Update value</small>
+                    </form>
                 </div>
                 <div class="modal-footer">
-                  <a class="btn btn-primary" href="index.html">Add</a>
+                  <a class="btn btn-primary" data-dismiss="modal" href="#">Save</a>
                   <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
                 </div>
               </div>
@@ -316,31 +301,6 @@
             </div>
         </div>
 
-        <div class="modal fade" id="editText" tabindex="-1" role="dialog" aria-hidden="true">
-            <div class="modal-dialog" role="document">
-              <div class="modal-content">
-                <div class="modal-header">
-                  <h5 class="modal-title">Edit Scenario Details</h5>
-                  <button type="button" class="btn btn-toolbar" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                  </button>
-                </div>
-                <form class="modal-body">
-                    <div class="mb-3">
-                        <label for="newText" class="form-label">Scenario Title</label>
-                        <input type="text" class="form-control form-control-lg" id="newText" 
-                               value="Potential 2022 Round">
-                        <small class="form-text text-muted">Update value</small>
-                    </div>
-                </form>
-                <div class="modal-footer">
-                  <a class="btn btn-primary" data-dismiss="modal" href="#">Save</a>
-                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
-                </div>
-              </div>
-            </div>
-        </div>
-
         <div class="container-fluid">
             <div class="row">
                 <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse">
@@ -400,7 +360,7 @@
                     <nav aria-label="breadcrumb">
                         <ol class="breadcrumb">
                           <li class="breadcrumb-item"><a href="index.html">My Scenarios</a></li>
-                          <li class="breadcrumb-item active" aria-current="page">Scenario Pools</li>
+                          <li class="breadcrumb-item active" aria-current="page">Scenario</li>
                         </ol>
                     </nav>
                     <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3">
@@ -410,6 +370,7 @@
                                 <span data-feather="edit"></span>
                             </button>
                         </div>
+                        
                         <div class="btn-toolbar mb-2 mb-md-0">
                             <button type="button" class="btn btn-primary dropdown-toggle" 
                                     data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -436,7 +397,7 @@
                         </div>
                     </div>
 
-                    <div style="width: max-content;">
+                    <div style="width: max-content;" class="mb-4">
                         <ul class="nav nav-tabs">
                             <li class="nav-item">
                                 <a class="nav-link" href="./scenario.html">
@@ -445,13 +406,13 @@
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="fund_scenarios.html">
+                                <a class="nav-link active" href="fund_scenarios.html">
                                     <i class="fa fa-usd"></i>
                                     Funding
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link active" href="./pools.html">
+                                <a class="nav-link" href="./pools.html">
                                     <span data-feather="clipboard"></span>
                                     Pools
                                 </a>
@@ -465,205 +426,35 @@
                         </ul>
                     </div>
 
-                    <div class="panel">
-                        <div class="btn-toolbar mb-3">
-                            <h3>Candidates</h3>
-                            <button type="button" class="btn btn-sm btn-outline-primary" 
-                                    data-toggle="modal" data-target="#stateModal">
-                                <span data-feather="plus"></span>
-                                Add to Pool
-                            </button>
-                            <a class="btn btn-sm btn-outline-success" href="./add_fund_scenario.html">
-                                <i class="fa fa-usd"></i>
-                                Allocate Funds
-                            </a>
-                        </div>
-                        <div id="candidatePool"> 
-                            <div class="row row-cols-5 row-cols-md-5">
-                                <div class="col">
+                    <h3>Funding</h3>
+                    <div class="grid" id="overview">
+                        <div class="row">
+                            <div class="col-auto mb-3">
+                                <div class="card-group">
                                     <div class="card">
                                         <div class="card-body">
-                                            <a class="card-title" href="./../projects/project_group.html">Eco-Friendly Competitor Pool</a>
+                                            <h5 class="card-title">Budget</h5>
+                                            <h3 class="card-text">$ 25,646,000</h3>
                                         </div>
                                         <div class="card-footer">
-                                            <!-- Remove card after pressing cancel. -->
                                             <div class="btn-group">
-                                                <button type="button" class="btn btn-sm" data-toggle="modal" data-target="#removeModal">
-                                                    <span data-feather="minus"></span> Remove
+                                                <button type="button" class="btn" 
+                                                        data-toggle="modal" data-target="#editDollars">
+                                                    <span data-feather="edit"></span> Edit
                                                 </button>
                                             </div>
                                         </div>
                                     </div>
-                                </div>
-                                <div class="col">
                                     <div class="card">
                                         <div class="card-body">
-                                            <a class="card-title" href="./../projects/project_group.html">Hypothetical Loudoun Bids</a>
+                                            <h5 class="card-title">Total Funds</h5>
+                                            <h3 class="card-text">$ 15,660,000</h3>
                                         </div>
                                         <div class="card-footer">
                                             <div class="btn-group">
-                                                <button type="button" class="btn btn-sm" data-toggle="modal" data-target="#removeModal">
-                                                    <span data-feather="minus"></span> Remove
-                                                </button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col">
-                                    <div class="card">
-                                        <div class="card-body">
-                                            <a class="card-title" href="./../projects/project_group.html">Average Competition</a>
-                                        </div>
-                                        <div class="card-footer">
-                                            <div class="btn-group">
-                                                <button type="button" class="btn btn-sm" data-toggle="modal" data-target="#removeModal">
-                                                    <span data-feather="minus"></span> Remove
-                                                </button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="panel">
-                        <div class="btn-toolbar mb-3">
-                            <h3>Statewide Competitors</h3>
-                            <button type="button" class="btn btn-sm btn-outline-primary" 
-                                    data-toggle="modal" data-target="#stateModal">
-                                <span data-feather="plus"></span>
-                                Add to Pool
-                            </button>
-                        </div>
-                        <div id="statePool"> 
-                            <div class="row row-cols-5 row-cols-md-5">
-                                <div class="col">
-                                    <div class="card">
-                                        <div class="card-body">
-                                            <a class="card-title" href="./../projects/project_group.html">Eco-Friendly Competitor Pool</a>
-                                        </div>
-                                        <div class="card-footer">
-                                            <!-- Remove card after pressing button. -->
-                                            <div class="btn-group">
-                                                <button type="button" class="btn btn-sm" data-toggle="modal" data-target="#removeModal">
-                                                    <span data-feather="minus"></span> Remove
-                                                </button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col">
-                                    <div class="card">
-                                        <div class="card-body">
-                                            <a class="card-title" href="./../projects/project_group.html">Hypothetical Loudoun Bids</a>
-                                        </div>
-                                        <div class="card-footer">
-                                            <div class="btn-group">
-                                                <button type="button" class="btn btn-sm" data-toggle="modal" data-target="#removeModal">
-                                                    <span data-feather="minus"></span> Remove
-                                                </button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col">
-                                    <div class="card">
-                                        <div class="card-body">
-                                            <a class="card-title" href="./../projects/project_group.html">Average Competition</a>
-                                        </div>
-                                        <div class="card-footer">
-                                            <div class="btn-group">
-                                                <button type="button" class="btn btn-sm" data-toggle="modal" data-target="#removeModal">
-                                                    <span data-feather="minus"></span> Remove
-                                                </button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col">
-                                    <div class="card">
-                                        <div class="card-body">
-                                            <a class="card-title" href="./../projects/project_group.html">State Bridge Projects</a>
-                                        </div>
-                                        <div class="card-footer">
-                                            <!-- Remove card after pressing button. -->
-                                            <div class="btn-group">
-                                                <button type="button" class="btn btn-sm" data-toggle="modal" data-target="#removeModal">
-                                                    <span data-feather="minus"></span> Remove
-                                                </button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col">
-                                    <div class="card">
-                                        <div class="card-body">
-                                            <a class="card-title" href="./../projects/project_group.html">Round 2017</a>
-                                        </div>
-                                        <div class="card-footer">
-                                            <!-- Remove card after pressing button. -->
-                                            <div class="btn-group">
-                                                <button type="button" class="btn btn-sm" data-toggle="modal" data-target="#removeModal">
-                                                    <span data-feather="minus"></span> Remove
-                                                </button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="panel">
-                        <div class="btn-toolbar mb-3">
-                            <h3>District Competitors</h3>
-                            <button type="button" class="btn btn-sm btn-outline-primary"
-                                    data-toggle="modal" data-target="#stateModal">
-                                <span data-feather="plus"></span>
-                                Add to Pool
-                            </button>
-                        </div>
-                        <div id="districtPool" class="collapse show"> 
-                            <div class="row row-cols-5 row-cols-md-5">
-                                <div class="col">
-                                    <div class="card">
-                                        <div class="card-body">
-                                            <a class="card-title" href="./../projects/project_group.html">Eco-Friendly Competitor Pool</a>
-                                        </div>
-                                        <div class="card-footer">
-                                            <!-- Remove card after pressing cancel. -->
-                                            <div class="btn-group">
-                                                <button type="button" class="btn btn-sm" data-toggle="modal" data-target="#removeModal">
-                                                    <span data-feather="minus"></span> Remove
-                                                </button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col">
-                                    <div class="card">
-                                        <div class="card-body">
-                                            <a class="card-title" href="./../projects/project_group.html">Hypothetical Loudoun Bids</a>
-                                        </div>
-                                        <div class="card-footer">
-                                            <div class="btn-group">
-                                                <button type="button" class="btn btn-sm" data-toggle="modal" data-target="#removeModal">
-                                                    <span data-feather="minus"></span> Remove
-                                                </button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col">
-                                    <div class="card">
-                                        <div class="card-body">
-                                            <a class="card-title" href="./../projects/project_group.html">Average Competition</a>
-                                        </div>
-                                        <div class="card-footer">
-                                            <div class="btn-group">
-                                                <button type="button" class="btn btn-sm" data-toggle="modal" data-target="#removeModal">
-                                                    <span data-feather="minus"></span> Remove
+                                                <button type="button" class="btn" 
+                                                        data-toggle="modal" data-target="#editDollars">
+                                                    <span data-feather="edit"></span> Edit
                                                 </button>
                                             </div>
                                         </div>
@@ -673,8 +464,108 @@
                         </div>
                     </div>
                     
+                    <div class="card">
+                        <div class="card-header">
+                            <div class="row justify-content-between align-items-center flex-grow-1">
+                                <div class="col-3 col-md">
+                                    <h4>Candidate Funding Scenarios</h4>
+                                </div>
+                                <div class="col-8 col-md">
+                                    <form>
+                                        <div class="input-group input-group-merge input-group-flush">
+                                            <div class="input-group-prepend">
+                                                <div class="input-group-text">
+                                                    <span data-feather="search"></span>
+                                                </div>
+                                            </div>
+                                            <input class="form-control" type="search" placeholder="search scenarios" aria-label="enter project to search">
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="col-auto">
+                                    <a class="btn btn-outline-primary" href="./add_fund_scenario.html">
+                                        <span data-feather="plus"></span> 
+                                        Add Scenario
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="table-responsive">
+                            <table class="table table-hover">
+                            <thead class="bg-light">
+                                <tr>
+                                    <th scope="col"><input type="checkbox" class="form-check-input" id="selectAll"></th>
+                                    <th class="col-sm">ID</th>
+                                    <th>Title</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th><input type="checkbox" class="form-check-input"></th>
+                                    <td>123</td>
+                                    <td><a href="./fund_scenario.html">Moderate Competitors</a></td>
+                                </tr>
+                                <tr>
+                                    <th><input type="checkbox" class="form-check-input"></th>
+                                    <td>232</a></td>
+                                    <td><a href="./fund_scenario.html">Eco-Friendly Competitor Pool</a></td>
+                                </tr>
+                                <tr>
+                                    <th><input type="checkbox" class="form-check-input"></th>
+                                    <td>765</td>
+                                    <td><a href="./fund_scenario.html">Average Competition</a></td>
+                                </tr>
+                                <tr>
+                                    <th><input type="checkbox" class="form-check-input"></th>
+                                    <td>654</td>
+                                    <td><a href="./fund_scenario.html">Moderate Competitors</a></td>
+                                </tr>
+                                <tr>
+                                    <th><input type="checkbox" class="form-check-input"></th>
+                                    <td>665</td>
+                                    <td><a href="./fund_scenario.html">State Bridge Projects</a></td>
+                                </tr>
+                                <tr>
+                                    <th><input type="checkbox" class="form-check-input"></th>
+                                    <td>876</td>
+                                    <td><a href="./fund_scenario.html">Moderate Competitors</a></td>
+                                </tr>
+                                <tr>
+                                    <th><input type="checkbox" class="form-check-input"></th>
+                                    <td>567</td>
+                                    <td><a href="./fund_scenario.html">Eco-Friendly Competitor Pool</a></td>
+                                </tr>
+                                <tr>
+                                    <th><input type="checkbox" class="form-check-input"></th>
+                                    <td>872</td>
+                                    <td><a href="./fund_scenario.html">Average Competition</a></td>
+                                </tr>
+                            </tbody>
+                            </table>
+                        </div>
+                        <div class="card-footer">
+                            <div class="pagination justify-content-end" aria-label="table pagination">
+                                <div class="col-2">
+                                    <form>
+                                        <div class="input-group">
+                                            <div class="input-group-prepend">
+                                                <div class="input-group-text">Page</div>
+                                            </div>
+                                            <input class="form-control" type="number" value="1" min="1" max="32" aria-label="enter table page">
+                                        </div>
+                                    </form>
+                                </div>
+                                <button type="button" class="btn btn-sm disabled" href="#" tabindex="-1" aria-label="previous page">
+                                    <span data-feather="arrow-left"></span>
+                                </button>
+                                <button type="button" class="btn btn-sm text-primary" href="#" aria-label="next page">
+                                    <span data-feather="arrow-right"></span>
+                                </button>
+                            </div>   
+                        </div>
+                    </div>
                 </main>
-            </div>
+            </div>                  
         </div>
 
         <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" crossorigin="anonymous"></script>
