@@ -151,3 +151,13 @@ p.card-text .feather {
 .mb-4 {
     margin-bottom: 2rem !important;
 }
+
+.info {
+    display: flex;
+    flex-direction: column;
+    padding-left: 7px;
+}
+
+svg.feather.feather-info {
+    width: 14px;
+}

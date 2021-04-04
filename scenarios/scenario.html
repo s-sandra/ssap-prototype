@@ -198,8 +198,8 @@
                 </div>
                 <div class="modal-body">
                     <form class="mb-3">
-                        <label for="newAreaType" class="form-label">SSS Calculation Template</label>
-                        <select class="form-control form-control-lg" id="newTemplate" required>
+                        <label for="sssTemplate" class="form-label">SSS Calculation Template</label>
+                        <select class="form-control" id="sssTemplate" required>
                             <option selected>SSS 2020 Template</option>
                             <option value="2018">SSS 2018 Template</option>
                             <option value="2016">SSS 2016 Template</option>
@@ -482,9 +482,35 @@
                         <div class="card">
                             <div class="card-header">
                                 <div class="row justify-content-between align-items-center flex-grow-1">
-                                    <div class="col-3 col-md">
+                                    <div class="col-3 col-md d-flex">
                                         <h5>Smart Scale Scores</h5>
+                                        <div class="info">
+                                            <span data-feather="info" data-toggle="tooltip" data-placement="right" 
+                                            title="SSS 2017 Template"></span>
+                                        </div>
                                     </div>
+                                    <div class="col-auto">
+                                        <button type="button" class="btn btn-outline-primary dropdown-toggle" 
+                                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            Actions
+                                        </button>
+                                        <div class="dropdown-menu">
+                                            <a class="dropdown-item" href="./scenario_charts.html">
+                                                <span data-feather="bar-chart-2"></span> 
+                                                View Chart
+                                            </a>
+                                            <button class="dropdown-item">
+                                                <span data-feather="download"></span>
+                                                Export Scores
+                                            </button>
+                                            <button class="dropdown-item" data-toggle="modal" data-target="#editChoice">
+                                                <span data-feather="tool"></span>
+                                                Change SSS Template
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row mt-3 mb-3">
                                     <div class="col-8 col-md">
                                         <form>
                                             <div class="input-group input-group-merge input-group-flush">
@@ -496,12 +522,6 @@
                                                 <input class="form-control" type="search" placeholder="search projects" aria-label="enter project to search">
                                             </div>
                                         </form>
-                                    </div>
-                                    <div class="col-auto">
-                                        <a class="btn btn-outline-primary" href="./scenario_charts.html">
-                                            <span data-feather="bar-chart-2"></span> 
-                                            View Chart
-                                        </a>
                                     </div>
                                 </div>
                                 <div class="mt-2 btn-toolbar">
@@ -606,9 +626,35 @@
                         <div class="card">
                             <div class="card-header">
                                 <div class="row justify-content-between align-items-center flex-grow-1">
-                                    <div class="col-3 col-md">
+                                    <div class="col-3 col-md d-flex">
                                         <h5>Project Benefit Scores</h5>
+                                        <div class="info">
+                                            <span data-feather="info" data-toggle="tooltip" data-placement="right" 
+                                            title="SSS 2017 Template"></span>
+                                        </div>
                                     </div>
+                                    <div class="col-auto">
+                                        <button type="button" class="btn btn-outline-primary dropdown-toggle" 
+                                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            Actions
+                                        </button>
+                                        <div class="dropdown-menu">
+                                            <a class="dropdown-item" href="./scenario_charts.html">
+                                                <span data-feather="bar-chart-2"></span> 
+                                                View Chart
+                                            </a>
+                                            <button class="dropdown-item">
+                                                <span data-feather="download"></span>
+                                                Export Scores
+                                            </button>
+                                            <button class="dropdown-item" data-toggle="modal" data-target="#editChoice">
+                                                <span data-feather="tool"></span>
+                                                Change SSS Template
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row mt-3 mb-3">
                                     <div class="col-8 col-md">
                                         <form>
                                             <div class="input-group input-group-merge input-group-flush">
@@ -620,12 +666,6 @@
                                                 <input class="form-control" type="search" placeholder="search projects" aria-label="enter project to search">
                                             </div>
                                         </form>
-                                    </div>
-                                    <div class="col-auto">
-                                        <a class="btn btn-outline-primary" href="./scenario_charts.html">
-                                            <span data-feather="bar-chart-2"></span> 
-                                            View Chart
-                                        </a>
                                     </div>
                                 </div>
                                 <div class="mt-2 btn-toolbar">
@@ -739,9 +779,27 @@
                         <div class="card">
                             <div class="card-header">
                                 <div class="row justify-content-between align-items-center flex-grow-1">
-                                    <div class="col-3 col-md">
+                                    <div class="col-3 col-md d-flex">
                                         <h5>Access to Jobs</h5>
                                     </div>
+                                    <div class="col-auto">
+                                        <button type="button" class="btn btn-outline-primary dropdown-toggle" 
+                                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            Actions
+                                        </button>
+                                        <div class="dropdown-menu">
+                                            <a class="dropdown-item" href="./scenario_charts.html">
+                                                <span data-feather="bar-chart-2"></span> 
+                                                View Chart
+                                            </a>
+                                            <button class="dropdown-item">
+                                                <span data-feather="download"></span>
+                                                Export Scores
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row mt-3 mb-3">
                                     <div class="col-8 col-md">
                                         <form>
                                             <div class="input-group input-group-merge input-group-flush">
@@ -753,12 +811,6 @@
                                                 <input class="form-control" type="search" placeholder="search projects" aria-label="enter project to search">
                                             </div>
                                         </form>
-                                    </div>
-                                    <div class="col-auto">
-                                        <a class="btn btn-outline-primary" href="./scenario_charts.html">
-                                            <span data-feather="bar-chart-2"></span> 
-                                            View Chart
-                                        </a>
                                     </div>
                                 </div>
                                 <div class="mt-2 btn-toolbar">
