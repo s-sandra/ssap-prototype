@@ -416,22 +416,26 @@
                                 Actions
                             </button>
                             <div class="dropdown-menu">
-                              <button class="dropdown-item" data-toggle="modal" data-target="#cloneModal">
-                                 <span data-feather="copy"></span>
-                                  Clone
-                              </button>
-                              <button class="dropdown-item" data-toggle="modal" data-target="#warningModal">
-                                  <span data-feather="trash"></span>
-                                  Delete
-                              </button>
-                              <button class="dropdown-item" data-toggle="modal" data-target="#addModal">
-                                  <span data-feather="plus"></span>
-                                  Add to pool
-                              </button>
-                              <a class="dropdown-item" href="./remove_pool.html">
-                                  <span data-feather="minus"></span>
-                                  Remove from pool
-                              </a>
+                                <button class="dropdown-item" data-toggle="modal" data-target="#cloneModal">
+                                    <span data-feather="copy"></span>
+                                    Clone
+                                </button>
+                                <button class="dropdown-item" data-toggle="modal" data-target="#warningModal">
+                                    <span data-feather="trash"></span>
+                                    Delete
+                                </button>
+                                <button class="dropdown-item" data-toggle="modal" data-target="#addModal">
+                                    <span data-feather="plus"></span>
+                                    Add to pool
+                                </button>
+                                <a class="dropdown-item" href="./remove_pool.html">
+                                    <span data-feather="minus"></span>
+                                    Remove from pool
+                                </a>
+                                <a class="dropdown-item" href="./add_fund_scenario.html">
+                                    <span data-feather="dollar-sign"></span>
+                                    Allocate Funds
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -457,6 +461,12 @@
                                 </a>
                             </li>
                             <li class="nav-item">
+                                <a class="nav-link" href="./add_ons.html">
+                                    <span data-feather="file-plus"></span>
+                                    Options
+                                </a>
+                            </li>
+                            <li class="nav-item">
                                 <a class="nav-link" href="./charts.html">
                                     <span data-feather="bar-chart-2"></span>
                                     Charts
@@ -468,15 +478,24 @@
                     <div class="panel">
                         <div class="btn-toolbar mb-3">
                             <h3>Candidates</h3>
-                            <button type="button" class="btn btn-sm btn-outline-primary" 
-                                    data-toggle="modal" data-target="#stateModal">
-                                <span data-feather="plus"></span>
-                                Add to Pool
+                            <button type="button" class="btn btn-sm btn-outline-primary dropdown-toggle" 
+                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Actions
                             </button>
-                            <a class="btn btn-sm btn-outline-success" href="./add_fund_scenario.html">
-                                <i class="fa fa-usd"></i>
-                                Allocate Funds
-                            </a>
+                            <div class="dropdown-menu">
+                                <button type="button" class="dropdown-item" data-target="#stateModal" data-toggle="modal">
+                                    <span data-feather="plus"></span>
+                                    Add to Pool
+                                </button>
+                                 <a class="dropdown-item" href="./add_fund_scenario.html">
+                                    <span data-feather="dollar-sign"></span>
+                                    Allocate Funds
+                                 </a>
+                                 <a class="dropdown-item" href="./add_ons.html">
+                                    <span data-feather="file-plus"></span>
+                                    Optimize Add-Ons
+                                 </a>
+                            </div>
                         </div>
                         <div id="candidatePool"> 
                             <div class="row row-cols-5 row-cols-md-5">
