@@ -1,0 +1,291 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="">
+        <meta name="author" content="Sandra Shtabnaya">
+        <title>New Fund Scenario</title>
+
+        <!-- Font Awesome Icons -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+        <!-- Font CSS -->
+        <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet'>
+
+        <!-- Bootstrap core CSS -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+
+        <!-- component styles -->
+        <link href="./../styles/navbar.css" rel="stylesheet">
+        <link href="./../styles/global.css" rel="stylesheet">
+        <link href="./../styles/table.css" rel="stylesheet">
+        <link href="./../styles/panel.css" rel="stylesheet">
+        <link href="./../styles/form.css" rel="stylesheet">
+
+    </head>
+    <body>
+        <header class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0 shadow">
+            <a class="navbar-brand col-md-3 col-lg-2 me-0 px-3" href="#">SSAP</a>
+            <button class="navbar-toggler position-absolute d-md-none collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="input-group w-50">
+                <div class="input-group-prepend">
+                  <span class="input-group-text" id="search-phrase">
+                    <span data-feather="search"></span>
+                  </span>
+                </div>
+                <input class="form-control" type="text" placeholder="Search" aria-label="Search">
+              </div>
+            <ul class="navbar-nav px-3 user">
+                <li class="nav-item text-nowrap">
+                    <a class="nav-link" href="./../index.html">
+                        <span data-feather="log-out"></span>
+                        Log out
+                    </a>
+                </li>
+            </ul>
+        </header>
+
+        <div class="container-fluid">
+            <div class="row">
+                <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse">
+                    <div class="position-sticky pt-3">
+                        <ul class="nav flex-column">
+                            <li class="nav-item">
+                                <a class="nav-link active" href="./../scenarios/index.html">
+                                <span data-feather="tool"></span>
+                                Scenarios
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="./../projects/index.html">
+                                <span data-feather="clipboard"></span>
+                                Projects
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" aria-current="page" href="./../rounds/index.html">
+                                <span data-feather="bar-chart-2"></span>
+                                Round Data
+                                </a>
+                            </li>
+                        </ul>
+
+                        <p class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted">
+                        <span>Account</span>
+                        </p>
+                        <ul class="nav flex-column">
+                            <li class="nav-item">
+                                <a class="nav-link" href="./../users/index.html">
+                                <span data-feather="users"></span>
+                                Users
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="./../settings/index.html">
+                                <span data-feather="settings"></span>
+                                Settings
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="./../index.html">
+                                <span data-feather="log-out"></span>
+                                Log Out
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+
+                <main class="col-md-9 ms-sm-auto col-lg-10">
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb">
+                          <li class="breadcrumb-item"><a href="index.html">My Scenarios</a></li>
+                          <li class="breadcrumb-item"><a href="fund_scenarios.html">Potential 2022 Round Funding</a></li>
+                          <li class="breadcrumb-item active" aria-current="page">Add Fund Scenario</li>
+                        </ol>
+                    </nav>
+                    <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3  border-bottom">
+                        <div class="d-flex">
+                            <h1>Add Fund Scenario</h1>
+                        </div>
+                        
+                        <div class="btn-toolbar mb-2 mb-md-0">
+                            <a class="btn btn-primary" href="./fund_scenario.html">
+                                <span data-feather="plus"></span>
+                                Add
+                            </a>
+                            <a class="btn btn-secondary" href="./scenario.html">
+                                <span data-feather="x"></span>
+                                Cancel
+                            </a>
+                        </div>
+                    </div>
+
+                    <ul class="nav nav-tabs">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="./add_fund_scenario.html">
+                                <span data-feather="file"></span>
+                                New
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./clone_fund_scenario.html">
+                                <span data-feather="copy"></span>
+                                Clone
+                            </a>
+                        </li>
+                    </ul>
+
+                    <form class="form" novalidate>
+                        <div class="panel">
+                            <div class="row form-row">
+                                <div class="col-8 mb-3">
+                                    <label class="form-label" for="title">Scenario Title</label>
+                                    <input type="text" class="form-control" id="title" aria-describedby="titleHelp" required>
+                                </div>
+                            </div>
+                            <div class="row form-row">
+                                <div class="col-md-4 mb-3">
+                                    <label for="budget" class="form-label">Budget</label>
+                                    <div class="input-group">
+                                        <div class="input-group-prepend">
+                                            <div class="input-group-text">$</div>
+                                        </div>
+                                        <input type="number" class="form-control" id="budget" min="0" step="100" required>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 mb-3">
+                                    <label for="totalFund" class="form-label">Total Funds</label>
+                                    <div class="input-group">
+                                        <div class="input-group-prepend">
+                                            <div class="input-group-text">$</div>
+                                        </div>
+                                        <input type="number" class="form-control" id="totalFund" min="0" step="100" required>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="panel">
+                            <div class="row">
+                                <h3>District Fund Allocation</h3> 
+                            </div>
+                            <div class="col-md-4">
+                                <select class="form-control" id="county" required>
+                                    <option selected>Spotsylvania County</option>
+                                    <option value="2018">Stafford County</option>
+                                    <option value="2016">Loudoun County</option>
+                                </select>
+                            </div>
+
+                            <div class="list">
+                                <div class="card-group">
+                                    <div class="card">
+                                        <div class="card-body" style="flex-basis: auto;">
+                                            <h6 class="card-title">Fredericksburg</h6>
+                                            <input type="range" class="form-range" min="0" max="5" step="0.01" id="fundRange">
+                                        </div>
+                                    </div>
+                                    <div class="card" style="flex: inherit;">
+                                        <div class="card-body">
+                                            <input type="number" value="25" class="form-control-lg" 
+                                                   id="percentage" min="0" max="100" step="1" required>
+                                            <h6 style="margin-left:5px">%</h6>
+                                        </div>
+                                    </div>
+                                    <div class="card" style="flex: inherit;">
+                                        <div class="card-body">
+                                            <h6 style="margin-right:5px">$</h6>
+                                            <input type="number" value="1250.25" class="form-control-lg" 
+                                                   id="budget" min="0" step="100" max="10000" required>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-group">
+                                    <div class="card">
+                                        <div class="card-body" style="flex-basis: auto;">
+                                            <h6 class="card-title">Lee Hill</h6>
+                                            <input type="range" class="form-range" min="0" max="5" step="0.01" id="fundRange">
+                                        </div>
+                                    </div>
+                                    <div class="card" style="flex: inherit;">
+                                        <div class="card-body">
+                                            <input type="number" value="25" class="form-control-lg" 
+                                                   id="percentage" min="0" max="100" step="1" required>
+                                            <h6 style="margin-left:5px">%</h6>
+                                        </div>
+                                    </div>
+                                    <div class="card" style="flex: inherit;">
+                                        <div class="card-body">
+                                            <h6 style="margin-right:5px">$</h6>
+                                            <input type="number" value="1250.25" class="form-control-lg" 
+                                                   id="budget" min="0" step="100" max="10000" required>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-group">
+                                    <div class="card">
+                                        <div class="card-body" style="flex-basis: auto;">
+                                            <h6 class="card-title">Chancellor</h6>
+                                            <input type="range" class="form-range" min="0" max="5" step="0.01" id="fundRange">
+                                        </div>
+                                    </div>
+                                    <div class="card" style="flex: inherit;">
+                                        <div class="card-body">
+                                            <input type="number" value="25" class="form-control-lg" 
+                                                   id="percentage" min="0" max="100" step="1" required>
+                                            <h6 style="margin-left:5px">%</h6>
+                                        </div>
+                                    </div>
+                                    <div class="card" style="flex: inherit;">
+                                        <div class="card-body">
+                                            <h6 style="margin-right:5px">$</h6>
+                                            <input type="number" value="1250.25" class="form-control-lg" 
+                                                   id="budget" min="0" step="100" max="10000" required>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-group">
+                                    <div class="card">
+                                        <div class="card-body" style="flex-basis: auto;">
+                                            <h6 class="card-title">Salem</h6>
+                                            <input type="range" class="form-range" min="0" max="5" step="0.01" id="fundRange">
+                                        </div>
+                                    </div>
+                                    <div class="card" style="flex: inherit;">
+                                        <div class="card-body">
+                                            <input type="number" value="25" class="form-control-lg" 
+                                                   id="percentage" min="0" max="100" step="1" required>
+                                            <h6 style="margin-left:5px">%</h6>
+                                        </div>
+                                    </div>
+                                    <div class="card" style="flex: inherit;">
+                                        <div class="card-body">
+                                            <h6 style="margin-right:5px">$</h6>
+                                            <input type="number" value="1250.25" class="form-control-lg" 
+                                                   id="budget" min="0" step="100" max="10000" required>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </form>
+                </main>
+            </div>                  
+        </div>
+
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/feather-icons@4.28.0/dist/feather.min.js" crossorigin="anonymous"></script>
+
+        <script src="./../scripts/global.js"></script>
+        <script src="./../scripts/backToTop.js"></script>
+        <script scr="./../scripts/sortCols.js"></script>
+
+    </body>
+</html>

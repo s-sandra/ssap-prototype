@@ -101,36 +101,6 @@
             </div>
         </div>
 
-        <div class="modal fade" id="editDollars" tabindex="-1" role="dialog" aria-hidden="true">
-            <div class="modal-dialog" role="document">
-              <div class="modal-content">
-                <div class="modal-header">
-                  <h5 class="modal-title">Edit Scenario Details</h5>
-                  <button type="button" class="btn btn-toolbar" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                  </button>
-                </div>
-                <form class="modal-body">
-                    <div class="mb-3">
-                        <label for="newFund" class="form-label">Budget</label>
-                        <div class="input-group">
-                            <div class="input-group-prepend">
-                                <div class="input-group-text">$</div>
-                            </div>
-                            <input type="number" class="form-control form-control-lg" id="newFund" 
-                                min="0" step="100" value="285000">
-                        </div>
-                        <small class="form-text text-muted">Update value</small>
-                    </div>
-                </form>
-                <div class="modal-footer">
-                  <a class="btn btn-primary" data-dismiss="modal" href="#">Save</a>
-                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
-                </div>
-              </div>
-            </div>
-        </div>
-
         <div class="modal fade" id="cloneModal" tabindex="-1" role="dialog" aria-hidden="true">
             <div class="modal-dialog" role="document">
               <div class="modal-content">
@@ -156,26 +126,6 @@
                                 <option value="2016">SSS 2016 Template</option>
                             </select>
                             <small class="form-text text-muted">Select template for calculating smart scale score.</small>
-                        </div>
-                        <div class="form-group col">
-                            <label for="budget" class="form-label">Budget</label>
-                            <div class="input-group">
-                                <div class="input-group-prepend">
-                                    <div class="input-group-text">$</div>
-                                </div>
-                                <input type="number" class="form-control" id="budget" 
-                                    min="0" step="100" value="85000">
-                            </div>
-                        </div>
-                        <div class="form-group col">
-                            <label for="total" class="form-label">Total Funds</label>
-                            <div class="input-group">
-                                <div class="input-group-prepend">
-                                    <div class="input-group-text">$</div>
-                                </div>
-                                <input type="number" class="form-control" id="total" 
-                                    min="0" step="100" value="285000">
-                            </div>
                         </div>
                     </form>
                 </div>
@@ -439,44 +389,6 @@
                             </li>
                         </ul>
                     </div>
-
-                    <h3>Funding</h3>
-                    <div class="grid" id="overview">
-                        <div class="row">
-                            <div class="col-auto mb-3">
-                                <div class="card-group">
-                                    <div class="card">
-                                        <div class="card-body">
-                                            <h5 class="card-title">Budget</h5>
-                                            <h3 class="card-text">$ 25,646,000</h3>
-                                        </div>
-                                        <div class="card-footer">
-                                            <div class="btn-group">
-                                                <button type="button" class="btn" 
-                                                        data-toggle="modal" data-target="#editDollars">
-                                                    <span data-feather="edit"></span> Edit
-                                                </button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="card">
-                                        <div class="card-body">
-                                            <h5 class="card-title">Total Funds</h5>
-                                            <h3 class="card-text">$ 15,660,000</h3>
-                                        </div>
-                                        <div class="card-footer">
-                                            <div class="btn-group">
-                                                <button type="button" class="btn" 
-                                                        data-toggle="modal" data-target="#editDollars">
-                                                    <span data-feather="edit"></span> Edit
-                                                </button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
                     
                     <div class="card">
                         <div class="card-header">
@@ -502,13 +414,17 @@
                                         Actions
                                     </button>
                                     <div class="dropdown-menu">
-                                        <button class="dropdown-item" data-toggle="modal" data-target="#addModal">
+                                        <a class="dropdown-item" href="./add_fund_scenario.html">
                                             <span data-feather="plus"></span>
                                             Add
-                                        </button>
+                                        </a>
                                         <button class="dropdown-item" data-toggle="modal" data-target="#warningModal">
                                             <span data-feather="trash"></span>
                                             Delete
+                                        </button>
+                                        <button class="dropdown-item" data-toggle="modal" data-target="#cloneModal">
+                                            <span data-feather="copy"></span>
+                                            Clone
                                         </button>
                                     </div>
                                 </div>
@@ -520,8 +436,9 @@
                                 <tr>
                                     <th scope="col"><input type="checkbox" class="form-check-input" id="selectAll"></th>
                                     <th class="col-sm">ID</th>
-                                    <th class="col-2">Title</th>
-                                    <th>Notes</th>
+                                    <th class="col-5">Name</th>
+                                    <th>Budget</th>
+                                    <th>Total Funds</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -529,49 +446,57 @@
                                     <th><input type="checkbox" class="form-check-input"></th>
                                     <td><a href="./fund_scenario.html">123</a></td>
                                     <td><a href="./fund_scenario.html">Option 4</a></td>
-                                    <td>Less funding for downtown district.</td>
+                                    <td>3400</td>
+                                    <td>250000</td>
                                 </tr>
                                 <tr>
                                     <th><input type="checkbox" class="form-check-input"></th>
                                     <td><a href="./fund_scenario.html">232</a></td>
                                     <td><a href="./fund_scenario.html">Low Funding</a></td>
-                                    <td>More funding allocated for bridge project 3.</td>
+                                    <td>3506</td>
+                                    <td>900000</td>
                                 </tr>
                                 <tr>
                                     <th><input type="checkbox" class="form-check-input"></th>
                                     <td><a href="./fund_scenario.html">765</a></td>
                                     <td><a href="./fund_scenario.html">Option 2</a></td>
-                                    <td></td>
+                                    <td>9320</td>
+                                    <td>50000</td>
                                 </tr>
                                 <tr>
                                     <th><input type="checkbox" class="form-check-input"></th>
                                     <td><a href="./fund_scenario.html">654</a></td>
                                     <td><a href="./fund_scenario.html">Higher Funding</a></td>
-                                    <td>Total funds raised by $10,000.</td>
+                                    <td>38000</td>
+                                    <td>2500000</td>
                                 </tr>
                                 <tr>
                                     <th><input type="checkbox" class="form-check-input"></th>
                                     <td><a href="./fund_scenario.html">665</a></td>
                                     <td><a href="./fund_scenario.html">Scenario 2/15</a></td>
-                                    <td></td>
+                                    <td>3900</td>
+                                    <td>250000</td>
                                 </tr>
                                 <tr>
                                     <th><input type="checkbox" class="form-check-input"></th>
                                     <td><a href="./fund_scenario.html">876</a></td>
                                     <td><a href="./fund_scenario.html">Option 24</a></td>
-                                    <td></td>
+                                    <td>3870</td>
+                                    <td>54000</td>
                                 </tr>
                                 <tr>
                                     <th><input type="checkbox" class="form-check-input"></th>
                                     <td><a href="./fund_scenario.html">567</a></td>
                                     <td><a href="./fund_scenario.html">Alternate 1</a></td>
-                                    <td>Revisit district allocation.</td>
+                                    <td>12306</td>
+                                    <td>287100</td>
                                 </tr>
                                 <tr>
                                     <th><input type="checkbox" class="form-check-input"></th>
                                     <td><a href="./fund_scenario.html">872</a></td>
                                     <td><a href="./fund_scenario.html">Scenario 1/25</a></td>
-                                    <td></td>
+                                    <td>19000</td>
+                                    <td>50000</td>
                                 </tr>
                             </tbody>
                             </table>
