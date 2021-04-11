@@ -29,11 +29,6 @@ th[scope="col"]+td a {
     padding-right: 10px;
 }
 
-th[scope="col"],
-th[scope="col"]+td {
-    width: 10px;
-}
-
 .table > :not(:last-child) > :last-child > * {
     border-bottom-color: inherit;
 }
@@ -41,6 +36,7 @@ th[scope="col"]+td {
 td:first-child, th:first-child {
     text-align: center;
     border-right: solid 1px #dee2e6;
+    width: 3%;
 }
 
 .table thead th {

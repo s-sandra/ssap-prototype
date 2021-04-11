@@ -381,17 +381,16 @@
                                         </div>
                                     </form>
                                 </div>
-                                <div class="col-auto">
+                                <div class="col-auto btn-toolbar">
+                                    <button type="button" class="btn btn-outline-success" data-target="#addModal" data-toggle="modal">
+                                        <span data-feather="plus"></span>
+                                        Add
+                                    </button>
                                     <button type="button" class="btn btn-outline-primary dropdown-toggle" 
                                             data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                         Actions
                                     </button>
-                                    <div class="dropdown-menu">
-                                        <!-- Enable when no projects selected -->
-                                        <button type="button" class="dropdown-item" data-target="#addModal" data-toggle="modal">
-                                            <span data-feather="plus"></span>
-                                            Add
-                                        </button>
+                                    <div class="dropdown-menu">                                        
                                         <!-- Enable when projects selected -->
                                          <button type="button" class="dropdown-item" data-target="#warningModal" data-toggle="modal">
                                              <span data-feather="trash"></span>
@@ -405,10 +404,9 @@
                             <table class="table table-hover">
                                 <thead class="bg-light">
                                     <tr>
-                                        <th scope="col"><input type="checkbox" class="form-check-input" id="selectAll"></th>
-                                        <th>ID</th>
-                                        <th class="col-9">Group Name</th>
-                                        <th>Projects</th>
+                                        <th><input type="checkbox" class="form-check-input" id="selectAll"></th>
+                                        <th class="col-sm">ID</th>
+                                        <th>Name</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -416,37 +414,31 @@
                                         <th><input type="checkbox" class="form-check-input"></th>
                                         <td><a href="project_group.html">1760</a></td>
                                         <td><a href="project_group.html">Eco-Friendly Competitor Pool</a></td>
-                                        <td>25</td>
                                     </tr>
                                     <tr>
                                         <th><input type="checkbox" class="form-check-input"></th>
                                         <td><a href="project_group.html">1607</a></td>
                                         <td><a href="project_group.html">Highly Accessible Competitors</a></td>
-                                        <td>130</td>
                                     </tr>
                                     <tr>
                                         <th><input type="checkbox" class="form-check-input"></th>
                                         <td><a href="project_group.html">7601</a></td>
                                         <td><a href="project_group.html">Hypothetical Loudoun Bids</a></td>
-                                        <td>22</td>
                                     </tr>
                                     <tr>
                                         <th><input type="checkbox" class="form-check-input"></th>
                                         <td><a href="project_group.html">7823</a></td>
                                         <td><a href="project_group.html">Moderate Competitor Pool</a></td>
-                                        <td>126</td>
                                     </tr>
                                     <tr>
                                         <th><input type="checkbox" class="form-check-input"></th>
                                         <td><a href="project_group.html">1054</a></td>
                                         <td><a href="project_group.html">Average Competition</a></td>
-                                        <td>33</td>
                                     </tr>
                                     <tr>
                                         <th><input type="checkbox" class="form-check-input"></th>
                                         <td><a href="project_group.html">6432</a></td>
                                         <td><a href="project_group.html">High Econ-Dev</a></td>
-                                        <td>113</td>
                                     </tr>
                                     <tr>
                                 </tbody>

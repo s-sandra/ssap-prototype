@@ -355,7 +355,11 @@
                                         </div>
                                     </form>
                                 </div>
-                                <div class="col-auto">
+                                <div class="col-auto btn-toolbar">
+                                    <button type="button" class="btn btn-outline-success" data-toggle="modal" data-target="#uploadModal">
+                                        <span data-feather="plus"></span>
+                                        Add
+                                    </button>
                                     <button type="button" class="btn btn-outline-primary dropdown-toggle" 
                                             data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                         Actions
@@ -364,10 +368,6 @@
                                         <button class="dropdown-item" data-toggle="modal" data-target="#cloneModal">
                                             <span data-feather="copy"></span>
                                             Clone
-                                        </button>
-                                        <button class="dropdown-item" data-toggle="modal" data-target="#uploadModal">
-                                            <span data-feather="plus"></span>
-                                            Add
                                         </button>
                                         <button class="dropdown-item" data-toggle="modal" data-target="#warningModal">
                                             <span data-feather="trash"></span>
@@ -385,12 +385,11 @@
                             <table class="table table-hover">
                                 <thead class="bg-light">
                                     <tr>
-                                        <th scope="col"><input type="checkbox" class="form-check-input" id="selectAll"></th>
-                                        <th>ID</th>
-                                        <th class="col-8">Record Name</th>
-                                        <th>Year</th>
+                                        <th><input type="checkbox" class="form-check-input" id="selectAll"></th>
+                                        <th class="col-sm">ID</th>
+                                        <th class="col-5">Name</th>
+                                        <th class="col-1">Year</th>
                                         <th>Region</th>
-                                        <th>Projects</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -400,7 +399,6 @@
                                         <td><a href="round.html">2019 Round Data</a></td>
                                         <td>2019</td>
                                         <td>local</td>
-                                        <td>25</td>
                                     </tr>
                                     <tr>
                                         <th><input type="checkbox" class="form-check-input"></th>
@@ -408,7 +406,6 @@
                                         <td><a href="round.html">2019 Regional Data</a></td>
                                         <td>2019</td>
                                         <td>state</td>
-                                        <td>130</td>
                                     </tr>
                                     <tr>
                                         <th><input type="checkbox" class="form-check-input"></th>
@@ -416,7 +413,6 @@
                                         <td><a href="round.html">2017 Regional SSS Scores</a></td>
                                         <td>2017</td>
                                         <td>local</td>
-                                        <td>22</td>
                                     </tr>
                                     <tr>
                                         <th><input type="checkbox" class="form-check-input"></th>
@@ -424,7 +420,6 @@
                                         <td><a href="round.html">2017 State Scores</a></td>
                                         <td>2017</td>
                                         <td>state</td>
-                                        <td>126</td>
                                     </tr>
                                     <tr>
                                         <th><input type="checkbox" class="form-check-input"></th>
@@ -432,7 +427,6 @@
                                         <td><a href="round.html">2015 Regional Projects</a></td>
                                         <td>2015</td>
                                         <td>local</td>
-                                        <td>33</td>
                                     </tr>
                                     <tr>
                                         <th><input type="checkbox" class="form-check-input"></th>
@@ -440,7 +434,6 @@
                                         <td><a href="round.html">2015 State Projects</a></td>
                                         <td>2015</td>
                                         <td>state</td>
-                                        <td>113</td>
                                     </tr>
                                     <tr>
                                 </tbody>

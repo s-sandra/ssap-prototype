@@ -247,7 +247,11 @@
                                         </div>
                                     </form>
                                 </div>
-                                <div class="col-auto">
+                                <div class="col-auto btn-toolbar">
+                                    <a class="btn btn-outline-success" href="./add_scenario.html">
+                                        <span data-feather="plus"></span>
+                                        Add
+                                    </a>
                                     <button type="button" class="btn btn-outline-primary dropdown-toggle" 
                                             data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                         Actions
@@ -257,10 +261,6 @@
                                             <span data-feather="copy"></span>
                                             Clone
                                         </button>
-                                        <a class="dropdown-item" href="./add_scenario.html">
-                                            <span data-feather="plus"></span>
-                                            Add
-                                        </a>
                                         <button class="dropdown-item"  data-toggle="modal" data-target="#warningModal">
                                             <span data-feather="trash"></span>
                                             Delete
@@ -273,7 +273,7 @@
                             <table class="table table-hover">
                                 <thead class="bg-light">
                                     <tr>
-                                        <th scope="col"><input type="checkbox" class="form-check-input" id="selectAll"></th>
+                                        <th><input type="checkbox" class="form-check-input" id="selectAll"></th>
                                         <th class="col-sm">ID</th>
                                         <th class="col-4">Name</th>
                                         <th>Template</th>
