@@ -77,6 +77,10 @@ h1, h2, h3, h4 {
     -moz-box-shadow: none;
 }
 
+.card-footer {
+    background-color: #f8f9fa;
+}
+
 .card-text .feather {
     width: 1.5rem;
 }

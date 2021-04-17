@@ -228,7 +228,7 @@
             </div>
         </div>
 
-        <div class="modal fade" id="editText" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal fade" id="editTextArea" tabindex="-1" role="dialog" aria-hidden="true">
             <div class="modal-dialog" role="document">
               <div class="modal-content">
                 <div class="modal-header">
@@ -241,6 +241,31 @@
                     <div class="mb-3">
                         <label for="newText" class="form-label">Description</label>
                         <textarea class="form-control" id="newText" rows="5">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec sollicitudin mi. Donec scelerisque lobortis sodales. Cras consectetur ornare hendrerit. Sed elementum sem imperdiet vulputate gravida. Duis eu risus nibh.</textarea>
+                        <small class="form-text text-muted">Update value</small>
+                    </div>
+                </form>
+                <div class="modal-footer">
+                  <a class="btn btn-primary" data-dismiss="modal" href="#">Save</a>
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                </div>
+              </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="editText" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title">Edit Fund Scenario Details</h5>
+                  <button type="button" class="btn btn-toolbar" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <form class="modal-body">
+                    <div class="mb-3">
+                        <label for="newText" class="form-label">Name</label>
+                        <input type="text" class="form-control form-control-lg" id="newText" 
+                               value="Option 4">
                         <small class="form-text text-muted">Update value</small>
                     </div>
                 </form>
@@ -341,44 +366,42 @@
                         </div>
                     </div>
 
-                    <div style="width: max-content;">
-                        <ul class="nav nav-pills">
-                            <li class="nav-item">
-                                <a class="nav-link" href="#access_deltas" 
-                                   data-toggle="tooltip" data-placement="bottom" 
-                                   title="Accessibility">
-                                   <i class="fa fa-wheelchair" style="font-weight: bold;"></i>
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#econ_deltas" 
-                                   data-toggle="tooltip" data-placement="bottom" 
-                                   title="Economic Development">
-                                   <i class="fa fa-usd"></i>
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#safety_deltas"
-                                   data-toggle="tooltip" data-placement="bottom" title="Safety">
-                                   <span data-feather="life-buoy"></span>
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#congestion_deltas"
-                                   data-toggle="tooltip" data-placement="bottom" 
-                                   title="Congestion Mitigation">
-                                   <i class="fa fa-car"></i>
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#environ_deltas"
-                                   data-toggle="tooltip" data-placement="bottom" 
-                                   title="Environmental Quality">
-                                   <i class="fa fa-leaf"></i>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
+                    <ul class="nav nav-pills">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#access_deltas" 
+                                data-toggle="tooltip" data-placement="bottom" 
+                                title="Accessibility">
+                                <i class="fa fa-wheelchair" style="font-weight: bold;"></i>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#econ_deltas" 
+                                data-toggle="tooltip" data-placement="bottom" 
+                                title="Economic Development">
+                                <i class="fa fa-usd"></i>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#safety_deltas"
+                                data-toggle="tooltip" data-placement="bottom" title="Safety">
+                                <span data-feather="life-buoy"></span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#congestion_deltas"
+                                data-toggle="tooltip" data-placement="bottom" 
+                                title="Congestion Mitigation">
+                                <i class="fa fa-car"></i>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#environ_deltas"
+                                data-toggle="tooltip" data-placement="bottom" 
+                                title="Environmental Quality">
+                                <i class="fa fa-leaf"></i>
+                            </a>
+                        </li>
+                    </ul>
 
                     <button class="btn" type="button" data-toggle="collapse" data-target="#overview" 
                             aria-expanded="true" aria-controls="collapseOverview">
@@ -416,7 +439,7 @@
                                     <div class="card-footer">
                                         <div class="btn-group">
                                             <button type="button" class="btn"
-                                                    data-toggle="modal" data-target="#editText">
+                                                    data-toggle="modal" data-target="#editTextArea">
                                                 <span data-feather="edit"></span> Edit
                                             </button>
                                         </div>

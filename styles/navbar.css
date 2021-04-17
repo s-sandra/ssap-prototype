@@ -58,6 +58,11 @@ body {
   color: #333;
 }
 
+.nav-pills {
+  width: max-content;
+  min-width: 20vw;
+}
+
 .nav-link .feather, .nav-link .fa {
   margin-right: 4px;
   color: #727272;

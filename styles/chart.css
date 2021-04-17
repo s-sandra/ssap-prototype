@@ -1,0 +1,34 @@
+.label .card-body {
+    display: flex;
+    flex-flow: row;
+    padding: 10px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.label .card-body .card-title {
+    margin-bottom: 0px;
+}
+
+.legend {
+    padding-right: 1rem;
+}
+
+.legend .card {
+    width: auto;
+    background-color: #f8f9fa;
+}
+
+.legend .grid {
+    margin: 2.5rem;
+}
+
+.donut {
+    flex: 1;
+    display: flex;
+    min-width: 50%;
+}
+
+.donut canvas {
+    padding: 3rem;
+}
