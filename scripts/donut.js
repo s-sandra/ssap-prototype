@@ -1,4 +1,6 @@
-(function () {   
+(function () {
+    const funds = [65600, 15600, 115600, 15403];
+    funds.sort((num1, num2) => num2 - num1);
     const data = {
         labels: [
         'Fredericksburg',
@@ -8,7 +10,7 @@
         ],
         datasets: [{
             label: "Visitor",
-            data: [65600, 15600, 115600, 15403],
+            data: funds,
             backgroundColor: [
                 'rgb(255, 99, 132)',
                 'rgb(54, 162, 235)',
@@ -30,7 +32,6 @@
             legendCallback: function(chart) {
                 var legendHtml = [];
                 var item = chart.data.datasets[0];
-                item.data.sort((num1, num2) => num2 - num1);;
 
                 legendHtml.push('<div class="grid">');
                 for (var i=0; i < item.data.length; i++) {
