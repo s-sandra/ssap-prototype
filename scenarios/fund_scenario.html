@@ -24,7 +24,6 @@
         <link href="./../styles/accordian.css" rel="stylesheet">
         <link href="./../styles/modal.css" rel="stylesheet">
         <link href="./../styles/panel.css" rel="stylesheet">
-        <link href="./../styles/form.css" rel="stylesheet">
         <link href="./../styles/searchResults.css" rel="stylesheet">
         <link href="./../styles/backToTop.css" rel="stylesheet">
 
@@ -299,19 +298,129 @@
 
                             <div class="row">
                                 <div class="donut">
-                                    <canvas class="w-100" id="donut"></canvas>
+                                    <canvas id="donut"></canvas>
                                 </div>
-                                <div id="legend" class="col-md-5 legend"></div>
+                                <div id="legend" class="col-md-6 legend"></div>
                             </div>
                         </div>
                     </div>
 
-                    <button id="portfolio" class="btn" type="button" data-toggle="collapse" data-target="#projects" 
-                            aria-expanded="true" aria-controls="collapseOverview">
-                        <h3>Bid Portfolio</h3>
-                        <span data-feather="chevron-down"></span>
-                        <span data-feather="chevron-up"></span>
-                    </button>
+                    <div class="card" id="portfolio">
+                        <div class="card-header">
+                            <div class="row justify-content-between align-items-center flex-grow-1">
+                                <div class="col-3 col-md">
+                                    <h3>Optimized Bid Portfolio</h3>
+                                </div>
+                                <div class="col-8 col-md">
+                                        <div class="input-group input-group-merge input-group-flush">
+                                            <div class="input-group-prepend">
+                                                <div class="input-group-text">
+                                                    <span data-feather="search"></span>
+                                                </div>
+                                            </div>
+                                            <input class="form-control" type="search" placeholder="search candidates" aria-label="enter candidate project to search">
+                                        </div>
+                                </div>
+                                <div class="col-auto">
+                                    <button type="button" class="btn btn-outline-primary">
+                                        <span data-feather="download"></span>
+                                        Export
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="table-responsive">
+                            <table class="table table-hover">
+                            <thead class="bg-light">
+                                <tr>
+                                    <th class="score">Total</th>
+                                    <th class="col-2">Requested</th>
+                                    <th>Candidate</th>
+                                    <th>District</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>14140</td>
+                                    <td>8300</td>
+                                    <td><a href="project.html">VRE Fredericksburg Line Capacity Expansion</a></td>
+                                    <td>Fredericksburg</td>
+                                </tr>
+                                <tr>
+                                    <td>12290</td>
+                                    <td>4500</td>
+                                    <td><a href="project.html">Westwind Drive</a></td>
+                                    <td>Chancellor</td>
+                                </tr>
+                                <tr>
+                                    <td>11110</td>
+                                    <td>6730</td>
+                                    <td><a href="project.html">Multi-Use Paths - Routes 17/698/1036</a></td>
+                                    <td>Fredericksburg</td>
+                                </tr>
+                                <tr>
+                                    <td>10194</td>
+                                    <td>1200</td>
+                                    <td><a href="project.html">Butler Road Widening</a></td>
+                                    <td>Lee Hill</td>
+                                </tr>
+                                <tr>
+                                    <td>8036</td>
+                                    <td>1900</td>
+                                    <td><a href="project.html">Route 460 Project</a></td>
+                                    <td>Salem</td>
+                                </tr>
+                                <tr>
+                                    <td>7450</td>
+                                    <td>8605</td>
+                                    <td><a href="project.html">Bus Service Expansion</a></td>
+                                    <td>Chancellor</td>
+                                </tr>
+                                <tr>
+                                    <td>7060</td>
+                                    <td>4500</td>
+                                    <td><a href="project.html">Maple Street Widening</a></td>
+                                    <td>Lee Hill</td>
+                                </tr>
+                                    <td>5620</td>
+                                    <td>1000</td>
+                                    <td><a href="project.html">Exit 35 Ramp</a></td>
+                                    <td>Fredericksburg</td>
+                                </tr>
+                                    <td>3360</td>
+                                    <td>1200</td>
+                                    <td><a href="project.html">Downtown Congestion Relief</a></td>
+                                    <td>Fredericksburg</td>
+                                </tr>
+                                    <td>1329</td>
+                                    <td>705</td>
+                                    <td><a href="project.html">Road Bridge Phase-2A</a></td>
+                                    <td>Lee Hill</td>
+                                </tr>
+                            </tbody>
+                            </table>
+                        </div>
+                        <div class="card-footer">
+                            <div class="pagination justify-content-end" aria-label="table pagination">
+                                <div class="col-2">
+                                    <form>
+                                        <div class="input-group">
+                                            <div class="input-group-prepend">
+                                                <div class="input-group-text">Page</div>
+                                            </div>
+                                            <input class="form-control" type="number" value="1" min="1" max="32" aria-label="enter table page">
+                                        </div>
+                                    </form>
+                                </div>
+                                <button type="button" class="btn btn-sm disabled" href="#" tabindex="-1" aria-label="previous page">
+                                    <span data-feather="arrow-left"></span>
+                                </button>
+                                <button type="button" class="btn btn-sm text-primary" href="#" aria-label="next page">
+                                    <span data-feather="arrow-right"></span>
+                                </button>
+                            </div>   
+                        </div>
+                    </div>
                 </main> 
             </div>                  
         </div>
