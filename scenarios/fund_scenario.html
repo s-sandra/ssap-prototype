@@ -232,76 +232,68 @@
                         </li>
                     </ul>
 
-                    <div class="collapse show" id="overview">
-                        <div class="row grid">
-                            <div class="card-group">
-                                <div class="card">
-                                    <div class="card-body">
-                                        <h5 class="card-title">Organization</h5>
-                                        <h3 class="card-text">Spotsylvania County</h3>
-                                    </div>
-                                    <div class="card-footer">
-                                        <div class="btn-group">
-                                            <button type="button" class="btn"
-                                                    data-toggle="modal" data-target="#editText">
-                                                <span data-feather="edit"></span> Edit
-                                            </button>
-                                        </div>
+                    <div class="row grid" id="overview">
+                        <div class="card-group">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h5 class="card-title">Organization</h5>
+                                    <h3 class="card-text">Spotsylvania County</h3>
+                                </div>
+                                <div class="card-footer">
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="card-body">
+                                    <h5 class="card-title">Budget</h5>
+                                    <h3 class="card-text">$ 250,000</h3>
+                                </div>
+                                <div class="card-footer">
+                                    <div class="btn-group">
+                                        <button type="button" class="btn" 
+                                                data-toggle="modal" data-target="#editDollars">
+                                            <span data-feather="edit"></span> Edit
+                                        </button>
                                     </div>
                                 </div>
-                                <div class="card">
-                                    <div class="card-body">
-                                        <h5 class="card-title">Budget</h5>
-                                        <h3 class="card-text">$ 250,000</h3>
-                                    </div>
-                                    <div class="card-footer">
-                                        <div class="btn-group">
-                                            <button type="button" class="btn" 
-                                                    data-toggle="modal" data-target="#editDollars">
-                                                <span data-feather="edit"></span> Edit
-                                            </button>
-                                        </div>
+                            </div>
+                            <div class="card">
+                                <div class="card-body">
+                                    <h5 class="card-title">Total Funds</h5>
+                                    <h3 class="card-text">$ 350,000</h3>
+                                </div>
+                                <div class="card-footer">
+                                    <div class="btn-group">
+                                        <button type="button" class="btn" 
+                                                data-toggle="modal" data-target="#editDollars">
+                                            <span data-feather="edit"></span> Edit
+                                        </button>
                                     </div>
                                 </div>
-                                <div class="card">
-                                    <div class="card-body">
-                                        <h5 class="card-title">Total Funds</h5>
-                                        <h3 class="card-text">$ 350,000</h3>
-                                    </div>
-                                    <div class="card-footer">
-                                        <div class="btn-group">
-                                            <button type="button" class="btn" 
-                                                    data-toggle="modal" data-target="#editDollars">
-                                                <span data-feather="edit"></span> Edit
-                                            </button>
-                                        </div>
-                                    </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-header bg-light">
+                            <div class="row justify-content-between align-items-center flex-grow-1">
+                                <div class="col-12 col-md">
+                                    <h3>District Fund Allocation</h3>
                                 </div>
-                                
+                                <div class="col-auto">
+                                    <a class="btn btn-outline-primary" href="edit_fund_allocation.html">
+                                        <span data-feather="edit"></span>
+                                        Edit
+                                    </a>
+                                </div>
                             </div>
                         </div>
 
-                        <div class="card">
-                            <div class="card-header bg-light">
-                                <div class="row justify-content-between align-items-center flex-grow-1">
-                                    <div class="col-12 col-md">
-                                        <h3>District Fund Allocation</h3>
-                                    </div>
-                                    <div class="col-auto">
-                                        <a class="btn btn-outline-primary" href="edit_fund_allocation.html">
-                                            <span data-feather="edit"></span>
-                                            Edit
-                                        </a>
-                                    </div>
-                                </div>
+                        <div class="row">
+                            <div class="donut">
+                                <canvas id="donut"></canvas>
                             </div>
-
-                            <div class="row">
-                                <div class="donut">
-                                    <canvas id="donut"></canvas>
-                                </div>
-                                <div id="legend" class="col-md-6 legend"></div>
-                            </div>
+                            <div id="legend" class="col-md-6 legend"></div>
                         </div>
                     </div>
 
@@ -343,58 +335,58 @@
                                 <tr>
                                     <td>14140</td>
                                     <td>8300</td>
-                                    <td><a href="project.html">VRE Fredericksburg Line Capacity Expansion</a></td>
+                                    <td><a href="candidate.html">VRE Fredericksburg Line Capacity Expansion</a></td>
                                     <td>Fredericksburg</td>
                                 </tr>
                                 <tr>
                                     <td>12290</td>
                                     <td>4500</td>
-                                    <td><a href="project.html">Westwind Drive</a></td>
+                                    <td><a href="candidate.html">Westwind Drive</a></td>
                                     <td>Chancellor</td>
                                 </tr>
                                 <tr>
                                     <td>11110</td>
                                     <td>6730</td>
-                                    <td><a href="project.html">Multi-Use Paths - Routes 17/698/1036</a></td>
+                                    <td><a href="candidate.html">Multi-Use Paths - Routes 17/698/1036</a></td>
                                     <td>Fredericksburg</td>
                                 </tr>
                                 <tr>
                                     <td>10194</td>
                                     <td>1200</td>
-                                    <td><a href="project.html">Butler Road Widening</a></td>
+                                    <td><a href="candidate.html">Butler Road Widening</a></td>
                                     <td>Lee Hill</td>
                                 </tr>
                                 <tr>
                                     <td>8036</td>
                                     <td>1900</td>
-                                    <td><a href="project.html">Route 460 Project</a></td>
+                                    <td><a href="candidate.html">Route 460 Project</a></td>
                                     <td>Salem</td>
                                 </tr>
                                 <tr>
                                     <td>7450</td>
                                     <td>8605</td>
-                                    <td><a href="project.html">Bus Service Expansion</a></td>
+                                    <td><a href="candidate.html">Bus Service Expansion</a></td>
                                     <td>Chancellor</td>
                                 </tr>
                                 <tr>
                                     <td>7060</td>
                                     <td>4500</td>
-                                    <td><a href="project.html">Maple Street Widening</a></td>
+                                    <td><a href="candidate.html">Maple Street Widening</a></td>
                                     <td>Lee Hill</td>
                                 </tr>
                                     <td>5620</td>
                                     <td>1000</td>
-                                    <td><a href="project.html">Exit 35 Ramp</a></td>
+                                    <td><a href="candidate.html">Exit 35 Ramp</a></td>
                                     <td>Fredericksburg</td>
                                 </tr>
                                     <td>3360</td>
                                     <td>1200</td>
-                                    <td><a href="project.html">Downtown Congestion Relief</a></td>
+                                    <td><a href="candidate.html">Downtown Congestion Relief</a></td>
                                     <td>Fredericksburg</td>
                                 </tr>
                                     <td>1329</td>
                                     <td>705</td>
-                                    <td><a href="project.html">Road Bridge Phase-2A</a></td>
+                                    <td><a href="candidate.html">Road Bridge Phase-2A</a></td>
                                     <td>Lee Hill</td>
                                 </tr>
                             </tbody>

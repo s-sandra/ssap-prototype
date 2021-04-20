@@ -174,13 +174,6 @@
                             <!-- Once total funds inputted above, district inputs will be autocompleted 
                                 with evenly distributed funds among all districts listed. -->
                             <h3>District Fund Allocation</h3> 
-                            <div class="col-md-4">
-                                <select class="form-control" id="county" required>
-                                    <option selected>Spotsylvania County</option>
-                                    <option value="2018">Stafford County</option>
-                                    <option value="2016">Loudoun County</option>
-                                </select>
-                            </div>
 
                             <div class="list">
                                 <div class="card-group">
@@ -274,6 +267,141 @@
                                 </div>
                             </div>
                             
+                        </div>
+
+                        <div class="panel">
+                            <h3>Candidate Prioritization</h3>
+                            <small>Order projects from highest to lowest priority.</small>
+                            <div class="list">
+                                <div class="card-group">
+                                    <div class="card priority" style="flex:inherit;">
+                                        <button type="button" class="btn btn-sm" disabled>
+                                            <span data-feather="chevron-up"></span>
+                                        </button>
+                                        <button type="button" class="btn btn-sm text-danger">
+                                            <span data-feather="chevron-down"></span>
+                                        </button>
+                                    </div>
+                                    <div class="card" style="flex:inherit;">
+                                        <div class="card-body">
+                                            <input type="number" value="1" class="form-control-sm" 
+                                                   id="priority" min="1" step="1" max="50" required>
+                                        </div>
+                                    </div>
+                                    <div class="card" style="flex-basis:auto;">
+                                        <div class="card-body candidate">
+                                            <a class="h5" href="project.html" target="_blank">Butler Road Widening</a>
+                                            <small class="text-muted">
+                                                <span data-feather="map-pin"></span>
+                                                Fredericksburg
+                                            </small>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-group">
+                                    <div class="card priority" style="flex:inherit;">
+                                        <div class="card-body">
+                                            <button type="button" class="btn btn-sm text-success">
+                                                <span data-feather="chevron-up"></span>
+                                            </button>
+                                            <button type="button" class="btn btn-sm text-danger">
+                                                <span data-feather="chevron-down"></span>
+                                            </button>
+                                        </div>
+                                        
+                                    </div>
+                                    <div class="card" style="flex:inherit;">
+                                        <div class="card-body">
+                                            <input type="number" value="2" class="form-control-sm" 
+                                                   id="priority" min="1" step="1" max="50" required>
+                                        </div>
+                                    </div>
+                                    <div class="card" style="flex-basis:auto;">
+                                        <div class="card-body candidate">
+                                            <a class="h5" href="project.html" target="_blank">Route 460 Project</a>
+                                            <small class="text-muted">
+                                                <span data-feather="map-pin"></span>
+                                                Lee Hill
+                                            </small>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-group">
+                                    <div class="card priority" style="flex:inherit;">
+                                        <button type="button" class="btn btn-sm text-success">
+                                            <span data-feather="chevron-up"></span>
+                                        </button>
+                                        <button type="button" class="btn btn-sm text-danger">
+                                            <span data-feather="chevron-down"></span>
+                                        </button>
+                                    </div>
+                                    <div class="card" style="flex:inherit;">
+                                        <div class="card-body">
+                                            <input type="number" value="3" class="form-control-sm" 
+                                                   id="priority" min="1" step="1" max="50" required>
+                                        </div>
+                                    </div>
+                                    <div class="card" style="flex-basis:auto;">
+                                        <div class="card-body candidate">
+                                            <a class="h5" href="project.html" target="_blank">Exit 35 Ramp</a>
+                                            <small class="text-muted">
+                                                <span data-feather="map-pin"></span>
+                                                Chancellor
+                                            </small>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-group">
+                                    <div class="card priority" style="flex:inherit;">
+                                        <button type="button" class="btn btn-sm text-success">
+                                            <span data-feather="chevron-up"></span>
+                                        </button>
+                                        <button type="button" class="btn btn-sm text-danger">
+                                            <span data-feather="chevron-down"></span>
+                                        </button>
+                                    </div>
+                                    <div class="card" style="flex:inherit;">
+                                        <div class="card-body">
+                                            <input type="number" value="4" class="form-control-sm" 
+                                                   id="priority" min="1" step="1" max="50" required>
+                                        </div>
+                                    </div>
+                                    <div class="card" style="flex-basis:auto;">
+                                        <div class="card-body candidate">
+                                            <a class="h5" href="project.html" target="_blank">Downtown Congestion Relief</a>
+                                            <small class="text-muted">
+                                                <span data-feather="map-pin"></span>
+                                                Fredericksburg
+                                            </small>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-group">
+                                    <div class="card priority" style="flex:inherit;">
+                                        <button type="button" class="btn btn-sm text-success">
+                                            <span data-feather="chevron-up"></span>
+                                        </button>
+                                        <button type="button" class="btn btn-sm text-danger">
+                                            <span data-feather="chevron-down"></span>
+                                        </button>
+                                    </div>
+                                    <div class="card" style="flex:inherit;">
+                                        <div class="card-body">
+                                            <input type="number" value="5" class="form-control-sm" 
+                                                   id="priority" min="1" step="1" max="50" required>
+                                        </div>
+                                    </div>
+                                    <div class="card" style="flex-basis:auto;">
+                                        <div class="card-body candidate">
+                                            <a class="h5" href="project.html" target="_blank">Road Bridge Phase-2A</a>
+                                            <small class="text-muted">
+                                                <span data-feather="map-pin"></span>
+                                                Salem
+                                            </small>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </form>
                 </main>

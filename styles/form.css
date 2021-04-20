@@ -16,7 +16,7 @@ form {
     background-color: white;
 }
 
-.card-body .form-control-lg {
+.card-body .form-control-lg, .card-body .form-control-sm {
     border: 1px solid #ced4da;
     font-size: 1.1rem;
     color: #677788;
@@ -79,6 +79,24 @@ form .card {
 
 .list {
     margin: 1rem 0 1rem;
+}
+
+.priority .feather {
+    height: initial;
+    width: initial;
+}
+
+.priority button:disabled {
+    opacity: 0.5;
+}
+
+.card-body.candidate {
+    flex-direction: column !important;
+    align-items: initial;
+}
+
+.candidate .h5 {
+    margin-bottom: 0 !important;
 }
 
 .row-cols-5 {

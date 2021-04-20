@@ -76,7 +76,7 @@ tr {
 }
 
 .card-footer {
-    min-height: 2.5rem;
+    min-height: 3.5rem;
 }
 
 .table-responsive + .card-footer {
