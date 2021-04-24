@@ -99,3 +99,42 @@ tr {
 .card-body, .card-header {
     color: #424447;
 }
+
+.list td {
+    font-size: 1.2rem;
+}
+
+.list th, .list td {
+    border: none;
+}
+
+.list thead th {
+    font-weight: 500;
+    padding-bottom: 0px;
+}
+
+.list thead tr:first-child {
+    border-bottom: none;
+}
+
+.list td:first-child, .list th:first-child {
+    width: 7%;
+}
+
+.candidate {
+    flex-direction: row;
+    padding: 0.5rem 0 0.5rem 0;
+}
+
+.candidate .table-responsive {
+    flex: auto;
+}
+
+.candidate .table-responsive + * {
+    display: flex;
+    padding: 0 2rem 0 2rem;
+}
+
+.candidate .btn-lg .feather {
+    width: 25px;
+}

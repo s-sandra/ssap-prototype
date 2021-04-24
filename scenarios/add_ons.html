@@ -21,9 +21,9 @@
         <link href="./../styles/global.css" rel="stylesheet">
         <link href="./../styles/table.css" rel="stylesheet">
         <link href="./../styles/accordian.css" rel="stylesheet">
+        <link href="./../styles/panel.css" rel="stylesheet">
         <link href="./../styles/modal.css" rel="stylesheet">
         <link href="./../styles/searchResults.css" rel="stylesheet">
-        <link href="./../styles/backToTop.css" rel="stylesheet">
 
     </head>
     <body>
@@ -302,10 +302,6 @@
                     </div>
                 </nav>
 
-                <button class="btn btn-secondary" onclick="goToTop()" id="topBtn" title="Go to top">
-                    <span data-feather="arrow-up"></span>
-                </button>
-
                 <main class="col-md-9 ms-sm-auto col-lg-10">
                     <nav aria-label="breadcrumb">
                         <ol class="breadcrumb">
@@ -390,107 +386,36 @@
                         </ul>
                     </div>
 
-                    <div class="card">
-                        <div class="card-header">
-                            <div class="row justify-content-between align-items-center flex-grow-1">
-                                <div class="col-3 col-md d-flex">
-                                    <h4>Optimized Project Options</h4>
+                    <div class="panel">
+                        <h3>Optimized Project Options</h3>
+                        <div class="list">
+                            <div class="card candidate">
+                                <div class="table-responsive">
+                                    <table class="table table-borderless">
+                                    <thead>
+                                        <tr>
+                                            <th><span data-feather="key"></span> ID</th>
+                                            <th class="col-md-7"><span data-feather="clipboard"></span> Project</th>
+                                            <th><span data-feather="map-pin"></span> District</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>174</td>
+                                            <td><a href="./../projects/project.html">VRE Fredericksburg Line Capacity Expansion</a></td>
+                                            <td>Lee Hill</td>
+                                        </tr>
+                                    </tbody>
+                                    </table>
                                 </div>
-                                <div class="col-8 col-md">
-                                    <form>
-                                        <div class="input-group input-group-merge input-group-flush">
-                                            <div class="input-group-prepend">
-                                                <div class="input-group-text">
-                                                    <span data-feather="search"></span>
-                                                </div>
-                                            </div>
-                                            <input class="form-control" type="search" placeholder="search candidates" aria-label="enter candidate to search">
-                                        </div>
-                                    </form>
+                                <div>
+                                    <button class="btn btn-lg" type="button" data-toggle="collapse" data-target="#options-1" 
+                                        aria-expanded="false" aria-controls="collapseOptions">
+                                        <span data-feather="chevron-down"></span>
+                                        <span data-feather="chevron-up"></span>
+                                    </button>
                                 </div>
                             </div>
-                        </div>
-                        <div class="table-responsive">
-                            <table class="table table-hover">
-                            <thead class="bg-light">
-                                <tr>
-                                    <th>ID</th>
-                                    <th class="type-col"></th>
-                                    <th>Candidate</th>
-                                    <th>Group</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>1284</td>
-                                    <td><span data-feather="clipboard"></span></td>
-                                    <td>VRE Fredericksburg Line Capacity Expansion</td>
-                                    <td>Moderate Competitors</td>
-                                </tr>
-                                <tr>
-                                    <td>1108</td>
-                                    <td><span data-feather="bar-chart-2"></span></td>
-                                    <td>Westwind Drive (Loudoun County Parkway to Route 606)</td>
-                                    <td>Eco-Friendly Competitor Pool</td>
-                                </tr>
-                                <tr>
-                                    <td>4192</td>
-                                    <td><span data-feather="clipboard"></span></td>
-                                    <td>Butler Road Widening</td>
-                                    <td>Average Competition</td>
-                                </tr>
-                                <tr>
-                                    <td>4094</td>
-                                    <td><span data-feather="clipboard"></span></td>
-                                    <td>Route 460 Project</td>
-                                    <td>Moderate Competitors</td>
-                                </tr>
-                                <tr>
-                                    <td>3847</td>
-                                    <td><span data-feather="bar-chart-2"></span></td>
-                                    <td>Road Bridge Phase-2A</td>
-                                    <td>State Bridge Projects</td>
-                                </tr>
-                                <tr>
-                                    <td>1809</td>
-                                    <td><span data-feather="clipboard"></span></td>
-                                    <td>Bus Service Expansion</td>
-                                    <td>Moderate Competitors</td>
-                                </tr>
-                                <tr>
-                                    <td>1430</td>
-                                    <td><span data-feather="clipboard"></span></td>
-                                    <td>Exit 35 Ramp</td>
-                                    <td>Eco-Friendly Competitor Pool</td>
-                                </tr>
-                                <tr>
-                                    <td>1227</td>
-                                    <td><span data-feather="clipboard"></span></td>
-                                    <td>Downtown Congestion Relief</td>
-                                    <td>Average Competition</td>
-                                </tr>
-                            </tbody>
-                            </table>
-                        </div>
-                        <div class="card-footer">
-                            <div class="pagination justify-content-end" aria-label="table pagination">
-                                <div class="col-2">
-                                    <form>
-                                        <div class="input-group">
-                                            <div class="input-group-prepend">
-                                                <div class="input-group-text">Page</div>
-                                            </div>
-                                            <input class="form-control" type="number" value="1" min="1" max="32" aria-label="enter table page">
-                                        </div>
-                                    </form>
-                                </div>
-                                <button type="button" class="btn btn-sm disabled" href="#" tabindex="-1" aria-label="previous page">
-                                    <span data-feather="arrow-left"></span>
-                                </button>
-                                <button type="button" class="btn btn-sm text-primary" href="#" aria-label="next page">
-                                    <span data-feather="arrow-right"></span>
-                                </button>
-                            </div>   
                         </div>
                     </div>
                 </main>
@@ -503,7 +428,6 @@
         <script src="https://cdn.jsdelivr.net/npm/feather-icons@4.28.0/dist/feather.min.js" crossorigin="anonymous"></script>
 
         <script src="./../scripts/global.js"></script>
-        <script src="./../scripts/backToTop.js"></script>
         <script scr="./../scripts/sortCols.js"></script>
 
     </body>

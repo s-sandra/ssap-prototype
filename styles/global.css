@@ -164,3 +164,16 @@ p.card-text .feather {
     flex-direction: column;
     padding-left: 7px;
 }
+
+.list .card {
+    margin: 1rem 0 1rem;
+}
+
+.list {
+    margin: 1rem 0 1rem;
+}
+
+.list .card-body {
+    display: flex;
+    align-items: center;
+}
