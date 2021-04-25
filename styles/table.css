@@ -104,6 +104,10 @@ tr {
     font-size: 1.2rem;
 }
 
+.list .options td {
+    font-size: 1rem;
+}
+
 .list th, .list td {
     border: none;
 }
@@ -119,6 +123,10 @@ tr {
 
 .list td:first-child, .list th:first-child {
     width: 7%;
+}
+
+.list .options td:first-child, .list .options th:first-child {
+    width: 3%;
 }
 
 .candidate {
@@ -137,4 +145,17 @@ tr {
 
 .candidate .btn-lg .feather {
     width: 25px;
+}
+
+.selected {
+    color: green;
+    background-color: rgb(236 248 234);
+}
+
+.selected a {
+    color: green;
+}
+
+.options {
+    margin-bottom: 3rem !important;
 }
