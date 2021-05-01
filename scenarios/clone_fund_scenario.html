@@ -177,21 +177,61 @@
                             <!-- Once total funds inputted above, district inputs will be autocompleted 
                                 with evenly distributed funds among all districts listed. -->
                             <h3>District Fund Allocation</h3> 
-                            <div class="col-md-4">
-                                <select class="form-control" id="county" required>
-                                    <option selected>Spotsylvania County</option>
-                                    <option value="2018">Stafford County</option>
-                                    <option value="2016">Loudoun County</option>
-                                </select>
-                            </div>
 
                             <div class="list">
                                 <div class="card-group">
                                     <div class="card">
                                         <div class="card-body" style="flex-basis: auto;">
                                             <h6 class="card-title">Fredericksburg</h6>
-                                            <input type="range" class="form-range" min="0" max="100" step="0.01"
-                                                   id="fundRange" value="25">
+                                            <input type="range" class="form-range" value="21.3"
+                                                   min="0" max="100" step="0.01" id="fundRange">
+                                        </div>
+                                    </div>
+                                    <div class="card" style="flex: inherit;">
+                                        <div class="card-body">
+                                            <input type="number" value="21.3" class="form-control-lg" 
+                                                   id="percentage" min="0" max="100" step="1" required>
+                                            <h6 style="margin-left:5px">%</h6>
+                                        </div>
+                                    </div>
+                                    <div class="card" style="flex: inherit;">
+                                        <div class="card-body">
+                                            <h6 style="margin-right:5px">$</h6>
+                                            <input type="number" value="55891" class="form-control-lg" 
+                                                   id="budget" min="0" step="100" max="100000" required>
+                                            <!-- Set input max attribute to total funds variable. -->
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-group">
+                                    <div class="card">
+                                        <div class="card-body" style="flex-basis: auto;">
+                                            <h6 class="card-title">NOVA</h6>
+                                            <input type="range" class="form-range" value="9.5"
+                                                   min="0" max="100" step="0.01" id="fundRange">
+                                        </div>
+                                    </div>
+                                    <div class="card" style="flex: inherit;">
+                                        <div class="card-body">
+                                            <input type="number" value="9.5" class="form-control-lg" 
+                                                   id="percentage" min="0" max="100" step="1" required>
+                                            <h6 style="margin-left:5px">%</h6>
+                                        </div>
+                                    </div>
+                                    <div class="card" style="flex: inherit;">
+                                        <div class="card-body">
+                                            <h6 style="margin-right:5px">$</h6>
+                                            <input type="number" value="24928" class="form-control-lg" 
+                                                   id="budget" min="0" step="100" max="100000" required>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-group">
+                                    <div class="card">
+                                        <div class="card-body" style="flex-basis: auto;">
+                                            <h6 class="card-title">Hampton Roads</h6>
+                                            <input type="range" class="form-range" value="25"
+                                                   min="0" max="100" step="0.01" id="fundRange">
                                         </div>
                                     </div>
                                     <div class="card" style="flex: inherit;">
@@ -205,52 +245,6 @@
                                         <div class="card-body">
                                             <h6 style="margin-right:5px">$</h6>
                                             <input type="number" value="65600" class="form-control-lg" 
-                                                   id="budget" min="0" step="100" max="100000" required>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="card-group">
-                                    <div class="card">
-                                        <div class="card-body" style="flex-basis: auto;">
-                                            <h6 class="card-title">Lee Hill</h6>
-                                            <input type="range" class="form-range" min="0" max="100" step="0.01"
-                                                   id="fundRange" value="15">
-                                        </div>
-                                    </div>
-                                    <div class="card" style="flex: inherit;">
-                                        <div class="card-body">
-                                            <input type="number" value="15" class="form-control-lg" 
-                                                   id="percentage" min="0" max="100" step="1" required>
-                                            <h6 style="margin-left:5px">%</h6>
-                                        </div>
-                                    </div>
-                                    <div class="card" style="flex: inherit;">
-                                        <div class="card-body">
-                                            <h6 style="margin-right:5px">$</h6>
-                                            <input type="number" value="15600" class="form-control-lg" 
-                                                   id="budget" min="0" step="100" max="100000" required>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="card-group">
-                                    <div class="card">
-                                        <div class="card-body" style="flex-basis: auto;">
-                                            <h6 class="card-title">Chancellor</h6>
-                                            <input type="range" class="form-range" min="0" max="100" step="0.01" 
-                                                   id="fundRange" value="35">
-                                        </div>
-                                    </div>
-                                    <div class="card" style="flex: inherit;">
-                                        <div class="card-body">
-                                            <input type="number" value="35" class="form-control-lg" 
-                                                   id="percentage" min="0" max="100" step="1" required>
-                                            <h6 style="margin-left:5px">%</h6>
-                                        </div>
-                                    </div>
-                                    <div class="card" style="flex: inherit;">
-                                        <div class="card-body">
-                                            <h6 style="margin-right:5px">$</h6>
-                                            <input type="number" value="115600" class="form-control-lg" 
                                                    id="budget" min="0" step="100" max="100000" required>
                                         </div>
                                     </div>
@@ -259,13 +253,13 @@
                                     <div class="card">
                                         <div class="card-body" style="flex-basis: auto;">
                                             <h6 class="card-title">Salem</h6>
-                                            <input type="range" class="form-range" min="0" max="100" step="0.01" id="fundRange"
-                                                   value="25">
+                                            <input type="range" class="form-range" value="15.2"
+                                                   min="0" max="100" step="0.01" id="fundRange">
                                         </div>
                                     </div>
                                     <div class="card" style="flex: inherit;">
                                         <div class="card-body">
-                                            <input type="number" value="25" class="form-control-lg" 
+                                            <input type="number" value="15.2" class="form-control-lg" 
                                                    id="percentage" min="0" max="100" step="1" required>
                                             <h6 style="margin-left:5px">%</h6>
                                         </div>
@@ -273,13 +267,260 @@
                                     <div class="card" style="flex: inherit;">
                                         <div class="card-body">
                                             <h6 style="margin-right:5px">$</h6>
-                                            <input type="number" value="65600" class="form-control-lg" 
+                                            <input type="number" value="39884.80" class="form-control-lg" 
+                                                   id="budget" min="0" step="100" max="100000" required>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-group">
+                                    <div class="card">
+                                        <div class="card-body" style="flex-basis: auto;">
+                                            <h6 class="card-title">Bristol</h6>
+                                            <input type="range" class="form-range" value="10"
+                                                   min="0" max="100" step="0.01" id="fundRange">
+                                        </div>
+                                    </div>
+                                    <div class="card" style="flex: inherit;">
+                                        <div class="card-body">
+                                            <input type="number" value="10" class="form-control-lg" 
+                                                   id="percentage" min="0" max="100" step="1" required>
+                                            <h6 style="margin-left:5px">%</h6>
+                                        </div>
+                                    </div>
+                                    <div class="card" style="flex: inherit;">
+                                        <div class="card-body">
+                                            <h6 style="margin-right:5px">$</h6>
+                                            <input type="number" value="26240" class="form-control-lg" 
+                                                   id="budget" min="0" step="100" max="100000" required>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-group">
+                                    <div class="card">
+                                        <div class="card-body" style="flex-basis: auto;">
+                                            <h6 class="card-title">Culpeper</h6>
+                                            <input type="range" class="form-range" value="5"
+                                                   min="0" max="100" step="0.01" id="fundRange">
+                                        </div>
+                                    </div>
+                                    <div class="card" style="flex: inherit;">
+                                        <div class="card-body">
+                                            <input type="number" value="5" class="form-control-lg" 
+                                                   id="percentage" min="0" max="100" step="1" required>
+                                            <h6 style="margin-left:5px">%</h6>
+                                        </div>
+                                    </div>
+                                    <div class="card" style="flex: inherit;">
+                                        <div class="card-body">
+                                            <h6 style="margin-right:5px">$</h6>
+                                            <input type="number" value="13120" class="form-control-lg" 
+                                                   id="budget" min="0" step="100" max="100000" required>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-group">
+                                    <div class="card">
+                                        <div class="card-body" style="flex-basis: auto;">
+                                            <h6 class="card-title">Lynchburg</h6>
+                                            <input type="range" class="form-range" value="5"
+                                                   min="0" max="100" step="0.01" id="fundRange">
+                                        </div>
+                                    </div>
+                                    <div class="card" style="flex: inherit;">
+                                        <div class="card-body">
+                                            <input type="number" value="5" class="form-control-lg" 
+                                                   id="percentage" min="0" max="100" step="1" required>
+                                            <h6 style="margin-left:5px">%</h6>
+                                        </div>
+                                    </div>
+                                    <div class="card" style="flex: inherit;">
+                                        <div class="card-body">
+                                            <h6 style="margin-right:5px">$</h6>
+                                            <input type="number" value="13120" class="form-control-lg" 
+                                                   id="budget" min="0" step="100" max="100000" required>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-group">
+                                    <div class="card">
+                                        <div class="card-body" style="flex-basis: auto;">
+                                            <h6 class="card-title">Staunton</h6>
+                                            <input type="range" class="form-range" value="4" 
+                                                   min="0" max="100" step="0.01" id="fundRange">
+                                        </div>
+                                    </div>
+                                    <div class="card" style="flex: inherit;">
+                                        <div class="card-body">
+                                            <input type="number" value="4" class="form-control-lg" 
+                                                   id="percentage" min="0" max="100" step="1" required>
+                                            <h6 style="margin-left:5px">%</h6>
+                                        </div>
+                                    </div>
+                                    <div class="card" style="flex: inherit;">
+                                        <div class="card-body">
+                                            <h6 style="margin-right:5px">$</h6>
+                                            <input type="number" value="10496" class="form-control-lg" 
+                                                   id="budget" min="0" step="100" max="100000" required>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-group">
+                                    <div class="card">
+                                        <div class="card-body" style="flex-basis: auto;">
+                                            <h6 class="card-title">Richmond</h6>
+                                            <input type="range" class="form-range" value="5" 
+                                                min="0" max="100" step="0.01" id="fundRange">
+                                        </div>
+                                    </div>
+                                    <div class="card" style="flex: inherit;">
+                                        <div class="card-body">
+                                            <input type="number" value="5" class="form-control-lg" 
+                                                   id="percentage" min="0" max="100" step="1" required>
+                                            <h6 style="margin-left:5px">%</h6>
+                                        </div>
+                                    </div>
+                                    <div class="card" style="flex: inherit;">
+                                        <div class="card-body">
+                                            <h6 style="margin-right:5px">$</h6>
+                                            <input type="number" value="13120" class="form-control-lg" 
                                                    id="budget" min="0" step="100" max="100000" required>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            
+                        </div>
+
+                        <div class="panel">
+                            <h3 class="mt-3">Candidate Prioritization</h3>
+                            <small>Order projects from highest to lowest priority.</small>
+                            <div class="list">
+                                <div class="card-group">
+                                    <div class="card priority" style="flex:inherit;">
+                                        <button type="button" class="btn btn-sm" disabled>
+                                            <span data-feather="chevron-up"></span>
+                                        </button>
+                                        <button type="button" class="btn btn-sm text-danger">
+                                            <span data-feather="chevron-down"></span>
+                                        </button>
+                                    </div>
+                                    <div class="card" style="flex:inherit;">
+                                        <div class="card-body">
+                                            <input type="number" value="1" class="form-control-sm" 
+                                                   id="priority" min="1" step="1" max="50" required>
+                                        </div>
+                                    </div>
+                                    <div class="card" style="flex-basis:auto;">
+                                        <div class="card-body candidate">
+                                            <a class="h5" href="project.html" target="_blank">Butler Road Widening</a>
+                                            <small class="text-muted">
+                                                <span data-feather="map-pin"></span>
+                                                Fredericksburg
+                                            </small>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-group">
+                                    <div class="card priority" style="flex:inherit;">
+                                        <button type="button" class="btn btn-sm text-success">
+                                            <span data-feather="chevron-up"></span>
+                                        </button>
+                                        <button type="button" class="btn btn-sm text-danger">
+                                            <span data-feather="chevron-down"></span>
+                                        </button>
+                                        
+                                    </div>
+                                    <div class="card" style="flex:inherit;">
+                                        <div class="card-body">
+                                            <input type="number" value="2" class="form-control-sm" 
+                                                   id="priority" min="1" step="1" max="50" required>
+                                        </div>
+                                    </div>
+                                    <div class="card" style="flex-basis:auto;">
+                                        <div class="card-body candidate">
+                                            <a class="h5" href="project.html" target="_blank">Route 460 Project</a>
+                                            <small class="text-muted">
+                                                <span data-feather="map-pin"></span>
+                                                Lee Hill
+                                            </small>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-group">
+                                    <div class="card priority" style="flex:inherit;">
+                                        <button type="button" class="btn btn-sm text-success">
+                                            <span data-feather="chevron-up"></span>
+                                        </button>
+                                        <button type="button" class="btn btn-sm text-danger">
+                                            <span data-feather="chevron-down"></span>
+                                        </button>
+                                    </div>
+                                    <div class="card" style="flex:inherit;">
+                                        <div class="card-body">
+                                            <input type="number" value="3" class="form-control-sm" 
+                                                   id="priority" min="1" step="1" max="50" required>
+                                        </div>
+                                    </div>
+                                    <div class="card" style="flex-basis:auto;">
+                                        <div class="card-body candidate">
+                                            <a class="h5" href="project.html" target="_blank">Exit 35 Ramp</a>
+                                            <small class="text-muted">
+                                                <span data-feather="map-pin"></span>
+                                                Chancellor
+                                            </small>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-group">
+                                    <div class="card priority" style="flex:inherit;">
+                                        <button type="button" class="btn btn-sm text-success">
+                                            <span data-feather="chevron-up"></span>
+                                        </button>
+                                        <button type="button" class="btn btn-sm text-danger">
+                                            <span data-feather="chevron-down"></span>
+                                        </button>
+                                    </div>
+                                    <div class="card" style="flex:inherit;">
+                                        <div class="card-body">
+                                            <input type="number" value="4" class="form-control-sm" 
+                                                   id="priority" min="1" step="1" max="50" required>
+                                        </div>
+                                    </div>
+                                    <div class="card" style="flex-basis:auto;">
+                                        <div class="card-body candidate">
+                                            <a class="h5" href="project.html" target="_blank">Downtown Congestion Relief</a>
+                                            <small class="text-muted">
+                                                <span data-feather="map-pin"></span>
+                                                Fredericksburg
+                                            </small>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-group">
+                                    <div class="card priority" style="flex:inherit;">
+                                        <button type="button" class="btn btn-sm text-success">
+                                            <span data-feather="chevron-up"></span>
+                                        </button>
+                                        <button type="button" class="btn btn-sm text-danger">
+                                            <span data-feather="chevron-down"></span>
+                                        </button>
+                                    </div>
+                                    <div class="card" style="flex:inherit;">
+                                        <div class="card-body">
+                                            <input type="number" value="5" class="form-control-sm" 
+                                                   id="priority" min="1" step="1" max="50" required>
+                                        </div>
+                                    </div>
+                                    <div class="card" style="flex-basis:auto;">
+                                        <div class="card-body candidate">
+                                            <a class="h5" href="project.html" target="_blank">Road Bridge Phase-2A</a>
+                                            <small class="text-muted">
+                                                <span data-feather="map-pin"></span>
+                                                Salem
+                                            </small>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </form>
                 </main>
