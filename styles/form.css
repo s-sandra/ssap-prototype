@@ -77,9 +77,14 @@ form .card {
     opacity: 0.5;
 }
 
+.priority {
+    justify-content: space-between;
+}
+
 .card-body.candidate {
     flex-direction: column !important;
     align-items: initial;
+    padding: 1rem;
 }
 
 .candidate .h5 {
