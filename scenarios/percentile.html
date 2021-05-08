@@ -276,7 +276,8 @@
                         <ol class="breadcrumb">
                           <li class="breadcrumb-item"><a href="index.html">My Scenarios</a></li>
                           <li class="breadcrumb-item"><a href="scenario.html">Potential 2022 Round</a></li>
-                          <li class="breadcrumb-item active" aria-current="page">Project Details</li>
+                          <li class="breadcrumb-item"><a href="project.html">Butler Road Extension</a></li>
+                          <li class="breadcrumb-item active" aria-current="page">SMART SCALE Score</li>
                         </ol>
                     </nav>
                     <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3">
@@ -286,170 +287,33 @@
                                 <span data-feather="edit"></span>
                             </button>
                         </div>
-                        <div class="btn-toolbar mb-2 mb-md-0">
-                            <button type="button" class="btn btn-primary dropdown-toggle" 
-                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                Actions
-                            </button>
-                            <div class="dropdown-menu">
-                              <button class="dropdown-item" data-toggle="modal" data-target="#cloneModal">
-                                 <span data-feather="copy"></span>
-                                  Clone
-                              </button>
-                              <button class="dropdown-item" data-toggle="modal" data-target="#warningModal">
-                                  <span data-feather="trash"></span>
-                                  Delete
-                              </button>
-                              <a class="dropdown-item" href="./create_add_on.html">
-                                <span data-feather="file-plus"></span>
-                                Add option
-                              </a>
-                              <a class="dropdown-item" href="./delete_add_on.html">
-                                <span data-feather="file-minus"></span>
-                                Delete option
-                              </a>
-                            </div>
-                        </div>
                     </div>
-
-                    <div style="width: max-content;">
-                        <ul class="nav nav-tabs">
-                            <li class="nav-item">
-                                <a class="nav-link" href="./project.html">
-                                    <span data-feather="menu"></span>
-                                    Details
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link active" href="./project_add_ons.html">
-                                    <span data-feather="file-plus"></span>
-                                    Options
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="./project_charts.html">
-                                    <span data-feather="bar-chart-2"></span>
-                                    Charts
-                                </a>
-                            </li>
-                        </ul>
+    
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">SMART SCALE Score</h5>
+                            <h3 class="card-text">1.195</h3>
+                            <p class="card-subtitle">33rd Percentile</p>
+                        </div>
+                        <div class="card-footer">
+                        </div>
                     </div>
                     
                     <div class="card">
-                        <div class="card-header">
+                        <div class="card-header bg-light">
                             <div class="row justify-content-between align-items-center flex-grow-1">
                                 <div class="col-12 col-md">
-                                    <h3>Project Options</h3>
+                                    <h3>SMART SCALE Score Percentiles</h3>
                                 </div>
-                                <div class="col-8 col-md">
-                                    <form>
-                                        <div class="input-group input-group-merge input-group-flush">
-                                            <div class="input-group-prepend">
-                                                <div class="input-group-text">
-                                                    <span data-feather="search"></span>
-                                                </div>
-                                            </div>
-                                            <input class="form-control" type="search" placeholder="search project options" aria-label="enter add-on to search">
-                                        </div>
-                                    </form>
-                                </div>
-                                <div class="col-auto btn-toolbar">
-                                    <a class="btn btn-outline-success" href="./../projects/create_add_on.html">
-                                        <span data-feather="plus"></span>
-                                        Add
-                                    </a>
-                                    <button type="button" class="btn btn-outline-primary dropdown-toggle" 
-                                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                        Actions
+                                <div class="col-auto">
+                                    <button type="button" class="btn btn-outline-primary">
+                                        <span data-feather="download"></span>
+                                        Export Chart
                                     </button>
-                                    <div class="dropdown-menu">
-                                        <button class="dropdown-item" data-toggle="modal" data-target="#cloneAddOn">
-                                            <span data-feather="copy"></span>
-                                            Clone
-                                        </button>
-                                        <!-- Enable when projects selected -->
-                                         <button type="button" class="dropdown-item" data-target="#warningModal" data-toggle="modal">
-                                             <span data-feather="minus"></span>
-                                             Remove
-                                         </button>
-                                    </div>
-                                </div>
-                                <div class="mt-2 btn-toolbar">
-                                    <label for="scoreFilters" class="col-form-label">Display :</label>
-                                    <div class="form-group" id="scoreFilters">
-                                        <label class="btn btn-sm btn-outline-secondary">
-                                            <input type="checkbox" name="options" id="selectedFilter" checked> Selected
-                                        </label>
-                                        <label class="btn btn-sm btn-outline-secondary">
-                                            <input type="checkbox" name="options" id="unselectedFilter" checked> Not Selected
-                                        </label>
-                                    </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="table-responsive">
-                            <table class="table table-hover">
-                                <thead class="bg-light">
-                                    <tr>
-                                        <th><input type="checkbox" class="form-check-input" id="selectAll"></th>
-                                        <th class="col-sm">ID</th>
-                                        <th class="type-col"></th>
-                                        <th class="col-4">Name</th>
-                                        <th>Cost</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr class="selected">
-                                        <th><input type="checkbox" class="form-check-input"></th>
-                                        <td><a href="add_on.html">703</a></td>
-                                        <td><span data-feather="check-circle"></span></td>
-                                        <td><a href="add_on.html">Sidewalks</a></td>
-                                        <td>25000</td>
-                                    </tr>
-                                    <tr>
-                                        <th><input type="checkbox" class="form-check-input"></th>
-                                        <td><a href="add_on.html">183</a></td>
-                                        <td></td>
-                                        <td><a href="add_on.html">Rain Garden</a></td>
-                                        <td>10500</td>
-                                    </tr>
-                                    <tr class="selected">
-                                        <th><input type="checkbox" class="form-check-input"></th>
-                                        <td><a href="add_on.html">501</a></td>
-                                        <td><span data-feather="check-circle"></span></td>
-                                        <td><a href="add_on.html">Solar Panels</a></td>
-                                        <td>75000</td>
-                                    </tr>
-                                    <tr>
-                                        <th><input type="checkbox" class="form-check-input"></th>
-                                        <td><a href="add_on.html">411</a></td>
-                                        <td></td>
-                                        <td><a href="add_on.html">Solar Powered Street Lamps</a></td>
-                                        <td>10600</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                        <div class="card-footer">
-                            <div class="pagination justify-content-end" aria-label="table pagination">
-                                <div class="col-2">
-                                    <form>
-                                        <div class="input-group">
-                                            <div class="input-group-prepend">
-                                                <div class="input-group-text">Page</div>
-                                            </div>
-                                            <input class="form-control" type="number" value="1" min="1" max="32" aria-label="enter table page">
-                                        </div>
-                                    </form>
-                                </div>
-                                <button type="button" class="btn btn-sm disabled" href="#" tabindex="-1" aria-label="previous page">
-                                    <span data-feather="arrow-left"></span>
-                                </button>
-                                <button type="button" class="btn btn-sm text-primary" href="#" aria-label="next page">
-                                    <span data-feather="arrow-right"></span>
-                                </button>
-                            </div>   
-                        </div>
+                        <canvas class="my-4 w-100" id="percentileHighlight" width="900" height="380"></canvas>
                     </div>
                 </main>
             </div>
@@ -459,9 +323,11 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/feather-icons@4.28.0/dist/feather.min.js" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js" integrity="sha384-zNy6FEbO50N+Cg5wap8IKA4M/ZnLJgzc6w2NqACZaK0u0FXfOWRRJOnQtpZun8ha" crossorigin="anonymous"></script>
 
         <script src="./../scripts/global.js"></script>
         <script src="./../scripts/backToTop.js"></script>
+        <script src="./../scripts/percentileHighlight.js"></script>
 
     </body>
 </html>
