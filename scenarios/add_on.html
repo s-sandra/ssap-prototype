@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="description" content="">
         <meta name="author" content="Sandra Shtabnaya">
-        <title>Sidewalks</title>
+        <title>Butler Road Extension</title>
 
         <!-- Font Awesome Icons -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -65,12 +65,37 @@
                     </div>
                 </div>
                 <div class="modal-footer">
-                  <a class="btn btn-danger" href="./add_ons.html">
+                  <a class="btn btn-danger" href="./../rounds/round.html">
                       Delete
                   </a>
                   <button type="button" class="btn btn-secondary" data-dismiss="modal">
                       Cancel
                   </button>
+                </div>
+              </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="editText" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title">Edit Project Option Details</h5>
+                  <button type="button" class="btn btn-toolbar" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <form class="modal-body">
+                    <div class="mb-3">
+                        <label for="newText" class="form-label">Project Option Name</label>
+                        <input type="text" class="form-control form-control-lg" id="newText" 
+                               value="Sidewalks">
+                        <small class="form-text text-muted">Update value</small>
+                    </div>
+                </form>
+                <div class="modal-footer">
+                  <a class="btn btn-primary" data-dismiss="modal" href="#">Save</a>
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
                 </div>
               </div>
             </div>
@@ -131,103 +156,6 @@
             </div>
         </div>
 
-        <div class="modal fade" id="cloneModal" tabindex="-1" role="dialog" aria-hidden="true">
-            <div class="modal-dialog" role="document">
-              <div class="modal-content">
-                <div class="modal-header">
-                  <h5 class="modal-title">Clone Project Option</h5>
-                  <button type="button" class="btn btn-toolbar" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                  </button>
-                </div>
-                <div class="modal-body">
-                    <form class="form">
-                        <div class="form-group col">
-                            <label class="form-label" for="opTitle">Project Option Title</label>
-                            <input type="search" class="form-control" id="opTitle" aria-describedby="optionHelp"
-                                   value="Sidewalks Copy">
-                            <small id="optionHelp" class="form-text text-muted">Enter a name for the project option.</small>
-                        </div>
-                        <div class="row align-items-end">
-                            <div class="col">
-                                <label class="form-label" for="destination">Copy To</label>
-                                <div class="input-group">
-                                    <div class="input-group-prepend">
-                                        <div class="input-group-text">
-                                            <span data-feather="search"></span>
-                                        </div>
-                                    </div>
-                                    <input class="form-control" type="search" id="destination"
-                                           placeholder="search projects" aria-label="enter project to search"
-                                           data-toggle="collapse" data-target="#results">
-                                </div>
-                            </div>
-                        </div>
-                        <ul class="list-group collapse" id="results">
-                            <button class="list-group-item list-group-item-action">
-                                <span data-feather="clipboard"></span>
-                                Butler Road Extension
-                                <small class="text-muted">- Project Groups</small>
-                            </button>
-                            <button class="list-group-item list-group-item-action">
-                                <span data-feather="clipboard"></span>
-                                Route 460 Project
-                                <small class="text-muted">- Project Groups</small>
-                            </button>
-                            <button class="list-group-item list-group-item-action">
-                                <span data-feather="bar-chart-2"></span>
-                                Bus Service Expansion
-                                <small class="text-muted">- Project Groups</small>
-                            </button>
-                        </ul>
-                    </form>
-                    <div class="grid">
-                        <div class="card">
-                            <div class="card-body">
-                                <div class="row justify-content-between">
-                                    <div class="col">
-                                        <h3 class="card-title">Butler Road Extension</h3>
-                                        <small class="text-muted">
-                                            <span data-feather="clipboard"></span>
-                                            Project Groups
-                                        </small>
-                                    </div>
-                                    <div class="col-auto">
-                                        <button class="btn">
-                                            <span data-feather="x"></span>
-                                        </button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card">
-                            <div class="card-body">
-                                <div class="row justify-content-between">
-                                    <div class="col">
-                                        <h3 class="card-title">Route 460 Project</h3>
-                                        <small class="text-muted">
-                                            <span data-feather="clipboard"></span>
-                                            Project Groups
-                                        </small>
-                                    </div>
-                                    <div class="col-auto">
-                                        <button class="btn">
-                                            <span data-feather="x"></span>
-                                        </button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="modal-footer">
-                  <a class="btn btn-primary" href="./add_ons.html">Clone</a>
-                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
-                </div>
-              </div>
-            </div>
-        </div>
-
         <div class="modal fade" id="editTextArea" tabindex="-1" role="dialog" aria-hidden="true">
             <div class="modal-dialog" role="document">
               <div class="modal-content">
@@ -252,25 +180,97 @@
             </div>
         </div>
 
-        <div class="modal fade" id="editText" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal fade" id="cloneModal" tabindex="-1" role="dialog" aria-hidden="true">
             <div class="modal-dialog" role="document">
               <div class="modal-content">
                 <div class="modal-header">
-                  <h5 class="modal-title">Edit Fund Scenario Details</h5>
+                  <h5 class="modal-title">Clone Project Option</h5>
                   <button type="button" class="btn btn-toolbar" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                   </button>
                 </div>
-                <form class="modal-body">
-                    <div class="mb-3">
-                        <label for="newText" class="form-label">Name</label>
-                        <input type="text" class="form-control form-control-lg" id="newText" 
-                               value="Option 4">
-                        <small class="form-text text-muted">Update value</small>
+                <div class="modal-body">
+                    <form class="form">
+                        <div class="form-group col">
+                            <label class="form-label" for="projectTitle">Project Option Title</label>
+                            <input type="search" class="form-control" id="projectTitle" aria-describedby="projectHelp"
+                                   value="Sidewalks Copy">
+                            <small id="projectHelp" class="form-text text-muted">Enter a name for the project option.</small>
+                        </div>
+                        <div class="row align-items-end">
+                            <div class="col">
+                                <label class="form-label" for="destination">Copy To</label>
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
+                                        <div class="input-group-text">
+                                            <span data-feather="search"></span>
+                                        </div>
+                                    </div>
+                                    <input class="form-control" type="search" id="destination"
+                                           placeholder="search project groups" aria-label="enter group to search"
+                                           data-toggle="collapse" data-target="#results">
+                                </div>
+                            </div>
+                        </div>
+                        <ul class="list-group collapse" id="results">
+                            <button class="list-group-item list-group-item-action">
+                                <span data-feather="clipboard"></span>
+                                Eco-Friendly Competitor Pool
+                                <small class="text-muted">- Project Groups</small>
+                            </button>
+                            <button class="list-group-item list-group-item-action">
+                                <span data-feather="clipboard"></span>
+                                Eco-Friendly Group
+                                <small class="text-muted">- Project Groups</small>
+                            </button>
+                            <button class="list-group-item list-group-item-action">
+                                <span data-feather="bar-chart-2"></span>
+                                Economic 2017 Projects
+                                <small class="text-muted">- Round Data</small>
+                            </button>
+                        </ul>
+                    </form>
+                    <div class="grid">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="row justify-content-between">
+                                    <div class="col">
+                                        <h3 class="card-title">Hypothetical Loudoun Bids</h3>
+                                        <small class="text-muted">
+                                            <span data-feather="clipboard"></span>
+                                            Project Groups
+                                        </small>
+                                    </div>
+                                    <div class="col-auto">
+                                        <button class="btn">
+                                            <span data-feather="x"></span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="row justify-content-between">
+                                    <div class="col">
+                                        <h3 class="card-title">Average Competition</h3>
+                                        <small class="text-muted">
+                                            <span data-feather="clipboard"></span>
+                                            Project Groups
+                                        </small>
+                                    </div>
+                                    <div class="col-auto">
+                                        <button class="btn">
+                                            <span data-feather="x"></span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                </form>
+                </div>
                 <div class="modal-footer">
-                  <a class="btn btn-primary" data-dismiss="modal" href="#">Save</a>
+                  <button type="button" class="btn btn-primary" data-dismiss="modal">Clone</button>
                   <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
                 </div>
               </div>
@@ -283,13 +283,13 @@
                     <div class="position-sticky pt-3">
                         <ul class="nav flex-column">
                             <li class="nav-item">
-                                <a class="nav-link" href="./../scenarios/index.html">
+                                <a class="nav-link active" href="./../scenarios/index.html">
                                 <span data-feather="tool"></span>
                                 Scenarios
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link active" href="./../projects/index.html">
+                                <a class="nav-link" href="./../projects/index.html">
                                 <span data-feather="clipboard"></span>
                                 Projects
                                 </a>
@@ -335,9 +335,9 @@
                 <main class="col-md-9 ms-sm-auto col-lg-10">
                     <nav aria-label="breadcrumb">
                         <ol class="breadcrumb">
-                          <li class="breadcrumb-item"><a href="index.html">My Project Groups</a></li>
-                          <li class="breadcrumb-item"><a href="project_group.html">Moderate Competitor Pool</a></li>
-                          <li class="breadcrumb-item"><a href="add_ons.html">Butler Road Extension</a></li>
+                          <li class="breadcrumb-item"><a href="index.html">My Scenarios</a></li>
+                          <li class="breadcrumb-item"><a href="scenario.html">Potential 2022 Round</a></li>
+                          <li class="breadcrumb-item"><a href="project_add_ons.html">Butler Road Extension</a></li>
                           <li class="breadcrumb-item active" aria-current="page">Project Option Details</li>
                         </ol>
                     </nav>
@@ -359,8 +359,8 @@
                                   Clone
                               </button>
                               <button class="dropdown-item" data-toggle="modal" data-target="#warningModal">
-                                <span data-feather="file-minus"></span>
-                                Delete
+                                  <span data-feather="trash"></span>
+                                  Delete
                               </button>
                             </div>
                         </div>
@@ -425,6 +425,16 @@
                                                 <span data-feather="edit"></span> Edit
                                             </button>
                                         </div>
+                                    </div>
+                                </div>
+                                <div class="card">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Selected</h5>
+                                        <h3 class="card-text text-success">
+                                            <span data-feather="check-circle"></span> Yes
+                                        </h3>
+                                    </div>
+                                    <div class="card-footer">
                                     </div>
                                 </div>
                                 <div class="card" style="flex-basis: auto;">

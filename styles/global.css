@@ -101,6 +101,10 @@ p.card-text .feather {
     width: 18rem;
 }
 
+.collapse .card-body .card-text {
+    color: grey;
+}
+
 .row-cols-3 .card {
     margin: 0;
 }

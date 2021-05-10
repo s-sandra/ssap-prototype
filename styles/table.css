@@ -24,6 +24,14 @@ ul {
     color: #007bff;
 }
 
+.table-hover a:hover {
+    color: #808080;
+}
+
+.selected a:hover {
+    color: #25ac25;
+}
+
 .table > :not(:last-child) > :last-child > * {
     border-bottom-color: inherit;
 }
