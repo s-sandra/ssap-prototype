@@ -152,7 +152,17 @@
                                 </div>
                                 <div class="col-md-4 mb-3">
                                     <label class="form-label" for="district">District</label>
-                                    <input type="text" class="form-control" id="district" aria-describedby="districtHelp">
+                                    <select class="form-control" id="district" aria-describedby="districtHelp">
+                                        <option>Fredericksburg</option>
+                                        <option>Hampton Roads</option>
+                                        <option>Lynchburg</option>
+                                        <option>Culpeper</option>
+                                        <option>Richmond</option>
+                                        <option>Bristol</option>
+                                        <option>Salem</option>
+                                        <option>Staunton</option>
+                                        <option>NOVA</option>
+                                    </select>
                                 </div>
                                 <div class="col-md-2 mb-3">
                                     <label for="areaType" class="form-label">Area Type</label>
@@ -162,68 +172,6 @@
                                         <option>C</option>
                                         <option>D</option>
                                     </select>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="panel">
-                            <h3 disabled>Rankings</h3>
-                            <div class="row form-row">
-                                <div class="col-md-4 mb-3">
-                                    <div class="mb-3">
-                                        <label class="form-label" for="stateRank" disabled>State Rank</label>
-                                        <input type="number" class="form-control" id="stateRank" min="1" max="300" step="1" disabled>
-                                    </div>
-                                    <div class="mb-3">
-                                        <input class="form-check-input" type="checkbox" id="priority" disabled>
-                                        <label class="form-check-label" for="priority">Statewide Priority</label>
-                                    </div>
-                                </div>  
-                                <div class="col-md-4 mb-3">
-                                    <div class="mb-3">
-                                        <label class="form-label" for="distRank" disabled>District Rank</label>
-                                        <input type="number" class="form-control" id="distRank" min="1" max="100" step="1" disabled>
-                                    </div>
-                                    <div class="mb-3">
-                                        <input class="form-check-input" type="checkbox" id="grant" disabled>
-                                        <label class="form-check-label" for="grant">District Grant</label>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row form-row">
-                                <div class="col-md-3 mb-3">
-                                    <label class="form-label" for="sss" disabled>SMART SCALE Score</label>
-                                    <input type="number" class="form-control" id="sss" min="0" max="300" step="0.001" disabled>
-                                </div>
-                                <div class="col-md-3 mb-3">
-                                    <label class="form-label" for="benefitScore" disabled>Project Benefit Score</label>
-                                    <input type="number" class="form-control" id="benefitScore" min="0" max="300" step="0.001" disabled>
-                                </div>
-                                <div class="col-md-3 mb-3">
-                                    <label class="form-label" for="benefitRank" disabled>Benefit Rank</label>
-                                    <input type="number" class="form-control" id="benefitRank" min="1" max="300" step="1" disabled>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="panel">
-                            <h3 disabled>Funding</h3>
-                            <div class="row form-row">
-                                <div class="col-md-4 mb-3">
-                                    <label for="fund" class="form-label" disabled>Total Project</label>
-                                    <div class="input-group">
-                                        <div class="input-group-prepend">
-                                            <div class="input-group-text">$</div>
-                                        </div>
-                                        <input type="number" class="form-control" id="fund" min="0" step="100" disabled>
-                                    </div>
-                                </div>
-                                <div class="col-md-4 mb-3">
-                                    <label for="ssFund" class="form-label" disabled>SMART SCALE Request</label>
-                                    <div class="input-group">
-                                        <div class="input-group-prepend">
-                                            <div class="input-group-text">$</div>
-                                        </div>
-                                        <input type="number" class="form-control" id="ssFund" min="0" step="100" disabled>
-                                    </div>
                                 </div>
                             </div>
                         </div>
