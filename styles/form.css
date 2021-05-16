@@ -78,7 +78,16 @@ form .card {
 }
 
 .priority {
-    justify-content: space-between;
+    justify-content: center;
+}
+
+.priority .btn:disabled {
+    background-color: initial;
+    opacity: 0.3;
+}
+
+.candidate .form-control-sm {
+    width: 95%;
 }
 
 .card-body.candidate {

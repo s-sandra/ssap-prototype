@@ -426,7 +426,7 @@
                         </div>
 
                         <div class="panel">
-                            <h3 class="mt-3">Candidate Prioritization</h3>
+                            <h3 class="mt-3 mb-2">Candidate Prioritization</h3>
                             <small>Order projects from highest to lowest priority.</small>
                             <div class="list">
                                 <div class="card-group">
@@ -438,73 +438,42 @@
                                             <span data-feather="chevron-down"></span>
                                         </button>
                                     </div>
-                                    <div class="card" style="flex:inherit;">
-                                        <div class="card-body">
-                                            <input type="number" value="1" class="form-control-sm" 
-                                                   id="priority" min="1" step="1" max="50" required>
-                                        </div>
-                                    </div>
-                                    <div class="card" style="flex-basis:auto;">
-                                        <div class="card-body candidate">
-                                            <a class="h5" href="project.html" target="_blank">Butler Road Widening</a>
-                                            <small class="text-muted">
-                                                <span data-feather="map-pin"></span>
-                                                Fredericksburg
-                                            </small>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="card-group">
-                                    <div class="card priority" style="flex:inherit;">
-                                        <button type="button" class="btn btn-sm text-success">
-                                            <span data-feather="chevron-up"></span>
-                                        </button>
-                                        <button type="button" class="btn btn-sm text-danger">
-                                            <span data-feather="chevron-down"></span>
-                                        </button>
-                                        
-                                    </div>
-                                    <div class="card" style="flex:inherit;">
-                                        <div class="card-body">
-                                            <input type="number" value="2" class="form-control-sm" 
-                                                   id="priority" min="1" step="1" max="50" required>
-                                        </div>
-                                    </div>
-                                    <div class="card" style="flex-basis:auto;">
-                                        <div class="card-body candidate">
-                                            <a class="h5" href="project.html" target="_blank">Route 460 Project</a>
-                                            <small class="text-muted">
-                                                <span data-feather="map-pin"></span>
-                                                Lee Hill
-                                            </small>
+                                    <div class="card candidate">
+                                        <div class="table-responsive">
+                                            <table class="table table-borderless">
+                                            <thead>
+                                                <tr>
+                                                    <th>
+                                                        <label for="priority">Priority</label>
+                                                    </th>
+                                                    <th class="col-2">
+                                                        <label for="target">
+                                                            <span data-feather="award"></span> Target SSS
+                                                        </label>
+                                                    </th>
+                                                    <th class="col-5"><span data-feather="clipboard"></span> Candidate</th>
+                                                    <th><span data-feather="map-pin"></span> District</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>
+                                                        <input type="number" value="1" class="form-control form-control-sm" 
+                                                        id="priority" min="1" step="1" max="50" required>
+                                                    </td>
+                                                    <td>
+                                                        <input type="number" value="0.900" class="form-control form-control-sm" 
+                                                               id="target" min="0" max="300" step="0.001">
+                                                    </td>
+                                                    <td><a href="project.html">Butler Road Expansion</a></td>
+                                                    <td>Fredericksburg</td>
+                                                </tr>
+                                            </tbody>
+                                            </table>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="card-group">
-                                    <div class="card priority" style="flex:inherit;">
-                                        <button type="button" class="btn btn-sm text-success">
-                                            <span data-feather="chevron-up"></span>
-                                        </button>
-                                        <button type="button" class="btn btn-sm text-danger">
-                                            <span data-feather="chevron-down"></span>
-                                        </button>
-                                    </div>
-                                    <div class="card" style="flex:inherit;">
-                                        <div class="card-body">
-                                            <input type="number" value="3" class="form-control-sm" 
-                                                   id="priority" min="1" step="1" max="50" required>
-                                        </div>
-                                    </div>
-                                    <div class="card" style="flex-basis:auto;">
-                                        <div class="card-body candidate">
-                                            <a class="h5" href="project.html" target="_blank">Exit 35 Ramp</a>
-                                            <small class="text-muted">
-                                                <span data-feather="map-pin"></span>
-                                                Chancellor
-                                            </small>
-                                        </div>
-                                    </div>
-                                </div>
+                                
                                 <div class="card-group">
                                     <div class="card priority" style="flex:inherit;">
                                         <button type="button" class="btn btn-sm text-success">
@@ -514,19 +483,38 @@
                                             <span data-feather="chevron-down"></span>
                                         </button>
                                     </div>
-                                    <div class="card" style="flex:inherit;">
-                                        <div class="card-body">
-                                            <input type="number" value="4" class="form-control-sm" 
-                                                   id="priority" min="1" step="1" max="50" required>
-                                        </div>
-                                    </div>
-                                    <div class="card" style="flex-basis:auto;">
-                                        <div class="card-body candidate">
-                                            <a class="h5" href="project.html" target="_blank">Downtown Congestion Relief</a>
-                                            <small class="text-muted">
-                                                <span data-feather="map-pin"></span>
-                                                Fredericksburg
-                                            </small>
+                                    <div class="card candidate">
+                                        <div class="table-responsive">
+                                            <table class="table table-borderless">
+                                            <thead>
+                                                <tr>
+                                                    <th>
+                                                        <label for="priority2">Priority</label>
+                                                    </th>
+                                                    <th class="col-2">
+                                                        <label for="target2">
+                                                            <span data-feather="award"></span> Target SSS
+                                                        </label>
+                                                    </th>
+                                                    <th class="col-5"><span data-feather="clipboard"></span> Candidate</th>
+                                                    <th><span data-feather="map-pin"></span> District</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>
+                                                        <input type="number" value="2" class="form-control form-control-sm" 
+                                                               id="priority2" min="1" step="1" max="50" required>
+                                                    </td>
+                                                    <td>
+                                                        <input type="number" value="0.315" class="form-control form-control-sm" 
+                                                               id="target2" min="0" max="300" step="0.001">
+                                                    </td>
+                                                    <td><a href="project.html">Route 460 Project</a></td>
+                                                    <td>Hampton Roads</td>
+                                                </tr>
+                                            </tbody>
+                                            </table>
                                         </div>
                                     </div>
                                 </div>
@@ -539,19 +527,126 @@
                                             <span data-feather="chevron-down"></span>
                                         </button>
                                     </div>
-                                    <div class="card" style="flex:inherit;">
-                                        <div class="card-body">
-                                            <input type="number" value="5" class="form-control-sm" 
-                                                   id="priority" min="1" step="1" max="50" required>
+                                    <div class="card candidate">
+                                        <div class="table-responsive">
+                                            <table class="table table-borderless">
+                                            <thead>
+                                                <tr>
+                                                    <th>
+                                                        <label for="priority-3">Priority</label>
+                                                    </th>
+                                                    <th class="col-2">
+                                                        <label for="target3">
+                                                            <span data-feather="award"></span> Target SSS
+                                                        </label>
+                                                    </th>
+                                                    <th class="col-5"><span data-feather="clipboard"></span> Candidate</th>
+                                                    <th><span data-feather="map-pin"></span> District</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>
+                                                        <input type="number" value="3" class="form-control form-control-sm" 
+                                                               id="priority3" min="1" step="1" max="50" required>
+                                                    </td>
+                                                    <td>
+                                                        <input type="number" value="0.403" class="form-control form-control-sm" 
+                                                               id="target3" min="0" max="300" step="0.001">
+                                                    </td>
+                                                    <td><a href="project.html">Exit 35 Ramp</a></td>
+                                                    <td>Chancellor</td>
+                                                </tr>
+                                            </tbody>
+                                            </table>
                                         </div>
                                     </div>
-                                    <div class="card" style="flex-basis:auto;">
-                                        <div class="card-body candidate">
-                                            <a class="h5" href="project.html" target="_blank">Road Bridge Phase-2A</a>
-                                            <small class="text-muted">
-                                                <span data-feather="map-pin"></span>
-                                                Salem
-                                            </small>
+                                </div>
+                                <div class="card-group">
+                                    <div class="card priority" style="flex:inherit;">
+                                        <button type="button" class="btn btn-sm text-success">
+                                            <span data-feather="chevron-up"></span>
+                                        </button>
+                                        <button type="button" class="btn btn-sm text-danger">
+                                            <span data-feather="chevron-down"></span>
+                                        </button>
+                                    </div>
+                                    <div class="card candidate">
+                                        <div class="table-responsive">
+                                            <table class="table table-borderless">
+                                            <thead>
+                                                <tr>
+                                                    <th>
+                                                        <label for="priority4">Priority</label>
+                                                    </th>
+                                                    <th class="col-2">
+                                                        <label for="target4">
+                                                            <span data-feather="award"></span> Target SSS
+                                                        </label>
+                                                    </th>
+                                                    <th class="col-5"><span data-feather="clipboard"></span> Candidate</th>
+                                                    <th><span data-feather="map-pin"></span> District</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>
+                                                        <input type="number" value="4" class="form-control form-control-sm" 
+                                                               id="priority4" min="1" step="1" max="50" required>
+                                                    </td>
+                                                    <td>
+                                                        <input type="number" value="1.200" class="form-control form-control-sm" 
+                                                               id="target4" min="0" max="300" step="0.001">
+                                                    </td>
+                                                    <td><a href="project.html">Downtown Congestion Relief</a></td>
+                                                    <td>Richmond</td>
+                                                </tr>
+                                            </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-group">
+                                    <div class="card priority" style="flex:inherit;">
+                                        <button type="button" class="btn btn-sm text-success">
+                                            <span data-feather="chevron-up"></span>
+                                        </button>
+                                        <button type="button" class="btn btn-sm text-danger">
+                                            <span data-feather="chevron-down"></span>
+                                        </button>
+                                    </div>
+                                    <div class="card candidate">
+                                        <div class="table-responsive">
+                                            <table class="table table-borderless">
+                                            <thead>
+                                                <tr>
+                                                    <th>
+                                                        <label for="priority5">Priority</label>
+                                                    </th>
+                                                    <th class="col-2">
+                                                        <label for="target5">
+                                                            <span data-feather="award"></span> Target SSS
+                                                        </label>
+                                                    </th>
+                                                    <th class="col-5"><span data-feather="clipboard"></span> Candidate</th>
+                                                    <th><span data-feather="map-pin"></span> District</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>
+                                                        <input type="number" value="5" class="form-control form-control-sm" 
+                                                               id="priority5" min="1" step="1" max="50" required>
+                                                    </td>
+                                                    <td>
+                                                        <input type="number" value="0.670" class="form-control form-control-sm" 
+                                                                id="target5" min="0" max="300" step="0.001">
+                                                    </td>
+                                                    <td><a href="project.html">Road Bridge Phase 2A</a></td>
+                                                    <td>Salem</td>
+                                                </tr>
+                                            </tbody>
+                                            </table>
                                         </div>
                                     </div>
                                 </div>
