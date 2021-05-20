@@ -1,0 +1,19 @@
+.avatar {
+    vertical-align: middle;
+    width: 30px;
+    height: 30px;
+}
+
+.user-table td, .user-table th {
+    border-bottom-width: 0px;
+    vertical-align: middle;
+}
+
+.user-table {
+    border-bottom: solid 1px #dee2e6;
+}
+
+.user-table td:nth-child(3) {
+    font-weight: bold;
+    color: #1e2022;
+}
