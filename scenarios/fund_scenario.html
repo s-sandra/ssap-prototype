@@ -162,7 +162,6 @@
                         <span>Account</span>
                         </p>
                         <ul class="nav flex-column">
-                            
                             <li class="nav-item">
                                 <a class="nav-link" href="./../settings/index.html">
                                 <span data-feather="settings"></span>
@@ -218,6 +217,13 @@
                     </div>
 
                     <ul class="nav nav-pills">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#prioritization" 
+                                data-toggle="tooltip" data-placement="bottom" 
+                                title="Candidate Prioritization">
+                                <span data-feather="clipboard"></span>
+                            </a>
+                        </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#portfolio" 
                                 data-toggle="tooltip" data-placement="bottom" 
@@ -281,6 +287,123 @@
                                 <canvas id="donut"></canvas>
                             </div>
                             <div id="legend" class="col-md-6 legend"></div>
+                        </div>
+                    </div>
+
+                    <div class="card" id="prioritization">
+                        <div class="card-header">
+                            <div class="row justify-content-between align-items-center flex-grow-1">
+                                <div class="col-3 col-md">
+                                    <h3>Candidate Prioritization</h3>
+                                </div>
+                                <div class="col-8 col-md">
+                                        <div class="input-group input-group-merge input-group-flush">
+                                            <div class="input-group-prepend">
+                                                <div class="input-group-text">
+                                                    <span data-feather="search"></span>
+                                                </div>
+                                            </div>
+                                            <input class="form-control" type="search" placeholder="search candidates" aria-label="enter candidate project to search">
+                                        </div>
+                                </div>
+                                <div class="col-auto">
+                                    <a class="btn btn-outline-primary" href="edit_prioritization.html">
+                                        <span data-feather="edit"></span>
+                                        Edit
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="table-responsive">
+                            <table class="table table-hover">
+                            <thead class="bg-light">
+                                <tr>
+                                    <th>Rank</th>
+                                    <th class="col-2">Target SSS</th>
+                                    <th>Candidate</th>
+                                    <th>District</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td>1.873</td>
+                                    <td><a href="project.html">VRE Fredericksburg Line Capacity Expansion</a></td>
+                                    <td>Fredericksburg</td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td>1.045</td>
+                                    <td><a href="project.html">Westwind Drive</a></td>
+                                    <td>Chancellor</td>
+                                </tr>
+                                <tr>
+                                    <td>3</td>
+                                    <td>0.673</td>
+                                    <td><a href="project.html">Multi-Use Paths - Routes 17/698/1036</a></td>
+                                    <td>Fredericksburg</td>
+                                </tr>
+                                <tr>
+                                    <td>4</td>
+                                    <td>1.200</td>
+                                    <td><a href="project.html">Butler Road Widening</a></td>
+                                    <td>Lee Hill</td>
+                                </tr>
+                                <tr>
+                                    <td>5</td>
+                                    <td>1.900</td>
+                                    <td><a href="project.html">Route 460 Project</a></td>
+                                    <td>Salem</td>
+                                </tr>
+                                <tr>
+                                    <td>6</td>
+                                    <td>0.860</td>
+                                    <td><a href="project.html">Bus Service Expansion</a></td>
+                                    <td>Chancellor</td>
+                                </tr>
+                                <tr>
+                                    <td>7</td>
+                                    <td>0.450</td>
+                                    <td><a href="project.html">Maple Street Widening</a></td>
+                                    <td>Lee Hill</td>
+                                </tr>
+                                    <td>8</td>
+                                    <td>1.00</td>
+                                    <td><a href="project.html">Exit 35 Ramp</a></td>
+                                    <td>Fredericksburg</td>
+                                </tr>
+                                    <td>9</td>
+                                    <td>1.200</td>
+                                    <td><a href="project.html">Downtown Congestion Relief</a></td>
+                                    <td>Fredericksburg</td>
+                                </tr>
+                                    <td>10</td>
+                                    <td>0.705</td>
+                                    <td><a href="project.html">Road Bridge Phase-2A</a></td>
+                                    <td>Lee Hill</td>
+                                </tr>
+                            </tbody>
+                            </table>
+                        </div>
+                        <div class="card-footer">
+                            <div class="pagination justify-content-end" aria-label="table pagination">
+                                <div class="col-2">
+                                    <form>
+                                        <div class="input-group">
+                                            <div class="input-group-prepend">
+                                                <div class="input-group-text">Page</div>
+                                            </div>
+                                            <input class="form-control" type="number" value="1" min="1" max="32" aria-label="enter table page">
+                                        </div>
+                                    </form>
+                                </div>
+                                <button type="button" class="btn btn-sm disabled" href="#" tabindex="-1" aria-label="previous page">
+                                    <span data-feather="arrow-left"></span>
+                                </button>
+                                <button type="button" class="btn btn-sm text-primary" href="#" aria-label="next page">
+                                    <span data-feather="arrow-right"></span>
+                                </button>
+                            </div>   
                         </div>
                     </div>
 
