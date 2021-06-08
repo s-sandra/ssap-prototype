@@ -25,3 +25,11 @@
 .card-text:last-child {
     opacity: 0.7;
 }
+
+.panel .table thead th {
+    font-weight: 500;
+}
+
+.panel .table .col-2 {
+    width: 11.6666666667%
+}
