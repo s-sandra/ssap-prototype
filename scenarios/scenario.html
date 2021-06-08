@@ -455,6 +455,10 @@
                                                 <span data-feather="tool"></span>
                                                 Change SSS Template
                                             </button>
+                                            <a class="dropdown-item" href="./edit_prioritization.html">
+                                                <span data-feather="award"></span> 
+                                                Change SSS Targets
+                                            </a>
                                         </div>
                                     </div>
                                 </div>
@@ -492,6 +496,7 @@
                                 <thead class="bg-light">
                                     <tr>
                                         <th class="score">Score</th>
+                                        <th>Target</th>
                                         <th class="type-col"></th>
                                         <th>Project</th>
                                         <th>District</th>
@@ -500,48 +505,56 @@
                                 <tbody>
                                     <tr>
                                         <td>12.874</td>
+                                        <td>10.343</td>
                                         <td><span data-feather="clipboard"></span></td>
                                         <td><a href="project.html">VRE Fredericksburg Line Capacity Expansion</a></td>
                                         <td>Salem</a></td>
                                     </tr>
                                     <tr>
                                         <td>11.084</td>
+                                        <td></td>
                                         <td><span data-feather="bar-chart-2"></span></td>
                                         <td><a href="project.html">Westwind Drive (Loudoun County Parkway to Route 606)</a></td>
                                         <td>Fredericksburg</a></td>
                                     </tr>
                                     <tr>
                                         <td>4.102</td>
+                                        <td>5.600</td>
                                         <td><span data-feather="clipboard"></span></td>
                                         <td><a href="project.html">Butler Road Widening</a></td>
                                         <td>Richmond</a></td>
                                     </tr>
                                     <tr>
                                         <td>4.094</td>
+                                        <td>3.500</td>
                                         <td><span data-feather="clipboard"></span></td>
                                         <td><a href="project.html">Route 460 Project</a></td>
                                         <td>Salem</a></td>
                                     </tr>
                                     <tr>
                                         <td>3.847</td>
+                                        <td></td>
                                         <td><span data-feather="bar-chart-2"></span></td>
                                         <td><a href="project.html">Road Bridge Phase-2A</a></td>
                                         <td>Staunton</a></td>
                                     </tr>
                                     <tr>
                                         <td>1.809</td>
+                                        <td>2.345</td>
                                         <td><span data-feather="clipboard"></span></td>
                                         <td><a href="project.html">Bus Service Expansion</a></td>
                                         <td>Salem</a></td>
                                     </tr>
                                     <tr>
                                         <td>1.430</td>
+                                        <td>1.420</td>
                                         <td><span data-feather="clipboard"></span></td>
                                         <td><a href="project.html">Exit 35 Ramp</a></td>
                                         <td>Fredericksburg</a></td>
                                     </tr>
                                     <tr>
                                         <td>1.227</td>
+                                        <td></td>
                                         <td><span data-feather="clipboard"></span></td>
                                         <td><a href="project.html">Downtown Congestion Relief</a></td>
                                         <td>Richmond</a></td>
@@ -716,6 +729,152 @@
                         </div>
                     </div>
 
+                    <div class="collapse show" id="rankings">
+                        <div class="card">
+                            <div class="card-header">
+                                <div class="row justify-content-between align-items-center flex-grow-1">
+                                    <div class="col-3 col-md d-flex">
+                                        <h5>Project Benefit Scores</h5>
+                                        <div class="info">
+                                            <span data-feather="info" data-toggle="tooltip" data-placement="right" 
+                                            title="SSS 2017 Template"></span>
+                                        </div>
+                                    </div>
+                                    <div class="col-auto">
+                                        <button type="button" class="btn btn-outline-primary dropdown-toggle" 
+                                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            Actions
+                                        </button>
+                                        <div class="dropdown-menu">
+                                            <a class="dropdown-item" href="./charts.html">
+                                                <span data-feather="bar-chart-2"></span> 
+                                                View Chart
+                                            </a>
+                                            <button class="dropdown-item">
+                                                <span data-feather="download"></span>
+                                                Export Scores
+                                            </button>
+                                            <button class="dropdown-item" data-toggle="modal" data-target="#editChoice">
+                                                <span data-feather="tool"></span>
+                                                Change SSS Template
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row mt-3 mb-3">
+                                    <div class="col-8 col-md">
+                                        <form>
+                                            <div class="input-group input-group-merge input-group-flush">
+                                                <div class="input-group-prepend">
+                                                    <div class="input-group-text">
+                                                        <span data-feather="search"></span>
+                                                    </div>
+                                                </div>
+                                                <input class="form-control" type="search" placeholder="search projects" aria-label="enter project to search">
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                                <div class="mt-2 btn-toolbar">
+                                    <label for="scoreFilters" class="col-form-label">Display :</label>
+                                    <div class="form-group" id="scoreFilters">
+                                        <label class="btn btn-sm btn-outline-secondary">
+                                            <input type="checkbox" name="options" id="stateFilter" checked> Statewide
+                                        </label>
+                                        <label class="btn btn-sm btn-outline-secondary">
+                                            <input type="checkbox" name="options" id="distFilter" checked> District
+                                        </label>
+                                        <label class="btn btn-sm btn-outline-secondary">
+                                            <input type="checkbox" name="options" id="candFilter" checked> Candidates
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="table-responsive">
+                                <table class="table table-hover">
+                                <thead class="bg-light">
+                                    <tr>
+                                        <th class="score">Score</th>
+                                        <th class="type-col"></th>
+                                        <th>Project</th>
+                                        <th>District</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>30.845</td>
+                                        <td><span data-feather="clipboard"></span></td>
+                                        <td><a href="./../projects/project.html">VRE Fredericksburg Line Capacity Expansion</a></td>
+                                        <td>Salem</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td>20.384</td>
+                                        <td><span data-feather="bar-chart-2"></span></td>
+                                        <td><a href="./../projects/project.html">Westwind Drive (Loudoun County Parkway to Route 606)</a></td>
+                                        <td>Fredericksburg</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td>14.129</td>
+                                        <td><span data-feather="clipboard"></span></td>
+                                        <td><a href="./../projects/project.html">Butler Road Widening</a></td>
+                                        <td>Richmond</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td>14.409</td>
+                                        <td><span data-feather="clipboard"></span></td>
+                                        <td><a href="./../projects/project.html">Route 460 Project</a></td>
+                                        <td>Salem</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td>13.874</td>
+                                        <td><span data-feather="bar-chart-2"></span></td>
+                                        <td><a href="./../projects/project.html">Road Bridge Phase-2A</a></td>
+                                        <td>Staunton</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td>11.956</td>
+                                        <td><span data-feather="clipboard"></span></td>
+                                        <td><a href="./../projects/project.html">Bus Service Expansion</a></td>
+                                        <td>Salem</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td>10.401</td>
+                                        <td><span data-feather="clipboard"></span></td>
+                                        <td><a href="./../projects/project.html">Exit 35 Ramp</a></td>
+                                        <td>Fredericksburg</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td>9.227</td>
+                                        <td><span data-feather="clipboard"></span></td>
+                                        <td><a href="./../projects/project.html">Downtown Congestion Relief</a></td>
+                                        <td>Richmond</a></td>
+                                    </tr>
+                                </tbody>
+                                </table>
+                            </div>
+                            <div class="card-footer">
+                                <div class="pagination justify-content-end" aria-label="table pagination">
+                                    <div class="col-2">
+                                        <form>
+                                            <div class="input-group">
+                                                <div class="input-group-prepend">
+                                                    <div class="input-group-text">Page</div>
+                                                </div>
+                                                <input class="form-control" type="number" value="1" min="1" max="32" aria-label="enter table page">
+                                            </div>
+                                        </form>
+                                    </div>
+                                    <button type="button" class="btn btn-sm disabled" href="#" tabindex="-1" aria-label="previous page">
+                                        <span data-feather="arrow-left"></span>
+                                    </button>
+                                    <button type="button" class="btn btn-sm text-primary" href="#" aria-label="next page">
+                                        <span data-feather="arrow-right"></span>
+                                    </button>
+                                </div>   
+                            </div>
+                        </div>
+                    </div>
+
                     <button id="access_scores" class="btn" type="button" data-toggle="collapse" data-target="#access" 
                             aria-expanded="true" aria-controls="collapseStats">
                         <h3>Accessibility Statistics</h3>
@@ -790,49 +949,49 @@
                                     <tr>
                                         <td>1.845</td>
                                         <td><span data-feather="clipboard"></span></td>
-                                        <td><a href="project.html">VRE Fredericksburg Line Capacity Expansion</a></td>
+                                        <td><a href="./../projects/project.html">VRE Fredericksburg Line Capacity Expansion</a></td>
                                         <td>Salem</a></td>
                                     </tr>
                                     <tr>
                                         <td>1.384</td>
                                         <td><span data-feather="bar-chart-2"></span></td>
-                                        <td><a href="project.html">Westwind Drive (Loudoun County Parkway to Route 606)</a></td>
+                                        <td><a href="./../projects/project.html">Westwind Drive (Loudoun County Parkway to Route 606)</a></td>
                                         <td>Fredericksburg</a></td>
                                     </tr>
                                     <tr>
                                         <td>0.929</td>
                                         <td><span data-feather="clipboard"></span></td>
-                                        <td><a href="project.html">Butler Road Widening</a></td>
+                                        <td><a href="./../projects/project.html">Butler Road Widening</a></td>
                                         <td>Richmond</a></td>
                                     </tr>
                                     <tr>
                                         <td>0.910</td>
                                         <td><span data-feather="clipboard"></span></td>
-                                        <td><a href="project.html">Route 460 Project</a></td>
+                                        <td><a href="./../projects/project.html">Route 460 Project</a></td>
                                         <td>Salem</a></td>
                                     </tr>
                                     <tr>
                                         <td>0.875</td>
                                         <td><span data-feather="bar-chart-2"></span></td>
-                                        <td><a href="project.html">Road Bridge Phase-2A</a></td>
+                                        <td><a href="./../projects/project.html">Road Bridge Phase-2A</a></td>
                                         <td>Staunton</a></td>
                                     </tr>
                                     <tr>
                                         <td>0.659</td>
                                         <td><span data-feather="clipboard"></span></td>
-                                        <td><a href="project.html">Bus Service Expansion</a></td>
+                                        <td><a href="./../projects/project.html">Bus Service Expansion</a></td>
                                         <td>Salem</a></td>
                                     </tr>
                                     <tr>
                                         <td>0.401</td>
                                         <td><span data-feather="clipboard"></span></td>
-                                        <td><a href="project.html">Exit 35 Ramp</a></td>
+                                        <td><a href="./../projects/project.html">Exit 35 Ramp</a></td>
                                         <td>Fredericksburg</a></td>
                                     </tr>
                                     <tr>
                                         <td>0.227</td>
                                         <td><span data-feather="clipboard"></span></td>
-                                        <td><a href="project.html">Downtown Congestion Relief</a></td>
+                                        <td><a href="./../projects/project.html">Downtown Congestion Relief</a></td>
                                         <td>Richmond</a></td>
                                     </tr>
                                 </tbody>

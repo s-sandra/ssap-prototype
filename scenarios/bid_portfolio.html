@@ -187,7 +187,7 @@
                         <ol class="breadcrumb">
                           <li class="breadcrumb-item"><a href="index.html">My Scenarios</a></li>
                           <li class="breadcrumb-item"><a href="fund_scenarios.html">Potential 2022 Round Funding</a></li>
-                          <li class="breadcrumb-item active" aria-current="page">Fund Scenario</li>
+                          <li class="breadcrumb-item active" aria-current="page">Bid Portfolio</li>
                         </ol>
                     </nav>
                     <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3">
@@ -219,92 +219,25 @@
                     <div style="width: max-content;" class="mb-4">
                         <ul class="nav nav-tabs">
                             <li class="nav-item">
-                                <a class="nav-link active" href="fund_scenario_scores.html">
+                                <a class="nav-link" href="fund_scenario.html">
                                     <span data-feather="menu"></span>
                                     Details
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="bid_portfolio.html">
+                                <a class="nav-link active" href="bid_portfolio.html">
                                     <i class="fa fa-usd"></i>
                                     Bid Portfolio
                                 </a>
                             </li>
                         </ul>
-                        <ul class="nav nav-pills">
-                            <li class="nav-item">
-                                <a class="nav-link" href="#prioritization" 
-                                    data-toggle="tooltip" data-placement="bottom" 
-                                    title="Candidate Prioritization">
-                                    <span data-feather="clipboard"></span>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                    
-
-                    <div class="row grid" id="overview">
-                        <div class="card-group">
-                            <div class="card">
-                                <div class="card-body">
-                                    <h5 class="card-title">Budget</h5>
-                                    <h3 class="card-text">$ 250,000</h3>
-                                </div>
-                                <div class="card-footer">
-                                    <div class="btn-group">
-                                        <button type="button" class="btn" 
-                                                data-toggle="modal" data-target="#editDollars">
-                                            <span data-feather="edit"></span> Edit
-                                        </button>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="card">
-                                <div class="card-body">
-                                    <h5 class="card-title">Total Funds</h5>
-                                    <h3 class="card-text">$ 350,000</h3>
-                                </div>
-                                <div class="card-footer">
-                                    <div class="btn-group">
-                                        <button type="button" class="btn" 
-                                                data-toggle="modal" data-target="#editDollars">
-                                            <span data-feather="edit"></span> Edit
-                                        </button>
-                                    </div>
-                                </div>
-                            </div>
-                            
-                        </div>
                     </div>
 
-                    <div class="card">
-                        <div class="card-header bg-light">
-                            <div class="row justify-content-between align-items-center flex-grow-1">
-                                <div class="col-12 col-md">
-                                    <h3>District Fund Allocation</h3>
-                                </div>
-                                <div class="col-auto">
-                                    <a class="btn btn-outline-primary" href="edit_fund_allocation.html">
-                                        <span data-feather="edit"></span>
-                                        Edit
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="row">
-                            <div class="donut">
-                                <canvas id="donut"></canvas>
-                            </div>
-                            <div id="legend" class="col-md-6 legend"></div>
-                        </div>
-                    </div>
-
-                    <div class="card" id="prioritization">
+                    <div class="card" id="portfolio">
                         <div class="card-header">
                             <div class="row justify-content-between align-items-center flex-grow-1">
                                 <div class="col-3 col-md">
-                                    <h3>Candidate Prioritization</h3>
+                                    <h3>Optimized Bid Portfolio</h3>
                                 </div>
                                 <div class="col-8 col-md">
                                         <div class="input-group input-group-merge input-group-flush">
@@ -317,10 +250,10 @@
                                         </div>
                                 </div>
                                 <div class="col-auto">
-                                    <a class="btn btn-outline-primary" href="edit_prioritization.html">
-                                        <span data-feather="edit"></span>
-                                        Edit
-                                    </a>
+                                    <button type="button" class="btn btn-outline-primary">
+                                        <span data-feather="download"></span>
+                                        Export
+                                    </button>
                                 </div>
                             </div>
                         </div>
@@ -328,56 +261,67 @@
                             <table class="table table-hover">
                             <thead class="bg-light">
                                 <tr>
-                                    <th>Priority</th>
+                                    <th class="score">Total</th>
+                                    <th class="col-2">Requested</th>
                                     <th>Candidate</th>
                                     <th>District</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td>1</td>
+                                    <td>14140</td>
+                                    <td>8300</td>
                                     <td><a href="project.html">VRE Fredericksburg Line Capacity Expansion</a></td>
                                     <td>Fredericksburg</td>
                                 </tr>
                                 <tr>
-                                    <td>2</td>
+                                    <td>12290</td>
+                                    <td>4500</td>
                                     <td><a href="project.html">Westwind Drive</a></td>
                                     <td>Chancellor</td>
                                 </tr>
                                 <tr>
-                                    <td>3</td>
+                                    <td>11110</td>
+                                    <td>6730</td>
                                     <td><a href="project.html">Multi-Use Paths - Routes 17/698/1036</a></td>
                                     <td>Fredericksburg</td>
                                 </tr>
                                 <tr>
-                                    <td>4</td>
+                                    <td>10194</td>
+                                    <td>1200</td>
                                     <td><a href="project.html">Butler Road Widening</a></td>
                                     <td>Lee Hill</td>
                                 </tr>
                                 <tr>
-                                    <td>5</td>
+                                    <td>8036</td>
+                                    <td>1900</td>
                                     <td><a href="project.html">Route 460 Project</a></td>
                                     <td>Salem</td>
                                 </tr>
                                 <tr>
-                                    <td>6</td>
+                                    <td>7450</td>
+                                    <td>8605</td>
                                     <td><a href="project.html">Bus Service Expansion</a></td>
                                     <td>Chancellor</td>
                                 </tr>
                                 <tr>
-                                    <td>7</td>
+                                    <td>7060</td>
+                                    <td>4500</td>
                                     <td><a href="project.html">Maple Street Widening</a></td>
                                     <td>Lee Hill</td>
                                 </tr>
-                                    <td>8</td>
+                                    <td>5620</td>
+                                    <td>1000</td>
                                     <td><a href="project.html">Exit 35 Ramp</a></td>
                                     <td>Fredericksburg</td>
                                 </tr>
-                                    <td>9</td>
+                                    <td>3360</td>
+                                    <td>1200</td>
                                     <td><a href="project.html">Downtown Congestion Relief</a></td>
                                     <td>Fredericksburg</td>
                                 </tr>
-                                    <td>10</td>
+                                    <td>1329</td>
+                                    <td>705</td>
                                     <td><a href="project.html">Road Bridge Phase-2A</a></td>
                                     <td>Lee Hill</td>
                                 </tr>
