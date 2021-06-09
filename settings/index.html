@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="description" content="">
         <meta name="author" content="Sandra Shtabnaya">
-        <title>Round Data</title>
+        <title>SSS Templates</title>
 
         <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet'>
 
@@ -22,104 +22,6 @@
 
     </head>
     <body>
-        <div class="modal fade" id="cloneModal" tabindex="-1" role="dialog" aria-hidden="true">
-            <div class="modal-dialog" role="document">
-              <div class="modal-content">
-                <div class="modal-header">
-                  <h5 class="modal-title">Clone Project Group</h5>
-                  <button type="button" class="btn btn-toolbar" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                  </button>
-                </div>
-                <div class="modal-body">
-                    <form class="form">
-                        <div class="form-group col">
-                            <label class="form-label" for="projectTitle">Project Group Title</label>
-                            <input type="search" class="form-control" id="projectTitle" aria-describedby="projectHelp"
-                                   value="2019 Round Data Copy">
-                            <small id="projectHelp" class="form-text text-muted">Enter a name for the project group.</small>
-                        </div>
-                        <div class="form-group">
-                            <label class="form-label" for="destination">Copy To</label>
-                            <div id="destination" class="btn-toolbar btn-group-toggle" data-toggle="buttons">
-                                <label class="btn btn-outline-secondary">
-                                    <input type="checkbox" name="options" id="projects"> Projects
-                                </label>
-                                <label class="btn btn-outline-secondary">
-                                    <input type="checkbox" name="options" id="rounds"> Round Data
-                                </label>
-                            </div>   
-                        </div>
-                    </form>
-                </div>
-                <div class="modal-footer">
-                  <button type="button" class="btn btn-primary" data-dismiss="modal">Clone</button>
-                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
-                </div>
-              </div>
-            </div>
-        </div>
-        <div class="modal fade" id="uploadModal" tabindex="-1" role="dialog" aria-hidden="true">
-            <div class="modal-dialog" role="document">
-              <div class="modal-content">
-                <div class="modal-header">
-                  <h5 class="modal-title">Add Round Data</h5>
-                  <button type="button" class="btn btn-toolbar" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                  </button>
-                </div>
-                <div class="modal-body">
-                    <ul class="nav nav-tabs">
-                        <li class="nav-item">
-                            <a class="nav-link active">
-                                <span data-feather="upload"></span>
-                                Import
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link">
-                                <span data-feather="copy"></span>
-                                Clone
-                            </a>
-                        </li>
-                    </ul>
-                    <div class="mb-3">
-                        <label for="uploadFile" class="form-label">Round Data File</label>
-                        <input class="form-control" type="file" id="fileUpload">
-                    </div>
-                    <div class="progress mb-3">
-                        <div class="progress-bar" role="progressbar" style="width: 25%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">25%</div>
-                    </div>
-                    <div class="mb-3">
-                        <div class="form-group">
-                            <label for="recordName">Record Name</label>
-                            <input type="text" class="form-control" id="recordName" aria-describedby="recordHelp">
-                            <small id="emailHelp" class="form-text text-muted">Enter a unique name for the round data.</small>
-                        </div>
-                    </div>
-                    <div class="mb-3 row">
-                        <div class="form-group col-5">
-                            <label for="roundYear">Round Year</label>
-                            <input type="number" min="1960" max="2099" step="1" value="2021"
-                                   class="form-control" id="roundYear" aria-describedby="yearHelp">
-                        </div>
-                        <div class="form-group col-5">
-                            <label for="roundRegion">Round Region</label>
-                            <select class="form-control" id="roundRegion">
-                                <option>State</option>
-                                <option>Local</option>
-                            </select>
-                        </div>
-                    </div>
-                </div>
-                <div class="modal-footer">
-                  <a class="btn btn-primary" data-dismiss="modal" href="#">Add</a>
-                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
-                </div>
-              </div>
-            </div>
-        </div>
-
         <div class="modal fade" id="warningModal" tabindex="-1" role="dialog" aria-hidden="true">
             <div class="modal-dialog" role="document">
               <div class="modal-content">
@@ -131,16 +33,16 @@
                 </div>
                 <div class="modal-body">
                     <div class="mb-3">
-                        <p>Are you sure you want to delete the following rounds?</p>
+                        <p>Are you sure you want to delete the following SSS templates?</p>
                         <div class="grid">
                             <div class="card">
                                 <div class="card-body">
                                     <div class="row justify-content-between">
                                         <div class="col">
-                                            <h3 class="card-title">State Projects</h3>
+                                            <h3 class="card-title">Provisional Template</h3>
                                             <small class="text-muted">
-                                                <span data-feather="calendar"></span>
-                                                2019
+                                                <span data-feather="key"></span>
+                                                176
                                             </small>
                                         </div>
                                         <div class="col-auto">
@@ -155,28 +57,10 @@
                                 <div class="card-body">
                                     <div class="row justify-content-between">
                                         <div class="col">
-                                            <h3 class="card-title">2017 Round Data</h3>
+                                            <h3 class="card-title">2018 Template</h3>
                                             <small class="text-muted">
-                                                <span data-feather="calendar"></span>
-                                                2017
-                                            </small>
-                                        </div>
-                                        <div class="col-auto">
-                                            <button class="btn">
-                                                <span data-feather="x"></span>
-                                            </button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="card">
-                                <div class="card-body">
-                                    <div class="row justify-content-between">
-                                        <div class="col">
-                                            <h3 class="card-title">2015 Regional Projects</h3>
-                                            <small class="text-muted">
-                                                <span data-feather="calendar"></span>
-                                                2015
+                                                <span data-feather="key"></span>
+                                                190
                                             </small>
                                         </div>
                                         <div class="col-auto">
@@ -197,41 +81,6 @@
                   <button type="button" class="btn btn-secondary" data-dismiss="modal">
                       Cancel
                   </button>
-                </div>
-              </div>
-            </div>
-        </div>
-
-        <div class="modal fade" id="moveModal" tabindex="-1" role="dialog" aria-hidden="true">
-            <div class="modal-dialog" role="document">
-              <div class="modal-content">
-                <div class="modal-header">
-                  <h5 class="modal-title">Move Round</h5>
-                  <button type="button" class="btn btn-toolbar" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                  </button>
-                </div>
-                <div class="modal-body">
-                    <div class="mb-3">
-                        <p>
-                            Are you sure you want to move <b>2019 Round Data</b>? This
-                            will make the round private and other users will not be able to access it.
-                        </p>
-                        <div class="grid">
-                            <div class="card">
-                                <div class="card-body">
-                                    <h3 class="card-title">
-                                        <span data-feather="lock"></span>
-                                        My Project Groups
-                                    </h3>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="modal-footer">
-                  <button type="button" class="btn btn-primary" data-dismiss="modal">Move</button>
-                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
                 </div>
               </div>
             </div>
@@ -278,7 +127,7 @@
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link active" aria-current="page" href="./rounds/index.html">
+                                <a class="nav-link" aria-current="page" href="./../rounds/index.html">
                                 <span data-feather="bar-chart-2"></span>
                                 Round Data
                                 </a>
@@ -291,7 +140,7 @@
                         <ul class="nav flex-column">
                             
                             <li class="nav-item">
-                                <a class="nav-link" href="./../settings/index.html">
+                                <a class="nav-link active" href="./../settings/index.html">
                                 <span data-feather="settings"></span>
                                 Templates
                                 </a>
@@ -308,35 +157,20 @@
 
                 <main class="col-md-9 ms-sm-auto col-lg-10">
                     <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-                        <h1>Historical Round Data</h1>
+                        <h1>Smart Scale Score Templates</h1>
                         <div class="btn-toolbar mb-2 mb-md-0">
-                            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#uploadModal">
+                            <a class="btn btn-primary" href="./add_template.html">
                                 <span data-feather="plus"></span>
-                                Add Round
-                            </button>
+                                Add Template
+                            </a>
                         </div>
                     </div>
-
-                    <ul class="nav nav-tabs">
-                        <li class="nav-item">
-                            <a class="nav-link active" href="./../rounds/index.html">
-                                <span data-feather="archive"></span>
-                                Rounds
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="./charts.html">
-                                <span data-feather="bar-chart-2"></span>
-                                Charts
-                            </a>
-                        </li>
-                    </ul>
 
                     <div class="card">
                         <div class="card-header">
                             <div class="row justify-content-between align-items-center flex-grow-1">
                                 <div class="col-12 col-md">
-                                    <h3>Round Data</h3>
+                                    <h3>Templates</h3>
                                 </div>
                                 <div class="col-8 col-md">
                                     <form>
@@ -346,31 +180,32 @@
                                                     <span data-feather="search"></span>
                                                 </div>
                                             </div>
-                                            <input class="form-control" type="search" placeholder="search rounds" aria-label="enter round to search">
+                                            <input class="form-control" type="search" placeholder="search templates" 
+                                                   aria-label="enter template to search">
                                         </div>
                                     </form>
                                 </div>
                                 <div class="col-auto btn-toolbar">
-                                    <button type="button" class="btn btn-outline-success" data-toggle="modal" data-target="#uploadModal">
+                                    <a class="btn btn-outline-success" href="./add_template.html">
                                         <span data-feather="plus"></span>
                                         Add
-                                    </button>
+                                    </a>
                                     <button type="button" class="btn btn-outline-primary dropdown-toggle" 
                                             data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                         Actions
                                     </button>
                                     <div class="dropdown-menu">
-                                        <button class="dropdown-item" data-toggle="modal" data-target="#cloneModal">
+                                        <a class="dropdown-item" href="./edit_template.html">
+                                            <span data-feather="edit"></span>
+                                            Edit
+                                        </a>
+                                        <a class="dropdown-item" href="./clone_template.html">
                                             <span data-feather="copy"></span>
                                             Clone
-                                        </button>
-                                        <button class="dropdown-item" data-toggle="modal" data-target="#warningModal">
+                                        </a>
+                                        <button class="dropdown-item"  data-toggle="modal" data-target="#warningModal">
                                             <span data-feather="trash"></span>
                                             Delete
-                                        </button>
-                                        <button class="dropdown-item" data-toggle="modal" data-target="#moveModal">
-                                            <span data-feather="arrow-right"></span>
-                                            Move
                                         </button>
                                     </div>
                                 </div>
@@ -382,53 +217,29 @@
                                     <tr>
                                         <th><input type="checkbox" class="form-check-input" id="selectAll"></th>
                                         <th class="col-sm">ID</th>
-                                        <th class="col-5">Name</th>
-                                        <th class="col-1">Year</th>
-                                        <th>Region</th>
+                                        <th>Name</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     <tr>
                                         <th><input type="checkbox" class="form-check-input"></th>
-                                        <td><a href="round.html">473</a></td>
-                                        <td><a href="round.html">2019 Round Data</a></td>
-                                        <td>2019</td>
-                                        <td>local</td>
+                                        <td><a href="template.html">176</a></td>
+                                        <td><a href="template.html">SSS 2017 Template</td>
                                     </tr>
                                     <tr>
                                         <th><input type="checkbox" class="form-check-input"></th>
-                                        <td><a href="round.html">112</a></td>
-                                        <td><a href="round.html">2019 Regional Data</a></td>
-                                        <td>2019</td>
-                                        <td>state</td>
+                                        <td><a href="template.html">760</a></td>
+                                        <td><a href="template.html">SSS 2012 Template</td>
                                     </tr>
                                     <tr>
                                         <th><input type="checkbox" class="form-check-input"></th>
-                                        <td><a href="round.html">789</a></td>
-                                        <td><a href="round.html">2017 Regional SSS Scores</a></td>
-                                        <td>2017</td>
-                                        <td>local</td>
+                                        <td><a href="template.html">601</a></td>
+                                        <td><a href="template.html">SSS 2021 Template</td>
                                     </tr>
                                     <tr>
                                         <th><input type="checkbox" class="form-check-input"></th>
-                                        <td><a href="round.html">340</a></td>
-                                        <td><a href="round.html">2017 State Scores</a></td>
-                                        <td>2017</td>
-                                        <td>state</td>
-                                    </tr>
-                                    <tr>
-                                        <th><input type="checkbox" class="form-check-input"></th>
-                                        <td><a href="round.html">349</a></td>
-                                        <td><a href="round.html">2015 Regional Projects</a></td>
-                                        <td>2015</td>
-                                        <td>local</td>
-                                    </tr>
-                                    <tr>
-                                        <th><input type="checkbox" class="form-check-input"></th>
-                                        <td><a href="round.html">103</a></td>
-                                        <td><a href="round.html">2015 State Projects</a></td>
-                                        <td>2015</td>
-                                        <td>state</td>
+                                        <td><a href="template.html">105</a></td>
+                                        <td><a href="template.html">2022 Eco-Friendly Round</a></td>
                                     </tr>
                                 </tbody>
                             </table>
@@ -464,6 +275,7 @@
         <script src="https://cdn.jsdelivr.net/npm/feather-icons@4.28.0/dist/feather.min.js" integrity="sha384-uO3SXW5IuS1ZpFPKugNNWqTZRRglnUJK6UAZ/gxOX80nxEkN9NcGZTftn6RzhGWE" crossorigin="anonymous"></script>
         
         <!-- Custom component scripts -->
+        <script src="./../scripts/modal.js"></script>
         <script src="./../scripts/global.js"></script>
 
     </body>
