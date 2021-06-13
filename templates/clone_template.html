@@ -102,8 +102,8 @@
                         <div class="btn-toolbar mb-2 mb-md-0">
                             <!-- After add, redirect to template page. Show confirmation snackbar / pop-up, or highlight new row -->
                             <a class="btn btn-primary" href="./index.html">
-                                <span data-feather="plus"></span>
-                                Add
+                                <span data-feather="copy"></span>
+                                Clone
                             </a>
                             <a class="btn btn-secondary" href="./index.html">
                                 <span data-feather="x"></span>
@@ -113,7 +113,7 @@
                     </div>
                     <ul class="nav nav-tabs">
                         <li class="nav-item">
-                            <a class="nav-link active" href="./add_template.html">
+                            <a class="nav-link" href="./add_template.html">
                                 <span data-feather="file"></span>
                                 New
                             </a>
@@ -125,7 +125,7 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="./clone_template.html">
+                            <a class="nav-link active" href="./clone_template.html">
                                 <span data-feather="copy"></span>
                                 Clone
                             </a>
@@ -133,9 +133,41 @@
                     </ul>
                     <form class="form" novalidate>
                         <div class="panel">
-                            <div class="col-md-7">
-                                <label class="form-label" for="templateName">Template Title</label>
-                                <input type="text" class="form-control" id="templateName" aria-describedby="titleHelp">
+                            <div class="row form-row">
+                                <div class="col-8 mb-3">
+                                    <label class="form-label" for="title">Template Title</label>
+                                    <input type="text" class="form-control" id="title" aria-describedby="titleHelp" 
+                                           value="2010 SSS Template Copy" required>
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <div class="row align-items-end">
+                                    <div class="col-8">
+                                        <label class="form-label" for="destination">Copy From</label>
+                                        <div class="input-group">
+                                            <div class="input-group-prepend">
+                                                <div class="input-group-text">
+                                                    <span data-feather="search"></span>
+                                                </div>
+                                            </div>
+                                            <!-- If arrived through template table clone action, populate field with selected scenario -->
+                                            <input class="form-control" type="search" id="source" value="2010 SSS Template"
+                                                placeholder="search templates" aria-label="enter group to search"
+                                                data-toggle="collapse" data-target="#results">
+                                        </div>
+                                    </div>
+                                </div>
+                                <ul class="list-group collapse col-7" id="results">
+                                    <button class="list-group-item list-group-item-action">
+                                        2020 SSS Template
+                                    </button>
+                                    <button class="list-group-item list-group-item-action">
+                                        Provisional 2023 SSS Template
+                                    </button>
+                                    <button class="list-group-item list-group-item-action">
+                                        2017 SSS Template
+                                    </button>
+                                </ul>
                             </div>
                         </div>
                         <div class="panel">
@@ -143,19 +175,23 @@
                             <div class="row form-row">
                                 <div class="col-md-3 mb-3 form-input">
                                     <label class="form-label" for="access">Accessibility Score Weight</label>
-                                    <input type="number" class="form-control" id="access" min="0" max="300" step="0.001">
+                                    <input type="number" class="form-control" id="access" min="0" max="300" step="0.001"
+                                            value="0.109">
                                 </div>
                                 <div class="col-md-3 mb-3 form-input">
                                     <label class="form-label" for="accessJobs">Access to Jobs Weight</label>
-                                    <input type="number" class="form-control" id="accessJobs" min="0" max="300" step="0.001">
+                                    <input type="number" class="form-control" id="accessJobs" min="0" max="300" step="0.001"
+                                            value="3.415">
                                 </div>
                                 <div class="col-md-3 mb-3 form-input">
                                     <label class="form-label" for="disAccJobs">Disadvantaged Access to Jobs Weight</label>
-                                    <input type="number" class="form-control" id="disAccJobs" min="0" max="300" step="0.001">
+                                    <input type="number" class="form-control" id="disAccJobs" min="0" max="300" step="0.001"
+                                            value="0.714">
                                 </div>
                                 <div class="col-md-3 mb-3 form-input">
                                     <label class="form-label" for="multiScore">Multimodal Access Score Weight</label>
-                                    <input type="number" class="form-control" id="multiScore" min="0" max="300" step="0.001">
+                                    <input type="number" class="form-control" id="multiScore" min="0" max="300" step="0.001"
+                                            value="0.613">
                                 </div>
                             </div>
                         </div>
@@ -164,19 +200,23 @@
                             <div class="row form-row">
                                 <div class="col-md-3 mb-3 form-input">
                                     <label class="form-label" for="econScore">Economic Score Weight</label>
-                                    <input type="number" class="form-control" id="econScore" min="0" max="300" step="0.001">
+                                    <input type="number" class="form-control" id="econScore" min="0" max="300" step="0.001"
+                                            value="0.853">
                                 </div>
                                 <div class="col-md-3 mb-3 form-input">
                                     <label class="form-label" for="econDev">Economic Development Support Weight</label>
-                                    <input type="number" class="form-control" id="econDev" min="0" max="300" step="0.001">
+                                    <input type="number" class="form-control" id="econDev" min="0" max="300" step="0.001"
+                                            value="0.231">
                                 </div>
                                 <div class="col-md-3 mb-3 form-input">
                                     <label class="form-label" for="travelTime">Travel Time Reliability Weight</label>
-                                    <input type="number" class="form-control" id="travelTime" min="0" max="300" step="0.001">
+                                    <input type="number" class="form-control" id="travelTime" min="0" max="300" step="0.001"
+                                            value="1.002">
                                 </div>
                                 <div class="col-md-3 mb-3 form-input">
                                     <label class="form-label" for="interScore">Intermodal Access Score Weight</label>
-                                    <input type="number" class="form-control" id="interScore" min="0" max="300" step="0.001">
+                                    <input type="number" class="form-control" id="interScore" min="0" max="300" step="0.001"
+                                            value="1.200">
                                 </div>
                             </div>
                         </div>
@@ -185,15 +225,18 @@
                             <div class="row form-row">
                                 <div class="col-md-3 mb-3 form-input">
                                     <label class="form-label" for="congest">Congestion Score Weight</label>
-                                    <input type="number" class="form-control" id="congest" min="0" max="300" step="0.1">
+                                    <input type="number" class="form-control" id="congest" min="0" max="300" step="0.1"
+                                            value="0.223">
                                 </div>
                                 <div class="col-md-3 mb-3 form-input">
                                     <label class="form-label" for="throughput">Throughput Score Weight</label>
-                                    <input type="number" class="form-control" id="throughput" min="0" max="300" step="0.1">
+                                    <input type="number" class="form-control" id="throughput" min="0" max="300" step="0.1"
+                                            value="2.013">
                                 </div>
                                 <div class="col-md-3 mb-3 form-input">
                                     <label class="form-label" for="interScore">Delay Score Weight</label>
-                                    <input type="number" class="form-control" id="delay" min="0" max="300" step="0.01">
+                                    <input type="number" class="form-control" id="delay" min="0" max="300" step="0.01"
+                                            value="0.239">
                                 </div>
                             </div>
                         </div>
@@ -202,15 +245,18 @@
                             <div class="row form-row">
                                 <div class="col-md-3 mb-3 form-input">
                                     <label class="form-label" for="safetyScore">Safety Score Weight</label>
-                                    <input type="number" class="form-control" id="safetyScore" min="0" max="300" step="0.001">
+                                    <input type="number" class="form-control" id="safetyScore" min="0" max="300" step="0.001"
+                                            value="0.649">
                                 </div>
                                 <div class="col-md-3 mb-3 form-input">
                                     <label class="form-label" for="crashScore">Crash Frequency Score Weight</label>
-                                    <input type="number" class="form-control" id="crashScore" min="0" max="300" step="0.001">
+                                    <input type="number" class="form-control" id="crashScore" min="0" max="300" step="0.001"
+                                            value="0.542">
                                 </div>
                                 <div class="col-md-3 mb-3 form-input">
                                     <label class="form-label" for="crashRate">Crash Rate Weight</label>
-                                    <input type="number" class="form-control" id="crashRate" min="0" max="300" step="0.001">
+                                    <input type="number" class="form-control" id="crashRate" min="0" max="300" step="0.001"
+                                            value="0.872">
                                 </div>
                             </div>
                         </div>
@@ -219,19 +265,23 @@
                             <div class="row form-row">
                                 <div class="col-md-3 mb-3 form-input">
                                     <label class="form-label" for="enviro">Environmental Score Weight</label>
-                                    <input type="number" class="form-control" id="enviro" min="0" max="300" step="0.001">
+                                    <input type="number" class="form-control" id="enviro" min="0" max="300" step="0.001"
+                                            value="0.931">
                                 </div>
                                 <div class="col-md-3 mb-3 form-input">
                                     <label class="form-label" for="airQuality">Air Quality Score Weight</label>
-                                    <input type="number" class="form-control" id="airQuality" min="0" max="300" step="0.001">
+                                    <input type="number" class="form-control" id="airQuality" min="0" max="300" step="0.001"
+                                            value="1.274">
                                 </div>
                                 <div class="col-md-3 mb-3 form-input">
                                     <label class="form-label" for="enviroImpact">Environmental Impact Score Weight</label>
-                                    <input type="number" class="form-control" id="enviroImpact" min="0" max="300" step="0.001">
+                                    <input type="number" class="form-control" id="enviroImpact" min="0" max="300" step="0.001"
+                                            value="0.279" >
                                 </div>
                                 <div class="col-md-3 mb-3 form-input">
                                     <label class="form-label" for="landUse">Land Use Score Weight</label>
-                                    <input type="number" class="form-control" id="landUse" min="0" max="300" step="0.001">
+                                    <input type="number" class="form-control" id="landUse" min="0" max="300" step="0.001"
+                                            value="0.584">
                                 </div>
                             </div>
                         </div>
