@@ -134,19 +134,19 @@
                     <form class="form" novalidate>
                         <div class="panel">
                             <div class="row form-row">
-                                <div class="col-8 mb-3">
+                                <div class="col-8 mb-3 form-input">
                                     <label class="form-label" for="title">Project Option Title</label>
                                     <input type="text" class="form-control" id="title" aria-describedby="titleHelp" required>
                                 </div>
                             </div>
                             <div class="row form-row">
-                                <div class="col-8 mb-3 form-group">
+                                <div class="col-8 mb-3 form-input form-group">
                                     <label class="form-label" for="desc">Description</label>
                                     <textarea class="form-control" id="desc" rows="3"></textarea>
                                 </div>
                             </div>
                             <div class="row form-row">
-                                <div class="col-md-4 mb-3">
+                                <div class="col-md-4 mb-3 form-input">
                                     <label for="fund" class="form-label">Cost</label>
                                     <div class="input-group">
                                         <div class="input-group-prepend">
@@ -160,19 +160,19 @@
                         <div class="panel">
                             <h3>Accessibility Deltas</h3>
                             <div class="row form-row">
-                                <div class="col-md-3 mb-3">
+                                <div class="col-md-3 mb-3 form-input">
                                     <label class="form-label" for="accessJobs">Access to Jobs</label>
                                     <input type="number" class="form-control" id="accessJobs" min="-300" max="300" step="0.001"
                                         data-toggle="collapse" data-target="#accessJobsPreview">
                                     <small class="collapse" id="accessJobsPreview">new score: 1.672</small>
                                 </div>
-                                <div class="col-md-3 mb-3">
+                                <div class="col-md-3 mb-3 form-input">
                                     <label class="form-label" for="disAccJobs">Disadvantaged Access to Jobs</label>
                                     <input type="number" class="form-control" id="disAccJobs" min="-300" max="300" step="0.001"
                                         data-toggle="collapse" data-target="#disAccJobsPreview">
                                     <small class="collapse" id="disAccJobsPreview">new score: 0.209</small>
                                 </div>
-                                <div class="col-md-3 mb-3">
+                                <div class="col-md-3 mb-3 form-input">
                                     <label class="form-label" for="multiScore">Multimodal Access Score</label>
                                     <input type="number" class="form-control" id="multiScore" min="-300" max="300" step="0.001"
                                         data-toggle="collapse" data-target="#multiScorePreview">
@@ -183,19 +183,19 @@
                         <div class="panel">
                             <h3>Economic Development Deltas</h3>
                             <div class="row form-row">
-                                <div class="col-md-3 mb-3">
+                                <div class="col-md-3 mb-3 form-input">
                                     <label class="form-label" for="econDev">Economic Development Support</label>
                                     <input type="number" class="form-control" id="econDev" min="-300" max="300" step="0.001"
                                         data-toggle="collapse" data-target="#econDevPreview">
                                     <small class="collapse" id="econDevPreview">new score: 2.632</small>
                                 </div>
-                                <div class="col-md-3 mb-3">
+                                <div class="col-md-3 mb-3 form-input">
                                     <label class="form-label" for="travelTime">Travel Time Reliability</label>
                                     <input type="number" class="form-control" id="travelTime" min="-300" max="300" step="0.001"
                                         data-toggle="collapse" data-target="#travelTimePreview">
                                     <small class="collapse" id="travelTimePreview">new score: 0.954</small>
                                 </div>
-                                <div class="col-md-3 mb-3">
+                                <div class="col-md-3 mb-3 form-input">
                                     <label class="form-label" for="interScore">Intermodal Access Score</label>
                                     <input type="number" class="form-control" id="interScore" min="v" max="300" step="0.001" 
                                         data-toggle="collapse" data-target="#interScorePreview">
@@ -206,25 +206,25 @@
                         <div class="panel">
                             <h3>Safety and Congestion Mitigation Deltas</h3>
                             <div class="row form-row">
-                                <div class="col-md-2 mb-3">
+                                <div class="col-md-2 mb-3 form-input">
                                     <label class="form-label" for="crashScore">Crash Frequency Score</label>
                                     <input type="number" class="form-control" id="crashScore" min="-300" max="300" step="0.001"
                                         data-toggle="collapse" data-target="#crashScorePreview">
                                     <small class="collapse" id="crashScorePreview">new score: 15.67</small>
                                 </div>
-                                <div class="col-md-2 mb-3">
+                                <div class="col-md-2 mb-3 form-input">
                                     <label class="form-label" for="crashRate">Crash Rate</label>
                                     <input type="number" class="form-control" id="crashRate" min="-300" max="300" step="0.001"
                                         data-toggle="collapse" data-target="#crashRatePreview">
                                     <small class="collapse" id="crashRatePreview">new score: 3.82</small>
                                 </div>
-                                <div class="col-md-2 mb-3">
+                                <div class="col-md-2 mb-3 form-input">
                                     <label class="form-label" for="throughput">Throughput Score</label>
                                     <input type="number" class="form-control" id="throughput" min="-300" max="300" step="0.1"
                                         data-toggle="collapse" data-target="#throughputPreview">
                                     <small class="collapse" id="throughputPreview">new score: 0.7</small>
                                 </div>
-                                <div class="col-md-2 mb-3">
+                                <div class="col-md-2 mb-3 form-input">
                                     <label class="form-label" for="interScore">Delay Score</label>
                                     <input type="number" class="form-control" id="delay" min="-300" max="300" step="0.01"
                                         data-toggle="collapse" data-target="#delayPreview">
@@ -235,19 +235,19 @@
                         <div class="panel">
                             <h3>Environmental Quality Deltas</h3>
                             <div class="row form-row">
-                                <div class="col-md-3 mb-3">
+                                <div class="col-md-3 mb-3 form-input">
                                     <label class="form-label" for="airQuality">Air Quality Score</label>
                                     <input type="number" class="form-control" id="airQuality" min="-300" max="300" step="0.001"
                                         data-toggle="collapse" data-target="#airQualityPreview">
                                     <small class="collapse" id="airQualityPreview">new score: 0.672</small>
                                 </div>
-                                <div class="col-md-3 mb-3">
+                                <div class="col-md-3 mb-3 form-input">
                                     <label class="form-label" for="enviroImpact">Environmental Impact Score</label>
                                     <input type="number" class="form-control" id="enviroImpact" min="-300" max="300" step="0.001"
                                         data-toggle="collapse" data-target="#enviroImpactPreview">
                                     <small class="collapse" id="enviroImpactPreview">new score: 0.273</small>
                                 </div>
-                                <div class="col-md-3 mb-3">
+                                <div class="col-md-3 mb-3 form-input">
                                     <label class="form-label" for="landUse">Land Use Score</label>
                                     <input type="number" class="form-control" id="landUse" min="-300" max="300" step="0.001"
                                         data-toggle="collapse" data-target="#landUsePreview">

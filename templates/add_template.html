@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="description" content="">
         <meta name="author" content="Sandra Shtabnaya">
-        <title>Add Project</title>
+        <title>Add SSS Template</title>
 
         <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet'>
 
@@ -55,7 +55,7 @@
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link active" href="./../projects/index.html">
+                                <a class="nav-link" href="./../projects/index.html">
                                 <span data-feather="clipboard"></span>
                                 Projects
                                 </a>
@@ -74,7 +74,7 @@
                         <ul class="nav flex-column">
                             
                             <li class="nav-item">
-                                <a class="nav-link" href="./../templates/index.html">
+                                <a class="nav-link active" href="./../templates/index.html">
                                 <span data-feather="settings"></span>
                                 Templates
                                 </a>
@@ -92,21 +92,20 @@
                 <main class="col-md-9 ms-sm-auto col-lg-10">
                     <nav aria-label="breadcrumb">
                         <ol class="breadcrumb">
-                          <li class="breadcrumb-item"><a href="index.html">My Project Groups</a></li>
-                          <li class="breadcrumb-item"><a href="project_group.html">Moderate Competitor Pool</a></li>
-                          <li class="breadcrumb-item active" aria-current="page">Add Project</li>
+                          <li class="breadcrumb-item"><a href="index.html">Account Templates</a></li>
+                          <li class="breadcrumb-item active" aria-current="page">Add Template</li>
                         </ol>
                     </nav>
                     
                     <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-                        <h1>Add Project</h1>
+                        <h1>Add SSS Template</h1>
                         <div class="btn-toolbar mb-2 mb-md-0">
-                            <!-- After add, redirect to project group page. Show confirmation snackbar / pop-up, or highlight new row -->
-                            <a class="btn btn-primary" href="./project_group.html">
+                            <!-- After add, redirect to template page. Show confirmation snackbar / pop-up, or highlight new row -->
+                            <a class="btn btn-primary" href="./index.html">
                                 <span data-feather="plus"></span>
                                 Add
                             </a>
-                            <a class="btn btn-secondary" href="./project_group.html">
+                            <a class="btn btn-secondary" href="./index.html">
                                 <span data-feather="x"></span>
                                 Cancel
                             </a>
@@ -114,19 +113,19 @@
                     </div>
                     <ul class="nav nav-tabs">
                         <li class="nav-item">
-                            <a class="nav-link active" href="./add_project.html">
+                            <a class="nav-link active" href="./add_template.html">
                                 <span data-feather="file"></span>
                                 New
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="./import_project.html">
+                            <a class="nav-link" href="./import_template.html">
                                 <span data-feather="upload"></span>
                                 Import
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="./clone_project.html">
+                            <a class="nav-link" href="./clone_template.html">
                                 <span data-feather="copy"></span>
                                 Clone
                             </a>
@@ -134,55 +133,22 @@
                     </ul>
                     <form class="form" novalidate>
                         <div class="panel">
-                            <div class="row form-row">
-                                <div class="col-8 mb-3">
-                                    <label class="form-label" for="title">Project Title</label>
-                                    <input type="text" class="form-control" id="title" aria-describedby="titleHelp" required>
-                                </div>
-                            </div>
-                            <div class="row form-row">
-                                <div class="col-md-5 mb-3">
-                                    <label class="form-label" for="org">Organization</label>
-                                    <input type="text" class="form-control" id="org" aria-describedby="orgHelp">
-                                </div>
-                                <div class="col-md-4 mb-3">
-                                    <label class="form-label" for="district">District</label>
-                                    <select class="form-control" id="district" aria-describedby="districtHelp">
-                                        <option>Fredericksburg</option>
-                                        <option>Hampton Roads</option>
-                                        <option>Lynchburg</option>
-                                        <option>Culpeper</option>
-                                        <option>Richmond</option>
-                                        <option>Bristol</option>
-                                        <option>Salem</option>
-                                        <option>Staunton</option>
-                                        <option>NOVA</option>
-                                    </select>
-                                </div>
-                                <div class="col-md-2 mb-3">
-                                    <label for="areaType" class="form-label">Area Type</label>
-                                    <select class="form-control" id="areaType">
-                                        <option>A</option>
-                                        <option>B</option>
-                                        <option>C</option>
-                                        <option>D</option>
-                                    </select>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="panel">
                             <h3>Accessibility</h3>
                             <div class="row form-row">
                                 <div class="col-md-3 mb-3 form-input">
-                                    <label class="form-label" for="accessJobs">Access to Jobs</label>
+                                    <label class="form-label" for="access">Accessibility Score Weight</label>
+                                    <input type="number" class="form-control" id="access" min="0" max="300" step="0.001">
+                                </div>
+                                <div class="col-md-3 mb-3 form-input">
+                                    <label class="form-label" for="accessJobs">Access to Jobs Weight</label>
                                     <input type="number" class="form-control" id="accessJobs" min="0" max="300" step="0.001">
                                 </div>
                                 <div class="col-md-3 mb-3 form-input">
-                                    <label class="form-label" for="disAccJobs">Disadvantaged Access to Jobs</label>
+                                    <label class="form-label" for="disAccJobs">Disadvantaged Access to Jobs Weight</label>
                                     <input type="number" class="form-control" id="disAccJobs" min="0" max="300" step="0.001">
                                 </div>
                                 <div class="col-md-3 mb-3 form-input">
-                                    <label class="form-label" for="multiScore">Multimodal Access Score</label>
+                                    <label class="form-label" for="multiScore">Multimodal Access Score Weight</label>
                                     <input type="number" class="form-control" id="multiScore" min="0" max="300" step="0.001">
                                 </div>
                             </div>
@@ -191,37 +157,54 @@
                             <h3>Economic Development</h3>
                             <div class="row form-row">
                                 <div class="col-md-3 mb-3 form-input">
-                                    <label class="form-label" for="econDev">Economic Development Support</label>
+                                    <label class="form-label" for="econScore">Economic Score Weight</label>
+                                    <input type="number" class="form-control" id="econScore" min="0" max="300" step="0.001">
+                                </div>
+                                <div class="col-md-3 mb-3 form-input">
+                                    <label class="form-label" for="econDev">Economic Development Support Weight</label>
                                     <input type="number" class="form-control" id="econDev" min="0" max="300" step="0.001">
                                 </div>
                                 <div class="col-md-3 mb-3 form-input">
-                                    <label class="form-label" for="travelTime">Travel Time Reliability</label>
+                                    <label class="form-label" for="travelTime">Travel Time Reliability Weight</label>
                                     <input type="number" class="form-control" id="travelTime" min="0" max="300" step="0.001">
                                 </div>
                                 <div class="col-md-3 mb-3 form-input">
-                                    <label class="form-label" for="interScore">Intermodal Access Score</label>
+                                    <label class="form-label" for="interScore">Intermodal Access Score Weight</label>
                                     <input type="number" class="form-control" id="interScore" min="0" max="300" step="0.001">
                                 </div>
                             </div>
                         </div>
                         <div class="panel">
-                            <h3>Safety and Congestion Mitigation</h3>
+                            <h3>Congestion Mitigation</h3>
                             <div class="row form-row">
-                                <div class="col-md-2 mb-3 form-input">
-                                    <label class="form-label" for="crashScore">Crash Frequency Score</label>
-                                    <input type="number" class="form-control" id="crashScore" min="0" max="300" step="0.001">
+                                <div class="col-md-3 mb-3 form-input">
+                                    <label class="form-label" for="congest">Congestion Score Weight</label>
+                                    <input type="number" class="form-control" id="congest" min="0" max="300" step="0.1">
                                 </div>
-                                <div class="col-md-2 mb-3 form-input">
-                                    <label class="form-label" for="crashRate">Crash Rate</label>
-                                    <input type="number" class="form-control" id="crashRate" min="0" max="300" step="0.001">
-                                </div>
-                                <div class="col-md-2 mb-3 form-input">
-                                    <label class="form-label" for="throughput">Throughput Score</label>
+                                <div class="col-md-3 mb-3 form-input">
+                                    <label class="form-label" for="throughput">Throughput Score Weight</label>
                                     <input type="number" class="form-control" id="throughput" min="0" max="300" step="0.1">
                                 </div>
-                                <div class="col-md-2 mb-3 form-input">
-                                    <label class="form-label" for="interScore">Delay Score</label>
+                                <div class="col-md-3 mb-3 form-input">
+                                    <label class="form-label" for="interScore">Delay Score Weight</label>
                                     <input type="number" class="form-control" id="delay" min="0" max="300" step="0.01">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="panel">
+                            <h3>Safety</h3>
+                            <div class="row form-row">
+                                <div class="col-md-3 mb-3 form-input">
+                                    <label class="form-label" for="safetyScore">Safety Score Weight</label>
+                                    <input type="number" class="form-control" id="safetyScore" min="0" max="300" step="0.001">
+                                </div>
+                                <div class="col-md-3 mb-3 form-input">
+                                    <label class="form-label" for="crashScore">Crash Frequency Score Weight</label>
+                                    <input type="number" class="form-control" id="crashScore" min="0" max="300" step="0.001">
+                                </div>
+                                <div class="col-md-3 mb-3 form-input">
+                                    <label class="form-label" for="crashRate">Crash Rate Weight</label>
+                                    <input type="number" class="form-control" id="crashRate" min="0" max="300" step="0.001">
                                 </div>
                             </div>
                         </div>
@@ -229,15 +212,19 @@
                             <h3>Environmental Quality</h3>
                             <div class="row form-row">
                                 <div class="col-md-3 mb-3 form-input">
-                                    <label class="form-label" for="airQuality">Air Quality Score</label>
+                                    <label class="form-label" for="enviro">Environmental Score Weight</label>
+                                    <input type="number" class="form-control" id="enviro" min="0" max="300" step="0.001">
+                                </div>
+                                <div class="col-md-3 mb-3 form-input">
+                                    <label class="form-label" for="airQuality">Air Quality Score Weight</label>
                                     <input type="number" class="form-control" id="airQuality" min="0" max="300" step="0.001">
                                 </div>
                                 <div class="col-md-3 mb-3 form-input">
-                                    <label class="form-label" for="enviroImpact">Environmental Impact Score</label>
+                                    <label class="form-label" for="enviroImpact">Environmental Impact Score Weight</label>
                                     <input type="number" class="form-control" id="enviroImpact" min="0" max="300" step="0.001">
                                 </div>
                                 <div class="col-md-3 mb-3 form-input">
-                                    <label class="form-label" for="landUse">Land Use Score</label>
+                                    <label class="form-label" for="landUse">Land Use Score Weight</label>
                                     <input type="number" class="form-control" id="landUse" min="0" max="300" step="0.001">
                                 </div>
                             </div>

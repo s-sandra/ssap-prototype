@@ -6,6 +6,12 @@ form {
     margin-top: inherit;
 }
 
+.form-input {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
 .form-check-inline {
     display: flex;
     align-items: center;
