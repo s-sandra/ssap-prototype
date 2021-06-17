@@ -1,0 +1,11 @@
+.account-panel {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.account-form {
+    background-color: #f3f3f3;
+    padding: 3em 3em 0.5em 3em;
+    width: 35%;
+}

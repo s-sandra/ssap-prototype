@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="">
+        <meta name="author" content="Sandra Shtabnaya">
+        <title>Log Into SSAP</title>
+
+        <!-- Font Awesome Icons -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+        <!-- Font CSS -->
+        <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet'>
+
+        <!-- Bootstrap core CSS -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+
+        <!-- component styles -->
+        <link href="./../styles/global.css" rel="stylesheet">
+        <link href="./../styles/form.css" rel="stylesheet">
+        <link href="./../styles/account.css" rel="stylesheet">
+
+    </head>
+    <body class="bg-dark">
+        <div class="text-center account-panel">
+            <form class="account-form">
+                <h1>SSAP</h1>
+                <h1 class="h3 mb-3 font-weight-normal">Sign In</h1>
+                <div class="form-group mt-5 mb-5">
+                    <label for="inputEmail" class="sr-only mb-4">Email address</label>
+                    <input type="email" id="inputEmail" class="form-control mb-2" placeholder="Email address" required="" autofocus="">
+                    <label for="inputPassword" class="sr-only">Password</label>
+                    <input type="password" id="inputPassword" class="form-control mb-2" placeholder="Password" required="">
+                </div>
+                <div class="checkbox mb-3 d-flex">
+                    <label>
+                    <input type="checkbox" value="remember-me"> Remember me
+                    </label>
+                </div>
+                <div class="d-grid">
+                    <a href="./../scenarios/index.html" class="btn btn-primary btn-block" type="submit">Sign in</a>
+                </div>
+                <div class="d-flex justify-content-between">
+                    <a href="#" class="mt-5 mb-3 text-muted">Forgot Password?</a>
+                    <a href="#" class="mt-5 mb-3 text-muted">Don't Have an Account?</a>
+                </div>
+            </form>
+        </div>
+    </body>
+</html>
