@@ -2,9 +2,25 @@ body {
     background-color: white;
 }
 
+.bg-light {
+    background-color: #f4f6f8;
+}
+
+.headline, hr {
+    color: white;
+}
+
+.headline-card {
+    padding: 2rem;
+}
+
+.headline-card p {
+    margin-top: 2rem;
+}
+
 .jumbotron {
     padding: 2rem 1rem;
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
     background-color: #ffffff3b;
     border-radius: .3rem;
     background-image: url(https://images.unsplash.com/photo-1485627941502-d2e6429a8af0?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80);
@@ -22,11 +38,15 @@ body {
     padding-right: 1rem;
 }
 
+.site-header a, footer a {
+    text-decoration: none;
+}
+
 .site-header a {
     color: #fff;
     transition: ease-in-out color .15s;
-    text-decoration: none;
 }
+
 .site-header a:hover {
     color: #b4b4b4;
     text-decoration: none;
@@ -34,4 +54,8 @@ body {
 
 .site-header a.btn-outline-light:hover {
     color: #b4b4b4;
+}
+
+footer {
+    padding-top: 4rem;
 }
