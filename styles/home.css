@@ -10,6 +10,21 @@ body {
     background-color: #ebeeef;
 }
 
+.radio-group {
+    border: 1px solid #ced4da;
+    padding: 13px;
+    padding-top: 20px;
+    border-radius: .25rem;
+}
+
+.radio-label {
+    background-color: white;
+    top: 13px;
+    left: 13px;
+    position: relative;
+    padding: 0 10px;
+}
+
 hr, 
 .text-white h1,
 .text-white h2,
