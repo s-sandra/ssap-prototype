@@ -108,3 +108,20 @@ footer small {
     line-height: 1.3;
     width: 30%;
 }
+
+.content {
+    color: #5b5c5e;
+    line-height: 1.8;
+}
+
+.feature-card {
+    border: 0 !important;
+}
+
+.feature-card .icon {
+    width: 60px;
+}
+
+.p-10 {
+    padding: 80px;
+}
