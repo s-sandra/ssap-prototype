@@ -20,9 +20,10 @@ body {
 .radio-label {
     background-color: white;
     top: 13px;
-    left: 13px;
     position: relative;
     padding: 0 10px;
+    color: #93979a;
+    font-size: 16px;
 }
 
 hr, 
