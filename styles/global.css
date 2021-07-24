@@ -135,6 +135,17 @@ p.card-text .feather {
     padding: 1rem 1rem;
 }
 
+.navbar .logo {
+    margin-right: 1rem;
+    width: 2.5rem;
+    padding: 5px;
+    border: 2px solid white;
+}
+
+.navbar .logo:hover {
+    border: 2px solid #b4b4b4;
+}
+
 .nav-pills {
     margin-bottom: 3em;
 }

@@ -84,10 +84,6 @@ hr,
     text-decoration: none;
 }
 
-.site-header .logo {
-    margin-right: 1rem;
-}
-
 .site-header a.btn-outline-light:hover {
     color: #b4b4b4;
 }
@@ -96,17 +92,15 @@ footer {
     padding-top: 4rem;
 }
 
-.logo {
-    height: 2rem;
-}
-
 footer .logo {
-    height: 3rem;
+    width: 3rem;
     margin: 0.5rem;
+    opacity: 0.6;
 }
 
 footer small {
     line-height: 1.3;
+    font-size: 10px;
     width: 30%;
 }
 
