@@ -42,11 +42,23 @@
                 <input class="form-control" type="text" placeholder="Search" aria-label="Search">
               </div>
             <ul class="navbar-nav px-3 user">
-                <li class="nav-item text-nowrap">
-                    <a class="nav-link" href="./../index.html">
-                        <span data-feather="log-out"></span>
-                        Log out
+                <li class="dropdown">
+                    <a class="btn dropdown-toggle nav-link nav-item" href="#" 
+                       role="button" data-toggle="dropdown" aria-haspopup="true"
+                       aria-expanded="false"
+                    >
+                      John Smith
                     </a>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                        <a class="dropdown-item" href="./../settings/index.html">
+                            <span data-feather="settings"></span>
+                            Settings
+                        </a>
+                        <a class="dropdown-item" href="./../index.html">
+                            <span data-feather="log-out"></span>
+                            Log Out
+                        </a>
+                    </div>
                 </li>
             </ul>
         </header>

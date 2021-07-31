@@ -73,7 +73,13 @@ body {
 }
 
 .navbar-nav .feather {
-  color: white;
+  margin-right: 5px;
+}
+
+.navbar-nav .dropdown-menu {
+  position: absolute;
+  right: 0;
+  left: auto;
 }
 
 .sidebar .nav-link.active {
