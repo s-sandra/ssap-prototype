@@ -26,8 +26,12 @@ h1 {
     font-size: 2rem;
 }
 
-h3, input.card-text {
+h2, input.card-text {
     font-size: 1.5rem;
+}
+
+h3 {
+    font-size: 1.2rem;
 }
 
 input.card-text:disabled {
